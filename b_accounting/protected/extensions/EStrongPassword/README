@@ -1,0 +1,66 @@
+This is an extension to enable strong password validation based on the jQuery
+pstrength plugin, found here: http://plugins.jquery.com/project/pstrength
+
+ Items which can be configured through the javascript (see the jquery page for full details)
+	
+	'defaults' : {
+		'displayMinChar': true,
+		'minChar': 8,
+		'minCharText': 'You must enter a minimum of %d characters',
+		'colors': ["#f00", "#c06", "#f60", "#3c0", "#3f0"],
+		'scores': [20, 30, 43, 50],
+		'verdicts':	['Weak', 'Normal', 'Medium', 'Strong', 'Very Strong'],
+		'raisePower': 1.4
+	},
+	'ruleScores' : {
+		'length': 0,
+		'lowercase': 1,
+		'uppercase': 3,
+		'one_number': 3,
+		'three_numbers': 5,
+		'one_special_char': 3,
+		'two_special_char': 5,
+		'upper_lower_combo': 2,
+		'letter_number_combo': 2,
+		'letter_number_char_combo': 2
+	},
+	'rules' : {
+		'length': true,
+		'lowercase': true,
+		'uppercase': true,
+		'one_number': true,
+		'three_numbers': true,
+		'one_special_char': true,
+		'two_special_char': true,
+		'upper_lower_combo': true,
+		'letter_number_combo': true,
+		'letter_number_char_combo': true
+	}
+ 
+ Example usage:
+ 	<div class="row">
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php
+
+		$this->widget('ext.EStrongPassword.EStrongPassword',
+				array('form'=>$form, 'model'=>$model, 'attribute'=>'password'));
+		
+		?>
+		<?php echo $form->error($model,'password'); ?>
+	</div>
+	
+By default, it will use the minified version of the javascript. If you wish NOT to use 
+that, set useMin param to false in your configuration array.
+
+To change the requirements, pass in your desired requirements as the 'requirementOptions' param, like so:
+		<?php
+
+		$this->widget('ext.EStrongPassword.EStrongPassword',
+				array('form'=>$form, 'model'=>$model, 'attribute'=>'password', 
+				'requirementsOptions'=>array('minChar'=>8,'one_special_char'=>true)
+		));
+		
+		?>
+
+
+GitHub Repo - http://github.com/DanaLuther/EStrongPassword

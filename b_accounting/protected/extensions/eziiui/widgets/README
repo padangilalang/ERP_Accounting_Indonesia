@@ -1,0 +1,30 @@
+Author: Marco Curatitoli <makro76@gmail.com>
+Version: 1.0.12
+
+Extension to use CGridView, CDetailView and CLinkPager with jquery-ui theme framework.
+Put it in your extensions folder and use it like normal widget.
+Since it isn't extended from CJuiWidget, you need to include a jquery-ui css theme in your page or, to test, simply put a zii CJuiWidget (CJuiTabs for example) before in order to auto-include a default theme.
+
+Tested (quickly) on FF4, FF 3.5.x, Google Chrome, IE9, IE8, IE7, IE6
+
+Knows issues:
+- IE6, IE7 pager buttons spacing and dimensions are not the same as in FF
+
+Example:
+[code]
+$this->widget('ext.eziiui.grid.CGridViewUI', array(
+    'dataProvider'=>$model->search(),
+    'columns'=>array(
+        'column1',
+        //......
+    ),
+));
+
+$this->widget('ext.eziiui.CDetailViewUI', array(
+    'data'=>$model,
+    'attributes'=>array(
+        'id',   
+        'column1',
+    ),
+));
+[/code]

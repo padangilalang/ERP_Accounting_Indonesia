@@ -1,0 +1,162 @@
+/* begin Page */
+img {
+	filter: expression(artFixPNG(this) );
+} /* end Page */
+
+/* begin MenuItem */
+.art-hmenu a .r {
+	clip: rect(auto, auto, auto, 400px);
+}
+/* end MenuItem */
+
+/* begin Box, Sheet */
+.art-sheet-tl {
+	clip: rect(auto, 29px, 29px, auto);
+}
+
+.art-sheet-tr {
+	clip: rect(auto, auto, 29px, 29px);
+}
+
+.art-sheet-bl {
+	clip: rect(29px, 29px, auto, auto);
+}
+
+.art-sheet-br {
+	clip: rect(29px, auto, auto, 29px);
+}
+
+.art-sheet-tc {
+	clip: rect(auto, auto, 29px, auto);
+}
+
+.art-sheet-bc {
+	clip: rect(29px, auto, auto, auto);
+}
+
+.art-sheet-cr {
+	clip: rect(auto, auto, auto, 29px);
+}
+
+.art-sheet-cl {
+	clip: rect(auto, 29px, auto, auto);
+}
+
+.art-sheet-body {
+	zoom: 1;
+}
+/* end Box, Sheet */
+
+/* begin Layout */
+.art-content-layout,.art-content-layout-row {
+	display: block;
+}
+
+.art-content-layout,.art-content-layout-row {
+	zoom: 1;
+}
+/* end Layout */
+
+/* begin Button */
+.art-button-wrapper .art-button-r {
+	clip: rect(auto, auto, auto, 399px);
+}
+/* end Button */
+
+/* begin Box, Block */
+.art-block-tl {
+	clip: rect(auto, 13px, 13px, auto);
+}
+
+.art-block-tr {
+	clip: rect(auto, auto, 13px, 13px);
+}
+
+.art-block-bl {
+	clip: rect(13px, 13px, auto, auto);
+}
+
+.art-block-br {
+	clip: rect(13px, auto, auto, 13px);
+}
+
+.art-block-tc {
+	clip: rect(auto, auto, 13px, auto);
+}
+
+.art-block-bc {
+	clip: rect(13px, auto, auto, auto);
+}
+
+.art-block-cr {
+	clip: rect(auto, auto, auto, 13px);
+}
+
+.art-block-cl {
+	clip: rect(auto, 13px, auto, auto);
+}
+
+.art-block-body {
+	zoom: 1;
+}
+/* end Box, Block */
+
+/* begin BlockHeader */
+.art-blockheader .r {
+	clip: rect(auto, auto, auto, 1704px);
+}
+/* end BlockHeader */
+
+/* begin Box, BlockContent */
+.art-blockcontent-body {
+	zoom: 1;
+}
+/* end Box, BlockContent */
+
+/* begin Box, Post */
+.art-post-body {
+	zoom: 1;
+}
+/* end Box, Post */
+
+/* begin PostContent */
+.art-postcontent {
+	height: 1%;
+}
+/* end PostContent */
+
+/* begin Footer */
+.art-footer-body {
+	padding-right: 0;
+	zoom: 1;
+}
+
+.art-footer {
+	zoom: 1;
+}
+
+/* end Footer */
+
+/* begin LayoutCell, content */
+.art-sidebar1 {
+	width: auto;
+}
+
+.art-content-layout .art-layout-cell,.art-content-layout .art-layout-cell .art-content-layout .art-layout-cell
+	{
+	display: block;
+	position: relative;
+	float: left;
+	clear: right;
+}
+
+.art-content-layout .art-layout-cell,.art-content-layout .art-layout-cell .art-content-layout .art-layout-cell
+	{
+	zoom: 1;
+}
+
+.art-layout-cell .art-layout-cell {
+	float: none;
+	clear: both;
+}
+/* end LayoutCell, content */

@@ -1,0 +1,61 @@
+1.0.11
+------
+Enh: update for yii-1.1.7
+
+1.0.10
+------
+Enh: update for yii-1.1.5
+
+
+1.0.9
+-----
+Enh: added UHtml (builds input fields adding ui-corner-all class automatically)
+Enh: added CActiveFormUI (same as CActiveForm but uses UHtml)
+Enh: added CCheckBoxColumnUI.php (thanks to Corey Tisdale for fixing CCheckColumn select all css error)
+Enh: CLinkPagerUI css improvements and bug fix
+Ehn: CDetailViewUI added visible property
+
+
+1.0.8
+-----
+Enh: css improvements
+
+1.0.7
+-----
+Enh: CLinkPagerUI hover effect
+Enh: css improvements
+Enh: yii-1.1.2 support
+
+1.0.6
+-----
+- Bug: css bug
+
+1.0.5
+-----
+- Bug: Pagination bug solved
+- Enh: CGridViewUI now is derived from CBaseListUI
+
+1.0.4
+-----
+- Upd: changed path from "eziiui.widgets.CGridViewUI" to "eziiui.widgets.grid.CGridViewUI"
+- Enh: yii 1.1.1 support
+- Enh: minor improvements
+
+
+1.0.3
+-----
+- Enh: added jqGrid wrapper based on CJuiWidget from zii
+
+1.0.2
+-----
+- Bug: CLinkPagerUI - fixed active button on mouseover
+- Enh: CGridViewUI - css improvements (crud column alignment, row height and padding)
+
+
+1.0.1
+-----
+- Bug: CGridViewUI - removed (commented) filter property for yii-1.1.0 compatibility
+
+1.0.0
+------
+First Release

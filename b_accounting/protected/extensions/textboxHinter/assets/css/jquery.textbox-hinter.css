@@ -1,0 +1,9 @@
+/* -------- textbox hinter  styles --------- */
+.greyText {
+	color: #CCCCCC;
+}
+
+.greyTextItalics {
+	color: #CCCCCC;
+	font-style: italic;
+}

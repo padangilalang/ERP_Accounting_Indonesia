@@ -1,0 +1,19 @@
+/* begin Footer */
+.art-footer {
+	margin-top: 30px;
+	margin-bottom: 0;
+	width: 100%;
+	background-image: url('images/footer_b.png');
+	background-color: #B0957D;
+	min-height: 50px;
+	padding: 10px;
+	text-align: center;
+	color: #17161D;
+	font-size: 11px;
+}
+
+.art-background {
+	background-color: #EAEAEA;
+}
+
+
