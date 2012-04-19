@@ -85,7 +85,7 @@ class aOrganization extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopCreated() {
+	public static function getTopCreated() {
 
 		$models=self::model()->findAll(array('limit'=>10,'order'=>'created_date DESC'));
 
@@ -98,7 +98,7 @@ class aOrganization extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopUpdated() {
+	public static function getTopUpdated() {
 
 		$models=self::model()->findAll(array('limit'=>10,'order'=>'updated_date DESC'));
 
@@ -111,7 +111,7 @@ class aOrganization extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopRelated($id) {
+	public static function getTopRelated($id) {
 
 		$_related = self::model()->findByPk((int)$id)->name;
 		$_exp=explode(" ",$_related);

@@ -22,7 +22,7 @@ $form=$this->beginWidget('BootActiveForm', array(
 
 <?php //echo $form->textAreaRow($model,'long_desc',array('class'=>'span6','rows'=>6)); ?>
 <?php $this->widget('application.extensions.tinymce.ETinyMce',
-		array('name'=>'html','model'=>$model,'attribute'=>'long_desc')); 
+		array('name'=>'html','model'=>$model,'attribute'=>'long_desc'));
 ?>
 
 

@@ -14,8 +14,10 @@ $this->menu4=sModule::getTopOther();
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/blockdevice.png') ?>
-	Data Module</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/blockdevice.png') ?>
+		Data Module
+	</h1>
 </div>
 <?php $this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'module-module-grid',
@@ -37,9 +39,9 @@ $this->menu4=sModule::getTopOther();
 						'name'=>'sort',
 				),
 				array(
-					'name'=>'title',
-					'type'=>'raw',
-					'value'=>'CHtml::link("$data->title",Yii::app()->createUrl("/sModule/view",array("id"=>$data->id)))'
+						'name'=>'title',
+						'type'=>'raw',
+						'value'=>'CHtml::link("$data->title",Yii::app()->createUrl("/sModule/view",array("id"=>$data->id)))'
 				),
 				'link',
 		),

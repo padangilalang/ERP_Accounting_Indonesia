@@ -39,7 +39,8 @@ $this->menu3=tAccount::getTopRelated($model->account_name);
 ?>
 
 <div class="page-header">
-		<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/tree_diagramm_new.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/tree_diagramm_new.png') ?>
 		Update:
 		<?php echo $model->account_no .". ".$model->account_name; ?>
 	</h1>

@@ -41,7 +41,7 @@ class MCashbankController extends Controller
 		$criteria->order='t.input_date DESC';
 
 		if (Yii::app()->user->name != "admin") {
-			$criteria->addInCondition('entity_id',sUser::model()->getGroupArray());  
+			$criteria->addInCondition('entity_id',sUser::model()->getGroupArray());
 		}
 
 		for($i = 0; $i < sizeof($_exp); ++$i):
@@ -345,7 +345,7 @@ class MCashbankController extends Controller
 
 		if (Yii::app()->user->name != "admin") {
 			//$criteria->compare('entity_id',sUser::model()->getGroup());
-			$criteria->addInCondition('entity_id',sUser::model()->getGroupArray());  
+			$criteria->addInCondition('entity_id',sUser::model()->getGroupArray());
 		}
 
 		$model=uJournal::model()->findByPk($id,$criteria);

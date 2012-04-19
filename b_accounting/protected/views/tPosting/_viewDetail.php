@@ -1,5 +1,5 @@
 <?php 
-	$this->widget('bootstrap.widgets.BootGridView', array(
+$this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'u-journal-detail-grid',
 		'dataProvider'=>uJournalDetail::model()->search($id),
 		'itemsCssClass'=>'table table-striped table-bordered',
@@ -29,8 +29,8 @@
 		),
 )); ?>
 <?php 
-	
-	$this->widget('bootstrap.widgets.BootDetailView', array(
+
+$this->widget('bootstrap.widgets.BootDetailView', array(
 		'data'=>uJournal::model()->findByPk((int)$id),
 		'attributes'=>array(
 				array(
@@ -52,7 +52,7 @@ if ($data->state_id ==1 || $data->state_id ==2) {
 					//'icons'=>'js:{secondary:"ui-icon-extlink"}',
 			),
 			'htmlOptions'=>array(
-				'class'=>'ui-button-primary',
+					'class'=>'ui-button-primary',
 			),
 
 	));
@@ -67,7 +67,7 @@ if ($data->state_id ==1 || $data->state_id ==2) {
 					//'icons'=>'js:{secondary:"ui-icon-extlink"}',
 			),
 			'htmlOptions'=>array(
-				'class'=>'ui-button-primary',
+					'class'=>'ui-button-primary',
 			),
 
 	));

@@ -1,57 +1,47 @@
 <ul class="nav nav-list">
-  <li class="nav-header">
-    Operation
-  </li>
+	<li class="nav-header">Operation</li>
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
-	'type'=>'list',
-	'items'=>$this->menu,
+		'type'=>'list',
+		'items'=>$this->menu,
 )); ?>
-<br/>
+<br />
 
 <ul class="nav nav-list">
-  <li class="nav-header">
-    Recent Updated
-  </li>
+	<li class="nav-header">Recent Updated</li>
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
-	'type'=>'list',
-	'items'=>$this->menu1,
+		'type'=>'list',
+		'items'=>$this->menu1,
 )); ?>
-<br/>
-	
+<br />
+
 
 <ul class="nav nav-list">
-  <li class="nav-header">
-    Recent Added
-  </li>
+	<li class="nav-header">Recent Added</li>
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
-	'type'=>'list',
-	'items'=>$this->menu2,
+		'type'=>'list',
+		'items'=>$this->menu2,
 )); ?>
-<br/>
-	
+<br />
+
 
 <ul class="nav nav-list">
-  <li class="nav-header">
-    Related Data
-  </li>
+	<li class="nav-header">Related Data</li>
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
-	'type'=>'list',
-	'items'=>$this->menu3,
+		'type'=>'list',
+		'items'=>$this->menu3,
 )); ?>
-<br/>
+<br />
 
 <ul class="nav nav-list">
-  <li class="nav-header">
-    Other Menu
-  </li>
+	<li class="nav-header">Other Menu</li>
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
-	'type'=>'list',
-	'items'=>$this->menu4,
+		'type'=>'list',
+		'items'=>$this->menu4,
 )); ?>
-<br/>
+<br />
 

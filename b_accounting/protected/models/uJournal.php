@@ -97,7 +97,7 @@ class uJournal extends CActiveRecord
 		return $model;
 	}
 
-	public function getTopCreated($mid=null) {
+	public static function getTopCreated($mid=null) {
 
 		$criteria=new CDbCriteria;
 		$criteria->limit=10;
@@ -119,7 +119,7 @@ class uJournal extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopUpdated($mid=null) {
+	public static function getTopUpdated($mid=null) {
 
 		$criteria=new CDbCriteria;
 		$criteria->limit=10;
@@ -147,7 +147,7 @@ class uJournal extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopRelated($name) {
+	public static function getTopRelated($name) {
 
 		$_exp=explode(" ",$name);
 

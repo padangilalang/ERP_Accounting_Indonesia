@@ -14,8 +14,10 @@ $this->menu2=sUser::getTopCreated();
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
-	User Management</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
+		User Management
+	</h1>
 </div>
 <?php $this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'user-module-grid',
@@ -67,7 +69,7 @@ $this->menu2=sUser::getTopCreated();
 
 
 <div class="page-header">
-<h2>Create New user</h2>
+	<h2>Create New user</h2>
 </div>
 <?php echo $this->renderPartial('_form', array('model'=>$modeluser)); ?>
 

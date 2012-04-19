@@ -78,17 +78,17 @@ class BootButtonGroup extends BootWidget
 		foreach ($this->buttons as $button)
 		{
 			$this->controller->widget('bootstrap.widgets.BootButton', array(
-				'fn'=>isset($button['fn']) ? $button['fn'] : $this->fn,
-				'type'=>isset($button['type']) ? $button['type'] : $this->type,
-				'size'=>$this->size,
-				'icon'=>isset($button['icon']) ? $button['icon'] : null,
-				'label'=>isset($button['label']) ? $button['label'] : null,
-				'url'=>isset($button['url']) ? $button['url'] : null,
-				'active'=>isset($button['active']) ? $button['active'] : false,
-				'items'=>isset($button['items']) ? $button['items'] : array(),
-				'ajaxOptions'=>isset($button['ajaxOptions']) ? $button['ajaxOptions'] : array(),
-				'htmlOptions'=>isset($button['htmlOptions']) ? $button['htmlOptions'] : array(),
-				'encodeLabel'=>isset($button['encodeLabel']) ? $button['encodeLabel'] : $this->encodeLabel,
+					'fn'=>isset($button['fn']) ? $button['fn'] : $this->fn,
+					'type'=>isset($button['type']) ? $button['type'] : $this->type,
+					'size'=>$this->size,
+					'icon'=>isset($button['icon']) ? $button['icon'] : null,
+					'label'=>isset($button['label']) ? $button['label'] : null,
+					'url'=>isset($button['url']) ? $button['url'] : null,
+					'active'=>isset($button['active']) ? $button['active'] : false,
+					'items'=>isset($button['items']) ? $button['items'] : array(),
+					'ajaxOptions'=>isset($button['ajaxOptions']) ? $button['ajaxOptions'] : array(),
+					'htmlOptions'=>isset($button['htmlOptions']) ? $button['htmlOptions'] : array(),
+					'encodeLabel'=>isset($button['encodeLabel']) ? $button['encodeLabel'] : $this->encodeLabel,
 			));
 		}
 

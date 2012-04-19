@@ -151,5 +151,5 @@ class sModule extends CActiveRecord
 		return $returnarray;
 	}
 
-	
+
 }

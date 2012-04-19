@@ -19,14 +19,15 @@ $this->menu2=uJournal::getTopCreated(1);
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
 		Journal:
 		<?php echo $model->system_reff(); ?>
 	</h1>
 </div>
 
 <?php 
-	
+
 //$this->widget('bootstrap.widgets.BootDetailView', array(
 $this->widget('ext.XDetailView', array(
 		'ItemColumns' => 2,
@@ -35,8 +36,8 @@ $this->widget('ext.XDetailView', array(
 				'input_date',
 				'yearmonth_periode',
 				array(
-					'label'=>'Module',
-					'value'=>$model->module->name,
+						'label'=>'Module',
+						'value'=>$model->module->name,
 				),
 				'user_ref',
 				'system_ref',

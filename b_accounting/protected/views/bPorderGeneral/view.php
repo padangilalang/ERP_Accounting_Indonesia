@@ -1,13 +1,14 @@
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/shopcart.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/shopcart.png') ?>
 		PO:
 		<?php echo $model->system_ref; ?>
 	</h1>
 </div>
 
 <?php 
-	
-	$this->widget('bootstrap.widgets.BootDetailView', array(
+
+$this->widget('bootstrap.widgets.BootDetailView', array(
 		'data'=>$model,
 		'attributes'=>array(
 				'input_date',

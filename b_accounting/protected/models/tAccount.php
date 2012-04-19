@@ -104,7 +104,7 @@ class tAccount extends CActiveRecord
 		));
 	}
 
-	public function labarugiDitahan($periode_date)
+	public static function labarugiDitahan($periode_date)
 	{
 		$_grandtotal=0;
 		$_grandtotalA=0;
@@ -317,7 +317,7 @@ class tAccount extends CActiveRecord
 
 
 
-	public function getTopCreated() {
+	public static function getTopCreated() {
 
 		$models=self::model()->findAll(array('limit'=>10,'order'=>'created_date DESC'));
 
@@ -330,7 +330,7 @@ class tAccount extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopUpdated() {
+	public static function getTopUpdated() {
 
 		$models=self::model()->findAll(array('limit'=>10,'order'=>'updated_date DESC'));
 
@@ -343,7 +343,7 @@ class tAccount extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopRelated($name) {
+	public static function getTopRelated($name) {
 
 		//$_related = self::model()->find((int)$id)->account_name;
 		$_exp=explode(" ",$name);

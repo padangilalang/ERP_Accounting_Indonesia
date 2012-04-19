@@ -1,5 +1,5 @@
 <?php 
-	$this->widget('bootstrap.widgets.BootGridView', array(
+$this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'u-journal-detail-grid',
 		'dataProvider'=>uJournalDetail::model()->search($id),
 		'template'=>'{items}{pager}',
@@ -33,8 +33,8 @@
 
 
 <?php 
-	
-	$this->widget('bootstrap.widgets.BootDetailView', array(
+
+$this->widget('bootstrap.widgets.BootDetailView', array(
 		'data'=>uJournal::model()->findByPk((int)$id),
 		'attributes'=>array(
 				array(

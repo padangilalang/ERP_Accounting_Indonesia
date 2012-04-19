@@ -8,7 +8,8 @@ $this->breadcrumbs=array(
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/blockdevice.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/blockdevice.png') ?>
 		<?php echo $model->title; ?>
 	</h1>
 </div>

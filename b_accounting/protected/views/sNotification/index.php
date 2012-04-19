@@ -14,8 +14,10 @@ $this->menu2=sNotification::getTopCreated();
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/preferences_desktop_notification.png') ?>
-	Notification</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/preferences_desktop_notification.png') ?>
+		Notification
+	</h1>
 </div>
 
 <?php

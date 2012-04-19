@@ -25,7 +25,7 @@ class sParameter extends CActiveRecord
 	public function relations()
 	{
 		return array(
-		
+
 		);
 	}
 
@@ -39,15 +39,15 @@ class sParameter extends CActiveRecord
 	}
 
 	public function lastItem($type) {
-			$_item=self::model()->find(array('condition'=>'type ="'.$type.'"','order'=>'code DESC'));
-			if (isset($_item)) {
-				$_code=$_item->code+1;
-			} else
-				$_code=false;
-				
-			return $_code;
+		$_item=self::model()->find(array('condition'=>'type ="'.$type.'"','order'=>'code DESC'));
+		if (isset($_item)) {
+			$_code=$_item->code+1;
+		} else
+			$_code=false;
+
+		return $_code;
 	}
-	
+
 	public function search($type=null)
 	{
 		$criteria=new CDbCriteria;

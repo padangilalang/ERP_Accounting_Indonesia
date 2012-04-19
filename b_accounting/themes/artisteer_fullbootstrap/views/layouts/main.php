@@ -25,14 +25,19 @@
 		<?php $this->beginContent('/layouts/_notification'); $this->endContent(); ?>
 
 		<div class="row">
-		<div class="span10"><?php echo $content ?></div>
-		<div class="span2"><?php $this->beginContent('/layouts/_sbRightMenu'); $this->endContent(); ?></div>
-		</div>	
-		
+			<div class="span10">
+				<?php echo $content ?>
+			</div>
+			<div class="span2">
+				<?php $this->beginContent('/layouts/_sbRightMenu'); $this->endContent(); ?>
+			</div>
+		</div>
 
-	</div> <!-- /container -->
-	
+
+	</div>
+	<!-- /container -->
+
 	<?php $this->beginContent('/layouts/_footer'); $this->endContent(); ?>
-	
+
 </body>
 </html>

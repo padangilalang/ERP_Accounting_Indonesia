@@ -53,7 +53,7 @@
 	left: 0;
 	position: absolute;
 	opacity: 0;
-	filter: Alpha(Opacity =       0);
+	filter: Alpha(Opacity =         0);
 }
 
 /* Interaction Cues
@@ -207,7 +207,7 @@
 
 .ui-state-disabled,.ui-widget-content .ui-state-disabled {
 	opacity: .35;
-	filter: Alpha(Opacity =       35);
+	filter: Alpha(Opacity =         35);
 	background-image: none;
 }
 
@@ -217,7 +217,7 @@
 
 .ui-priority-secondary,.ui-widget-content .ui-priority-secondary {
 	opacity: .7;
-	filter: Alpha(Opacity =       70);
+	filter: Alpha(Opacity =         70);
 	font-weight: normal;
 }
 
@@ -1014,7 +1014,7 @@
 	background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50%
 		repeat-x;
 	opacity: .30;
-	filter: Alpha(Opacity =       30);
+	filter: Alpha(Opacity =         30);
 }
 
 .ui-widget-shadow {
@@ -1023,7 +1023,7 @@
 	background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50%
 		repeat-x;
 	opacity: .30;
-	filter: Alpha(Opacity =       30);
+	filter: Alpha(Opacity =         30);
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 } /* Resizable

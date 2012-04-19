@@ -10,18 +10,18 @@ $form=$this->beginWidget('BootActiveForm', array(
 	<?php echo $form->labelEx($model,'type',array('class'=>'control-label')); ?>
 	<div class="controls">
 		<?php
-			$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-					'model'=>$model,
-					'attribute'=>'type',
-					'value'=>$this->createUrl('SParameter/TParameter'),
-					'source'=>$this->createUrl('SParameter/TParameter'),
-					'options'=>array(
-							'minLength'=>'2',
-					),
-					'htmlOptions'=>array(
-							'style'=>'height:20px;'
-					),
-			));
+		$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+				'model'=>$model,
+				'attribute'=>'type',
+				'value'=>$this->createUrl('SParameter/TParameter'),
+				'source'=>$this->createUrl('SParameter/TParameter'),
+				'options'=>array(
+						'minLength'=>'2',
+				),
+				'htmlOptions'=>array(
+						
+				),
+		));
 		?>
 	</div>
 </div>

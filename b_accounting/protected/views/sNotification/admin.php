@@ -19,8 +19,10 @@ Yii::app()->clientScript->registerScript('search', "
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/preferences_desktop_notification.png') ?>
-	Notification Manager</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/preferences_desktop_notification.png') ?>
+		Notification Manager
+	</h1>
 </div>
 <?php 
 $this->beginWidget('zii.widgets.jui.CJuiDialog',

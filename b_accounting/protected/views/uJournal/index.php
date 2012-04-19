@@ -23,8 +23,9 @@ $this->menu2=uJournal::getTopCreated(1);
 </div>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
-	Journal Voucher
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
+		Journal Voucher
 	</h1>
 </div>
 

@@ -88,23 +88,23 @@ class UJournalController extends Controller
 				$_tcredit = 0;
 
 				for($i = 0; $i < sizeof($model->account_no_id); ++$i):
-					$modelDetail=new uJournalDetail;
-					$modelDetail->parent_id=$modelHeader->id;
-					$modelDetail->account_no_id=$model->account_no_id[$i];
+				$modelDetail=new uJournalDetail;
+				$modelDetail->parent_id=$modelHeader->id;
+				$modelDetail->account_no_id=$model->account_no_id[$i];
 
-					if ($model->debit[$i] != null) {
-						$modelDetail->debit=$model->debit[$i];
-					} else
-						$modelDetail->debit=0;
+				if ($model->debit[$i] != null) {
+					$modelDetail->debit=$model->debit[$i];
+				} else
+					$modelDetail->debit=0;
 
-					if ($model->credit[$i] != null) {
-						$modelDetail->credit=$model->credit[$i];
-					} else
-						$modelDetail->credit=0;
+				if ($model->credit[$i] != null) {
+					$modelDetail->credit=$model->credit[$i];
+				} else
+					$modelDetail->credit=0;
 
-					$modelDetail->user_remark=$model->user_remark[$i];
+				$modelDetail->user_remark=$model->user_remark[$i];
 
-					$modelDetail->save();
+				$modelDetail->save();
 				endfor;
 
 				Yii::app()->user->setFlash("success","<strong>Great!</strong> Journal updated succesfully...");
@@ -192,7 +192,7 @@ class UJournalController extends Controller
 		return $model;
 	}
 
-	public function actionJournalAutoComplete() 
+	public function actionJournalAutoComplete()
 	{
 		$res =array();
 		if (isset($_GET['term'])) {

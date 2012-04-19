@@ -2092,3 +2092,17 @@ Stack trace:
 REQUEST_URI=/b_accounting/index.php?r=tAccount/view
 HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount/view&id=8
 ---
+2012/04/19 13:01:28 [error] [php] copy(C:\wamp\www\b_accounting\assets\3b7b1939\js\bootstrap-dropdown.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (C:\wamp\www\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 C:\wamp\www\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 C:\wamp\www\framework\web\CAssetManager.php(233): copyDirectory()
+#2 C:\wamp\www\b_accounting\protected\extensions\bootstrap\components\Bootstrap.php(351): CAssetManager->publish()
+#3 C:\wamp\www\b_accounting\protected\extensions\bootstrap\components\Bootstrap.php(89): Bootstrap->getAssetsUrl()
+#4 C:\wamp\www\b_accounting\protected\extensions\bootstrap\components\Bootstrap.php(62): Bootstrap->registerCss()
+#5 C:\wamp\www\framework\base\CModule.php(388): Bootstrap->init()
+#6 C:\wamp\www\framework\base\CModule.php(493): CWebApplication->getComponent()
+#7 C:\wamp\www\framework\base\CApplication.php(146): CWebApplication->preloadComponents()
+#8 C:\wamp\www\framework\YiiBase.php(127): CWebApplication->__construct()
+#9 C:\wamp\www\framework\YiiBase.php(100): createApplication()
+#10 C:\wamp\www\b_accounting\index.php(19): createWebApplication()
+REQUEST_URI=/b_accounting/index.php

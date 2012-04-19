@@ -37,7 +37,7 @@ class SParameterController extends Controller
 				$this->redirect(array('/sParameter','type'=>$type));
 			}
 		}
-		
+
 		if(isset($_GET['type'])) {
 			$model->type=$_GET['type'];
 			$model->code=sParameter::lastItem($_GET['type']);
@@ -66,7 +66,7 @@ class SParameterController extends Controller
 		if (!empty($_GET['asDialog']))
 			$this->layout = '//layouts/iframe';
 		//----- end new code --------------------
-		
+
 		$this->render('update',array(
 				'model'=>$model,
 		));
@@ -85,7 +85,7 @@ class SParameterController extends Controller
 
 		$model=new sParameter('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['sParameter'])) 
+		if(isset($_GET['sParameter']))
 			$model->attributes=$_GET['sParameter'];
 
 		$this->render('index',array(

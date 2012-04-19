@@ -69,7 +69,7 @@ function addNewProduct()
 						'dateFormat'=>'dd-mm-yy',
 				),
 				'htmlOptions'=>array(
-						'style'=>'height:20px;'
+						
 				),
 		));
 		?>

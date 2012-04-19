@@ -147,7 +147,7 @@ class JAppendo extends CWidget
 		$this->options = $this->getClientOptions();
 		$js = $this->createJsCode();
 		$this->cs->registerScript(__CLASS__.'#'.$this->id, $js, CClientScript::POS_READY);
-		
+
 		$this->render($this->viewName,array(
 				'id'=>$this->id,
 				'model'=>$this->model,

@@ -5,27 +5,29 @@
  */
 ?>
 <?php echo "<?php \$form=\$this->beginWidget('ext.bootstrap.widgets.BootActiveForm',array(
-	'id'=>'".$this->class2id($this->modelClass)."-form',
-	'enableAjaxValidation'=>false,
+'id'=>'".$this->class2id($this->modelClass)."-form',
+'enableAjaxValidation'=>false,
 )); ?>\n"; ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+<p class="help-block">
+	Fields with <span class="required">*</span> are required.
+</p>
 
-	<?php echo "<?php echo \$form->errorSummary(\$model); ?>\n"; ?>
+<?php echo "<?php echo \$form->errorSummary(\$model); ?>\n"; ?>
 
 <?php
 foreach($this->tableSchema->columns as $column)
 {
 	if($column->autoIncrement)
 		continue;
-?>
-	<?php echo "<?php echo ".$this->generateActiveRow($this->modelClass,$column)."; ?>\n"; ?>
+	?>
+<?php echo "<?php echo ".$this->generateActiveRow($this->modelClass,$column)."; ?>\n"; ?>
 
 <?php
 }
 ?>
-	<div class="actions">
-		<?php echo "<?php echo CHtml::submitButton(\$model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn primary')); ?>\n"; ?>
-	</div>
+<div class="actions">
+	<?php echo "<?php echo CHtml::submitButton(\$model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn primary')); ?>\n"; ?>
+</div>
 
 <?php echo "<?php \$this->endWidget(); ?>\n"; ?>

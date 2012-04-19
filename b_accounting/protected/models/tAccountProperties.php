@@ -1,7 +1,7 @@
 <?php
 
 class tAccountProperties extends CActiveRecord
-{	
+{
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -54,7 +54,7 @@ class tAccountProperties extends CActiveRecord
 				'criteria'=>$criteria,
 		));
 	}
-	
+
 	public function setMvalue(){
 		if ($this->mvalue ==0 ) {
 			$_myval='*Inherited*';
@@ -65,5 +65,5 @@ class tAccountProperties extends CActiveRecord
 			
 		return $_myval;
 	}
-	
+
 }

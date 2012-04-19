@@ -12,43 +12,44 @@ $this->menu2=bPorder::getTopCreated();
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/payment.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/payment.png') ?>
 		Account Payable:
 		<?php if ($id==1) echo "Waiting for Approval"; elseif ($id==2) echo "Waiting for Payment"; elseif ($id==3) echo "Paid"; ?>
 	</h1>
 </div>
 
 <?php
-	$this->widget('bootstrap.widgets.BootMenu', array(
-    'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
-    'stacked'=>false, // whether this is a stacked menu
-    'items'=>array(
-		array('label'=>'Waiting for Approval','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>1)),'active'=>($id==1)),
-		array('label'=>'Waiting for Payment','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>2)),'active'=>($id==2)),
-		array('label'=>'Paid','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>3)),'active'=>($id==3)),
-		array('label'=>'Show All','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>0)),'active'=>($id==0)),
-	),
-	));
+$this->widget('bootstrap.widgets.BootMenu', array(
+		'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
+		'stacked'=>false, // whether this is a stacked menu
+		'items'=>array(
+				array('label'=>'Waiting for Approval','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>1)),'active'=>($id==1)),
+				array('label'=>'Waiting for Payment','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>2)),'active'=>($id==2)),
+				array('label'=>'Paid','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>3)),'active'=>($id==3)),
+				array('label'=>'Show All','url'=>Yii::app()->createUrl('/mAccpayable',array("id"=>0)),'active'=>($id==0)),
+		),
+));
 ?>
 
 
 <?php 
-	if ($id ==2) {
-		$form=$this->beginWidget('BootActiveForm', array(
+if ($id ==2) {
+	$form=$this->beginWidget('BootActiveForm', array(
 			'id'=>'login-form',
 			'action'=>array('mAccpayable/journalInventory'),
 			'type'=>'inline',
 			'enableAjaxValidation'=>true,
-		)); 
-	} else {
-		$form=$this->beginWidget('BootActiveForm', array(
+	));
+} else {
+	$form=$this->beginWidget('BootActiveForm', array(
 			'id'=>'login-form',
 			'action'=>array('mAccpayable/journalPayment'),
 			'type'=>'inline',
 			'enableAjaxValidation'=>true,
-		)); 
-		
-	}
+	));
+
+}
 
 ?>
 
@@ -60,13 +61,13 @@ $this->menu2=bPorder::getTopCreated();
 		'selectableRows'=>null,
 		'columns'=>array(
 				array(
-                        'class'=>'CCheckBoxColumn',
-                        'name'=>'journal_id',
-                        'value'=>'$data->id',
-                        'id'=>'journal_id',
+						'class'=>'CCheckBoxColumn',
+						'name'=>'journal_id',
+						'value'=>'$data->id',
+						'id'=>'journal_id',
 						'visible'=>($id ==2 || $id ==3),
 						'selectableRows'=>($id ==3) ? 1 : 2,
-                ),
+				),
 				array(
 						'header'=>'Entity',
 						'value'=>'$data->organization->name',
@@ -82,9 +83,9 @@ $this->menu2=bPorder::getTopCreated();
 				),
 				'input_date',
 				array(
-					'name'=>'system_ref',
-					'type'=>'raw',
-					'value'=>'CHtml::link($data->system_ref,Yii::app()->createUrl("/mAccpayable/view",array("id"=>$data->id)))',
+						'name'=>'system_ref',
+						'type'=>'raw',
+						'value'=>'CHtml::link($data->system_ref,Yii::app()->createUrl("/mAccpayable/view",array("id"=>$data->id)))',
 				),
 				//'periode_date',
 				//array(
@@ -112,7 +113,7 @@ $this->menu2=bPorder::getTopCreated();
 										'url'=>'$this->grid->controller->createUrl("/mAccpayable/view", array("id"=>$data->id,"asDialog"=>1,"gridId"=>$this->grid->id))',
 										'click'=>'function(){$("#cru-frame").attr("src",$(this).attr("href")); $("#cru-dialog").dialog("open"); return false;}',
 								),
-						
+
 								'print' => array
 								(
 										'label'=>'<i class="icon-print"></i>',
@@ -141,13 +142,13 @@ $this->menu2=bPorder::getTopCreated();
 										url  : $(this).attr("href"),
 										data: "",
 										success : function(r){
-											}
-											})
+}
+})
 										$.fn.yiiGridView.update("bporder-grid", {
 										data: $(this).serialize()
-										});
+});
 										return false;
-										}
+}
 										',
 								),
 								'payment' => array
@@ -182,15 +183,15 @@ $this->menu2=bPorder::getTopCreated();
 
 ?>
 
-<br/>
+<br />
 
 <?php 
-	if ($id ==2) {
-		echo CHtml::htmlButton('<i class="icon-ok"></i> Inventory Journal Processing ', array('class'=>'btn', 'type'=>'submit')); 
-	} elseif ($id ==3) {
-		echo CHtml::htmlButton('<i class="icon-ok"></i> Payment Journal Processing ', array('class'=>'btn', 'type'=>'submit')); 	
-	}
-	
+if ($id ==2) {
+	echo CHtml::htmlButton('<i class="icon-ok"></i> Inventory Journal Processing ', array('class'=>'btn', 'type'=>'submit'));
+} elseif ($id ==3) {
+	echo CHtml::htmlButton('<i class="icon-ok"></i> Payment Journal Processing ', array('class'=>'btn', 'type'=>'submit'));
+}
+
 
 ?>
 
@@ -211,8 +212,8 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 		),
 ));
 ?>
-<iframe id="cru-frame"
-	width="100%" height="100%"></iframe>
+<iframe id="cru-frame" width="100%"
+	height="100%"></iframe>
 <?php
 
 $this->endWidget();

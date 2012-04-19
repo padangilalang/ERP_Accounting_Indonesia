@@ -31,7 +31,8 @@ $this->menu3=aOrganization::getTopRelated($model->id);
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>
 		<?php echo $model->name; ?>
 	</h1>
 </div>
@@ -76,9 +77,9 @@ array (
 		'template'=>'{items}{pager}',
 		'columns'=>array(
 				array(
-					'header'=>'Account',
-					'type'=>'raw',
-					'value'=>'CHtml::link($data->account->account_concat(),Yii::app()->createUrl("/tAccount/view",array("id"=>$data->parent_id)))',
+						'header'=>'Account',
+						'type'=>'raw',
+						'value'=>'CHtml::link($data->account->account_concat(),Yii::app()->createUrl("/tAccount/view",array("id"=>$data->parent_id)))',
 				),
 				array(
 						'header'=>'Type Account',

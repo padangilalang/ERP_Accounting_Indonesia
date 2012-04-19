@@ -20,8 +20,10 @@ $this->menu2=aOrganization::getTopCreated();
 </div>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>
-	Organization Structure</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>
+		Organization Structure
+	</h1>
 </div>
 
 

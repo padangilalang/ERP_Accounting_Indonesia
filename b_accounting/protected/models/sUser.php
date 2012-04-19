@@ -3,7 +3,7 @@
 class sUser extends CActiveRecord
 {
 	public $password_repeat;
-	
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -235,14 +235,14 @@ class sUser extends CActiveRecord
 	public function getGroupArray()
 	{
 		$models=sGroup::model()->findAll('parent_id = '.Yii::app()->user->id);
-		
+
 		//Default Group as the first array
 		$_items[]=$this->getGroup();
-		
-		foreach($models as $model) 
+
+		foreach($models as $model)
 			$_items[]=$model->organization_root_id;
-		
-		
+
+
 		return $_items;
 	}
 
@@ -278,12 +278,12 @@ class sUser extends CActiveRecord
 		return $_groupRoot;
 	}
 
-	public function getAccess($mid)
+	public static function getAccess($mid)
 	{
 		$_items=array();
 		$models=self::model()->findAllBySql('SELECT a.id, a.username FROM s_user a
-											INNER JOIN s_user_module b ON a.id = b.s_user_id
-											WHERE b.s_module_id = ' . $mid );
+				INNER JOIN s_user_module b ON a.id = b.s_user_id
+				WHERE b.s_module_id = ' . $mid );
 		$_items[]='admin';
 
 		if ($models != null) {
@@ -292,11 +292,11 @@ class sUser extends CActiveRecord
 			}
 		} else
 			$_items[]='non_registered_user';
-		
+
 		return $_items;
 	}
-	
-	public function getTopCreated() {
+
+	public static function getTopCreated() {
 
 		$models=self::model()->findAll(array('limit'=>10,'order'=>'created_date DESC'));
 
@@ -309,7 +309,7 @@ class sUser extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopRelated($id) {
+	public static function getTopRelated($id) {
 
 		$_related = self::model()->findByPk((int)$id)->name;
 		$_exp=explode(" ",$_related);

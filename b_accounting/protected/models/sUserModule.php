@@ -52,7 +52,7 @@ class sUserModule extends CActiveRecord
 				'criteria'=>$criteria,
 		));
 	}
-	
+
 	public function searchUser($uid)
 	{
 		$criteria=new CDbCriteria;
@@ -65,5 +65,5 @@ class sUserModule extends CActiveRecord
 		));
 	}
 
-	
+
 }

@@ -58,9 +58,9 @@ class BootAlert extends BootWidget
 			if (Yii::app()->user->hasFlash($key))
 			{
 				echo strtr($this->template, array(
-					'{class}'=>$transitions ? ' fade in' : '',
-					'{key}'=>$key,
-					'{message}'=>Yii::app()->user->getFlash($key),
+						'{class}'=>$transitions ? ' fade in' : '',
+						'{key}'=>$key,
+						'{message}'=>Yii::app()->user->getFlash($key),
 				));
 			}
 		}
@@ -71,18 +71,18 @@ class BootAlert extends BootWidget
 		Yii::app()->clientScript->registerScript(__CLASS__.'#'.$this->id, "jQuery('{$selector}').alert();");
 
 		/*
-		// Register the "close" event-handler.
+		 // Register the "close" event-handler.
 		if (isset($this->events['close']))
 		{
-			$fn = CJavaScript::encode($this->events['close']);
-			Yii::app()->clientScript->registerScript(__CLASS__.'#'.$this->id.'.close', "jQuery('{$selector}').bind('close', {$fn});");
+		$fn = CJavaScript::encode($this->events['close']);
+		Yii::app()->clientScript->registerScript(__CLASS__.'#'.$this->id.'.close', "jQuery('{$selector}').bind('close', {$fn});");
 		}
 
 		// Register the "closed" event-handler.
 		if (isset($this->events['closed']))
 		{
-			$fn = CJavaScript::encode($this->events['closed']);
-			Yii::app()->clientScript->registerScript(__CLASS__.'#'.$this->id.'.closed', "jQuery('{$selector}').bind('closed', {$fn});");
+		$fn = CJavaScript::encode($this->events['closed']);
+		Yii::app()->clientScript->registerScript(__CLASS__.'#'.$this->id.'.closed', "jQuery('{$selector}').bind('closed', {$fn});");
 		}
 		*/
 	}

@@ -7,8 +7,8 @@
 <?php echo $form->errorSummary($model); ?>
 
 <?php echo $form->dropDownListRow($model,'haschild_id',sParameter::items("cHasChild"),array(
-'disabled'=>!empty($model->hasJournal),
-'hint'=>'Dropdown will disabled automatically when this account already has journal voucher on current period',
+		'disabled'=>!empty($model->hasJournal),
+		'hint'=>'Dropdown will disabled automatically when this account already has journal voucher on current period',
 )); ?>
 <?php echo $form->textFieldRow($model,'account_no',array('class'=>'span3')); ?>
 <?php echo $form->textFieldRow($model,'account_name',array('class'=>'span3')); ?>
@@ -30,11 +30,11 @@
 
 <?php $this->endWidget(); ?>
 
-<hr/>
+<hr />
 
 <h3>Sibling Account</h3>
 <?php 
-	$this->widget('bootstrap.widgets.BootGridView', array(
+$this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'t-account-grid',
 		'dataProvider'=>tAccount::model()->searchSibling($model->parent_id,$model->id),
 		'itemsCssClass'=>'table table-striped table-bordered',
@@ -46,8 +46,8 @@
 						'value'=>'CHtml::link($data->account_no. ". ".$data->account_name,Yii::app()->createUrl("tAccount/view",array("id"=>$data->id)))',
 				),
 				array(
-					'name'=>'haschild_id',
-					'value'=>'isset($data->haschild) ? $data->haschild->childName->name : "Not Set"',
+						'name'=>'haschild_id',
+						'value'=>'isset($data->haschild) ? $data->haschild->childName->name : "Not Set"',
 				),
 				array(
 						'header'=>'Type Account',
@@ -62,6 +62,6 @@
 						'value'=>'$data->getState()',
 				),
 		),
-)); 
+));
 
 ?>

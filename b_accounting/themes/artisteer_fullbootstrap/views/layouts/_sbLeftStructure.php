@@ -1,3 +1,4 @@
-	<?php
-	$this->widget('treeViewStructure');
-	?>
+
+<?php
+$this->widget('treeViewStructure');
+?>

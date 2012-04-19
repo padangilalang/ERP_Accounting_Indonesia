@@ -167,7 +167,7 @@ class cSupplier extends CActiveRecord
 		return $_items;
 	}
 
-	public function getTopCreated() {
+	public static function getTopCreated() {
 
 		$criteria=new CDbCriteria;
 		$criteria->with=array('sort_po_created');
@@ -184,7 +184,7 @@ class cSupplier extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopUpdated() {
+	public static function getTopUpdated() {
 
 		$criteria=new CDbCriteria;
 		$criteria->with=array('sort_po_updated');
@@ -203,7 +203,7 @@ class cSupplier extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopRelated($id) {
+	public static function getTopRelated($id) {
 
 		$_related = self::model()->findByPk((int)$id)->company_name;
 		$_exp=explode(" ",$_related);

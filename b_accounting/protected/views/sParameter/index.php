@@ -7,8 +7,10 @@ $this->breadcrumbs=array(
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/ms_dos_batch_file.png') ?>
-	Data Parameter</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/ms_dos_batch_file.png') ?>
+		Data Parameter
+	</h1>
 </div>
 <?php
 $this->widget('DropDownRedirect', array(
@@ -19,28 +21,28 @@ $this->widget('DropDownRedirect', array(
 ?>
 
 <?php 
-		//$this->widget('bootstrap.widgets.BootGridView', array(
-		$this->widget('ext.groupgridview.GroupGridView', array(
-		'extraRowColumns' => array('type'),  
+//$this->widget('bootstrap.widgets.BootGridView', array(
+$this->widget('ext.groupgridview.GroupGridView', array(
+		'extraRowColumns' => array('type'),
 		'id'=>'parameter-grid',
 		'dataProvider'=>$model->search($type),
 		'itemsCssClass'=>'table table-striped table-bordered',
 		'template'=>'{items}{pager}',
 		'columns'=>array(
 				array(
-					'class'=>'bootstrap.widgets.BootButtonColumn',
-					'template'=>'{updated}{delete}',
-					'deleteButtonUrl'=>'Yii::app()->createUrl("/sParameter/delete",array("pk1"=>$data->type,"pk2"=>$data->code))',
-					'buttons'=>array
-					(
-						'updated' => array
+						'class'=>'bootstrap.widgets.BootButtonColumn',
+						'template'=>'{updated}{delete}',
+						'deleteButtonUrl'=>'Yii::app()->createUrl("/sParameter/delete",array("pk1"=>$data->type,"pk2"=>$data->code))',
+						'buttons'=>array
 						(
-							'label'=>'Update',
-							'url'=>'Yii::app()->createUrl("/sParameter/update",array("pk1"=>$data->type,"pk2"=>$data->code,"asDialog"=>1,"gridId"=>$this->grid->id))',
-							'click'=>'function(){$("#cru-frame").attr("src",$(this).attr("href")); $("#cru-dialog").dialog("open");  return false;}',
+								'updated' => array
+								(
+										'label'=>'Update',
+										'url'=>'Yii::app()->createUrl("/sParameter/update",array("pk1"=>$data->type,"pk2"=>$data->code,"asDialog"=>1,"gridId"=>$this->grid->id))',
+										'click'=>'function(){$("#cru-frame").attr("src",$(this).attr("href")); $("#cru-dialog").dialog("open");  return false;}',
 
+								),
 						),
-					),
 				),
 				'code',
 				'name',
@@ -50,12 +52,12 @@ $this->widget('DropDownRedirect', array(
 <hr />
 
 <?php $this->widget('bootstrap.widgets.BootTabbable', array(
-    'type'=>'tabs', // 'tabs' or 'pills'
-    'tabs'=>array(
-		array('label'=>'Existing Parameter', 'content'=>$this->renderPartial("_formE", array("model"=>$modelParameter), true)),
-		array('label'=>'New Parameter', 'content'=>$this->renderPartial("_form", array("model"=>$modelParameter), true)),
-	),
-)); 
+		'type'=>'tabs', // 'tabs' or 'pills'
+		'tabs'=>array(
+				array('label'=>'Existing Parameter', 'content'=>$this->renderPartial("_formE", array("model"=>$modelParameter), true)),
+				array('label'=>'New Parameter', 'content'=>$this->renderPartial("_form", array("model"=>$modelParameter), true)),
+		),
+));
 
 ?>
 
@@ -74,9 +76,7 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 ));
 ?>
 
-<iframe id="cru-frame"
-	width="100%" height="100%">
-</iframe>
+<iframe id="cru-frame" width="100%" height="100%"> </iframe>
 <?php
 $this->endWidget();
 //--------------------- end new code --------------------------

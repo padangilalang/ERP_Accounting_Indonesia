@@ -47,7 +47,7 @@ class sGroup extends CActiveRecord
 	public function relations()
 	{
 		return array(
-			'organization_root' => array(self::BELONGS_TO, 'aOrganization', 'organization_root_id'),
+				'organization_root' => array(self::BELONGS_TO, 'aOrganization', 'organization_root_id'),
 		);
 	}
 

@@ -23,9 +23,13 @@
 		<?php $this->beginContent('/layouts/_notification'); $this->endContent(); ?>
 
 		<div class="row">
-			<div class="span10"><?php echo $content ?></div>
-			<div class="span2"><?php $this->beginContent('/layouts/_sbRightOperation'); $this->endContent(); ?></div>
-		</div>	
+			<div class="span10">
+				<?php echo $content ?>
+			</div>
+			<div class="span2">
+				<?php $this->beginContent('/layouts/_sbRightOperation'); $this->endContent(); ?>
+			</div>
+		</div>
 		<?php $this->beginContent('/layouts/_footer'); $this->endContent(); ?>
 	</div>
 

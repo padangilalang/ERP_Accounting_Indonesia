@@ -48,7 +48,7 @@ div.mcdropdown a:active {
 
 div.mcdropdownDisabled {
 	background-color: #e1e0e0;
-	filter: alpha(opacity =       75);
+	filter: alpha(opacity =         75);
 	-moz-opacity: .75;
 	opacity: .75;
 	-khtml-user-select: none;
@@ -145,9 +145,13 @@ ul
 
 
 
+
+
 .mcdropdown_menu
 >
 li
+
+
 
 
 
@@ -159,17 +163,23 @@ li
 
 
 
+
+
 :not
 
 
+
  
+
 
 
 (
 .mc_firstrow
 
 
+
  
+
 
 
 ){
@@ -178,26 +188,36 @@ border-top
 
 
 
+
+
 :
 
 
+
  
+
 
 
 1
 px
 
 
+
  
+
 
 
 solid
 
 
+
  
 
 
+
 #999
+
+
 
 
 
@@ -254,19 +274,27 @@ ul
 
 
 
+
+
 .mcdropdown_menu
 
 
+
  
+
 
 
 ul
 
 
+
  
 
 
+
 li
+
+
 
 
 
@@ -278,17 +306,23 @@ li
 
 
 
+
+
 :not
 
 
+
  
+
 
 
 (
 .mc_firstrow
 
 
+
  
+
 
 
 ){
@@ -297,26 +331,36 @@ border-top
 
 
 
+
+
 :
 
 
+
  
+
 
 
 1
 px
 
 
+
  
+
 
 
 solid
 
 
+
  
 
 
+
 #dedede
+
+
 
 
 
@@ -328,7 +372,7 @@ div.mcdropdown_shadow {
 	position: absolute;
 	margin: 3px 0 0 3px;
 	background: #000;
-	filter: alpha(opacity =       33);
+	filter: alpha(opacity =         33);
 }
 
 html>body div.mcdropdown_shadow {

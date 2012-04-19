@@ -90,8 +90,8 @@ class sNotificationDetail extends CActiveRecord
 	public function nicetime($time) {
 		$_mywaktu= new waktu;
 		$_nicetime = $_mywaktu->nicetime($time);
-		
-		return $_nicetime;		
+
+		return $_nicetime;
 	}
 
 	public function behaviors()

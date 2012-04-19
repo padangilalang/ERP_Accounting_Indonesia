@@ -14,7 +14,8 @@ $this->menu=array(
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/box.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/box.png') ?>
 		Update cProduct
 		<?php echo $model->id; ?>
 	</h1>

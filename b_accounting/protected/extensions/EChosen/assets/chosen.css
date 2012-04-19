@@ -38,7 +38,7 @@ select.chzn-select {
 	background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%);
 	background-image: -o-linear-gradient(top, #eeeeee 0%, #ffffff 50%);
 	background-image: -ms-linear-gradient(top, #eeeeee 0%, #ffffff 50%);
-	filter: progid:DXImageTransform.Microsoft.gradient(      startColorstr='#eeeeee',
+	filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#eeeeee',
 		endColorstr='#ffffff', GradientType=0 );
 	background-image: linear-gradient(top, #eeeeee 0%, #ffffff 50%);
 	-webkit-border-radius: 4px;
@@ -84,7 +84,7 @@ select.chzn-select {
 	background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
 	background-image: -o-linear-gradient(bottom, #ccc 0%, #eee 60%);
 	background-image: -ms-linear-gradient(top, #cccccc 0%, #eeeeee 60%);
-	filter: progid:DXImageTransform.Microsoft.gradient(      startColorstr='#cccccc',
+	filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#cccccc',
 		endColorstr='#eeeeee', GradientType=0 );
 	background-image: linear-gradient(top, #cccccc 0%, #eeeeee 60%);
 	border-left: 1px solid #aaa;
@@ -153,7 +153,7 @@ select.chzn-select {
 	background-image: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
 	background-image: -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
 	background-image: -ms-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
-	filter: progid:DXImageTransform.Microsoft.gradient(      startColorstr='#ffffff',
+	filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#ffffff',
 		endColorstr='#eeeeee', GradientType=0 );
 	background-image: linear-gradient(top, #ffffff 85%, #eeeeee 99%);
 	border: 1px solid #aaa;
@@ -208,7 +208,7 @@ select.chzn-select {
 	background-image: -moz-linear-gradient(center bottom, #e4e4e4 0%, #eeeeee 70%);
 	background-image: -o-linear-gradient(bottom, #e4e4e4 0%, #eeeeee 70%);
 	background-image: -ms-linear-gradient(top, #e4e4e4 0%, #eeeeee 70%);
-	filter: progid:DXImageTransform.Microsoft.gradient(      startColorstr='#e4e4e4',
+	filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#e4e4e4',
 		endColorstr='#eeeeee', GradientType=0 );
 	background-image: linear-gradient(top, #e4e4e4 0%, #eeeeee 70%);
 	color: #333;
@@ -331,7 +331,7 @@ select.chzn-select {
 	background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
 	background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
 	background-image: -ms-linear-gradient(top, #ffffff 0%, #eeeeee 50%);
-	filter: progid:DXImageTransform.Microsoft.gradient(      startColorstr='#ffffff',
+	filter: progid:DXImageTransform.Microsoft.gradient(       startColorstr='#ffffff',
 		endColorstr='#eeeeee', GradientType=0 );
 	background-image: linear-gradient(top, #ffffff 0%, #eeeeee 50%);
 	-webkit-border-bottom-left-radius: 0;

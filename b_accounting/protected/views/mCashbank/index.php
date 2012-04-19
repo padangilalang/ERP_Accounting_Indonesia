@@ -32,19 +32,21 @@ Yii::app()->clientScript->registerScript('search', "
 </div>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/bank.png') ?>
-	Cash and Bank</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/bank.png') ?>
+		Cash and Bank
+	</h1>
 </div>
 
 
-	<?php
-	$this->widget('DropDownRedirect', array(
-			'data' => tAccount::cashBankAccount("ALL"),
-			'url' => $this->createUrl($this->route, array_merge($_GET, array('pid' => '__value__'))),
-			'select' =>(isset($_GET['pid'])) ? $_GET['pid'] : "(ALL)",
-	));
-	?>
-	
+<?php
+$this->widget('DropDownRedirect', array(
+		'data' => tAccount::cashBankAccount("ALL"),
+		'url' => $this->createUrl($this->route, array_merge($_GET, array('pid' => '__value__'))),
+		'select' =>(isset($_GET['pid'])) ? $_GET['pid'] : "(ALL)",
+));
+?>
+
 <?php 
 if (isset($_GET['pid'])) {
 	if ((int)$_GET['pid'] !=0) {

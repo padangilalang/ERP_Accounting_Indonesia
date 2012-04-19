@@ -30,7 +30,8 @@ $this->menu3=aOrganization::getTopRelated($model->id);
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>
 		Update:
 		<?php echo $model->name; ?>
 	</h1>

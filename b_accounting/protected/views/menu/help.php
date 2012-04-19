@@ -50,7 +50,7 @@ $this->breadcrumbs=array(
 
 <!-- Facebook Badge START -->
 <a href="http://www.facebook.com/peterjkambey" target="_TOP"
-	style="font-family: &amp; amp; amp; amp; amp; amp; quot; lucida grande&amp;amp; amp; amp; amp; amp; quot; , tahoma ,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;"
+	style="font-family: &amp; amp; amp; amp; amp; amp; amp; quot; lucida grande&amp;amp; amp; amp; amp; amp; amp; quot; , tahoma ,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;"
 	title="Peter Jack Kambey">Peter Jack Kambey</a>
 <br />
 <a href="http://www.facebook.com/peterjkambey" target="_TOP"

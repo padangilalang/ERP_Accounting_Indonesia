@@ -62,10 +62,10 @@ img {
 .art-hmenu a .r,.art-hmenu a .l {
 	font-size: 1px;
 	background: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/menuitem.png',sizingMethod='crop')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/menuitem.png',sizingMethod='crop')" );
 }
 
 .art-hmenu a .r {
@@ -75,7 +75,7 @@ img {
 }
 
 .art-hmenu a .l {
-	width: expression(this.parentNode.offsetWidth-0 +     'px');
+	width: expression(this.parentNode.offsetWidth-0 +       'px');
 }
 
 .art-hmenuhover .art-hmenuhoverA .t {
@@ -93,10 +93,10 @@ img {
 	font-size: 1px;
 	zoom: 1;
 	background: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/menuseparator.png',sizingMethod='crop')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/menuseparator.png',sizingMethod='crop')" );
 }
 
 /* end MenuSeparator */
@@ -139,10 +139,10 @@ img {
 }
 
 .art-sheet-tr,.art-sheet-tl,.art-sheet-br,.art-sheet-bl {
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/sheet_s.png',sizingMethod='scale')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/sheet_s.png',sizingMethod='scale')" );
 }
 
 .art-sheet-tl {
@@ -150,27 +150,27 @@ img {
 }
 
 .art-sheet-tr {
-	left: expression(this.parentNode.offsetWidth-58 +     'px');
+	left: expression(this.parentNode.offsetWidth-58 +       'px');
 	clip: rect(auto, auto, 29px, 29px);
 }
 
 .art-sheet-bl {
-	top: expression(this.parentNode.offsetHeight-58 +     'px');
+	top: expression(this.parentNode.offsetHeight-58 +       'px');
 	clip: rect(29px, 29px, auto, auto);
 }
 
 .art-sheet-br {
-	top: expression(this.parentNode.offsetHeight-58 +     'px');
-	left: expression(this.parentNode.offsetWidth-58 +     'px');
+	top: expression(this.parentNode.offsetHeight-58 +       'px');
+	left: expression(this.parentNode.offsetWidth-58 +       'px');
 	clip: rect(29px, auto, auto, 29px);
 }
 
 .art-sheet-tc,.art-sheet-bc {
-	width: expression(this.parentNode.offsetWidth-58 +     'px');
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/sheet_h.png',sizingMethod='scale')" );
+	width: expression(this.parentNode.offsetWidth-58 +       'px');
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/sheet_h.png',sizingMethod='scale')" );
 }
 
 .art-sheet-tc {
@@ -178,20 +178,20 @@ img {
 }
 
 .art-sheet-bc {
-	top: expression(this.parentNode.offsetHeight-58 +     'px');
+	top: expression(this.parentNode.offsetHeight-58 +       'px');
 	clip: rect(29px, auto, auto, auto);
 }
 
 .art-sheet-cr,.art-sheet-cl {
-	height: expression(this.parentNode.offsetHeight-58 +     'px');
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/sheet_v.png',sizingMethod='scale')" );
+	height: expression(this.parentNode.offsetHeight-58 +       'px');
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/sheet_v.png',sizingMethod='scale')" );
 }
 
 .art-sheet-cr {
-	left: expression(this.parentNode.offsetWidth-58 +     'px');
+	left: expression(this.parentNode.offsetWidth-58 +       'px');
 	clip: rect(auto, auto, auto, 29px);
 }
 
@@ -201,14 +201,14 @@ img {
 
 .art-sheet-cc {
 	font-size: 1px;
-	width: expression(this.parentNode.offsetWidth-58 +     'px');
-	height: expression(this.parentNode.offsetHeight-58 +     'px');
+	width: expression(this.parentNode.offsetWidth-58 +       'px');
+	height: expression(this.parentNode.offsetHeight-58 +       'px');
 	background-color: #FFFFFF;
 }
 
 #art-page-background-top-texture,#art-page-background-middle-texture {
-	width: expression(document.body.clientWidth >     700 ?     "100%" :    
-		"700px");
+	width: expression(document.body.clientWidth >       700 ?       "100%" :     
+		 "700px");
 }
 
 .art-sheet {
@@ -220,10 +220,10 @@ img {
 div.art-textblock {
 	font-size: 1px;
 	background: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/textblock-bg.png',sizingMethod='scale')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/textblock-bg.png',sizingMethod='scale')" );
 }
 /* end TextBlock */
 
@@ -231,10 +231,11 @@ div.art-textblock {
 div.art-headerobject {
 	font-size: 1px;
 	background: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/header-object.png',sizingMethod='scale')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/header-object.png',sizingMethod='scale')"
+		);
 }
 /* end HeaderObject */
 
@@ -260,19 +261,19 @@ div.art-headerobject {
 
 .art-button-wrapper .art-button-l,.art-button-wrapper .art-button-r {
 	background: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/button.png',sizingMethod='crop')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/button.png',sizingMethod='crop')" );
 }
 
 .art-button-wrapper .art-button-r {
-	left: expression(this.parentNode.offsetWidth-409 +     'px');
+	left: expression(this.parentNode.offsetWidth-409 +       'px');
 	clip: rect(auto, auto, auto, 399px);
 }
 
 .art-button-wrapper .art-button-l {
-	width: expression(this.parentNode.offsetWidth-10 +     'px');
+	width: expression(this.parentNode.offsetWidth-10 +       'px');
 }
 /* end Button */
 
@@ -288,10 +289,10 @@ div.art-headerobject {
 }
 
 .art-block-tr,.art-block-tl,.art-block-br,.art-block-bl {
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/block_s.png',sizingMethod='scale')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/block_s.png',sizingMethod='scale')" );
 }
 
 .art-block-tl {
@@ -299,27 +300,27 @@ div.art-headerobject {
 }
 
 .art-block-tr {
-	left: expression(this.parentNode.offsetWidth-26 +     'px');
+	left: expression(this.parentNode.offsetWidth-26 +       'px');
 	clip: rect(auto, auto, 13px, 13px);
 }
 
 .art-block-bl {
-	top: expression(this.parentNode.offsetHeight-26 +     'px');
+	top: expression(this.parentNode.offsetHeight-26 +       'px');
 	clip: rect(13px, 13px, auto, auto);
 }
 
 .art-block-br {
-	top: expression(this.parentNode.offsetHeight-26 +     'px');
-	left: expression(this.parentNode.offsetWidth-26 +     'px');
+	top: expression(this.parentNode.offsetHeight-26 +       'px');
+	left: expression(this.parentNode.offsetWidth-26 +       'px');
 	clip: rect(13px, auto, auto, 13px);
 }
 
 .art-block-tc,.art-block-bc {
-	width: expression(this.parentNode.offsetWidth-26 +     'px');
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/block_h.png',sizingMethod='scale')" );
+	width: expression(this.parentNode.offsetWidth-26 +       'px');
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/block_h.png',sizingMethod='scale')" );
 }
 
 .art-block-tc {
@@ -327,20 +328,20 @@ div.art-headerobject {
 }
 
 .art-block-bc {
-	top: expression(this.parentNode.offsetHeight-26 +     'px');
+	top: expression(this.parentNode.offsetHeight-26 +       'px');
 	clip: rect(13px, auto, auto, auto);
 }
 
 .art-block-cr,.art-block-cl {
-	height: expression(this.parentNode.offsetHeight-26 +     'px');
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/block_v.png',sizingMethod='scale')" );
+	height: expression(this.parentNode.offsetHeight-26 +       'px');
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/block_v.png',sizingMethod='scale')" );
 }
 
 .art-block-cr {
-	left: expression(this.parentNode.offsetWidth-26 +     'px');
+	left: expression(this.parentNode.offsetWidth-26 +       'px');
 	clip: rect(auto, auto, auto, 13px);
 }
 
@@ -350,8 +351,8 @@ div.art-headerobject {
 
 .art-block-cc {
 	font-size: 1px;
-	width: expression(this.parentNode.offsetWidth-26 +     'px');
-	height: expression(this.parentNode.offsetHeight-26 +     'px');
+	width: expression(this.parentNode.offsetWidth-26 +       'px');
+	height: expression(this.parentNode.offsetHeight-26 +       'px');
 	background-color: #EEE8E3;
 }
 /* end Box, Block */
@@ -363,19 +364,19 @@ div.art-headerobject {
 
 .art-blockheader .l,.art-blockheader .r {
 	background: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/blockheader.png',sizingMethod='crop')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/blockheader.png',sizingMethod='crop')" );
 }
 
 .art-blockheader .r {
-	left: expression(this.parentNode.offsetWidth-1728 +     'px');
+	left: expression(this.parentNode.offsetWidth-1728 +       'px');
 	clip: rect(auto, auto, auto, 1704px);
 }
 
 .art-blockheader .l {
-	width: expression(this.parentNode.offsetWidth-24 +     'px');
+	width: expression(this.parentNode.offsetWidth-24 +       'px');
 }
 /* end BlockHeader */
 
@@ -387,10 +388,10 @@ div.art-headerobject {
 .art-blockcontent-body ul li {
 	height: 1%;
 	background: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/blockcontentbullets.png',sizingMethod='crop')"
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/blockcontentbullets.png',sizingMethod='crop')"
 		);
 }
 
@@ -413,10 +414,10 @@ div.art-headerobject {
 .art-postcontent blockquote {
 	height: 1%;
 	background-image: none;
-	behavior: expression(this.runtimeStyle.filter ?     '' :    
-		this.runtimeStyle.filter =  
-		  "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +  
-		  artGetStyleUrl()+"images/postquote.png',sizingMethod='crop')" );
+	behavior: expression(this.runtimeStyle.filter ?       '' :     
+		 this.runtimeStyle.filter =   
+		   "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +   
+		   artGetStyleUrl()+"images/postquote.png',sizingMethod='crop')" );
 }
 /* end PostQuote */
 
@@ -435,8 +436,8 @@ div.art-headerobject {
 }
 
 .art-footer-b {
-	top: expression(this.parentNode.offsetHeight-50 +     'px');
-	width: expression(this.parentNode.offsetWidth-0 +     'px');
+	top: expression(this.parentNode.offsetHeight-50 +       'px');
+	width: expression(this.parentNode.offsetWidth-0 +       'px');
 	zoom: 1;
 	font-size: 1px;
 }
@@ -444,7 +445,7 @@ div.art-headerobject {
 .art-footer-t {
 	zoom: 1;
 	font-size: 1px;
-	height: expression(this.parentNode.offsetHeight-50 +     'px');
+	height: expression(this.parentNode.offsetHeight-50 +       'px');
 	width: 100%;
 }
 

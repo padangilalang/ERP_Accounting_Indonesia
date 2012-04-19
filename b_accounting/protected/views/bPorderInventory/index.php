@@ -13,23 +13,24 @@ $this->menu2=bPorder::getTopCreated(1);
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/shopcart.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/shopcart.png') ?>
 		PO Inventory:
 		<?php if ($id==1) echo "UnApproved"; elseif ($id==2) echo "Unpaid/Partial Paid"; else "Paid"; ?>
 	</h1>
 </div>
 
 <?php
-	$this->widget('bootstrap.widgets.BootMenu', array(
-    'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
-    'stacked'=>false, // whether this is a stacked menu
-    'items'=>array(
-		array('label'=>'UnApproved','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>1)),'active'=>($id==1)),
-		array('label'=>'UnPaid/Partial Paid','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>2)),'active'=>($id==2)),
-		array('label'=>'Paid','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>3)),'active'=>($id==3)),
-		array('label'=>'Show All','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>0)),'active'=>($id==0)),
-	),
-	));
+$this->widget('bootstrap.widgets.BootMenu', array(
+		'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
+		'stacked'=>false, // whether this is a stacked menu
+		'items'=>array(
+				array('label'=>'UnApproved','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>1)),'active'=>($id==1)),
+				array('label'=>'UnPaid/Partial Paid','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>2)),'active'=>($id==2)),
+				array('label'=>'Paid','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>3)),'active'=>($id==3)),
+				array('label'=>'Show All','url'=>Yii::app()->createUrl('/bPorderInventory',array("id"=>0)),'active'=>($id==0)),
+		),
+));
 ?>
 
 <?php $this->widget('bootstrap.widgets.BootGridView', array(
@@ -124,8 +125,8 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 		),
 ));
 ?>
-<iframe id="cru-frame"
-	width="100%" height="100%"></iframe>
+<iframe id="cru-frame" width="100%"
+	height="100%"></iframe>
 <?php
 
 $this->endWidget();

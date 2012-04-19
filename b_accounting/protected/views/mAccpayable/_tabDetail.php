@@ -22,8 +22,8 @@ $this->widget('ext.XDetailView', array(
 				'no_account',
 				'atas_nama',
 				array(
-					'label'=>'Status',
-					'value'=>$model->status->name,
+						'label'=>'Status',
+						'value'=>$model->status->name,
 				),
 		),
 )); ?>

@@ -16,8 +16,10 @@ $this->menu2=uJournal::getTopCreated(1);
 
 
 <div class="page-header">
-		<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
-		Journal Voucher</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
+		Journal Voucher
+	</h1>
 </div>
 
 <?php $form=$this->beginWidget('BootActiveForm', array(
@@ -44,7 +46,7 @@ $this->menu2=uJournal::getTopCreated(1);
 						'maxDate'=>'+1M +10D',
 				),
 				'htmlOptions'=>array(
-						'style'=>'height:20px;'
+						
 				),
 		));
 		?>

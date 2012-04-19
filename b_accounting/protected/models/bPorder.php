@@ -292,7 +292,7 @@ class bPorder extends CActiveRecord
 		return $_state;
 	}
 
-	public function getTopCreated($id=null) {  //1=PO Inventory, 2=PO General
+	public static function getTopCreated($id=null) {  //1=PO Inventory, 2=PO General
 
 		$criteria=new CDbCriteria;
 		$criteria->limit=10;
@@ -312,7 +312,7 @@ class bPorder extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopUpdated($id=null) {  //1=PO Inventory, 2=PO General
+	public static function getTopUpdated($id=null) {  //1=PO Inventory, 2=PO General
 
 		$criteria=new CDbCriteria;
 		$criteria->limit=10;
@@ -332,7 +332,7 @@ class bPorder extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopUnApprovedPO() {  
+	public static function getTopUnApprovedPO() {  
 
 		$criteria=new CDbCriteria;
 		$criteria->limit=10;
@@ -352,7 +352,7 @@ class bPorder extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopUnPaidPO() {  
+	public static function getTopUnPaidPO() {  
 
 		$criteria=new CDbCriteria;
 		$criteria->limit=10;
@@ -372,7 +372,7 @@ class bPorder extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function getTopRelated($name) {
+	public static function getTopRelated($name) {
 
 		//$_related = self::model()->find((int)$id)->account_name;
 		$_exp=explode(" ",$name);

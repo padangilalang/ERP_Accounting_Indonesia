@@ -65,21 +65,21 @@ class BootCarousel extends BootWidget
 		$options = !empty($this->options) ? CJavaScript::encode($this->options) : '';
 		$cs->registerScript(__CLASS__.'#'.$id, "jQuery('{$id}').carousel({$options});");
 
-        // Register the "slide" event-handler.
-        if (isset($this->events['slide']))
-        {
-            $fn = CJavaScript::encode($this->events['slide']);
-	        $cs->registerScript(__CLASS__.'#'.$this->id.'.slide',
-	                "jQuery('#{$id}').on('slide', {$fn});");
-        }
+		// Register the "slide" event-handler.
+		if (isset($this->events['slide']))
+		{
+			$fn = CJavaScript::encode($this->events['slide']);
+			$cs->registerScript(__CLASS__.'#'.$this->id.'.slide',
+					"jQuery('#{$id}').on('slide', {$fn});");
+		}
 
-        // Register the "slid" event-handler.
-        if (isset($this->events['slid']))
-        {
-            $fn = CJavaScript::encode($this->events['slid']);
-	        $cs->registerScript(__CLASS__.'#'.$this->id.'.slid',
-	                "jQuery('#{$id}').on('slid', {$fn});");
-        }
+		// Register the "slid" event-handler.
+		if (isset($this->events['slid']))
+		{
+			$fn = CJavaScript::encode($this->events['slid']);
+			$cs->registerScript(__CLASS__.'#'.$this->id.'.slid',
+					"jQuery('#{$id}').on('slid', {$fn});");
+		}
 	}
 
 	/**

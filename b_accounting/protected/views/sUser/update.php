@@ -16,7 +16,7 @@ $this->menu2=sUser::getTopCreated();
 
 <div class="page-header">
 	<h1>
-	<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
 		<?php echo $model->username; ?>
 	</h1>
 </div>

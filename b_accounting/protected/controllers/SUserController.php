@@ -118,7 +118,7 @@ class SUserController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		 $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['sUser']))
 		{

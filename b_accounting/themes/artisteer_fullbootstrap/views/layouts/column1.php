@@ -23,8 +23,10 @@
 		<?php $this->beginContent('/layouts/_notification'); $this->endContent(); ?>
 
 		<div class="row">
-			<div class="span12"><?php echo $content ?></div>
-		</div>	
+			<div class="span12">
+				<?php echo $content ?>
+			</div>
+		</div>
 		<?php $this->beginContent('/layouts/_footer'); $this->endContent(); ?>
 	</div>
 

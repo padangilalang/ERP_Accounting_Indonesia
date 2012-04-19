@@ -11,8 +11,10 @@
 		<tr>
 			<td><?php echo CHtml::dropDownList('account_properties[]',"",sParameter::itemsOther("cAccProperties")); ?>
 			</td>
-			<td><?php echo CHtml::dropDownList('value[]','',array('0'=>'*Inherited*','1'=>'Set Yes ( or Set No Child)','2'=>'Has Child')); ?></td>
-			<td><?php echo CHtml::textField('text[]',''); ?></td>
+			<td><?php echo CHtml::dropDownList('value[]','',array('0'=>'*Inherited*','1'=>'Set Yes ( or Set No Child)','2'=>'Has Child')); ?>
+			</td>
+			<td><?php echo CHtml::textField('text[]',''); ?>
+			</td>
 		</tr>
 		<?php else: ?>
 		<?php for($i = 0; $i < sizeof($model->account_properties); ++$i): ?>

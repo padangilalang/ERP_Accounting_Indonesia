@@ -37,9 +37,9 @@
 			<div class="art-sheet-cc"></div>
 			<div class="art-sheet-body">
 				<div class="art-content-layout">
-							<div class="art-post">
-										<?php echo $content; ?>
-							</div>
+					<div class="art-post">
+						<?php echo $content; ?>
+					</div>
 				</div>
 			</div>
 		</div>

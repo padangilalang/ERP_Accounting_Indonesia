@@ -126,8 +126,8 @@ class BootMenu extends BootBaseMenu
 				if(isset($item['items']) && !empty($item['items']))
 				{
 					$this->controller->widget('bootstrap.widgets.BootDropdown', array(
-						'items'=>$item['items'],
-						'htmlOptions'=>isset($item['dropdownOptions']) ? $item['dropdownOptions'] : $this->dropdownOptions,
+							'items'=>$item['items'],
+							'htmlOptions'=>isset($item['dropdownOptions']) ? $item['dropdownOptions'] : $this->dropdownOptions,
 					));
 				}
 
@@ -210,7 +210,7 @@ class BootMenu extends BootBaseMenu
 	{
 		foreach ($items as $item)
 			if (isset($item['active']) && $item['active'] === true)
-				return true;
+			return true;
 
 		return false;
 	}

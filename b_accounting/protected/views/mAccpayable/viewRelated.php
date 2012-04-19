@@ -100,39 +100,39 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 
 <h2>Purchased Journal</h2>
 <?php 
-		
-		$this->widget('bootstrap.widgets.BootDetailView', array(
-			'data'=>uJournal::model()->searchTagPurchasing($model->system_ref),
-			'attributes'=>array(
-					'input_date',
-					'yearmonth_periode',
-					'user_ref',
-					'system_ref',
-					'remark',
-			),	
-		));  
-		echo $this->renderPartial('/uJournal/_viewDetail', array('id'=>uJournal::model()->searchTagPurchasing($model->system_ref)->id));
+
+$this->widget('bootstrap.widgets.BootDetailView', array(
+		'data'=>uJournal::model()->searchTagPurchasing($model->system_ref),
+		'attributes'=>array(
+				'input_date',
+				'yearmonth_periode',
+				'user_ref',
+				'system_ref',
+				'remark',
+		),
+));
+echo $this->renderPartial('/uJournal/_viewDetail', array('id'=>uJournal::model()->searchTagPurchasing($model->system_ref)->id));
 ?>
 
 <?php 
-	if ($model->journal_state_id ==3) {
-	
-?>
+if ($model->journal_state_id ==3) {
+
+	?>
 <hr />
 <h2>Payment Journal</h2>
 <?php 
-		
-		$this->widget('bootstrap.widgets.BootDetailView', array(
-			'data'=>uJournal::model()->searchTagPayment($model->system_ref),
-			'attributes'=>array(
-					'input_date',
-					'yearmonth_periode',
-					'user_ref',
-					'system_ref',
-					'remark',
-			),
-		));  
-		echo $this->renderPartial('/uJournal/_viewDetail', array('id'=>uJournal::model()->searchTagPayment($model->system_ref)->id));
-	}
+
+$this->widget('bootstrap.widgets.BootDetailView', array(
+		'data'=>uJournal::model()->searchTagPayment($model->system_ref),
+		'attributes'=>array(
+				'input_date',
+				'yearmonth_periode',
+				'user_ref',
+				'system_ref',
+				'remark',
+		),
+));
+echo $this->renderPartial('/uJournal/_viewDetail', array('id'=>uJournal::model()->searchTagPayment($model->system_ref)->id));
+}
 
 ?>

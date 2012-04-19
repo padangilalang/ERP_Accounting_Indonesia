@@ -20,7 +20,7 @@
 						'dateFormat'=>'dd-mm-yy',
 				),
 				'htmlOptions'=>array(
-						'style'=>'height:20px;'
+						
 				),
 		));
 		?>
@@ -42,7 +42,7 @@
 						'dateFormat'=>'yymm',
 				),
 				'htmlOptions'=>array(
-						'style'=>'height:20px;'
+						
 				),
 		));
 		?>

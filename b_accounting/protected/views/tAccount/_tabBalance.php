@@ -71,9 +71,9 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 </h2>
 
 <?php 
-		//$this->widget('bootstrap.widgets.BootGridView', array(
-		$this->widget('ext.groupgridview.GroupGridView', array(
-		'mergeColumns' => array('journal.input_date'),  
+//$this->widget('bootstrap.widgets.BootGridView', array(
+$this->widget('ext.groupgridview.GroupGridView', array(
+		'mergeColumns' => array('journal.input_date'),
 		'id'=>'t-account-balance-grid',
 		'dataProvider'=>uJournalDetail::model()->searchByAccount($model->id),
 		'template'=>'{items}{pager}{summary}',
@@ -166,15 +166,15 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 						),
 				),
 
-/*				array(
-						'header'=>'Test',
-						'value'=>'$data->journal->entity->getTopLevelId()',
-				),
-				array(
-						'header'=>'Test',
-						'value'=>'sUser::model()->getGroup()',
-				), 
-*/
+		/*				array(
+		 'header'=>'Test',
+				'value'=>'$data->journal->entity->getTopLevelId()',
+		),
+		array(
+				'header'=>'Test',
+				'value'=>'sUser::model()->getGroup()',
+		),
+		*/
 		),
 ));
 ?>
@@ -195,8 +195,8 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 		),
 ));
 ?>
-<iframe id="cru-frame"
-	width="100%" height="100%"></iframe>
+<iframe id="cru-frame" width="100%"
+	height="100%"></iframe>
 <?php
 
 $this->endWidget();

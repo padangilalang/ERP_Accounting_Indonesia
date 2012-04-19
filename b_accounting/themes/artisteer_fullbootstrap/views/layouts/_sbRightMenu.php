@@ -1,7 +1,8 @@
-	<?php
-	$this->widget('communication');
-	?>
 
-	<?php
-	$this->widget('personalization');
-	?>
+<?php
+$this->widget('communication');
+?>
+
+<?php
+$this->widget('personalization');
+?>

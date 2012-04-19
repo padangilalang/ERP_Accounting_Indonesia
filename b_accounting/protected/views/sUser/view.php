@@ -17,7 +17,7 @@ $this->menu2=sUser::getTopCreated();
 
 <div class="page-header">
 	<h1>
-	<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
 		<?php echo CHtml::encode($model->username); ?>
 	</h1>
 </div>
@@ -44,11 +44,11 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 <br />
 
 <?php
-	$this->widget('bootstrap.widgets.BootTabbable', array(
+$this->widget('bootstrap.widgets.BootTabbable', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
 		'tabs'=>array(
-			array('label'=>'Module', 'content'=>$this->renderPartial("_tabUser", array("model"=>$model,"modelModule"=>$modelModule), true)),
-			array('label'=>'Group', 'content'=>$this->renderPartial("_tabGroup", array("model"=>$model,"modelGroup"=>$modelGroup), true)),
+				array('label'=>'Module', 'content'=>$this->renderPartial("_tabUser", array("model"=>$model,"modelModule"=>$modelModule), true)),
+				array('label'=>'Group', 'content'=>$this->renderPartial("_tabGroup", array("model"=>$model,"modelGroup"=>$modelGroup), true)),
 		),
-	)); 
+));
 ?>

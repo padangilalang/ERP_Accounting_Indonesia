@@ -30,7 +30,7 @@ class sNotificationController extends Controller
 		$model = $this->loadModel($id);
 		if ($model->receiver_id == Yii::app()->user->id)
 			$model->saveCounters(array('read_id'=>1));
-		
+
 		$this->render('view',array(
 				'model' => $model,
 				'comments' => $comments,
@@ -115,8 +115,8 @@ class sNotificationController extends Controller
 	{
 		$dataProvider=new CActiveDataProvider('sNotification',array('criteria'=>array('order'=>'sender_date DESC')));
 		$dataProviderMySelf=new CActiveDataProvider('sNotification',array('criteria'=>array(
-		'condition'=>'receiver_id = '.Yii::app()->user->id,
-		'order'=>'sender_date DESC')));
+				'condition'=>'receiver_id = '.Yii::app()->user->id,
+				'order'=>'sender_date DESC')));
 
 		$this->render('index',array(
 				'dataProviderMySelf'=>$dataProviderMySelf,

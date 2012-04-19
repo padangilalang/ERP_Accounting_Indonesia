@@ -15,7 +15,8 @@ $this->menu2=cSupplier::getTopCreated();
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/lorrygreen.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/lorrygreen.png') ?>
 		<?php echo $model->company_name; ?>
 	</h1>
 </div>

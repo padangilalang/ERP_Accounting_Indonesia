@@ -18,7 +18,7 @@ Yii::app()->clientScript->registerScript('search'.$data->id, "
 	if ($data->state_id == 4) {
 		echo $data->status->name;
 	} else {
-		echo 	   CHtml::link('DELETE',"#", array("submit"=>array('delete', 'id'=>$data->id), 'confirm' => 'Are you sure?')); 
+		echo 	   CHtml::link('DELETE',"#", array("submit"=>array('delete', 'id'=>$data->id), 'confirm' => 'Are you sure?'));
 		echo " | ";
 		echo CHtml::link('UPDATE',Yii::app()->createUrl($this->id.'/update',array("id"=>$data->id)));
 	}
@@ -28,8 +28,7 @@ Yii::app()->clientScript->registerScript('search'.$data->id, "
 	echo " ) ";
 
 
-	?> 
-	<?php echo CHtml::link('detail<i class="icon-chevron-right"></i>','#',array('class'=>'hide-info'.$data->id));
+	?> <?php echo CHtml::link('detail<i class="icon-chevron-right"></i>','#',array('class'=>'hide-info'.$data->id));
 	echo ($data->journalSum != $data->journalSumCek) ? " WARNING!!!... FAULT BY SYSTEM. JOURNAL IS NOT BALANCE, PLEASE DELETE.." : "";
 	?> </b>
 	<?php if ($data->remark !=null) { ?>

@@ -25,7 +25,7 @@
 						'maxDate'=>'+1M +10D',
 				),
 				'htmlOptions'=>array(
-						'style'=>'height:20px;'
+						
 				),
 		));
 		?>
@@ -56,7 +56,7 @@
 						'maxDate'=>'+1M +10D',
 				),
 				'htmlOptions'=>array(
-						'style'=>'height:20px;'
+						
 				),
 		));
 		?>

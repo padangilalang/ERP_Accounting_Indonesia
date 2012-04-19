@@ -18,15 +18,15 @@ if (!Yii::app()->user->isGuest) {
 	}
 
 	$this->widget('bootstrap.widgets.BootMenu', array(
-    'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
-    'stacked'=>false, // whether this is a stacked menu
-    'items'=>$items,
+			'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
+			'stacked'=>false, // whether this is a stacked menu
+			'items'=>$items,
 	));
 }  else
 	$this->widget('bootstrap.widgets.BootMenu', array(
-    'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
-    'stacked'=>false, // whether this is a stacked menu
-    //'items'=>$items,
+			'type'=>'pills', // '', 'tabs', 'pills' (or 'list')
+			'stacked'=>false, // whether this is a stacked menu
+			//'items'=>$items,
 	));
 
 ?>

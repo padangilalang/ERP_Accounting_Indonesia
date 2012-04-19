@@ -17,7 +17,8 @@ $this->menu2=uJournal::getTopCreated(1);
 
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/cash.png') ?>
 		Update:
 		<?php echo $model->system_ref; ?>
 	</h1>
@@ -45,7 +46,7 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 				'maxDate'=>'+1M +10D',
 		),
 		'htmlOptions'=>array(
-				'style'=>'height:20px;'
+				
 		),
 ));
 ?>

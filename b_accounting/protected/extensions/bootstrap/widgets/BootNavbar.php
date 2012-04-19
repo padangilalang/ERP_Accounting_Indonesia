@@ -100,8 +100,8 @@ class BootNavbar extends BootWidget
 			echo '</a>';
 		}
 
-        if ($this->brand !== false)
-            echo CHtml::openTag('a', $this->brandOptions).$this->brand.'</a>';
+		if ($this->brand !== false)
+			echo CHtml::openTag('a', $this->brandOptions).$this->brand.'</a>';
 
 		if ($this->collapse)
 			echo '<div class="nav-collapse">';

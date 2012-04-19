@@ -63,7 +63,7 @@ class MAccpayableController extends Controller
 			$total=0;
 			$m_ref=array();
 			$m_ref2=array();
-				
+
 			foreach($_POST['journal_id'] as $a=>$val)
 			{
 				$model=bPorder::model()->findByPk((int)$val);
@@ -80,7 +80,7 @@ class MAccpayableController extends Controller
 				}
 
 			}
-				
+
 			$modelHeader=new uJournal;
 			$modelHeader->input_date=Yii::app()->dateFormatter->format("dd-MM-yyyy",time());
 			$modelHeader->yearmonth_periode=Yii::app()->settings->get("System", "cCurrentPeriod");
@@ -91,7 +91,7 @@ class MAccpayableController extends Controller
 			$modelHeader->state_id=1;
 			$modelHeader->created_id=Yii::app()->user->id;
 			$modelHeader->created_date=time();
-				
+
 			$modelHeader->save();
 
 			//Create System_ref
@@ -103,7 +103,7 @@ class MAccpayableController extends Controller
 			$modelDetail->parent_id=$modelHeader->id;
 			$_inventory=tAccount::model()->with('inventory')->find('inventory.mvalue=1')->id;
 			$modelDetail->account_no_id=$_inventory;
-				
+
 			$modelDetail->debit=$total;
 			$modelDetail->credit=0;
 			$modelDetail->user_remark=implode($m_ref2," ");
@@ -123,8 +123,8 @@ class MAccpayableController extends Controller
 			$this->render('viewJournal',array(
 					'model'=>$modelHeader,
 			));
-				
-				
+
+
 		} else
 			$this->redirect(array('/mAccpayable'));
 	}
@@ -136,7 +136,7 @@ class MAccpayableController extends Controller
 		{
 			$total=0;
 			$m_ref=array();
-				
+
 			foreach($_POST['journal_id'] as $a=>$val)
 			{
 				$model=bPorder::model()->findByPk((int)$val);
@@ -148,7 +148,7 @@ class MAccpayableController extends Controller
 				} else
 					bPorder::model()->updateByPk((int)$val,array('journal_state_id'=>3));
 			}
-				
+
 			$modelHeader=new uJournal;
 			$modelHeader->input_date=Yii::app()->dateFormatter->format("dd-MM-yyyy",time());
 			$modelHeader->yearmonth_periode=Yii::app()->settings->get("System", "cCurrentPeriod");
@@ -159,7 +159,7 @@ class MAccpayableController extends Controller
 			$modelHeader->state_id=1;
 			$modelHeader->created_id=Yii::app()->user->id;
 			$modelHeader->created_date=time();
-				
+
 			$modelHeader->save();
 
 			//Create System_ref
@@ -171,15 +171,15 @@ class MAccpayableController extends Controller
 			$modelDetail->parent_id=$modelHeader->id;
 			$_inventory=tAccount::model()->with('hutang')->find('hutang.mvalue=1')->id;
 			$modelDetail->account_no_id=$_inventory;
-				
+
 			$modelDetail->debit=$total;
 			$modelDetail->credit=0;
 			$modelDetail->user_remark=implode($m_ref," ");
 			$modelDetail->save();
 
-				
+
 			$modelPayment=bPorderPayment::model()->findAll('parent_id = '.$model->id);
-				
+
 			foreach ($modelPayment as $payment) {
 				$modelDetail=new uJournalDetail;
 				$modelDetail->parent_id=$modelHeader->id;
@@ -202,15 +202,15 @@ class MAccpayableController extends Controller
 				$modelDetail->user_remark='Correction: '.implode($m_ref," ");
 				$modelDetail->save();
 			}
-				
+
 
 			Yii::app()->user->setFlash("success","<strong>Great!</strong> Payment Journal created succesfully...");
 
 			$this->render('viewJournal',array(
 					'model'=>$modelHeader,
 			));
-				
-				
+
+
 		} else
 			$this->redirect(array('/mAccpayable'));
 	}

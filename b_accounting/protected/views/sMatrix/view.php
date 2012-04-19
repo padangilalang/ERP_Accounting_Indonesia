@@ -11,7 +11,8 @@ $this->menu=array(
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/matrix.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/matrix.png') ?>
 		<?php echo CHtml::encode($model->level); ?>
 	</h1>
 </div>

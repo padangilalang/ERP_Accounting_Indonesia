@@ -12,7 +12,8 @@ $this->menu=array(
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/lorrygreen.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/lorrygreen.png') ?>
 		<?php echo $model->company_name; ?>
 	</h1>
 </div>
@@ -22,7 +23,7 @@ $this->menu=array(
 //$this->widget('bootstrap.widgets.BootDetailView', array(
 $this->widget('ext.XDetailView', array(
 		'ItemColumns' => 2,
-			'data'=>$model,
+		'data'=>$model,
 		'attributes'=>array(
 				'company_name',
 				'pic',

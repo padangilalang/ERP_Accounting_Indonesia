@@ -13,15 +13,14 @@
 			<td><?php echo CHtml::dropDownList('item_id[]','',pProduct::items()); ?>
 				<?php /*
 				$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-					'name'=>'item_id[]',
+						'name'=>'item_id[]',
 						'source'=>array('ac1', 'ac2', 'ac3'),
 						'options'=>array(
 								'minLength'=>'2',
 						),
 				)); */
-				?></td>
-			<td><?php echo CHtml::textField('description[]','',array()); ?>
-			</td>
+?></td>
+			<td><?php echo CHtml::textField('description[]','',array()); ?></td>
 			<td><?php echo CHtml::textField('qty[]','',array('maxlength'=>15)); ?>
 			</td>
 			<td><?php echo CHtml::textField('amount[]','',array('maxlength'=>15)); ?>

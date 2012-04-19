@@ -10,8 +10,10 @@ $this->menu=array(
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/box.png') ?>
-	C Products</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/box.png') ?>
+		C Products
+	</h1>
 </div>
 
 <?php $this->widget('ext.bootstrap.widgets.BootListView',array(

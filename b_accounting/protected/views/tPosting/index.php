@@ -39,8 +39,10 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 </div>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/balance.png') ?>
-		Trial Balance</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/balance.png') ?>
+		Trial Balance
+	</h1>
 </div>
 
 <?php /*
@@ -63,14 +65,14 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 	*/
 	?>
 
-	<?php
-	$this->widget('DropDownRedirect', array(
-			'data' => tAccount::accountDetail(),
-			'url' => $this->createUrl($this->route, array_merge($_GET, array('acc' => '__value__'))),
-			'select' =>(isset($_GET['acc'])) ? $_GET['acc'] : "ALL",
-	));
-	?>
-	<?php echo CHtml::link('Refresh',$this->createUrl($this->route, $_GET)); ?>
+<?php
+$this->widget('DropDownRedirect', array(
+		'data' => tAccount::accountDetail(),
+		'url' => $this->createUrl($this->route, array_merge($_GET, array('acc' => '__value__'))),
+		'select' =>(isset($_GET['acc'])) ? $_GET['acc'] : "ALL",
+));
+?>
+<?php echo CHtml::link('Refresh',$this->createUrl($this->route, $_GET)); ?>
 
 <br />
 <?php

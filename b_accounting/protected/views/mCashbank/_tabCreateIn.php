@@ -28,7 +28,7 @@
 						//'changeYear'=>true,
 				),
 				'htmlOptions'=>array(
-						'style'=>'height:20px;'
+						
 				),
 		));
 		?>

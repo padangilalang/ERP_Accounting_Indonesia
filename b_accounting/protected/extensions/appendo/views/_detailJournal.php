@@ -12,12 +12,9 @@
 		<tr>
 			<td><?php echo CHtml::dropDownList('account_no_id[]',"",tAccount::item(),array()); ?>
 			</td>
-			<td><?php echo CHtml::textField('debit[]','',array()); ?>
-			</td>
-			<td><?php echo CHtml::textField('credit[]','',array()); ?>
-			</td>
-			<td><?php echo CHtml::textField('user_remark[]','',array()); ?>
-			</td>
+			<td><?php echo CHtml::textField('debit[]','',array()); ?></td>
+			<td><?php echo CHtml::textField('credit[]','',array()); ?></td>
+			<td><?php echo CHtml::textField('user_remark[]','',array()); ?></td>
 		</tr>
 		<?php else: ?>
 		<?php for($i = 0; $i < sizeof($model->account_no_id); ++$i): ?>

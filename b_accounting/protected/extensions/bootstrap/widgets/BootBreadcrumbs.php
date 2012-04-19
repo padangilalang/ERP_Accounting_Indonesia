@@ -67,7 +67,7 @@ class BootBreadcrumbs extends CBreadcrumbs
 	protected function renderItem($content, $active=false)
 	{
 		$separator = !$active ? '<span class="divider">'.$this->separator.'</span>' : '';
-		
+
 		ob_start();
 		echo CHtml::openTag('li', $active ? array('class'=>'active') : array());
 		echo $content.$separator;

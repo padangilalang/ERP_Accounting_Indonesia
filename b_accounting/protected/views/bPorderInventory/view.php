@@ -13,15 +13,16 @@ $this->menu2=bPorder::getTopCreated(1);
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/shopcart.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/shopcart.png') ?>
 		PO:
 		<?php echo $model->system_ref; ?>
 	</h1>
 </div>
 
 <?php 
-	//$this->widget('bootstrap.widgets.BootDetailView', array(
-	$this->widget('ext.XDetailView', array(
+//$this->widget('bootstrap.widgets.BootDetailView', array(
+$this->widget('ext.XDetailView', array(
 		'ItemColumns' => 2,
 
 		'data'=>$model,

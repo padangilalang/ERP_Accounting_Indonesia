@@ -31,7 +31,7 @@ $this->menu=array(
 		//array('label'=>'Create', 'url'=>array('create')),
 		array('label'=>'Update', 'url'=>array('update', 'id'=>$model->id)),
 		array('label'=>'Delete', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?'),
-		'visible'=>empty($model->hasJournal)),
+				'visible'=>empty($model->hasJournal)),
 );
 
 $this->menu1=tAccount::getTopUpdated();
@@ -41,7 +41,8 @@ $this->menu3=tAccount::getTopRelated($model->account_name);
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/tree_diagramm_new.png') ?>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/tree_diagramm_new.png') ?>
 		<?php echo $model->account_no .". ".$model->account_name; ?>
 	</h1>
 </div>
@@ -49,24 +50,24 @@ $this->menu3=tAccount::getTopRelated($model->account_name);
 <?php
 if ($model->haschild->mvalue == 2) {
 	$this->widget('bootstrap.widgets.BootTabbable', array(
-		'type'=>'tabs', // 'tabs' or 'pills'
-		'tabs'=>array(
-			array('label'=>'Detail','content'=>$this->renderPartial("_tabDetail", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
-			array('label'=>'Entity','content'=>$this->renderPartial("_tabEntity", array("model"=>$model,'modelEntity'=>$modelEntity), true)),
-			array('label'=>'Sub Account','content'=>$this->renderPartial("_tabSub", array("model"=>$model), true)),
-			array('label'=>'Linked Module','content'=>$this->renderPartial("_tabModule", array("model"=>$model), true)),
-		),
+			'type'=>'tabs', // 'tabs' or 'pills'
+			'tabs'=>array(
+					array('label'=>'Detail','content'=>$this->renderPartial("_tabDetail", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
+					array('label'=>'Entity','content'=>$this->renderPartial("_tabEntity", array("model"=>$model,'modelEntity'=>$modelEntity), true)),
+					array('label'=>'Sub Account','content'=>$this->renderPartial("_tabSub", array("model"=>$model), true)),
+					array('label'=>'Linked Module','content'=>$this->renderPartial("_tabModule", array("model"=>$model), true)),
+			),
 	));
 } else {
 	$this->widget('bootstrap.widgets.BootTabbable', array(
-		'type'=>'tabs', // 'tabs' or 'pills'
-		'tabs'=>array(
-			array('label'=>'Balance','content'=>$this->renderPartial("_tabBalance", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
-			array('label'=>'Detail','content'=>$this->renderPartial("_tabDetail", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
-			array('label'=>'Entity','content'=>$this->renderPartial("_tabEntity", array("model"=>$model,'modelEntity'=>$modelEntity), true)),
-			array('label'=>'Sub Account','content'=>$this->renderPartial("_tabSub", array("model"=>$model), true)),
-			array('label'=>'Linked Module','content'=>$this->renderPartial("_tabModule", array("model"=>$model), true)),
-		),
+			'type'=>'tabs', // 'tabs' or 'pills'
+			'tabs'=>array(
+					array('label'=>'Balance','content'=>$this->renderPartial("_tabBalance", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
+					array('label'=>'Detail','content'=>$this->renderPartial("_tabDetail", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
+					array('label'=>'Entity','content'=>$this->renderPartial("_tabEntity", array("model"=>$model,'modelEntity'=>$modelEntity), true)),
+					array('label'=>'Sub Account','content'=>$this->renderPartial("_tabSub", array("model"=>$model), true)),
+					array('label'=>'Linked Module','content'=>$this->renderPartial("_tabModule", array("model"=>$model), true)),
+			),
 	));
 }
 

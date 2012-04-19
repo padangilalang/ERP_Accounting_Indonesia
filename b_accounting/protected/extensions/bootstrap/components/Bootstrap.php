@@ -328,7 +328,7 @@ class Bootstrap extends CApplicationComponent
 	/**
 	 * Registers a JavaScript file in the assets folder.
 	 * @param string $fileName the file name.
-     * @param integer $position the position of the JavaScript file.
+	 * @param integer $position the position of the JavaScript file.
 	 */
 	protected function registerScriptFile($fileName, $position=CClientScript::POS_END)
 	{
@@ -336,9 +336,9 @@ class Bootstrap extends CApplicationComponent
 	}
 
 	/**
-	* Returns the URL to the published assets folder.
-	* @return string the URL
-	*/
+	 * Returns the URL to the published assets folder.
+	 * @return string the URL
+	 */
 	protected function getAssetsUrl()
 	{
 		if ($this->_assetsUrl !== null)

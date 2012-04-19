@@ -28,7 +28,7 @@ class BootTabbable extends BootWidget
 	 * Valid values are 'tabs' and 'pills'.
 	 * Please not that JavaScript pills are not fully supported in Bootstrap!
 	 */
-    public $type = BootMenu::TYPE_TABS;
+	public $type = BootMenu::TYPE_TABS;
 	/**
 	 * @var string the placement of the tabs.
 	 * Valid values are 'above', 'below', 'left' and 'right'.
@@ -37,17 +37,17 @@ class BootTabbable extends BootWidget
 	/**
 	 * @var array the tab configuration.
 	 */
-    public $tabs = array();
+	public $tabs = array();
 	/**
 	 * @var boolean whether to encode item labels.
 	 */
 	public $encodeLabel = true;
 
-    /**
-     * Initializes the widget.
-     */
-    public function init()
-    {
+	/**
+	 * Initializes the widget.
+	 */
+	public function init()
+	{
 		if (!isset($this->htmlOptions['id']))
 			$this->htmlOptions['id'] = $this->getId();
 
@@ -65,22 +65,22 @@ class BootTabbable extends BootWidget
 		}
 
 		Yii::app()->bootstrap->registerTabs();
-    }
+	}
 
-    /**
-     * Run this widget.
-     */
-    public function run()
-    {
-	    $id = $this->id;
-	    $content = array();
-	    $items = $this->normalizeTabs($this->tabs, $content);
+	/**
+	 * Run this widget.
+	 */
+	public function run()
+	{
+		$id = $this->id;
+		$content = array();
+		$items = $this->normalizeTabs($this->tabs, $content);
 
 		ob_start();
 		$this->controller->widget('bootstrap.widgets.BootMenu', array(
-			'type'=>$this->type,
-			'encodeLabel'=>$this->encodeLabel,
-			'items'=>$items,
+				'type'=>$this->type,
+				'encodeLabel'=>$this->encodeLabel,
+				'items'=>$items,
 		));
 		$tabs = ob_get_clean();
 
@@ -94,26 +94,26 @@ class BootTabbable extends BootWidget
 		echo $this->placement === self::PLACEMENT_BELOW ? $content.$tabs : $tabs.$content;
 		echo '</div>';
 
-	    /** @var CClientScript $cs */
-	    $cs = Yii::app()->getClientScript();
-	    $cs->registerScript(__CLASS__.'#'.$id, "jQuery('#{$id}').tab('show');");
+		/** @var CClientScript $cs */
+		$cs = Yii::app()->getClientScript();
+		$cs->registerScript(__CLASS__.'#'.$id, "jQuery('#{$id}').tab('show');");
 
-        // Register the "show" event-handler.
-        if (isset($this->events['show']))
-        {
-            $fn = CJavaScript::encode($this->events['show']);
-	        $cs->registerScript(__CLASS__.'#'.$id.'.show',
-	                "jQuery('#{$id} a[data-toggle=\"tab\"').on('show', {$fn});");
-        }
+		// Register the "show" event-handler.
+		if (isset($this->events['show']))
+		{
+			$fn = CJavaScript::encode($this->events['show']);
+			$cs->registerScript(__CLASS__.'#'.$id.'.show',
+					"jQuery('#{$id} a[data-toggle=\"tab\"').on('show', {$fn});");
+		}
 
-        // Register the "shown" event-handler.
-        if (isset($this->events['shown']))
-        {
-            $fn = CJavaScript::encode($this->events['shown']);
-	        $cs->registerScript(__CLASS__.'#'.$id.'.shown',
-	                "jQuery('#{$id} a[data-toggle=\"tab\"').on('shown', {$fn});");
-        }
-    }
+		// Register the "shown" event-handler.
+		if (isset($this->events['shown']))
+		{
+			$fn = CJavaScript::encode($this->events['shown']);
+			$cs->registerScript(__CLASS__.'#'.$id.'.shown',
+					"jQuery('#{$id} a[data-toggle=\"tab\"').on('shown', {$fn});");
+		}
+	}
 
 	/**
 	 * Normalizes the tab configuration.
@@ -129,24 +129,24 @@ class BootTabbable extends BootWidget
 
 		$items = array();
 
-	    foreach ($tabs as $tab)
-	    {
+		foreach ($tabs as $tab)
+		{
 			$item = $tab;
 
 			if (!isset($item['itemOptions']))
 				$item['itemOptions'] = array();
 
-		    if ($i === 0)
-		    {
-			    if (isset($item['itemOptions']['class']))
-	                $item['itemOptions']['class'] .= ' active';
-	            else
-		            $item['itemOptions']['class'] = 'active';
-		    }
+			if ($i === 0)
+			{
+				if (isset($item['itemOptions']['class']))
+					$item['itemOptions']['class'] .= ' active';
+				else
+					$item['itemOptions']['class'] = 'active';
+			}
 
 			$item['linkOptions']['data-toggle'] = 'tab';
 
-		    if (isset($tab['items']))
+			if (isset($tab['items']))
 				$item['items'] = $this->normalizeTabs($item['items'], $panes, $i);
 			else
 			{
@@ -189,7 +189,7 @@ class BootTabbable extends BootWidget
 			}
 
 			$items[] = $item;
-	    }
+		}
 
 		return $items;
 	}

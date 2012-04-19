@@ -12,8 +12,7 @@
 		<tr>
 			<td><?php echo CHtml::dropDownList('budget_id[]','',tAccount::item()); ?>
 			</td>
-			<td><?php echo CHtml::textField('description[]','',array()); ?>
-			</td>
+			<td><?php echo CHtml::textField('description[]','',array()); ?></td>
 			<td><?php echo CHtml::textField('qty[]','',array('maxlength'=>15)); ?>
 			</td>
 			<td><?php echo CHtml::textField('amount[]','',array('maxlength'=>15)); ?>

@@ -27,8 +27,8 @@ $this->menu2=bPorder::getTopCreated(1);
 </div>
 
 <?php 
-	
-	$this->widget('bootstrap.widgets.BootDetailView', array(
+
+$this->widget('bootstrap.widgets.BootDetailView', array(
 		'data'=>$model,
 		'attributes'=>array(
 				'input_date',
@@ -61,7 +61,7 @@ $this->menu2=bPorder::getTopCreated(1);
 <br />
 
 <?php 
-	$this->widget('bootstrap.widgets.BootGridView', array(
+$this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'u-order-detail-grid',
 		'dataProvider'=>bPorderDetail::model()->search($model->id),
 		'template'=>'{items}{pager}',
@@ -150,8 +150,8 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 		),
 ));
 ?>
-<iframe id="cru-frame"
-	width="100%" height="100%"></iframe>
+<iframe id="cru-frame" width="100%"
+	height="100%"></iframe>
 <?php
 
 $this->endWidget();

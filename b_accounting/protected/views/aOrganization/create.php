@@ -27,7 +27,10 @@ $this->menu2=aOrganization::getTopCreated();
 ?>
 
 <div class="page-header">
-	<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>Create New Organization</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/document_organization_chart_01.png') ?>
+		Create New Organization
+	</h1>
 </div>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

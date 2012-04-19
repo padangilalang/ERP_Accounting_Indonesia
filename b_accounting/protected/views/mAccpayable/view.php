@@ -27,8 +27,8 @@ $this->menu2=bPorder::getTopCreated(1);
 </div>
 
 <?php 
-	
-	$this->widget('bootstrap.widgets.BootDetailView', array(
+
+$this->widget('bootstrap.widgets.BootDetailView', array(
 		'data'=>$model,
 		'attributes'=>array(
 				'input_date',
@@ -140,14 +140,14 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 <hr />
 
 <?php
-	if ($model->payment_state_id ==1 && $model->journal_state_id ==2 ) {
-		echo $this->renderPartial('_create', array('model'=>$modelPayment)); 
-	} 
+if ($model->payment_state_id ==1 && $model->journal_state_id ==2 ) {
+	echo $this->renderPartial('_create', array('model'=>$modelPayment));
+}
 ?>
-	
+
 <hr />
 <?php echo CHtml::link('See Journal Detail >>',Yii::app()->createUrl('/mAccpayable/viewRelated',array("id"=>$model->id))); ?>
-	
+
 <?php
 //--------------------- begin new code --------------------------
 // add the (closed) dialog for the iframe
@@ -162,8 +162,8 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 		),
 ));
 ?>
-<iframe id="cru-frame"
-	width="100%" height="100%"></iframe>
+<iframe id="cru-frame" width="100%"
+	height="100%"></iframe>
 <?php
 
 $this->endWidget();
