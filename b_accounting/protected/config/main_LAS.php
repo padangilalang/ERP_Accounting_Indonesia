@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 		'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-		'name'=>'PT. Karya Sentosa Motor',
+		'name'=>'CV Laksana',
 
 		// preloading 'log' component
 		'preload'=>array('log','bootstrap'),
@@ -76,9 +76,10 @@ return array(
 						'allowAutoLogin'=>true,
 				),
 				'db'=>array(
-						'connectionString' => 'mysql:host=localhost;dbname=accounting',
+						'connectionString' => 'mysql:host=localhost;dbname=laksana',
+						'username' => 'laksana',
 						'emulatePrepare' => true,
-						'username' => 'accounting',
+						//'username' => 'accounting',
 						'password' => '1234qwe',
 						'charset' => 'utf8',
 						'tablePrefix' => '',

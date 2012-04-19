@@ -299,17 +299,25 @@ class TAccountController extends Controller
 		}
 
 		$criteria->order='account_no';
-
-		$dataProvider=new CActiveDataProvider('tAccount', array(
-				'criteria'=>$criteria,
-				'pagination'=>array(
-						'pageSize'=>500,
-				),
-		));
-
+		$total = tAccount::model()->count();
+		
+		$pages = new CPagination($total);
+        $pages->pageSize = 20;
+        $pages->applyLimit($criteria);
+			
+			
+		//$dataProvider=new CActiveDataProvider('tAccount', array(
+		//		'criteria'=>$criteria,
+		//		'pagination'=>array(
+		//				'pageSize'=>500,
+		//		),
+		//));
+		$dataProvider=tAccount::model()->findAll($criteria);
+		
 		$this->render('index',array(
 				'dataProvider'=>$dataProvider,
 				'model'=>$model,
+				'pages' => $pages,
 		));
 	}
 

@@ -7,11 +7,6 @@
 	font-size: 12px;
 }
 
-h1,h2,h3,h4,h5,h6,p,a,ul,ol,li {
-	margin: 0;
-	padding: 0;
-}
-
 .art-postcontent,.art-postcontent li,.art-postcontent a,.art-postcontent a:link,.art-postcontent a:visited,.art-postcontent a.visited,.art-postcontent a:hover,.art-postcontent a.hovered
 	{
 	font-family: Arial, Helvetica, Sans-Serif;
@@ -589,7 +584,7 @@ div.art-header {
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
-	height: 50px;
+	height: 55px;
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -599,7 +594,7 @@ div.art-header-clip {
 	width: 100%;
 	left: 0;
 	overflow: hidden;
-	height: 50px;
+	height: 55px;
 }
 
 div.art-header-center {
@@ -613,7 +608,7 @@ div.art-header-jpeg {
 	top: 0;
 	left: -50%;
 	width: 1728px;
-	height: 50px;
+	height: 55px;
 	background-image: url('images/header.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -650,7 +645,7 @@ div.art-logo {
 	top: 5px;
 	left: 10px;
 	margin-left: 0;
-	width: 400px;
+	width: 100%;
 }
 
 h1.art-logo-name {
@@ -742,115 +737,6 @@ h2.art-logo-text a,h2.art-logo-text a:link,h2.art-logo-text a:visited,h2.art-log
 .art-layout-glare {
 	position: relative;
 } /* end Layout */
-
-/* begin Button */
-.art-button-wrapper a.art-button,.art-button-wrapper a.art-button:link,.art-button-wrapper input.art-button,.art-button-wrapper button.art-button
-	{
-	text-decoration: none;
-	font-family: Arial, Helvetica, Sans-Serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	position: relative;
-	top: 0;
-	display: inline-block;
-	vertical-align: middle;
-	white-space: nowrap;
-	text-align: center;
-	color: #000000 !important;
-	width: auto;
-	outline: none;
-	border: none;
-	background: none;
-	line-height: 32px;
-	height: 32px;
-	margin: 0 !important;
-	padding: 0 16px !important;
-	overflow: visible;
-	cursor: pointer;
-}
-
-.art-button img,.art-button-wrapper img {
-	margin: 0;
-	vertical-align: middle;
-}
-
-.art-button-wrapper {
-	vertical-align: middle;
-	display: inline-block;
-	position: relative;
-	height: 32px;
-	overflow: hidden;
-	white-space: nowrap;
-	width: auto;
-	margin: 0;
-	padding: 0;
-	z-index: 0;
-}
-
-.firefox2 .art-button-wrapper {
-	display: block;
-	float: left;
-}
-
-input,select,textarea {
-	vertical-align: middle;
-	font-family: Arial, Helvetica, Sans-Serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-}
-
-/*.art-block select 
-{
-    width:96%;
-}
-*/
-.art-button-wrapper.hover .art-button,.art-button-wrapper.hover a.art-button:link,.art-button:hover
-	{
-	color: #000000 !important;
-	text-decoration: none !important;
-}
-
-.art-button-wrapper.active .art-button,.art-button-wrapper.active a.art-button:link
-	{
-	color: #231C15 !important;
-}
-
-.art-button-wrapper .art-button-l,.art-button-wrapper .art-button-r {
-	display: block;
-	position: absolute;
-	height: 106px;
-	margin: 0;
-	padding: 0;
-	background-image: url('images/button.png');
-}
-
-.art-button-wrapper .art-button-l {
-	left: 0;
-	right: 10px;
-}
-
-.art-button-wrapper .art-button-r {
-	width: 409px;
-	right: 0;
-	clip: rect(auto, auto, auto, 399px);
-}
-
-.art-button-wrapper.hover .art-button-l,.art-button-wrapper.hover .art-button-r
-	{
-	top: -37px;
-}
-
-.art-button-wrapper.active .art-button-l,.art-button-wrapper.active .art-button-r
-	{
-	top: -74px;
-}
-
-.art-button-wrapper input {
-	float: none !important;
-}
-/* end Button */
 
 /* begin Box, Block */
 .art-block {

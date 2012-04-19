@@ -175,4 +175,10 @@ Yii::app()->clientScript->registerScript('myCap', "
 						),
 				),
 		),
-)); ?>
+				
+)); 
+
+		//$_nextPeriod = sParameter::cBeginDateAfter(Yii::app()->settings->get("System", "cCurrentPeriod"));
+		//Yii::app()->settings->set("System", "cCurrentPeriod", $_nextPeriod, $toDatabase=true);
+
+?>
