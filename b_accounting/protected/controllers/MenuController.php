@@ -175,6 +175,11 @@ class MenuController extends Controller
 		$this->render('image', array('model'=>$model));
 	}
 
+	public function actionBarcode()
+	{
+		$this->render('barcode');
+	}
+
 	public function actionPeter()
 	{
 		$this->render('peter');
@@ -208,5 +213,5 @@ class MenuController extends Controller
 			}
 		}
 	}
-
+	
 }

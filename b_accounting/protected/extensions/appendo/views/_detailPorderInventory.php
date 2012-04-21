@@ -1,3 +1,15 @@
+<?php
+Yii::app()->clientScript->registerScript('myCap', "
+
+		$('.test').click(function(){
+		alert('I am an alert box!');
+});
+
+
+		");
+
+?>
+
 <table class="appendo-gii" id="<?php echo $id ?>">
 	<thead>
 		<tr>
@@ -20,7 +32,7 @@
 						),
 				)); */
 ?></td>
-			<td><?php echo CHtml::textField('description[]','',array()); ?></td>
+			<td><?php echo CHtml::textField('description[]','',array('class'=>'test')); ?></td>
 			<td><?php echo CHtml::textField('qty[]','',array('maxlength'=>15)); ?>
 			</td>
 			<td><?php echo CHtml::textField('amount[]','',array('maxlength'=>15)); ?>

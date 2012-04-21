@@ -14,24 +14,24 @@
 	width: 100% !important;
 }
 
-.appendo-gii thead tr{
+.appendo-gii thead tr {
 	border: 0;
 	border-width: 1px;
 	border-collapse: collapse;
 	width: 100% !important;
 }
 
-.appendo-gii tbody tr{
+.appendo-gii tbody tr {
 	border: 0;
 	border-width: 1px;
 	border-collapse: collapse;
 	width: 100% !important;
 }
 
-.appendo-gii tbody tr td{
+.appendo-gii tbody tr td {
 	width: 25%;
 }
 
-.appendo-gii tbody tr td input{
+.appendo-gii tbody tr td input {
 	width: 95%;
 }

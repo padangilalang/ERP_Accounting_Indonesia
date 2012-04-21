@@ -36,6 +36,7 @@ function addNewProduct()
                     $('#dialogProduct div.divForForm').html(data.div);
 					$('#item_id');
                     setTimeout(\"$('#dialogProduct').dialog('close') \",3000);
+					$('#item_id').serialize()
                 }
  
             } ",

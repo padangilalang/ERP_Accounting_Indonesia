@@ -137,7 +137,7 @@ $gmap->renderMap(); */
 <br />
 <hr />
 <?php
-$this->widget('ext.cfilebrowser.CFileBrowserWidget',array(
+/*$this->widget('ext.cfilebrowser.CFileBrowserWidget',array(
 		'script'=>array('menu/filebrowser'),
 		'root'=>'c:/',
 		'folderEvent'=>'click',
@@ -150,4 +150,4 @@ $this->widget('ext.cfilebrowser.CFileBrowserWidget',array(
 		'callbackFunction'=>'alert("I selected " + f)',
 		//'customData'=>array(Yii::app()->request->csrfTokenName=>Yii::app()->request->csrfToken),
 ));
-?>
+*/ ?>

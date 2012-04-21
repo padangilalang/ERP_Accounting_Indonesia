@@ -71,9 +71,9 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 </h2>
 
 <?php 
-//$this->widget('bootstrap.widgets.BootGridView', array(
-$this->widget('ext.groupgridview.GroupGridView', array(
-		'mergeColumns' => array('journal.input_date'),
+$this->widget('bootstrap.widgets.BootGridView', array(
+//$this->widget('ext.groupgridview.GroupGridView', array(
+//		'mergeColumns' => array('journal.input_date'),
 		'id'=>'t-account-balance-grid',
 		'dataProvider'=>uJournalDetail::model()->searchByAccount($model->id),
 		'template'=>'{items}{pager}{summary}',
