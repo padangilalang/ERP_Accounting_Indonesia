@@ -21,6 +21,30 @@ Yii::app()->clientScript->registerScript('search', "
 <div class="page-header">
 	<h1>Data SMS</h1>
 </div>
+
+
+<?php $this->beginWidget('bootstrap.widgets.BootModal', array('id'=>'modal')); ?>
+ 
+<div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3>Modal header</h3>
+</div>
+ 
+<div class="modal-body">
+    <?php $this->renderPartial('_search', array('model'=>$model)); ?>
+</div>
+ 
+<div class="modal-footer">
+    <?php $this->widget('bootstrap.widgets.BootButton', array(
+        'label'=>'Close',
+        'url'=>'#',
+        'htmlOptions'=>array('data-dismiss'=>'modal'),
+    )); ?>
+</div>
+ 
+<?php $this->endWidget(); ?>
+ 
+<?php echo CHtml::link('Click me','#modal', array('class'=>'btn btn-primary', 'data-toggle'=>'modal')); ?>
 <?php 
 $this->beginWidget('zii.widgets.jui.CJuiDialog',
 		array('id'=>'advancedsearch_dialog',
@@ -31,6 +55,7 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog',
 						'autoOpen'=>false,
 				),
 		));
+		
 $this->renderPartial('_search', array('model'=>$model));
 
 $this->endWidget('zii.widgets.jui.CJuiDialog');

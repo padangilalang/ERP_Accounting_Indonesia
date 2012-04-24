@@ -42,25 +42,31 @@ Yii::app()->clientScript->registerScript('myCap'.$data->id, "
 	<?php echo CHtml::link('detail>>','#',array('class'=>'hide-info'.$data->id)); ?>
 
 	<br />
+	<br />
 	<div class="list<?php echo $data->id ?>" style="display: none">
-		<br />
-		<?php echo CHtml::encode($data->getAttributeLabel('module_id')); ?>
-		: <b><?php echo sParameter::item("cModule",$data->module_id); ?> </b>
-		<br />
-
-		<?php echo CHtml::encode($data->getAttributeLabel('input_date')); ?>
-		: <b><?php echo CHtml::encode($data->input_date); ?> </b> |
-
-		<?php echo CHtml::encode($data->getAttributeLabel('yearmonth_periode')); ?>
-		: <b><?php echo CHtml::encode($data->yearmonth_periode); ?> </b> |
-
-		<?php echo CHtml::encode($data->getAttributeLabel('user_ref')); ?>
-		: <b><?php echo CHtml::encode($data->user_ref); ?> </b> <br />
-		<?php echo CHtml::encode($data->getAttributeLabel('entity_id')); ?>
-		: <b><?php echo $data->entity->name; ?> </b> |
-
-		<?php echo CHtml::encode($data->getAttributeLabel('remark')); ?>
-		: <b><?php echo CHtml::encode($data->remark); ?> </b> <br /> <br />
+	
+		<?php
+		$this->widget('bootstrap.widgets.BootDetailView', array(
+				'data'=>array(
+						'id'=>1, 
+						'module_id'=>$data->module->name,
+						'input_date'=>$data->input_date,
+						'yearmonth_periode'=>$data->yearmonth_periode,
+						'user_ref'=>$data->user_ref,
+						'entity_id'=>$data->entity->name,
+						'remark'=>$data->remark,
+				),
+				'attributes'=>array(
+						array('name'=>'module_id', 'label'=>'Module'),
+						array('name'=>'input_date', 'label'=>'Input Date'),
+						array('name'=>'yearmonth_periode', 'label'=>'Periode'),
+						array('name'=>'user_ref', 'label'=>'User Ref'),
+						array('name'=>'entity_id', 'label'=>'Entity'),
+						array('name'=>'remark', 'label'=>'Remark'),
+				),
+		)); ?>
+	
+	
 	</div>
 
 	<?php echo $this->renderPartial('_viewDetail', array('id'=>$data->id,'data'=>$data)); ?>

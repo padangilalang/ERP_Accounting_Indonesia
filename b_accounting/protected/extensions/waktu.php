@@ -1,6 +1,12 @@
 <?php
 class waktu {
-	function nicetime($date)
+	public static function getInstance()
+	{
+		$classname=__CLASS__;
+		return new $classname;
+	}
+
+	public function nicetime($date)
 	{
 		if(empty($date)) {
 			return "No date provided";

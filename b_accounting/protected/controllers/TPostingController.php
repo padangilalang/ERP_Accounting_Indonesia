@@ -28,7 +28,7 @@ class TPostingController extends Controller
 	{
 		$_curPeriod = Yii::app()->settings->get("System", "cCurrentPeriod");
 
-		$_labarugi=tAccount::netprofit();
+		$_labarugi=tAccount::netprofit($_curPeriod);
 
 		$_lraccount=tAccount::model()->with('accmain')->find('accmain.mvalue=8')->id;
 
@@ -196,7 +196,7 @@ class TPostingController extends Controller
 		$criteria=new CDbCriteria;
 		$criteria1=new CDbCriteria;
 		$criteria->condition='state_id = 1 OR state_id = 2';
-		//$criteria->compare('journal_type_id',4);
+		//$criteria->compare('updated_id',4);
 
 		if(isset($_GET['uJournal'])) {
 			$model->attributes=$_GET['uJournal'];

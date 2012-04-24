@@ -7,7 +7,7 @@
 		<?php echo nl2br(CHtml::encode($comment->long_desc)); ?>
 		</br>
 		<h6>
-			<?php echo $comment->nicetime($comment->sender_date); ?>
+			<?php echo waktu::getInstance()->nicetime($comment->sender_date); ?>
 		</h6>
 	</div>
 </div>

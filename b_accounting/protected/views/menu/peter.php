@@ -12,8 +12,6 @@ $this->widget('application.extensions.livechat.LivechatWidget',
 		));
 } */
 ?>
-<br />
-<hr />
 
 <?php /*
 $this->widget('ext.WGoogleStaticMap',array(
@@ -33,8 +31,8 @@ $this->widget('ext.WGoogleStaticMap',array(
 		'imageOptions'=>array('class'=>'map-image'), // HTML options for img tag (optional)
 )); */
 ?>
-<br />
-<hr />
+
+
 <?php /*
 Yii::import('ext.kml.*');
 
@@ -60,8 +58,6 @@ $kml->addTag($placemark);
 // generate feed
 $kml->generateFeed(); */
 ?>
-<br />
-<hr />
 
 <?php  /*
 Yii::import('ext.jquery-gmap.*');
@@ -134,8 +130,7 @@ $gmap->map->captureZoom(
 
 $gmap->renderMap(); */
 ?>
-<br />
-<hr />
+
 <?php
 /*$this->widget('ext.cfilebrowser.CFileBrowserWidget',array(
 		'script'=>array('menu/filebrowser'),

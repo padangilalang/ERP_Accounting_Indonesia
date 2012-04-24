@@ -37,23 +37,28 @@ Yii::app()->clientScript->registerScript('search'.$data->id, "
 
 	<br /> <br />
 
-	<?php echo CHtml::encode($data->getAttributeLabel('entity_id')); ?>
-	: <b><?php echo $data->entity->name; ?> </b> |
-
-	<?php echo CHtml::encode($data->getAttributeLabel('input_date')); ?>
-	: <b><?php echo CHtml::encode($data->input_date); ?> </b> |
-
-	<?php echo CHtml::encode($data->getAttributeLabel('yearmonth_periode')); ?>
-	: <b><?php echo CHtml::encode($data->yearmonth_periode); ?> </b> |
-
-	<?php echo "Receiver/Received From"; ?>
-	: <b><?php echo CHtml::encode($data->user_ref); ?> </b> |
-
-	<?php echo "TOTAL"; ?>
-	: <b><?php echo $data->journalSumF(); ?> </b>
-
+		<?php
+			//$this->widget('bootstrap.widgets.BootDetailView', array(
+			$this->widget('ext.XDetailView', array(
+				'ItemColumns' => 5,
+				'data'=>array(
+						'id'=>1, 
+						'entity_id'=>$data->entity->name,
+						'input_date'=>$data->input_date,
+						'yearmonth_periode'=>$data->yearmonth_periode,
+						'user_ref'=>$data->user_ref,
+						'total'=>$data->journalSumF(),
+				),
+				'attributes'=>array(
+						array('name'=>'entity_id', 'label'=>'Entity'),
+						array('name'=>'input_date', 'label'=>'Input Date'),
+						array('name'=>'yearmonth_periode', 'label'=>'Periode'),
+						array('name'=>'user_ref', 'label'=>'Receiver/Received From'),
+						array('name'=>'total', 'label'=>'Total'),
+				),
+		)); ?>
+	
 	<div class="list<?php echo $data->id ?>" style="display: none">
-		<br />
 
 		<?php echo $this->renderPartial('/uJournal/_viewDetail', array('id'=>$data->id)); ?>
 	</div>

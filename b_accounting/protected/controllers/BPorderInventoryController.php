@@ -23,6 +23,11 @@ class BPorderInventoryController extends Controller
 		);
 	}
 
+	public function actionTest()
+	{
+		$this->render('test');
+	}
+
 	public function actionView($id)
 	{
 		//----- begin new code --------------------

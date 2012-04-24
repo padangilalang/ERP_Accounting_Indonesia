@@ -63,11 +63,25 @@ class TAccountController extends Controller
 
 		$account=$this->newAccount($id);
 		$entity=$this->newEntity($id);
+		/*
+		$criteria=new CDbCriteria;
 
+		$criteria->compare('account_no_id',$id);
+		$criteria->with=('journal');
+		$criteria->compare('yearmonth_periode',Yii::app()->settings->get("System", "cCurrentPeriod"));
+
+		$total=uJournalDetail::model()->count($criteria);
+
+		$pages = new CPagination($total);
+        $pages->pageSize = 20;
+        $pages->applyLimit($criteria);
+		*/
+		
 		$this->render('view',array(
 				'model'=>$this->loadModel($id),
 				'modelAccount'=>$account,
 				'modelEntity'=>$entity,
+				//'pages'=>$pages,
 		));
 	}
 
@@ -432,4 +446,51 @@ class TAccountController extends Controller
 		$this->render('printList',array('model'=>$model));
 	}
 
+	
+    private $_indexFiles = 'runtime.search';
+  
+	public function actionSearchIndex()
+    {
+        $this->layout='column2';
+         if (($term = Yii::app()->getRequest()->getParam('q', null)) !== null) {
+            $index = new Zend_Search_Lucene(Yii::getPathOfAlias('application.' . $this->_indexFiles));
+            $results = $index->find($term);
+            $query = Zend_Search_Lucene_Search_QueryParser::parse($term);       
+ 
+            $this->render('/sParameter/search', compact('results', 'term', 'query'));
+        }
+    }	
+	/**
+     * Search index creation
+     */
+    public function actionSearchCreate()
+    {
+        $index = new Zend_Search_Lucene(Yii::getPathOfAlias('application.' . $this->_indexFiles), true);
+ 
+        $posts = tAccount::model()->findAll();
+        foreach($posts as $post){
+            $doc = new Zend_Search_Lucene_Document();
+ 
+            $doc->addField(Zend_Search_Lucene_Field::Text('account_no',
+                                          CHtml::encode($post->account_no), 'utf-8')
+            );
+ 
+            $doc->addField(Zend_Search_Lucene_Field::Text('short_description',
+                                            CHtml::encode($post->short_description)
+                                                , 'utf-8')
+            );   
+ 
+            $doc->addField(Zend_Search_Lucene_Field::Text('account_name',
+                                          CHtml::encode($post->account_name)
+                                          , 'utf-8')
+            );
+ 
+ 
+            $index->addDocument($doc);
+        }
+        $index->commit();
+        echo 'Lucene index created';
+    }	
+	
+	
 }

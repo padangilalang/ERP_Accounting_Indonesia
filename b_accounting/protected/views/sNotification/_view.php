@@ -10,7 +10,7 @@
 			<?php echo strlen($data->long_desc) <= 300 ? $data->long_desc : substr($data->long_desc,0,300). "..."; ?>
 
 			<h6>
-				<?php echo $data->nicetime($data->sender_date); ?>
+				<?php echo waktu::getInstance()->nicetime($data->sender_date); ?>
 			</h6>
 
 			<?php 

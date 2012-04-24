@@ -123,29 +123,6 @@ class sNotificationController extends Controller
 				'dataProvider'=>$dataProvider,
 		));
 
-		//$this->actionAdmin();
-	}
-
-	public function actionAdmin()
-	{
-
-		if (Yii::app()->user->name == 'admin') {
-			$model=new sNotification('search');
-		} else {
-			$model=new sNotification('searchFilter');
-		}
-
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['sNotification']))
-			$model->attributes=$_GET['sNotification'];
-
-
-		//$dataProvider=new CActiveDataProvider('sNotification');
-
-		$this->render('admin',array(
-				//'dataProvider'=>$dataProvider,
-				'model'=>$model,
-		));
 	}
 
 	public function loadModel($id)

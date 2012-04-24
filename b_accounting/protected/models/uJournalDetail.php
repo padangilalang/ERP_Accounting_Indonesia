@@ -16,7 +16,7 @@ class uJournalDetail extends CActiveRecord
 	{
 		return array(
 				array('account_no_id, debit, credit', 'required'),
-				array('id, parent_id, account_no_id, sub_account_id, debit, credit, user_remark, system_remark, created_date, created_id', 'safe', 'on'=>'search'),
+				array('account_no_id, sub_account_id, debit, credit, user_remark, system_remark', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +62,7 @@ class uJournalDetail extends CActiveRecord
 	{
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('user_remark',$this->user_remark,true);
 		$criteria->compare('account_no_id',$id);
 		$criteria->with=('journal');
 		$criteria->compare('yearmonth_periode',Yii::app()->settings->get("System", "cCurrentPeriod"));
@@ -71,6 +72,7 @@ class uJournalDetail extends CActiveRecord
 				'pagination'=>array(
 						'pageSize'=>100,
 				),
+				//'pagination'=>false,
 				'sort'=>array(
 						'defaultOrder'=>'input_date,journal.id',
 				),

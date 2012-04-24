@@ -10,89 +10,12 @@
 <meta name="description" content="Description" />
 <meta name="keywords" content="Keywords" />
 
-
 <link rel="stylesheet"
 	href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css"
 	type="text/css" media="screen" />
 
 <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
-
-		<style type="text/css" media="screen">
-
-			.carousel-tabs { clear: both; }
-			.carousel-active-tab { color: red; }	
-			.carousel-disabled,
-			.mr-rotato-disabled { color: #aaa; }
-
-			.slidewrap2 .carousel-tabs {
-				padding: 0;
-				margin: 1em 0;
-				clear: both;
-			}
-			.slidewrap2 .carousel-tabs li {
-			    display: inline-block; 
-			    padding: 0 2px;
-			}
-			.slidewrap2 .carousel-tabs a {
-			    background: #ddd;
-			    display: inline-block;
-			    height: 10px;
-			    text-indent: -9999px;
-			    width: 10px;
-			    border-radius: 5px;
-			}
-			.ie .slidewrap2 .carousel-tabs li,
-			.ie .slidewrap2 .carousel-tabs a { 
-				display: block;
-				float: left;
-			}
-			.slidewrap2 .carousel-tabs .carousel-active-tab a {
-				background: #777;
-			}
-
-			.events {
-				font: normal 11px/1.4 arial, helvetica, sans-serif;
-			}
-
-		</style>
-		
-	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/plugin.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('.slidewrap').carousel({
-				slider: '.slider',
-				slide: '.slide',
-				slideHed: '.slidehed',
-				nextSlide : '.next',
-				prevSlide : '.prev',
-				addPagination: true,
-				addNav : false
-			});
-
-			$('.slidewrap2').carousel({
-				slider: '.slider',
-				slide: '.slide',
-				addNav: false,
-				addPagination: true,
-				speed: 300 // ms.
-			});
-
-			$('.slidewrap3').carousel({ 
-					namespace: "mr-rotato" // Defaults to “carousel”.
-				})
-				.bind({
-					'mr-rotato-beforemove' : function() {
-						$('.events').append("<li>“beforemove” event fired.</li>");
-					},
-					'mr-rotato-aftermove' : function() {
-						$('.events').append("<li>“aftermove” event fired.</li>");
-					}
-				})
-				.after('<ul class="events">Events</ul>');
-		});
-	</script>
-
 	
 </head>
 

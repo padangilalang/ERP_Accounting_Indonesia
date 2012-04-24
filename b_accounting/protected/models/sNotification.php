@@ -186,13 +186,6 @@ class sNotification extends CActiveRecord
 		return $returnarray;
 	}
 
-	public function nicetime($time) {
-		$_mywaktu= new waktu;
-		$_nicetime = $_mywaktu->nicetime($time);
-
-		return $_nicetime;
-	}
-
 	public function getUnreadNotification() {
 		return self::count('read_id =1 and receiver_id = '.Yii::app()->user->id);
 	}

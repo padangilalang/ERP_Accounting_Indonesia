@@ -203,3 +203,13 @@ $this->endWidget();
 //--------------------- end new code --------------------------
 ?>
 
+<?php 
+/*$this->widget('ext.yiinfinite-scroll.YiinfiniteScroller', array(
+    'contentSelector' => '#t-account-balance-grid table',
+    'itemSelector' => 'tr',
+    'loadingText' => 'Loading...',
+    'donetext' => 'This is the end... ',
+    'pages' => $pages,
+)); 
+*/
+?>
