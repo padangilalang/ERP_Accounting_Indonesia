@@ -22,7 +22,7 @@ class BootThumbnails extends BootListView
 	public function renderItems()
 	{
 		$data = $this->dataProvider->getData();
-
+		
 		if (!empty($data))
 		{
 			echo CHtml::openTag('ul', array('class'=>'thumbnails'));

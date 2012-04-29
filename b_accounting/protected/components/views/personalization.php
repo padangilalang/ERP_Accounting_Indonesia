@@ -8,7 +8,7 @@
 	'type'=>'list',
 	'items'=>array(
 		array(
-			'label'=>'Inbox ('.sNotification::model()->getUnreadNotification().')',
+			'label'=>'Inbox ('.sNotification::model()->getUnreadNotification().') ',
 			'url'=>Yii::app()->createUrl('sNotification'),
 		),
 		array('label'=>'Profile','url'=>'#'),

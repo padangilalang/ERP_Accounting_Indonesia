@@ -7,9 +7,7 @@
  * @package bootstrap.widgets
  */
 
-Yii::import('bootstrap.widgets.BootWidget');
-
-abstract class BootBaseMenu extends BootWidget
+abstract class BootBaseMenu extends CWidget
 {
 	/**
 	 * @var array the menu items.
@@ -23,6 +21,10 @@ abstract class BootBaseMenu extends BootWidget
 	 * @var boolean whether to encode item labels.
 	 */
 	public $encodeLabel = true;
+	/**
+	 * @var array the HTML attributes for the widget container.
+	 */
+	public $htmlOptions = array();
 
 	/**
 	 * Runs the widget.
@@ -49,7 +51,7 @@ abstract class BootBaseMenu extends BootWidget
 			if (strpos($item['icon'], 'icon') === false)
 			{
 				$pieces = explode(' ', $item['icon']);
-				$item['icon'] = 'icon-'.implode(' icon-', $pieces);
+                $item['icon'] = 'icon-'.implode(' icon-', $pieces);
 			}
 
 			$item['label'] = '<i class="'.$item['icon'].'"></i> '.$item['label'];
@@ -76,8 +78,8 @@ abstract class BootBaseMenu extends BootWidget
 		{
 			if (count($item['url']) > 1)
 				foreach (array_splice($item['url'], 1) as $name=>$value)
-				if (!isset($_GET[$name]) || $_GET[$name] != $value)
-				return false;
+					if (!isset($_GET[$name]) || $_GET[$name] != $value)
+						return false;
 
 			return true;
 		}

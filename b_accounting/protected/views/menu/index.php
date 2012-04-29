@@ -14,7 +14,7 @@
 <?php $this->widget('bootstrap.widgets.BootTabbable', array(
     'type'=>'tabs', // 'tabs' or 'pills'
     'tabs'=>array(
-        array('label'=>'Personal Notification', 'content'=>$this->renderPartial("_tabPersonal", array("model"=>$model,"dataProvider"=>$dataProvider),true)),
+        array('label'=>'Personal Notification', 'content'=>$this->renderPartial("_tabPersonal", array("model"=>$model,"dataProvider"=>$dataProvider),true),'active'=>true),
         array('label'=>'System Notification', 'content'=>$this->renderPartial("_tabSystem", array("model"=>$model3,"dataProvider"=>$dataProvider3), true)),
         array('label'=>'Chat', 'content'=>$this->renderPartial("_tabChat", array("model"=>$model), true),),
         array('label'=>'Admin ', 'content'=>$this->renderPartial("_tabAdmin", array("model"=>$model,"dataProvider"=>$dataProvider),true),'visible'=>Yii::app()->user->name=='admin'),

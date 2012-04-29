@@ -1,3 +1,4 @@
+<!--
 <h2>Parent Account</h2>
 <?php 
 
@@ -15,11 +16,13 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 ?>
 
 <br />
-
+-->
 <h2>Account Properties</h2>
 
 <?php
-$this->widget('bootstrap.widgets.BootDetailView', array(
+//$this->widget('bootstrap.widgets.BootDetailView', array(
+$this->widget('ext.XDetailView', array(
+		'ItemColumns' => 2,
 		'data'=>array(
 				'id'=>1, 'account_type'=>$model->getRoot(),
 				'currency'=>$model->getCurrency(),

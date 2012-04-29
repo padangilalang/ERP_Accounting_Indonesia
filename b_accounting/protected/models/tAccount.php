@@ -26,7 +26,7 @@ class tAccount extends CActiveRecord
 		return array(
 				array('beginning_balance', 'required','on'=>'newaccount'),
 				//array('parent_id, haschild_id, account_no, account_name, currency_id, state_id', 'required'),
-				array('parent_id, haschild_id, account_no, account_name', 'required'),
+				array('parent_id, account_no, account_name', 'required'),
 				array('parent_id, haschild_id, currency_id, state_id, created_date, created_id, updated_date, updated_id', 'numerical', 'integerOnly'=>true),
 				array('beginning_balance', 'numerical'),
 				array('account_no', 'length', 'max'=>50),

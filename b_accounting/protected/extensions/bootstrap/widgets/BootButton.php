@@ -8,22 +8,20 @@
  * @since 0.9.10
  */
 
-Yii::import('bootstrap.widgets.BootWidget');
-
 /**
  * Bootstrap button widget.
  */
-class BootButton extends BootWidget
+class BootButton extends CWidget
 {
-	// Button callback functions.
-	const FN_LINK = 'link';
-	const FN_BUTTON = 'button';
-	const FN_SUBMIT = 'submit';
-	const FN_SUBMITLINK = 'submitLink';
-	const FN_RESET = 'reset';
-	const FN_AJAXLINK = 'ajaxLink';
-	const FN_AJAXBUTTON = 'ajaxButton';
-	const FN_AJAXSUBMIT = 'ajaxSubmit';
+	// Button callback types.
+	const BUTTON_LINK = 'link';
+	const BUTTON_BUTTON = 'button';
+	const BUTTON_SUBMIT = 'submit';
+	const BUTTON_SUBMITLINK = 'submitLink';
+	const BUTTON_RESET = 'reset';
+	const BUTTON_AJAXLINK = 'ajaxLink';
+	const BUTTON_AJAXBUTTON = 'ajaxButton';
+	const BUTTON_AJAXSUBMIT = 'ajaxSubmit';
 
 	// Button types.
 	const TYPE_NORMAL = '';
@@ -35,15 +33,16 @@ class BootButton extends BootWidget
 	const TYPE_INVERSE = 'inverse';
 
 	// Button sizes.
+	const SIZE_MINI = 'mini';
 	const SIZE_SMALL = 'small';
 	const SIZE_NORMAL = '';
 	const SIZE_LARGE = 'large';
 
 	/**
-	 * @var string the callback function for rendering the button.
+	 * @var string the button callback types.
 	 * Valid values are 'link', 'button', 'submit', 'submitLink', 'reset', 'ajaxLink', 'ajaxButton' and 'ajaxSubmit'.
 	 */
-	public $fn = self::FN_LINK;
+	public $buttonType = self::BUTTON_LINK;
 	/**
 	 * @var string the button type.
 	 * Valid values are '', 'primary', 'info', 'success', 'warning', 'danger' and 'inverse'.
@@ -91,31 +90,39 @@ class BootButton extends BootWidget
 	 */
 	public $encodeLabel = true;
 	/**
+	 * @var array the HTML attributes for the widget container.
+	 */
+	public $htmlOptions = array();
+	/**
 	 * @var array the button ajax options (used by 'ajaxLink' and 'ajaxButton').
 	 */
 	public $ajaxOptions = array();
+	/**
+	 * @var array the HTML options for the dropdown menu.
+	 * @since 0.9.11
+	 */
+	public $dropdownOptions = array();
 
 	/**
 	 * Initializes the widget.
 	 */
 	public function init()
 	{
-		$class = array('btn');
+		$classes = array('btn');
 
 		$validTypes = array(self::TYPE_PRIMARY, self::TYPE_INFO, self::TYPE_SUCCESS,
 				self::TYPE_WARNING, self::TYPE_DANGER, self::TYPE_INVERSE);
 
 		if (isset($this->type) && in_array($this->type, $validTypes))
-			$class[] = 'btn-'.$this->type;
+			$classes[] = 'btn-'.$this->type;
 
-		$validSizes = array(self::SIZE_SMALL, self::SIZE_LARGE);
+		$validSizes = array(self::SIZE_LARGE, self::SIZE_SMALL, self::SIZE_MINI);
 
 		if (isset($this->size) && in_array($this->size, $validSizes))
-			$class[] = 'btn-'.$this->size;
+			$classes[] = 'btn-'.$this->size;
 
-		if ($this->active) {
-			$class[] = 'active';
-		}
+		if ($this->active)
+			$classes[] = 'active';
 
 		if ($this->encodeLabel)
 			$this->label = CHtml::encode($this->label);
@@ -125,18 +132,17 @@ class BootButton extends BootWidget
 			if (!isset($this->url))
 				$this->url = '#';
 
-			$class[] = 'dropdown-toggle';
+			$classes[] = 'dropdown-toggle';
 			$this->label .= ' <span class="caret"></span>';
 			$this->htmlOptions['data-toggle'] = 'dropdown';
-			Yii::app()->bootstrap->registerDropdown();
 		}
 
-		$cssClass = implode(' ', $class);
+		$classes = implode(' ', $classes);
 
 		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$cssClass;
+			$this->htmlOptions['class'] .= ' '.$classes;
 		else
-			$this->htmlOptions['class'] = $cssClass;
+			$this->htmlOptions['class'] = $classes;
 
 		if (isset($this->icon))
 		{
@@ -164,8 +170,6 @@ class BootButton extends BootWidget
 
 			if (isset($this->completeText))
 				$this->htmlOptions['data-complete-text'] = $this->completeText;
-
-			Yii::app()->bootstrap->registerButton();
 		}
 	}
 
@@ -177,7 +181,13 @@ class BootButton extends BootWidget
 		echo $this->createButton();
 
 		if ($this->hasDropdown())
-			$this->controller->widget('bootstrap.widgets.BootDropdown', array('items'=>$this->items));
+		{
+			$this->controller->widget('bootstrap.widgets.BootDropdown', array(
+				'encodeLabel'=>$this->encodeLabel,
+				'items'=>$this->items,
+				'htmlOptions'=>$this->dropdownOptions,
+			));
+		}
 	}
 
 	/**
@@ -186,31 +196,39 @@ class BootButton extends BootWidget
 	 */
 	protected function createButton()
 	{
-		switch ($this->fn)
+		switch ($this->buttonType)
 		{
-			case self::FN_BUTTON:
+			case self::BUTTON_BUTTON:
 				return CHtml::htmlButton($this->label, $this->htmlOptions);
 
-			case self::FN_SUBMIT:
-				return CHtml::submitButton($this->label, $this->htmlOptions);
+			case self::BUTTON_SUBMIT:
+				$this->htmlOptions['type'] = 'submit';
+				return CHtml::htmlButton($this->label, $this->htmlOptions);
 
-			case self::FN_RESET:
-				return CHtml::resetButton($this->label, $this->htmlOptions);
+			case self::BUTTON_RESET:
+				$this->htmlOptions['type'] = 'reset';
+				return CHtml::htmlButton($this->label, $this->htmlOptions);
 
-			case self::FN_SUBMITLINK:
+			case self::BUTTON_SUBMITLINK:
 				return CHtml::linkButton($this->label, $this->htmlOptions);
 
-			case self::FN_AJAXLINK:
+			case self::BUTTON_AJAXLINK:
 				return CHtml::ajaxLink($this->label, $this->url, $this->ajaxOptions, $this->htmlOptions);
 
-			case self::FN_AJAXBUTTON:
-				return CHtml::ajaxButton($this->label, $this->url, $this->ajaxOptions, $this->htmlOptions);
+			case self::BUTTON_AJAXBUTTON:
+				$this->ajaxOptions['url'] = $this->url;
+				$this->htmlOptions['ajax'] = $this->ajaxOptions;
+				return CHtml::htmlButton($this->label, $this->htmlOptions);
 
-			case self::FN_AJAXSUBMIT:
-				return CHtml::ajaxSubmitButton($this->label, $this->ajaxOptions, $this->htmlOptions);
+			case self::BUTTON_AJAXSUBMIT:
+				$this->ajaxOptions['type'] = 'POST';
+				$this->ajaxOptions['url'] = $this->url;
+				$this->htmlOptions['type'] = 'submit';
+				$this->htmlOptions['ajax'] = $this->ajaxOptions;
+				return CHtml::htmlButton($this->label, $this->htmlOptions);
 
 			default:
-			case self::FN_LINK:
+			case self::BUTTON_LINK:
 				return CHtml::link($this->label, $this->url, $this->htmlOptions);
 		}
 	}

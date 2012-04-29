@@ -59,7 +59,7 @@ class TAccountController extends Controller
 
 	public function actionView($id)
 	{
-		$this->layout = '//layouts/column2';
+		$this->layout = '//layouts/column2breadcrumb';
 
 		$account=$this->newAccount($id);
 		$entity=$this->newEntity($id);
@@ -96,41 +96,42 @@ class TAccountController extends Controller
 			$model->attributes=$_POST['tAccount'];
 			$model->parent_id=$id;
 
-			$model->save();
+			if($model->save()) {
 
-			//haschild
-			$modelProperties2Add = new tAccountProperties();
-			$modelProperties2Add->parent_id=$model->id;
-			$modelProperties2Add->mkey="haschild_id";
-			$modelProperties2Add->mvalue=$_POST['tAccount']['haschild_id'];
-			$modelProperties2Add->save();
+				//haschild
+				$modelProperties2Add = new tAccountProperties();
+				$modelProperties2Add->parent_id=$model->id;
+				$modelProperties2Add->mkey="haschild_id";
+				$modelProperties2Add->mvalue=$_POST['tAccount']['haschild_id'];
+				$modelProperties2Add->save();
 
-			//currency
-			//$modelProperties3Add = new tAccountProperties();
-			//$modelProperties3Add->parent_id=$model->id;
-			//$modelProperties3Add->mkey="currency_id";
-			//$modelProperties3Add->mvalue=$_POST['tAccount']['currency_id'];
-			//$modelProperties3Add->save();
+				//currency
+				//$modelProperties3Add = new tAccountProperties();
+				//$modelProperties3Add->parent_id=$model->id;
+				//$modelProperties3Add->mkey="currency_id";
+				//$modelProperties3Add->mvalue=$_POST['tAccount']['currency_id'];
+				//$modelProperties3Add->save();
 
-			//state
-			//$modelProperties4Add = new tAccountProperties();
-			//$modelProperties4Add->parent_id=$model->id;
-			//$modelProperties4Add->mkey="state_id";
-			//$modelProperties4Add->mvalue=$_POST['tAccount']['state_id'];
-			//$modelProperties4Add->save();
+				//state
+				//$modelProperties4Add = new tAccountProperties();
+				//$modelProperties4Add->parent_id=$model->id;
+				//$modelProperties4Add->mkey="state_id";
+				//$modelProperties4Add->mvalue=$_POST['tAccount']['state_id'];
+				//$modelProperties4Add->save();
 
-			//Balance
-			$modelProperties5Add = new tBalanceSheet();
-			$modelProperties5Add->parent_id=$model->id;
-			$modelProperties5Add->yearmonth_periode=Yii::app()->settings->get("System", "cCurrentPeriod");
-			$modelProperties5Add->type_balance_id=1;
-			$modelProperties5Add->debit=0;
-			$modelProperties5Add->credit=0;
-			$modelProperties5Add->beginning_balance=$_POST['tAccount']['beginning_balance'];
-			$modelProperties5Add->end_balance=$_POST['tAccount']['beginning_balance'];
-			$modelProperties5Add->save();
+				//Balance
+				$modelProperties5Add = new tBalanceSheet();
+				$modelProperties5Add->parent_id=$model->id;
+				$modelProperties5Add->yearmonth_periode=Yii::app()->settings->get("System", "cCurrentPeriod");
+				$modelProperties5Add->type_balance_id=1;
+				$modelProperties5Add->debit=0;
+				$modelProperties5Add->credit=0;
+				$modelProperties5Add->beginning_balance=$_POST['tAccount']['beginning_balance'];
+				$modelProperties5Add->end_balance=$_POST['tAccount']['beginning_balance'];
+				$modelProperties5Add->save();
 
-			$this->redirect(array('view','id'=>$model->parent_id));
+				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		return $model;
@@ -258,9 +259,9 @@ class TAccountController extends Controller
 			}
 		}
 
-		if (isset($model->haschild))  $model->haschild_id=$model->haschild->mvalue;
-		if (isset($model->currency))  $model->currency_id=$model->currency->mvalue;
-		if (isset($model->state))  $model->state_id=$model->state->mvalue;
+		if (isset($model->haschild))  $model->haschild_id = $model->haschild->mvalue;
+		if (isset($model->currency))  $model->currency_id = $model->currency->mvalue;
+		if (isset($model->state))  $model->state_id = $model->state->mvalue;
 
 		if(!isset($_POST['account_properties'])) {
 			$modelDetail = tAccountProperties::model()->findAll('parent_id ='.$model->id);
@@ -381,7 +382,7 @@ class TAccountController extends Controller
 				"SELECT m1.id, m1.account_name AS text, m2.id IS NOT NULL AS hasChildren
 				FROM t_account AS m1 LEFT JOIN t_account AS m2 ON m1.id=m2.parent_id
 				WHERE m1.parent_id <=> $parentId
-				GROUP BY m1.id ORDER BY m1.id ASC"
+				GROUP BY m1.id ORDER BY m1.account_no ASC"
 		);
 		$children = $req->queryAll();
 

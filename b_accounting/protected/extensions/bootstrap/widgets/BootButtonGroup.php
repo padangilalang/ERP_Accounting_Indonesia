@@ -9,22 +9,21 @@
  */
 
 Yii::import('bootstrap.widgets.BootButton');
-Yii::import('bootstrap.widgets.BootWidget');
 
 /**
  * Bootstrap button group widget.
  */
-class BootButtonGroup extends BootWidget
+class BootButtonGroup extends CWidget
 {
 	// Toggle options.
 	const TOGGLE_CHECKBOX = 'checkbox';
 	const TOGGLE_RADIO = 'radio';
 
 	/**
-	 * @var string the button function.
-	 * @see BootButton::fn
+	 * @var string the button callback type.
+	 * @see BootButton::buttonType
 	 */
-	public $fn = BootButton::FN_LINK;
+	public $buttonType = BootButton::BUTTON_LINK;
 	/**
 	 * @var string the button type.
 	 * @see BootButton::type
@@ -40,6 +39,10 @@ class BootButtonGroup extends BootWidget
 	 */
 	public $encodeLabel = true;
 	/**
+	 * @var array the HTML attributes for the widget container.
+	 */
+	public $htmlOptions = array();
+	/**
 	 * @var array the button configuration.
 	 */
 	public $buttons = array();
@@ -53,19 +56,16 @@ class BootButtonGroup extends BootWidget
 	 */
 	public function init()
 	{
-		$cssClass = 'btn-group';
+		$classes = 'btn-group';
 		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$cssClass;
+			$this->htmlOptions['class'] .= ' '.$classes;
 		else
-			$this->htmlOptions['class'] = $cssClass;
+			$this->htmlOptions['class'] = $classes;
 
 		$validToggles = array(self::TOGGLE_CHECKBOX, self::TOGGLE_RADIO);
 
 		if (isset($this->toggle) && in_array($this->toggle, $validToggles))
-		{
 			$this->htmlOptions['data-toggle'] = 'buttons-'.$this->toggle;
-			Yii::app()->bootstrap->registerButton();
-		}
 	}
 
 	/**
@@ -78,17 +78,17 @@ class BootButtonGroup extends BootWidget
 		foreach ($this->buttons as $button)
 		{
 			$this->controller->widget('bootstrap.widgets.BootButton', array(
-					'fn'=>isset($button['fn']) ? $button['fn'] : $this->fn,
-					'type'=>isset($button['type']) ? $button['type'] : $this->type,
-					'size'=>$this->size,
-					'icon'=>isset($button['icon']) ? $button['icon'] : null,
-					'label'=>isset($button['label']) ? $button['label'] : null,
-					'url'=>isset($button['url']) ? $button['url'] : null,
-					'active'=>isset($button['active']) ? $button['active'] : false,
-					'items'=>isset($button['items']) ? $button['items'] : array(),
-					'ajaxOptions'=>isset($button['ajaxOptions']) ? $button['ajaxOptions'] : array(),
-					'htmlOptions'=>isset($button['htmlOptions']) ? $button['htmlOptions'] : array(),
-					'encodeLabel'=>isset($button['encodeLabel']) ? $button['encodeLabel'] : $this->encodeLabel,
+				'buttonType'=>isset($button['buttonType']) ? $button['buttonType'] : $this->buttonType,
+				'type'=>isset($button['type']) ? $button['type'] : $this->type,
+				'size'=>$this->size,
+				'icon'=>isset($button['icon']) ? $button['icon'] : null,
+				'label'=>isset($button['label']) ? $button['label'] : null,
+				'url'=>isset($button['url']) ? $button['url'] : null,
+				'active'=>isset($button['active']) ? $button['active'] : false,
+				'items'=>isset($button['items']) ? $button['items'] : array(),
+				'ajaxOptions'=>isset($button['ajaxOptions']) ? $button['ajaxOptions'] : array(),
+				'htmlOptions'=>isset($button['htmlOptions']) ? $button['htmlOptions'] : array(),
+				'encodeLabel'=>isset($button['encodeLabel']) ? $button['encodeLabel'] : $this->encodeLabel,
 			));
 		}
 

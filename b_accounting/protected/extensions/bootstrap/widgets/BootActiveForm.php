@@ -312,10 +312,10 @@ class BootActiveForm extends CActiveForm
 		$labelCssClass = $checkbox ? 'checkbox' : 'radio';
 
 		if (isset($htmlOptions['inline']))
-		{
-			$labelCssClass .= ' inline';
-			unset($htmlOptions['inline']);
-		}
+        {
+                $labelCssClass .= ' inline';
+                unset($htmlOptions['inline']);
+        }
 
 		foreach ($data as $value => $label)
 		{
@@ -325,9 +325,9 @@ class BootActiveForm extends CActiveForm
 			$option = CHtml::$method($name, $checked, $htmlOptions);
 			$label = CHtml::label($label, $htmlOptions['id'], $labelOptions);
 			$items[] = strtr($template, array(
-					'{labelCssClass}'=>$labelCssClass,
-					'{input}'=>$option,
-					'{label}'=>$label,
+				'{labelCssClass}'=>$labelCssClass,
+				'{input}'=>$option,
+				'{label}'=>$label,
 			));
 		}
 
@@ -384,26 +384,26 @@ class BootActiveForm extends CActiveForm
 			$htmlOptions['id'] = $inputID.'_em_';
 
 		$option = array(
-				'id'=>$id,
-				'inputID'=>$inputID,
-				'errorID'=>$htmlOptions['id'],
-				'model'=>get_class($model),
-				'name'=>CHtml::resolveName($model, $attribute),
-				'enableAjaxValidation'=>$enableAjaxValidation,
-				'inputContainer'=>'div.control-group', // Bootstrap requires this
+			'id'=>$id,
+			'inputID'=>$inputID,
+			'errorID'=>$htmlOptions['id'],
+			'model'=>get_class($model),
+			'name'=>CHtml::resolveName($model, $attribute),
+			'enableAjaxValidation'=>$enableAjaxValidation,
+			'inputContainer'=>'div.control-group', // Bootstrap requires this
 		);
 
 		$optionNames = array(
-				'validationDelay',
-				'validateOnChange',
-				'validateOnType',
-				'hideErrorMessage',
-				'inputContainer',
-				'errorCssClass',
-				'successCssClass',
-				'validatingCssClass',
-				'beforeValidateAttribute',
-				'afterValidateAttribute',
+			'validationDelay',
+			'validateOnChange',
+			'validateOnType',
+			'hideErrorMessage',
+			'inputContainer',
+			'errorCssClass',
+			'successCssClass',
+			'validatingCssClass',
+			'beforeValidateAttribute',
+			'afterValidateAttribute',
 		);
 
 		foreach ($optionNames as $name)
@@ -484,12 +484,12 @@ class BootActiveForm extends CActiveForm
 	{
 		ob_start();
 		Yii::app()->controller->widget($this->getInputClassName(), array(
-				'type'=>$type,
-				'form'=>$this,
-				'model'=>$model,
-				'attribute'=>$attribute,
-				'data'=>$data,
-				'htmlOptions'=>$htmlOptions,
+			'type'=>$type,
+			'form'=>$this,
+			'model'=>$model,
+			'attribute'=>$attribute,
+			'data'=>$data,
+			'htmlOptions'=>$htmlOptions,
 		));
 		return ob_get_clean();
 	}

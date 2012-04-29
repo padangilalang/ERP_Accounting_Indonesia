@@ -4,7 +4,7 @@
  * @author Christoffer Niska <ChristofferNiska@gmail.com>
  * @copyright Copyright &copy; Christoffer Niska 2011-
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- * @version 0.9.10
+ * @version 0.9.12
  */
 
 /**
@@ -13,7 +13,7 @@
  */
 class Bootstrap extends CApplicationComponent
 {
-	// The Bootstrap core plugins.
+	// Bootstrap plugins.
 	const PLUGIN_ALERT = 'alert';
 	const PLUGIN_BUTTON = 'button';
 	const PLUGIN_CAROUSEL = 'carousel';
@@ -38,7 +38,13 @@ class Bootstrap extends CApplicationComponent
 	 */
 	public $responsiveCss = false;
 	/**
+	 * @var boolean whether to register the Yii-specific CSS missing from Bootstrap.
+	 * @since 0.9.12
+	 */
+	public $yiiCss = true;
+	/**
 	 * @var boolean whether to register jQuery and the Bootstrap JavaScript.
+	 * @since 0.9.10
 	 */
 	public $enableJS = true;
 	/**
@@ -46,17 +52,26 @@ class Bootstrap extends CApplicationComponent
 	 * @since 0.9.8
 	 */
 	public $plugins = array();
+	/**
+	 * @var boolean whether to enable debugging mode.
+	 */
+	public $debug = false;
 
 	protected $_assetsUrl;
-	protected $_rp = array();
 
 	/**
 	 * Initializes the component.
 	 */
 	public function init()
 	{
+		// Register the bootstrap path alias.
 		if (!Yii::getPathOfAlias('bootstrap'))
 			Yii::setPathOfAlias('bootstrap', realpath(dirname(__FILE__).'/..'));
+
+		// Prevents the extension from registering scripts
+		// and publishing assets when ran from the command line.
+		if (php_sapi_name() === 'cli')
+			return;
 
 		if ($this->coreCss)
 			$this->registerCss();
@@ -64,21 +79,11 @@ class Bootstrap extends CApplicationComponent
 		if ($this->responsiveCss)
 			$this->registerResponsiveCss();
 
-		if ($this->enableJS)
-		{
-			Yii::app()->clientScript->registerCoreScript('jquery');
-			$this->registerCorePlugins();
-		}
-	}
+		if ($this->yiiCss)
+			$this->registerYiiCss();
 
-	/**
-	 * Returns whether a plugin is registered.
-	 * @param string $name the name of the plugin
-	 * @return boolean the result
-	 */
-	public function isPluginRegistered($name)
-	{
-		return isset($this->_rp[$name]);
+		if ($this->enableJS)
+			$this->registerCorePlugins();
 	}
 
 	/**
@@ -95,32 +100,34 @@ class Bootstrap extends CApplicationComponent
 	 */
 	public function registerResponsiveCss()
 	{
-		Yii::app()->clientScript->registerCssFile($this->getAssetsUrl().'/css/bootstrap-responsive.min.css');
+		/** @var CClientScript $cs */
+		$cs = Yii::app()->getClientScript();
+		$cs->registerMetaTag('width=device-width, initial-scale=1.0', 'viewport');
+		$cs->registerCssFile($this->getAssetsUrl().'/css/bootstrap-responsive.min.css');
+	}
+
+	/**
+	 * Registers the Yii-specific CSS missing from Bootstrap.
+	 * @since 0.9.11
+	 */
+	public function registerYiiCss()
+	{
+		Yii::app()->clientScript->registerCssFile($this->getAssetsUrl().'/css/bootstrap-yii.css');
 	}
 
 	/**
 	 * Registers the core JavaScript plugins.
 	 * @since 0.9.8
 	 */
-	protected function registerCorePlugins()
+	public function registerCorePlugins()
 	{
-		if (!$this->isPluginDisabled(self::PLUGIN_TRANSITION))
-			$this->enableTransitions();
+		/** @var CClientScript $cs */
+		$cs = Yii::app()->getClientScript();
+		$cs->registerCoreScript('jquery');
+		$cs->registerScriptFile($this->getAssetsUrl().'/js/bootstrap.min.js');
 
-		if (!$this->isPluginDisabled(self::PLUGIN_TOOLTIP))
-			$this->registerTooltip();
-
-		if (!$this->isPluginDisabled(self::PLUGIN_POPOVER))
-			$this->registerPopover();
-	}
-
-	/**
-	 * Enables the Bootstrap transitions plugin.
-	 * @since 0.9.8
-	 */
-	public function enableTransitions()
-	{
-		$this->registerPlugin(self::PLUGIN_TRANSITION);
+		$this->registerTooltip();
+		$this->registerPopover();
 	}
 
 	/**
@@ -276,17 +283,6 @@ class Bootstrap extends CApplicationComponent
 	}
 
 	/**
-	 * Returns whether a plugin is disabled in the plugin configuration.
-	 * @param string $name the name of the plugin
-	 * @return boolean the result
-	 * @since 0.9.8
-	 */
-	protected function isPluginDisabled($name)
-	{
-		return isset($this->plugins[$name]) && $this->plugins[$name] === false;
-	}
-
-	/**
 	 * Registers a Bootstrap JavaScript plugin.
 	 * @param string $name the name of the plugin
 	 * @param string $selector the CSS selector
@@ -296,12 +292,6 @@ class Bootstrap extends CApplicationComponent
 	 */
 	protected function registerPlugin($name, $selector = null, $options = array(), $defaultSelector = null)
 	{
-		if (!$this->isPluginRegistered($name))
-		{
-			$this->registerScriptFile("bootstrap-{$name}.js");
-			$this->_rp[$name] = true;
-		}
-
 		if (!isset($selector) && empty($options))
 		{
 			// Initialization from extension configuration.
@@ -326,19 +316,9 @@ class Bootstrap extends CApplicationComponent
 	}
 
 	/**
-	 * Registers a JavaScript file in the assets folder.
-	 * @param string $fileName the file name.
-	 * @param integer $position the position of the JavaScript file.
-	 */
-	protected function registerScriptFile($fileName, $position=CClientScript::POS_END)
-	{
-		Yii::app()->clientScript->registerScriptFile($this->getAssetsUrl().'/js/'.$fileName, $position);
-	}
-
-	/**
-	 * Returns the URL to the published assets folder.
-	 * @return string the URL
-	 */
+	* Returns the URL to the published assets folder.
+	* @return string the URL
+	*/
 	protected function getAssetsUrl()
 	{
 		if ($this->_assetsUrl !== null)
@@ -347,7 +327,7 @@ class Bootstrap extends CApplicationComponent
 		{
 			$assetsPath = Yii::getPathOfAlias('bootstrap.assets');
 
-			if (YII_DEBUG)
+			if ($this->debug)
 				$assetsUrl = Yii::app()->assetManager->publish($assetsPath, false, -1, true);
 			else
 				$assetsUrl = Yii::app()->assetManager->publish($assetsPath);

@@ -7,6 +7,7 @@ $this->menu=array(
 		array('label'=>'Home', 'url'=>array('/tAccount')),
 );
 
+
 ?>
 
 <div class="page-header">
@@ -39,7 +40,18 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 				'style'=>'height:24px;'
 		),
 ));
+
+
 ?>
+<?php 
+/*
+$this->widget('ext.monthpicker.MonthPicker', array(
+    'model'=>$model,
+    'name'=>'begindate',
+));
+*/
+?>
+
 <?php echo $form->error($model,'begindate'); ?>
 
 <?php echo $form->labelEx($model,'enddate'); ?>

@@ -19,7 +19,6 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 		'dataProvider'=>tBalanceSheet::model()->search($model->id),
 		'template'=>'{items}{pager}',
 		'itemsCssClass'=>'table table-striped table-bordered',
-		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
 				array(
 						'name'=>'type_balance_id',

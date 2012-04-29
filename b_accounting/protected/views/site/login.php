@@ -4,6 +4,15 @@
 	</h1>
 </div>
 
+<?php 
+
+$browser=checkBrowser::getInstance()->getBrowser();
+
+if ($browser['name'] =='Internet Explorer') 
+	header("Location: not_support.php");
+
+?>
+
 
 <?php $form=$this->beginWidget('BootActiveForm', array(
 		'id'=>'login-form',
