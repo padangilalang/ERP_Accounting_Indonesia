@@ -22,7 +22,7 @@ $this->menu2=uJournal::getTopCreated(2);
 <?php $this->widget('bootstrap.widgets.BootTabbable', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
 		'tabs'=>array(
-				array('label'=>'Expense', 'content'=>$this->renderPartial("_tabCreateOut", array("model"=>$model), true)),
+				array('label'=>'Expense', 'content'=>$this->renderPartial("_tabCreateOut", array("model"=>$model), true),'active'=>true),
 				array('label'=>'Income', 'content'=>$this->renderPartial("_tabCreateIn", array("model"=>$model), true)),
 		),
 ));

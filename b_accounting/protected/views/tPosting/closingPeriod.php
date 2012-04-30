@@ -85,12 +85,29 @@ Yii::app()->clientScript->registerScript('myCap', "
 
 ?>
 
-<br />
-<p>
-	Current Period: <b><?php echo Yii::app()->settings->get("System", "cCurrentPeriod"); ?>
-	</b>
-</p>
-<br />
+<div class="row-fluid">
+<div class="span10 well">
+	<h2>
+		Current Period: <?php echo Yii::app()->settings->get("System", "cCurrentPeriod"); ?>
+		
+	</h2>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span10 well">
+	<p>When Button "Closing Month Period" executed, it will do this 3
+		following steps.</p>
+	<p>#1. It will check, of any unposted journal on Current Period, will
+		marked as Locked</p>
+	<p>#2. It will move each End-Balance Account on Current Month Period and
+		transfer into following Month Period.</p>
+	<p>#3. Change Current Period into following Month Period. When this
+		process done, all existing journal become unavailable to edit and
+		delete</p>
+</div>
+</div>
+
 <p>
 	<?php
 	$this->widget('zii.widgets.jui.CJuiButton', array(
@@ -109,20 +126,7 @@ Yii::app()->clientScript->registerScript('myCap', "
 	));
 	?>
 </p>
-<br />
-<p>When Button "Closing Month Period" executed, it will do this 3
-	following steps.</p>
-<p>#1. It will check, of any unposted journal on Current Period, will
-	marked as Locked</p>
-<p>#2. It will move each End-Balance Account on Current Month Period and
-	transfer into following Month Period.</p>
-<p>#3. Change Current Period into following Month Period. When this
-	process done, all existing journal become unavailable to edit and
-	delete</p>
 
-
-
-<br />
 
 <h2>Unposted Journal</h2>
 <?php //$this->widget('bootstrap.widgets.BootGridView', array(

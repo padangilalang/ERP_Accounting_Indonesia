@@ -29,13 +29,18 @@ $this->menu2=uJournal::getTopCreated(1);
 	</h1>
 </div>
 
-<?php $this->widget('zii.widgets.CListView', array(
-		'dataProvider'=>$dataProvider,
-		'itemView'=>'_view',
-		//'template'=>'{summary}{items}'
-		//'sortableAttributes'=>array(
-		//   'updated_date',
-		//    'entity.name',
-		//),
-)); ?>
+<div id="posts">
+<?php foreach($dataProvider as $data): ?>
+    <div class="post">
+		<?php echo $this->renderPartial('/uJournal/_view', array('data'=>$data)); ?>
+    </div>
+<?php endforeach; ?>
+</div>
 
+<?php $this->widget('ext.yiinfinite-scroll.YiinfiniteScroller', array(
+    'contentSelector' => '#posts',
+    'itemSelector' => 'div.post',
+    'loadingText' => 'Loading...',
+    'donetext' => 'This is the end... ',
+    'pages' => $pages,
+)); ?>

@@ -32,21 +32,23 @@ Yii::app()->clientScript->registerScript('myCap'.$data->id, "
 ?>
 
 
-<div id="list-<?php echo $data->id; ?>" class="view-c0">
+<div id="list-<?php echo $data->id; ?>" class="well">
 
 	<b><?php 
 	echo CHtml::encode($data->system_ref);
 	if ($data->state_id != 1) echo " (" .sParameter::item("cStatus",$data->state_id) .")";
 	?> </b>
 
-	<?php echo CHtml::link('detail>>','#',array('class'=>'hide-info'.$data->id)); ?>
+	<?php echo CHtml::link('detail<i class="icon-chevron-right"></i>','#',array('class'=>'hide-info'.$data->id)); ?>
 
 	<br />
 	<br />
 	<div class="list<?php echo $data->id ?>" style="display: none">
 	
 		<?php
-		$this->widget('bootstrap.widgets.BootDetailView', array(
+			//$this->widget('bootstrap.widgets.BootDetailView', array(
+			$this->widget('ext.XDetailView', array(
+				'ItemColumns' => 2,
 				'data'=>array(
 						'id'=>1, 
 						'module_id'=>$data->module->name,

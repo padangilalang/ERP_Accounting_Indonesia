@@ -4433,3 +4433,816 @@ Stack trace:
 REQUEST_URI=/b_accounting/index.php?r=tAccount/view&id=7
 HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount/view&id=7
 ---
+2012/04/29 20:48:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'accounting'@'localhost' for table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'.
+2012/04/29 20:48:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'accounting'@'localhost' for table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1681): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1061): CActiveRecord->updateByPk('1', Array)
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->update(NULL)
+#3 C:\wamp\www\b_accounting\protected\controllers\SiteController.php(51): CActiveRecord->save()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/login
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=site/login
+---
+2012/04/29 21:00:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'id' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'.
+2012/04/29 21:00:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'id' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1681): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1061): CActiveRecord->updateByPk('1', Array)
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->update(NULL)
+#3 C:\wamp\www\b_accounting\protected\controllers\SiteController.php(51): CActiveRecord->save()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/login
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=site/login
+---
+2012/04/29 21:01:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'password' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'.
+2012/04/29 21:01:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'password' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1681): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1061): CActiveRecord->updateByPk('1', Array)
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->update(NULL)
+#3 C:\wamp\www\b_accounting\protected\controllers\SiteController.php(51): CActiveRecord->save()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/login
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=site/login
+---
+2012/04/29 21:03:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'id' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'.
+2012/04/29 21:03:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'id' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1681): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1061): CActiveRecord->updateByPk('1', Array)
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->update(NULL)
+#3 C:\wamp\www\b_accounting\protected\controllers\SiteController.php(51): CActiveRecord->save()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/login
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=site/login
+---
+2012/04/29 21:05:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'password' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'.
+2012/04/29 21:05:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1143 UPDATE command denied to user 'accounting'@'localhost' for column 'password' in table 's_user'. The SQL statement executed was: UPDATE `s_user` SET `id`=:yp0, `username`=:yp1, `password`=:yp2, `salt`=:yp3, `default_group`=:yp4, `status_id`=:yp5, `created_date`=:yp6, `created_by`=:yp7, `last_login`=:yp8 WHERE `s_user`.`id`='1'' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1681): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1061): CActiveRecord->updateByPk('1', Array)
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->update(NULL)
+#3 C:\wamp\www\b_accounting\protected\controllers\SiteController.php(51): CActiveRecord->save()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/login
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=site/login
+---
+2012/04/29 21:08:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'accounting'@'localhost' for table 's_notification'. The SQL statement executed was: INSERT INTO `s_notification` (`receiver_id`, `long_desc`, `sender_id`, `type_id`, `read_id`, `category_id`, `sender_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+2012/04/29 21:08:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'accounting'@'localhost' for table 's_notification'. The SQL statement executed was: INSERT INTO `s_notification` (`receiver_id`, `long_desc`, `sender_id`, `type_id`, `read_id`, `category_id`, `sender_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\b_accounting\protected\controllers\MenuController.php(84): CActiveRecord->save()
+#3 C:\wamp\www\b_accounting\protected\controllers\MenuController.php(46): MenuController->newNotification()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MenuController->actionIndex()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#17 {main}
+REQUEST_URI=/b_accounting/index.php
+HTTP_REFERER=http://localhost/b_accounting/index.php
+---
+2012/04/29 21:21:43 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.widgets.BootCrumb" is invalid. Make sure it points to an existing PHP file.' in C:\wamp\www\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): YiiBase::import('ext.bootstrap.w...', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(TAccountController), 'ext.bootstrap.w...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#3 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\_breadcrumb.php(6): CBaseController->widget('ext.bootstrap.w...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\column2breadcrumb.php(5): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#15 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(85): CController->render('view', Array)
+#16 [internal function]: TAccountController->actionView('8')
+#17 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TAccountController), Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TAccountController), Object(ReflectionMethod), Array)
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#31 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount/view&id=8
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount
+---
+2012/04/29 21:21:46 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.widgets.BootCrumb" is invalid. Make sure it points to an existing PHP file.' in C:\wamp\www\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): YiiBase::import('ext.bootstrap.w...', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(TAccountController), 'ext.bootstrap.w...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#3 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\_breadcrumb.php(6): CBaseController->widget('ext.bootstrap.w...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\column2breadcrumb.php(5): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#15 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(85): CController->render('view', Array)
+#16 [internal function]: TAccountController->actionView('8')
+#17 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TAccountController), Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TAccountController), Object(ReflectionMethod), Array)
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#31 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount/view&id=8
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount
+---
+2012/04/29 21:22:00 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.widgets.BootCrumb" is invalid. Make sure it points to an existing PHP file.' in C:\wamp\www\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): YiiBase::import('ext.bootstrap.w...', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(TAccountController), 'ext.bootstrap.w...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('ext.bootstrap.w...', Array)
+#3 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\_breadcrumb.php(6): CBaseController->widget('ext.bootstrap.w...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\column2breadcrumb.php(5): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#15 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(85): CController->render('view', Array)
+#16 [internal function]: TAccountController->actionView('8')
+#17 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TAccountController), Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TAccountController), Object(ReflectionMethod), Array)
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#31 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount/view&id=8
+---
+2012/04/29 23:06:37 [error] [php] Undefined variable: data (C:\wamp\www\b_accounting\protected\views\uJournal\_view.php:4)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): UJournalController->renderFile()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(45): UJournalController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): UJournalController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): UJournalController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): UJournalController->renderPartial()
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(184): UJournalController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): UJournalController->runAction()
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): UJournalController->filterAccessControl()
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): UJournalController->runActionWithFilters()
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): UJournalController->run()
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=uJournal
+2012/04/29 23:06:58 [error] [php] Trying to get property of non-object (C:\wamp\www\b_accounting\protected\views\uJournal\_view.php:4)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): UJournalController->renderFile()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(45): UJournalController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): UJournalController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): UJournalController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): UJournalController->renderPartial()
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(184): UJournalController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): UJournalController->runAction()
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): UJournalController->filterAccessControl()
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): UJournalController->runActionWithFilters()
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): UJournalController->run()
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=uJournal
+2012/04/29 23:10:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'module_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `t_account` `t` WHERE (module_id=:ycp0) AND (yearmonth_periode=:ycp1) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:10:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'module_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `t_account` `t` WHERE (module_id=:ycp0) AND (yearmonth_periode=:ycp1) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(187): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal')
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#17 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal
+---
+2012/04/29 23:13:27 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(56): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(194): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&page=5
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal
+---
+2012/04/29 23:15:36 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(46): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(194): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&uJournal%5Bsystem_ref%5D=954&yt0=&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal%2Findex&uJournal%5Bsystem_ref%5D=954&yt0=
+---
+2012/04/29 23:15:40 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(46): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(194): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&uJournal%5Bsystem_ref%5D=954&yt0=&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal%2Findex&uJournal%5Bsystem_ref%5D=954&yt0=
+---
+2012/04/29 23:16:03 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(46): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(194): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&uJournal%5Bsystem_ref%5D=B6193VAC&yt0=&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal%2Findex&uJournal%5Bsystem_ref%5D=B6193VAC&yt0=
+---
+2012/04/29 23:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(46): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(194): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&page=5
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal
+---
+2012/04/29 23:28:11 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\mCashbank\index.php(74): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(339): CController->render('index', Array)
+#7 [internal function]: MCashbankController->actionIndex(0)
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&uJournal%5Bsystem_ref%5D=CB-c6-201202-EXP-01269&yt0=&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=mCashbank%2Findex&uJournal%5Bsystem_ref%5D=CB-c6-201202-EXP-01269&yt0=
+---
+2012/04/29 23:28:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:28:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(332): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&uJournal%5Bsystem_ref%5D=CB-c6-201202-EXP-01269&yt0=&pid=4
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=mCashbank%2Findex&uJournal%5Bsystem_ref%5D=CB-c6-201202-EXP-01269&yt0=
+---
+2012/04/29 23:31:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:31:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(333): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&uJournal%5Bsystem_ref%5D=CB-c6-201202-EXP-01269&yt0=&pid=4
+---
+2012/04/29 23:32:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:32:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(333): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&uJournal%5Bsystem_ref%5D=CB-c6-201202-EXP-01269&yt0=&pid=4
+---
+2012/04/29 23:32:38 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:32:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE (((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) AND ((system_ref LIKE :ycp2) OR (remark LIKE :ycp3))) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(333): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&uJournal%5Bsystem_ref%5D=CB-c6-201202-EXP-01269&yt0=&pid=4
+---
+2012/04/29 23:33:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:33:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(333): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&pid=4
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=mCashbank
+---
+2012/04/29 23:34:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:34:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(334): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&pid=4
+---
+2012/04/29 23:34:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:34:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(334): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&pid=4
+---
+2012/04/29 23:35:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:35:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(334): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&pid=4
+---
+2012/04/29 23:35:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20.
+2012/04/29 23:35:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'journalDetail.account_no_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`entity_id` AS `t0_c1`, `t`.`module_id` AS `t0_c2`, `t`.`input_date` AS `t0_c3`, `t`.`yearmonth_periode` AS `t0_c4`, `t`.`user_ref` AS `t0_c5`, `t`.`system_ref` AS `t0_c6`, `t`.`system_ref_group` AS `t0_c7`, `t`.`remark` AS `t0_c8`, `t`.`journal_type_id` AS `t0_c9`, `t`.`state_id` AS `t0_c10`, `t`.`cb_receiver` AS `t0_c11`, `t`.`created_date` AS `t0_c12`, `t`.`created_id` AS `t0_c13`, `t`.`updated_date` AS `t0_c14`, `t`.`updated_id` AS `t0_c15` FROM `u_journal` `t`  WHERE ((module_id=:ycp0) AND (journalDetail.account_no_id=:ycp1)) ORDER BY t.yearmonth_periode DESC, t.created_date DESC LIMIT 20' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(334): CActiveRecord->findAll(Object(CDbCriteria))
+#7 [internal function]: MCashbankController->actionIndex('4')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&pid=4
+---
+2012/04/29 23:35:41 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "journalDetail1" is not defined in active record class "uJournal".' in C:\wamp\www\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'journalDetail1')
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1539): CActiveFinder->__construct(Object(uJournal), Array)
+#3 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(328): CActiveRecord->count(Object(CDbCriteria))
+#4 [internal function]: MCashbankController->actionIndex('4')
+#5 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#19 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&pid=4
+---
+2012/04/29 23:38:49 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\mCashbank\index.php(74): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(341): CController->render('index', Array)
+#7 [internal function]: MCashbankController->actionIndex('9')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&pid=9&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=mCashbank/index&pid=9
+---
+2012/04/29 23:39:54 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\tAccount\index.php(109): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(331): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): TAccountController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount/index&page=13
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount
+---
+2012/04/29 23:42:18 [error] [php] Trying to get property of non-object (C:\wamp\www\b_accounting\protected\views\tPosting\_view.php:2)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): TPostingController->renderFile()
+#1 C:\wamp\www\b_accounting\protected\views\tPosting\index.php(93): TPostingController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): TPostingController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): TPostingController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): TPostingController->renderPartial()
+#6 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(230): TPostingController->render()
+#7 unknown(0): TPostingController->actionIndex()
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): TPostingController->runAction()
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): TPostingController->filterAccessControl()
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): TPostingController->runActionWithFilters()
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): TPostingController->run()
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=tPosting

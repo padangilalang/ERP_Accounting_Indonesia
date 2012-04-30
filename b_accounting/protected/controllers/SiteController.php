@@ -45,11 +45,8 @@ class SiteController extends Controller
 			if($model->validate() && $model->login()) {
 
 				//Save Last Login
-				$model1=sUser::model()->findByPk((int)Yii::app()->user->id);
-				if($model1 != null) {
-					$model1->last_login=time();
-					$model1->save();
-				}
+				sUser::model()->updateByPk((int)Yii::app()->user->id,array('last_login'=>time()));
+				
 				$this->redirect(Yii::app()->user->returnUrl);
 			}
 		}

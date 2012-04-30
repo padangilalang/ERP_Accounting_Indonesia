@@ -54,7 +54,7 @@ $this->widget('ext.groupgridview.GroupGridView', array(
 <?php $this->widget('bootstrap.widgets.BootTabbable', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
 		'tabs'=>array(
-				array('label'=>'Existing Parameter', 'content'=>$this->renderPartial("_formE", array("model"=>$modelParameter), true)),
+				array('label'=>'Existing Parameter', 'content'=>$this->renderPartial("_formE", array("model"=>$modelParameter), true),'active'=>true),
 				array('label'=>'New Parameter', 'content'=>$this->renderPartial("_form", array("model"=>$modelParameter), true)),
 		),
 ));

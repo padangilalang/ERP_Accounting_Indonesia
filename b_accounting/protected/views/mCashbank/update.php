@@ -24,7 +24,7 @@ if (!isset($model->cb_receiver) && !isset($model->cb_received_from)) {
 	$this->widget('bootstrap.widgets.BootTabbable', array(
 			'type'=>'tabs', // 'tabs' or 'pills'
 			'tabs'=>array(
-					array('label'=>'Expense', 'content'=>$this->renderPartial("_tabCreateOut", array("model"=>$model), true)),
+					array('label'=>'Expense', 'content'=>$this->renderPartial("_tabCreateOut", array("model"=>$model), true),'active'=>true),
 					array('label'=>'Income', 'content'=>$this->renderPartial("_tabCreateIn", array("model"=>$model), true)),
 			),
 	));
@@ -32,7 +32,7 @@ if (!isset($model->cb_receiver) && !isset($model->cb_received_from)) {
 	$this->widget('bootstrap.widgets.BootTabbable', array(
 			'type'=>'tabs', // 'tabs' or 'pills'
 			'tabs'=>array(
-					array('label'=>'Expense', 'content'=>$this->renderPartial("_tabCreateOut", array("model"=>$model), true)),
+					array('label'=>'Expense', 'content'=>$this->renderPartial("_tabCreateOut", array("model"=>$model), true),'active'=>true),
 			),
 	));
 
@@ -40,7 +40,7 @@ if (!isset($model->cb_receiver) && !isset($model->cb_received_from)) {
 	$this->widget('bootstrap.widgets.BootTabbable', array(
 			'type'=>'tabs', // 'tabs' or 'pills'
 			'tabs'=>array(
-					array('label'=>'Income', 'content'=>$this->renderPartial("_tabCreateIn", array("model"=>$model), true)),
+					array('label'=>'Income', 'content'=>$this->renderPartial("_tabCreateIn", array("model"=>$model), true),'active'=>true),
 			),
 	));
 

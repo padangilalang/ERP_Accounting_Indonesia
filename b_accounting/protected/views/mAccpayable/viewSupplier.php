@@ -24,7 +24,7 @@ $this->menu2=cSupplier::getTopCreated();
 <?php $this->widget('bootstrap.widgets.BootTabbable', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
 		'tabs'=>array(
-				array('label'=>'AP State', 'content'=>$this->renderPartial("_tabState", array("model"=>$model), true)),
+				array('label'=>'AP State', 'content'=>$this->renderPartial("_tabState", array("model"=>$model), true),'active'=>true),
 				array('label'=>'Detail', 'content'=>$this->renderPartial("_tabDetail", array("model"=>$model), true)),
 		),
 )); ?>

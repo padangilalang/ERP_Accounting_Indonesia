@@ -27,16 +27,6 @@ $this->menu1=tAccount::getTopUpdated();
 	Chart of Accounts</h1>
 </div>
 
-<?php //$this->widget('zii.widgets.CListView', array(
-		//$this->widget('ext.bootstrap.widgets.BootListView', array(
-//		'dataProvider'=>$dataProvider,
-//		'itemView'=>'_view',
-//)); ?>
-
-<?php //$this->renderPartial('_view',array(
-//		'dataProvider'=>$dataProvider,
-//	)); ?>
-
 
 <div id="posts">
 <?php foreach($dataProvider as $data): ?>

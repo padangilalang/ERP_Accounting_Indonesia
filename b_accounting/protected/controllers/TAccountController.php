@@ -314,6 +314,7 @@ class TAccountController extends Controller
 		}
 
 		$criteria->order='account_no';
+		
 		$total = tAccount::model()->count();
 		
 		$pages = new CPagination($total);
@@ -321,12 +322,6 @@ class TAccountController extends Controller
         $pages->applyLimit($criteria);
 			
 			
-		//$dataProvider=new CActiveDataProvider('tAccount', array(
-		//		'criteria'=>$criteria,
-		//		'pagination'=>array(
-		//				'pageSize'=>500,
-		//		),
-		//));
 		$dataProvider=tAccount::model()->findAll($criteria);
 		
 		$this->render('index',array(

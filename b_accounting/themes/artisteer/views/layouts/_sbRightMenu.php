@@ -1,6 +1,6 @@
 <?php
-      $this->widget('SearchBlock', array(
-      )); 
+//      $this->widget('SearchBlock', array(
+//      )); 
 ?>
 
 <?php

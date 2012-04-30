@@ -303,6 +303,7 @@ class MCashbankController extends Controller
 		$criteria=new CDbCriteria;
 		$criteria1=new CDbCriteria;
 
+		$criteria->with=array('journalDetail');
 		$criteria->compare('module_id',2);
 		$criteria->order='t.yearmonth_periode DESC, t.created_date DESC';
 		//$criteria->compare('yearmonth_periode',Yii::app()->settings->get("System", "cCurrentPeriod"));
@@ -323,18 +324,22 @@ class MCashbankController extends Controller
 
 		$criteria->mergeWith($criteria1);
 
-		$rawData=uJournal::model()->with('journalDetail')->findAll($criteria);
-		$dataProvider=new CArrayDataProvider($rawData, array(
-				'pagination'=>array(
-						'pageSize'=>20,
-				),
-		));
+		$total = uJournal::model()->count($criteria);
+		
+		$dataProvider=uJournal::model()->findAll($criteria);
 
+		$pages = new CPagination($total);
+        $pages->pageSize = 20;
+        $pages->applyLimit($criteria);
+		
+		
 
 		$this->render('index',array(
 				'dataProvider'=>$dataProvider,
 				'model'=>$model,
+				'pages' => $pages,
 		));
+
 	}
 
 	public function loadModel($id)

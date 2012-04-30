@@ -52,7 +52,7 @@ if ($model->haschild->mvalue == 2) {
 	$this->widget('bootstrap.widgets.BootTabbable', array(
 			'type'=>'tabs', // 'tabs' or 'pills'
 			'tabs'=>array(
-					array('label'=>'Detail','content'=>$this->renderPartial("_tabDetail", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
+					array('label'=>'Detail','content'=>$this->renderPartial("_tabDetail", array("model"=>$model,"modelAccount"=>$modelAccount), true),'active'=>true),
 					array('label'=>'Entity','content'=>$this->renderPartial("_tabEntity", array("model"=>$model,'modelEntity'=>$modelEntity), true)),
 					array('label'=>'Sub Account','content'=>$this->renderPartial("_tabSub", array("model"=>$model), true)),
 					array('label'=>'Linked Module','content'=>$this->renderPartial("_tabModule", array("model"=>$model), true)),
@@ -63,7 +63,7 @@ if ($model->haschild->mvalue == 2) {
 			'type'=>'tabs', // 'tabs' or 'pills'
 			'tabs'=>array(
 					//array('label'=>'Balance','content'=>$this->renderPartial("_tabBalance", array("model"=>$model,"modelAccount"=>$modelAccount,"pages"=>$pages), true)),
-					array('label'=>'Balance','content'=>$this->renderPartial("_tabBalance", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
+					array('label'=>'Balance','content'=>$this->renderPartial("_tabBalance", array("model"=>$model,"modelAccount"=>$modelAccount), true),'active'=>true),
 					array('label'=>'Detail','content'=>$this->renderPartial("_tabDetail", array("model"=>$model,"modelAccount"=>$modelAccount), true)),
 					array('label'=>'Entity','content'=>$this->renderPartial("_tabEntity", array("model"=>$model,'modelEntity'=>$modelEntity), true)),
 					array('label'=>'Sub Account','content'=>$this->renderPartial("_tabSub", array("model"=>$model), true)),

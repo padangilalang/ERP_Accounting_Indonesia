@@ -174,13 +174,19 @@ class UJournalController extends Controller
 
 		$criteria->mergeWith($criteria1);
 
-		$dataProvider=new CActiveDataProvider('uJournal', array(
-				'criteria'=>$criteria,
-		));
+		$total = uJournal::model()->count($criteria);
+		
+		$pages = new CPagination($total);
+        $pages->pageSize = 20;
+        $pages->applyLimit($criteria);
+		
+		$dataProvider=uJournal::model()->findAll($criteria);
+		
 
 		$this->render('index',array(
 				'dataProvider'=>$dataProvider,
 				'model'=>$model,
+				'pages' => $pages,
 		));
 	}
 

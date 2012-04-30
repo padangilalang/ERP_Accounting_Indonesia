@@ -85,4 +85,3 @@ if ($data->state_id ==1 || $data->state_id ==2) {
 	));
 }
 ?>
-<hr />

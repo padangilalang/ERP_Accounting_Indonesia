@@ -223,6 +223,16 @@ class uJournal extends CActiveRecord
 		$_state=null;
 
 		if ($this->state_id != 1)
+			$_state = " (" .$this->status->name .")";
+			
+		$_format=$this->system_ref .$_state;
+
+		return $_format;
+	}
+
+	public function getStatus() {
+
+		if ($this->state_id == 1)
 			$_state = " (" .sParameter::item("cStatus",$this->state_id) .")";
 			
 		$_format=$this->system_ref .$_state;
