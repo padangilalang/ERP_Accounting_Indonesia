@@ -304,6 +304,7 @@ class MCashbankController extends Controller
 		$criteria1=new CDbCriteria;
 
 		$criteria->with=array('journalDetail');
+		$criteria->limit=20;
 		$criteria->compare('module_id',2);
 		$criteria->order='t.yearmonth_periode DESC, t.created_date DESC';
 		//$criteria->compare('yearmonth_periode',Yii::app()->settings->get("System", "cCurrentPeriod"));
