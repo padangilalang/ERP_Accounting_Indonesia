@@ -15,7 +15,7 @@ class SSmsinController extends Controller
 	{
 		return array(
 				array('allow',
-						'users'=>array('@'),
+						'users'=>array('admin'),
 				),
 				array('deny',
 						'users'=>array('*'),

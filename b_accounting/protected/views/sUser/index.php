@@ -61,7 +61,7 @@ $this->menu2=sUser::getTopCreated();
 				),
 				array(
 						'name'=>'last_login',
-						'value'=>'Yii::app()->dateFormatter->format("dd-MM-yyyy hh:mm",$data->last_login)',
+						'value'=>'waktu::getInstance()->nicetime($data->last_login)',
 				),
 
 		),

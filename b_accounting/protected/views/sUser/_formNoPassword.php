@@ -6,6 +6,8 @@ $form=$this->beginWidget('BootActiveForm', array(
 		'enableAjaxValidation'=>false,
 )); ?>
 
+<?php echo $form->errorSummary($model); ?>
+
 <?php echo $form->textFieldRow($model,'username',array('class'=>'span3')); ?>
 
 <?php echo $form->dropDownListRow($model,'default_group',aOrganization::model()->getRootList()); ?>

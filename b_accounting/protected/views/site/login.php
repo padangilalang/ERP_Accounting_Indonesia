@@ -32,15 +32,5 @@ if ($browser['name'] =='Internet Explorer')
 
 <div class="alert alert-info">
 	<h4 class="alert-heading">Note!!</h4>
-	This Application IS NOT designed to open with Internet Explorer
-	Browser. Please, use Chrome, Firefox or Opera
+	In the reason for speed development and concentrate on business process and workflow process, this application HAS DESIGNED to open with Chrome, Firefox or Opera. Internet Explorer will be banned automatically...
 </div>
-
-
-<?php /*
-<?php $this->beginWidget('bootstrap.widgets.BootHero', array(
-		'heading'=>'Welcome !!!...',
-)); ?>
-<p><?php echo Yii::app()->name; ?> Accounting System Information.  Built with TWO largest and best web application tools. #Yii PHP Framework, the best PHP Framework to control the back end process AND #Bootstrap Twitter, the best web front page design.. </p>
-<?php $this->endWidget(); ?>
-*/ ?>

@@ -16,7 +16,7 @@ class journalVoucherList2 extends fpdf
 	}
 
 	//Page header
-	function myHeader($acc_id, $begin_date,$end_date)
+	function myHeader($acc_id, $begin_date,$end_date,$post_id)
 	{
 		$this->y0=$this->GetY();
 		//$this->Image('css/LOGO.jpg',15,7,30);
@@ -65,9 +65,9 @@ class journalVoucherList2 extends fpdf
 
 	}
 
-	function report($acc_id, $begin_date,$end_date)
+	function report($acc_id, $begin_date,$end_date,$post_id)
 	{
-		$this->myHeader($acc_id, $begin_date,$end_date);
+		$this->myHeader($acc_id, $begin_date,$end_date,$post_id);
 
 		$_count = 0;
 		$_total = 0;
@@ -78,6 +78,8 @@ class journalVoucherList2 extends fpdf
 		$criteria= new CDbCriteria;
 		$criteria->with=array('journalDetail');
 		$criteria->compare('journalDetail.account_no_id',$acc_id);
+
+		if ($post_id !=0)  $criteria->compare('state_id',$post_id);
 
 		$criteria->addBetweenCondition('input_date',Yii::app()->dateFormatter->format('yyyy-MM-dd',$begin_date),Yii::app()->dateFormatter->format('yyyy-MM-dd',$end_date));
 
@@ -127,7 +129,7 @@ class journalVoucherList2 extends fpdf
 					$this->Cell(array_sum($w),0,'','T');
 					$this->AddPage();
 
-					$this->myHeader($acc_id, $begin_date,$end_date);
+					$this->myHeader($acc_id, $begin_date,$end_date,$post_id);
 
 					$_counter = 1;
 

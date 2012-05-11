@@ -38,6 +38,7 @@ class SUserController extends Controller
 	public function newUser()
 	{
 		$model=new sUser;
+		$model->setScenario('password');
 
 		//$this->performAjaxValidation($model);
 
@@ -117,6 +118,7 @@ class SUserController extends Controller
 	public function actionUpdatePassword($id)
 	{
 		$model=$this->loadModel($id);
+		$model->setScenario('password');
 
 		$this->performAjaxValidation($model);
 
@@ -126,9 +128,11 @@ class SUserController extends Controller
 
 			$_mysalt=sUser::model()->generateSalt();
 			$model->salt=$_mysalt;
-			$model->password = md5($_mysalt . $model->password);
 
-			if($model->save()) {
+			if($model->validate()) {
+				$model->password = md5($_mysalt . $model->password);
+				$model->save();
+				
 				Yii::app()->user->setFlash('success','<strong>Great!</strong> data has been saved successfully');
 				$this->redirect(array('view','id'=>$model->id));
 			}

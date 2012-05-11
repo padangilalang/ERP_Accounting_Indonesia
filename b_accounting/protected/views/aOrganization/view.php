@@ -1,12 +1,20 @@
 <?php
-if ($model->structure_id ==3) {
+if (isset($model->getparent->getparent->getparent->name)) {
+	$this->breadcrumbs=array(
+			$model->getparent->getparent->getparent->name=>array('view','id'=>$model->getparent->getparent->getparent->id),
+			$model->getparent->getparent->name=>array('view','id'=>$model->getparent->getparent->id),
+			$model->getparent->name=>array('view','id'=>$model->getparent->id),
+			$model->name,
+	);
+
+} elseif (isset($model->getparent->getparent->name)) {
 	$this->breadcrumbs=array(
 			$model->getparent->getparent->name=>array('view','id'=>$model->getparent->getparent->id),
 			$model->getparent->name=>array('view','id'=>$model->getparent->id),
 			$model->name,
 	);
 
-} elseif ($model->structure_id ==2) {
+} elseif (isset($model->getparent->name)) {
 	$this->breadcrumbs=array(
 			$model->getparent->name=>array('view','id'=>$model->getparent->id),
 			$model->name,
@@ -16,6 +24,7 @@ if ($model->structure_id ==3) {
 			$model->name,
 	);
 }
+
 
 $this->menu=array(
 		array('label'=>'Home', 'url'=>array('/aOrganization')),

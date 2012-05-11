@@ -112,23 +112,4 @@ class SParameterController extends Controller
 		}
 	}
 	
-	public function actionBackup()
-	{
-	
-		Yii::import('ext.yii-database-dumper.SDatabaseDumper');
-		$dumper = new SDatabaseDumper;
-		 
-		// Get path to new backup file
-		$file = Yii::getPathOfAlias('webroot.protected.backups').'/dump.'.Yii::app()->dateFormatter->format("yyyyMMdd",time()).'.sql';
-		 
-		// Gzip dump
-		if(function_exists('gzencode'))
-			file_put_contents($file.'.gz', gzencode($dumper->getDump()));
-		else
-			file_put_contents($file, $dumper->getDump());	
-			
-		Yii::app()->user->setFlash('success','<strong>Great!</strong> backup process finished..');
-		$this->redirect(array('/menu'));
-
-	}
 }

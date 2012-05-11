@@ -12,6 +12,8 @@ $form=$this->beginWidget('BootActiveForm', array(
 
 <?php echo $form->passwordFieldRow($model,'password',array('class'=>'span3')); ?>
 
+<?php echo $form->passwordFieldRow($model,'password_repeat',array('class'=>'span3')); ?>
+
 <?php echo $form->dropDownListRow($model,'default_group',aOrganization::model()->getRootList()); ?>
 
 <?php echo $form->dropDownListRow($model,'status_id',sParameter::items("cStatusP")); ?>

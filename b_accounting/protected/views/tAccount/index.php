@@ -45,19 +45,19 @@ Yii::app()->clientScript->registerScript('search'.$data->id, "
 
 	<b><?php 
 	if ($data->parent_id == 0) {
-		echo CHtml::link($data->account_no .". ". $data->account_name, array('view', 'id'=>$data->id));
+		echo CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
 	} elseif ($data->getparent->parent_id == 0) {
-		echo "--- ". CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		echo "--- ". CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
 	} elseif ($data->getparent->getparent->parent_id == 0) {
-		echo "------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		echo "------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
 	} elseif ($data->getparent->getparent->getparent->parent_id == 0) {
-		echo "--------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		echo "--------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
 	} elseif ($data->getparent->getparent->getparent->getparent->parent_id == 0) {
-		echo "------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		echo "------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
 	} elseif ($data->getparent->getparent->getparent->getparent->getparent->parent_id == 0) {
-		echo "--------------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		echo "--------------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
 	} else {
-		echo "------------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		echo "------------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
 
 	}
 

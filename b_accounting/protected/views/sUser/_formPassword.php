@@ -8,7 +8,7 @@ $form=$this->beginWidget('BootActiveForm', array(
 
 <?php echo $form->textFieldRow($model, 'salt', array('disabled'=>true)); ?>
 <?php echo $form->passwordFieldRow($model,'password',array('class'=>'span3')); ?>
-<?php //echo $form->passwordFieldRow($model,'password_repeat',array('class'=>'span3',)); ?>
+<?php echo $form->passwordFieldRow($model,'password_repeat',array('class'=>'span3',)); ?>
 
 
 <div class="form-actions">

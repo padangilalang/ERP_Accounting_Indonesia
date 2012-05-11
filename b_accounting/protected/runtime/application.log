@@ -5246,3 +5246,1686 @@ Stack trace:
 #20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #21 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
 REQUEST_URI=/b_accounting/index.php?r=tPosting
+2012/05/02 21:14:16 [error] [php] Trying to get property of non-object (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): BootDataColumn->renderDataCellContent()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): BootDataColumn->renderDataCell()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): BootGridView->renderTableRow()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): BootGridView->renderTableBody()
+#4 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): BootGridView->renderItems()
+#5 unknown(0): BootGridView->renderSection()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): BootGridView->renderContent()
+#8 C:\wamp\www\framework\web\CBaseController.php(174): BootGridView->run()
+#9 C:\wamp\www\b_accounting\protected\views\mAccpayable\index.php(182): MAccpayableController->widget()
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#11 C:\wamp\www\framework\web\CBaseController.php(96): MAccpayableController->renderInternal()
+#12 C:\wamp\www\framework\web\CController.php(870): MAccpayableController->renderFile()
+#13 C:\wamp\www\framework\web\CController.php(783): MAccpayableController->renderPartial()
+#14 C:\wamp\www\b_accounting\protected\controllers\MAccpayableController.php(56): MAccpayableController->render()
+#15 unknown(0): MAccpayableController->actionIndex()
+#16 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#17 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#18 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MAccpayableController->runAction()
+#20 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#22 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MAccpayableController->filterAccessControl()
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#24 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(266): MAccpayableController->runActionWithFilters()
+#26 C:\wamp\www\framework\web\CWebApplication.php(276): MAccpayableController->run()
+#27 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#28 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=mAccpayable
+2012/05/02 21:19:05 [error] [php] Trying to get property of non-object (C:\wamp\www\b_accounting\protected\controllers\MAccpayableController.php:104)
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MAccpayableController->runAction()
+#1 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MAccpayableController->filterAccessControl()
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): MAccpayableController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): MAccpayableController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=mAccpayable/journalInventory
+2012/05/02 21:28:47 [error] [php] Trying to get property of non-object (C:\wamp\www\b_accounting\protected\controllers\MAccpayableController.php:172)
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MAccpayableController->runAction()
+#1 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MAccpayableController->filterAccessControl()
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): MAccpayableController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): MAccpayableController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=mAccpayable/journalPayment
+2012/05/05 08:31:06 [error] [exception.CException] exception 'CException' with message 'Property "UJournalController.url" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\views\uJournal\_search.php(18): CComponent->__get('url')
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(22): CController->renderPartial('_search', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#9 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(190): CController->render('index', Array)
+#10 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#11 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#20 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal')
+#21 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#23 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal
+---
+2012/05/05 08:49:44 [error] [exception.CException] exception 'CException' with message 'SReportController cannot find the requested view "index".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', NULL, true)
+#1 C:\wamp\www\b_accounting\protected\controllers\SReportController.php(39): CController->render('index')
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SReportController->actionIndex()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sReport')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#15 {main}
+REQUEST_URI=/b_accounting/index.php?r=sReport
+---
+2012/05/05 08:49:50 [error] [php] include(Chart.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\SReportController.php(175): spl_autoload_call()
+#1 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SReportController->actionGraph1()
+#2 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SReportController->runAction()
+#4 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SReportController->filterAccessControl()
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(266): SReportController->runActionWithFilters()
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): SReportController->run()
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=sReport/graph1
+2012/05/05 08:50:05 [error] [php] include(pData.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\SReportController.php(184): spl_autoload_call()
+#1 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SReportController->actionGraph2()
+#2 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SReportController->runAction()
+#4 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SReportController->filterAccessControl()
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(266): SReportController->runActionWithFilters()
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): SReportController->run()
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=sReport/graph2
+2012/05/05 08:51:16 [error] [php] require_once(hawhaw.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (C:\wamp\www\b_accounting\protected\controllers\SReportController.php:54)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SReportController->runAction()
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SReportController->filterAccessControl()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): SReportController->runActionWithFilters()
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): SReportController->run()
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=sReport/mobile1
+2012/05/05 08:56:32 [error] [php] include(JPhpMailer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\MenuController.php(135): spl_autoload_call()
+#1 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MenuController->actionHelp()
+#2 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MenuController->runAction()
+#4 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MenuController->filterAccessControl()
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(266): MenuController->runActionWithFilters()
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): MenuController->run()
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=menu/help
+2012/05/05 08:57:04 [error] [php] include(JPhpMailer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\SReportController.php(275): spl_autoload_call()
+#1 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SReportController->actionHelp()
+#2 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SReportController->runAction()
+#4 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SReportController->filterAccessControl()
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(266): SReportController->runActionWithFilters()
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): SReportController->run()
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=sReport/help
+2012/05/05 08:59:56 [error] [php] include(JPhpMailer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\SReportController.php(275): spl_autoload_call()
+#1 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SReportController->actionHelp()
+#2 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SReportController->runAction()
+#4 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SReportController->filterAccessControl()
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(266): SReportController->runActionWithFilters()
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): SReportController->run()
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=sReport/help
+2012/05/05 09:00:33 [error] [exception.CException] exception 'CException' with message 'SReportController cannot find the requested view "help".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('help', Array, true)
+#1 C:\wamp\www\b_accounting\protected\controllers\SReportController.php(299): CController->render('help', Array)
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SReportController->actionHelp()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('help')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sReport/help')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#15 {main}
+REQUEST_URI=/b_accounting/index.php?r=sReport/help
+---
+2012/05/05 09:28:59 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textFieldRow".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\views\sAdmin\help.php(34): CComponent->__call('textFieldRow', Array)
+#1 C:\wamp\www\b_accounting\protected\views\sAdmin\help.php(34): CActiveForm->textFieldRow(Object(fEmail), 'subject', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('help', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\SAdminController.php(299): CController->render('help', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SAdminController->actionHelp()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('help')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sAdmin/help')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=sAdmin/help
+---
+2012/05/05 09:45:10 [error] [exception.Zend_Mail_Transport_Exception] exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\wamp\www\b_accounting\protected\vendors\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\vendors\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\b_accounting\protected\vendors\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\b_accounting\protected\views\sAdmin\barcode.php(39): Zend_Mail->send()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#4 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', NULL, true)
+#5 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', NULL, true)
+#6 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('barcode', NULL, true)
+#7 C:\wamp\www\b_accounting\protected\controllers\SAdminController.php(234): CController->render('barcode')
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SAdminController->actionBarcode()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('barcode')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sAdmin/barcode')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#21 {main}
+REQUEST_URI=/b_accounting/index.php?r=sAdmin/barcode
+---
+2012/05/05 09:49:31 [error] [exception.CException] exception 'CException' with message 'SSqlStatementController cannot find the requested view "/sReport/sqlstatement".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('/sReport/sqlsta...', Array, true)
+#1 C:\wamp\www\b_accounting\protected\controllers\SSqlStatementController.php(42): CController->render('/sReport/sqlsta...', Array)
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SSqlStatementController->actionIndex()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sSqlStatement')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#15 {main}
+REQUEST_URI=/b_accounting/index.php?r=sSqlStatement
+---
+2012/05/05 09:53:32 [error] [exception.CException] exception 'CException' with message 'Property "fSqlStatement.username" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CComponent->__get('username')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(fSqlStatement), 'username')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(fSqlStatement), 'username', Array)
+#3 C:\wamp\www\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(fSqlStatement), 'username', Array)
+#4 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(183): CActiveForm->textField(Object(fSqlStatement), 'username', Array)
+#5 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\input\BootInput.php(124): BootInputHorizontal->textField()
+#6 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(24): BootInput->run()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): BootInputHorizontal->run()
+#8 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\BootActiveForm.php(493): CBaseController->widget('bootstrap.widge...', Array)
+#9 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\BootActiveForm.php(180): BootActiveForm->inputRow('textfield', Object(fSqlStatement), 'username', NULL, Array)
+#10 C:\wamp\www\b_accounting\protected\views\sAdmin\sqlstatement.php(28): BootActiveForm->textFieldRow(Object(fSqlStatement), 'username', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('sqlstatement', Array, true)
+#15 C:\wamp\www\b_accounting\protected\controllers\SAdminController.php(58): CController->render('sqlstatement', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SAdminController->actionSqlStatement()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('sqlStatement')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sAdmin/sqlState...')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#29 {main}
+REQUEST_URI=/b_accounting/index.php?r=sAdmin/sqlStatement
+---
+2012/05/05 09:54:22 [error] [exception.CException] exception 'CException' with message 'Property "fSqlStatement.username" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CComponent->__get('username')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(fSqlStatement), 'username')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(fSqlStatement), 'username', Array)
+#3 C:\wamp\www\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(fSqlStatement), 'username', Array)
+#4 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(183): CActiveForm->textField(Object(fSqlStatement), 'username', Array)
+#5 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\input\BootInput.php(124): BootInputHorizontal->textField()
+#6 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(24): BootInput->run()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): BootInputHorizontal->run()
+#8 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\BootActiveForm.php(493): CBaseController->widget('bootstrap.widge...', Array)
+#9 C:\wamp\www\b_accounting\protected\extensions\bootstrap\widgets\BootActiveForm.php(180): BootActiveForm->inputRow('textfield', Object(fSqlStatement), 'username', NULL, Array)
+#10 C:\wamp\www\b_accounting\protected\views\sAdmin\sqlstatement.php(28): BootActiveForm->textFieldRow(Object(fSqlStatement), 'username', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('sqlstatement', Array, true)
+#15 C:\wamp\www\b_accounting\protected\controllers\SAdminController.php(58): CController->render('sqlstatement', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SAdminController->actionSqlStatement()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('sqlStatement')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sAdmin/sqlState...')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#29 {main}
+REQUEST_URI=/b_accounting/index.php?r=sAdmin/sqlStatement
+---
+2012/05/05 09:55:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page?view=namodule".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('page?view=namod...')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('page?view=namod...')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/page?view=...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/page?view=namodule
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=sAdmin/sqlStatement
+---
+2012/05/05 09:57:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "namodule".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('namodule')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('namodule')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/namodule')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/namodule
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=sAdmin/sqlStatement
+---
+2012/05/05 09:57:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "namodule".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('namodule')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('namodule')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/namodule')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/namodule
+---
+2012/05/05 10:06:15 [error] [exception.CException] exception 'CException' with message 'Column or attribute "parent.name" not found!' in C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php:222
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(62): GroupGridView->getRowValues(Array, Object(sModule), 0)
+#1 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(31): GroupGridView->groupByColumns()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#3 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#8 C:\wamp\www\b_accounting\protected\views\sModule\index.php(51): CBaseController->widget('ext.groupgridvi...', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#27 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:06:40 [error] [exception.CException] exception 'CException' with message 'Column or attribute "getparent.name" not found!' in C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php:222
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(62): GroupGridView->getRowValues(Array, Object(sModule), 0)
+#1 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(31): GroupGridView->groupByColumns()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#3 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#8 C:\wamp\www\b_accounting\protected\views\sModule\index.php(51): CBaseController->widget('ext.groupgridvi...', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#27 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:07:33 [error] [exception.CException] exception 'CException' with message 'Column or attribute "getparent.id" not found!' in C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php:222
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(62): GroupGridView->getRowValues(Array, Object(sModule), 0)
+#1 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(31): GroupGridView->groupByColumns()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#3 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#8 C:\wamp\www\b_accounting\protected\views\sModule\index.php(51): CBaseController->widget('ext.groupgridvi...', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#27 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:14:30 [error] [exception.CException] exception 'CException' with message 'Column or attribute "getparent.title" not found!' in C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php:222
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(62): GroupGridView->getRowValues(Array, Object(sModule), 0)
+#1 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(31): GroupGridView->groupByColumns()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#3 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#8 C:\wamp\www\b_accounting\protected\views\sModule\index.php(48): CBaseController->widget('ext.groupgridvi...', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#27 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:14:46 [error] [exception.CException] exception 'CException' with message 'Column or attribute "getparent.title" not found!' in C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php:222
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(62): GroupGridView->getRowValues(Array, Object(sModule), 0)
+#1 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(31): GroupGridView->groupByColumns()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#3 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#8 C:\wamp\www\b_accounting\protected\views\sModule\index.php(52): CBaseController->widget('ext.groupgridvi...', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#27 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:15:58 [error] [exception.CException] exception 'CException' with message 'Column or attribute "getparent.title" not found!' in C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php:222
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(62): GroupGridView->getRowValues(Array, Object(sModule), 0)
+#1 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(31): GroupGridView->groupByColumns()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#3 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#8 C:\wamp\www\b_accounting\protected\views\sModule\index.php(51): CBaseController->widget('ext.groupgridvi...', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#27 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=sParameter
+---
+2012/05/05 10:29:12 [error] [exception.CException] exception 'CException' with message 'Property "sUser." is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(160): CComponent->__set('', Object(sUser))
+#1 C:\wamp\www\framework\base\CModel.php(604): CActiveRecord->__set('', Object(sUser))
+#2 C:\wamp\www\b_accounting\protected\models\sModule.php(74): CModel->offsetSet(NULL, Object(sUser))
+#3 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): sModule->getUserList()
+#4 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#5 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CComponent->evaluateExpression('explode($data->...', Array)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(sModule))
+#7 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(169): CGridColumn->renderDataCell(0)
+#8 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): GroupGridView->renderTableRow(0)
+#9 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(33): CGridView->renderTableBody()
+#10 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#11 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#14 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#15 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#16 C:\wamp\www\b_accounting\protected\views\sModule\index.php(55): CBaseController->widget('ext.groupgridvi...', Array)
+#17 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#18 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#19 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#20 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#21 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#22 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#23 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#25 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#30 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#32 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#33 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#35 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:30:08 [error] [exception.CException] exception 'CException' with message 'Property "sUser.name" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('name')
+#1 C:\wamp\www\b_accounting\protected\models\sModule.php(74): CActiveRecord->__get('name')
+#2 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): sModule->getUserList()
+#3 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#4 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CComponent->evaluateExpression('explode($data->...', Array)
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(sModule))
+#6 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(169): CGridColumn->renderDataCell(0)
+#7 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): GroupGridView->renderTableRow(0)
+#8 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(33): CGridView->renderTableBody()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#10 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#13 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#14 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#15 C:\wamp\www\b_accounting\protected\views\sModule\index.php(55): CBaseController->widget('ext.groupgridvi...', Array)
+#16 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#17 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#19 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#20 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#21 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#22 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#24 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#29 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#31 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#32 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#33 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#34 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:30:15 [error] [exception.CException] exception 'CException' with message 'Property "sUser." is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(160): CComponent->__set('', 'wulan')
+#1 C:\wamp\www\framework\base\CModel.php(604): CActiveRecord->__set('', 'wulan')
+#2 C:\wamp\www\b_accounting\protected\models\sModule.php(74): CModel->offsetSet(NULL, 'wulan')
+#3 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): sModule->getUserList()
+#4 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#5 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CComponent->evaluateExpression('explode($data->...', Array)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(sModule))
+#7 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(169): CGridColumn->renderDataCell(0)
+#8 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): GroupGridView->renderTableRow(0)
+#9 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(33): CGridView->renderTableBody()
+#10 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#11 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#14 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#15 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#16 C:\wamp\www\b_accounting\protected\views\sModule\index.php(55): CBaseController->widget('ext.groupgridvi...', Array)
+#17 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#18 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#19 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#20 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#21 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#22 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#23 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#25 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#30 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#32 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#33 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#35 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 10:32:46 [error] [php] explode() expects parameter 1 to be string, array given (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CDataColumn->evaluateExpression()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent()
+#2 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(169): CDataColumn->renderDataCell()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): GroupGridView->renderTableRow()
+#4 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(33): GroupGridView->renderTableBody()
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): GroupGridView->renderItems()
+#7 unknown(0): GroupGridView->renderSection()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#9 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): GroupGridView->renderContent()
+#10 C:\wamp\www\framework\web\CBaseController.php(174): GroupGridView->run()
+#11 C:\wamp\www\b_accounting\protected\views\sModule\index.php(55): SModuleController->widget()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#13 C:\wamp\www\framework\web\CBaseController.php(96): SModuleController->renderInternal()
+#14 C:\wamp\www\framework\web\CController.php(870): SModuleController->renderFile()
+#15 C:\wamp\www\framework\web\CController.php(783): SModuleController->renderPartial()
+#16 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): SModuleController->render()
+#17 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#18 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SModuleController->runAction()
+#20 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#22 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SModuleController->filterAccessControl()
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#24 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(266): SModuleController->runActionWithFilters()
+#26 C:\wamp\www\framework\web\CWebApplication.php(276): SModuleController->run()
+#27 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#28 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=sModule
+2012/05/05 10:33:05 [error] [php] explode() expects parameter 2 to be string, array given (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CDataColumn->evaluateExpression()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent()
+#2 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(169): CDataColumn->renderDataCell()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): GroupGridView->renderTableRow()
+#4 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(33): GroupGridView->renderTableBody()
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): GroupGridView->renderItems()
+#7 unknown(0): GroupGridView->renderSection()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#9 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): GroupGridView->renderContent()
+#10 C:\wamp\www\framework\web\CBaseController.php(174): GroupGridView->run()
+#11 C:\wamp\www\b_accounting\protected\views\sModule\index.php(55): SModuleController->widget()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#13 C:\wamp\www\framework\web\CBaseController.php(96): SModuleController->renderInternal()
+#14 C:\wamp\www\framework\web\CController.php(870): SModuleController->renderFile()
+#15 C:\wamp\www\framework\web\CController.php(783): SModuleController->renderPartial()
+#16 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): SModuleController->render()
+#17 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#18 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SModuleController->runAction()
+#20 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#22 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SModuleController->filterAccessControl()
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#24 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(266): SModuleController->runActionWithFilters()
+#26 C:\wamp\www\framework\web\CWebApplication.php(276): SModuleController->run()
+#27 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#28 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=sModule
+2012/05/05 10:36:52 [error] [exception.CException] exception 'CException' with message 'CDataColumn and its behaviors do not have a method or closure named "createUrl".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): CComponent->__call('createUrl', Array)
+#1 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): CDataColumn->createUrl('/sModule/view', Array)
+#2 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#3 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CComponent->evaluateExpression('CHtml::link("$d...', Array)
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(sModule))
+#5 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(169): CGridColumn->renderDataCell(0)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): GroupGridView->renderTableRow(0)
+#7 C:\wamp\www\b_accounting\protected\extensions\groupgridview\GroupGridView.php(33): CGridView->renderTableBody()
+#8 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): GroupGridView->renderTableBody()
+#9 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#12 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#13 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#14 C:\wamp\www\b_accounting\protected\views\sModule\index.php(55): CBaseController->widget('ext.groupgridvi...', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#19 C:\wamp\www\b_accounting\protected\controllers\SModuleController.php(89): CController->render('index', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SModuleController->actionIndex()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#28 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#30 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sModule')
+#31 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#33 {main}
+REQUEST_URI=/b_accounting/index.php?r=sModule
+---
+2012/05/05 11:02:03 [error] [exception.CException] exception 'CException' with message 'Property "tAccount.entityList" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('entityList')
+#1 C:\wamp\www\b_accounting\protected\views\tAccount\index.php(48): CActiveRecord->__get('entityList')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(331): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): TAccountController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount
+---
+2012/05/05 11:02:28 [error] [php] Undefined variable: Pusat,Pasar Baru - Jakarta (C:\wamp\www\b_accounting\protected\models\tAccount.php:597)
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(96): TAccountController->renderInternal()
+#1 C:\wamp\www\framework\web\CController.php(870): TAccountController->renderFile()
+#2 C:\wamp\www\framework\web\CController.php(783): TAccountController->renderPartial()
+#3 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(331): TAccountController->render()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): TAccountController->actionIndex()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): TAccountController->runAction()
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): TAccountController->filterAccessControl()
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): TAccountController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): TAccountController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=tAccount
+2012/05/05 11:07:38 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\tAccount\index.php(109): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(331): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): TAccountController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount/index&page=13
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount
+---
+2012/05/05 11:57:00 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\mCashbank\index.php(74): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\MCashbankController.php(342): CController->render('index', Array)
+#7 [internal function]: MCashbankController->actionIndex(0)
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/index')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#22 {main}
+REQUEST_URI=/b_accounting/index.php?r=mCashbank/index&uJournal%5Bsystem_ref%5D=CB-01-201201-00017&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=mCashbank%2Findex&uJournal%5Bsystem_ref%5D=CB-01-201201-00017
+---
+2012/05/05 12:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(46): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(190): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&uJournal%5Bsystem_ref%5D=GL-201202-01042&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal%2Findex&uJournal%5Bsystem_ref%5D=GL-201202-01042
+---
+2012/05/05 12:37:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "not_support".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('not_support')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('not_support')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/not_suppor...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/not_support
+---
+2012/05/06 17:32:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\b_accounting\protected\controllers\TAccountController.php:338
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TAccountController.php(81): TAccountController->loadModel('8222')
+#1 [internal function]: TAccountController->actionView('8222')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TAccountController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TAccountController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount/view&id=8222
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=site/login
+---
+2012/05/06 17:32:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tAccount1".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount1')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php?r=tAccount1
+---
+2012/05/06 22:03:59 [error] [exception.CException] exception 'CException' with message 'Property "JAppendo.getViewPath" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\views\_detailPorderInventory.php(73): CComponent->__get('getViewPath')
+#1 C:\wamp\www\framework\web\CBaseController.php(131): require('C:\wamp\www\b_a...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, false)
+#3 C:\wamp\www\framework\web\widgets\CWidget.php(244): CBaseController->renderFile('C:\wamp\www\b_a...', Array, false)
+#4 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): CWidget->render('_detailPorderIn...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): CBaseController->widget('ext.appendo.JAp...', Array)
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#8 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#10 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): CController->renderPartial('_form', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#15 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): CController->render('create', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('bPorderInventor...')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#29 {main}
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+---
+2012/05/06 22:06:06 [error] [php] require(C:\wamp\www\b_accounting\protected/views/_detailPorderInventory) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\web\CBaseController.php:131)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): JAppendo->renderFile()
+#1 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#2 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): BPorderInventoryController->widget()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): BPorderInventoryController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#11 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): BPorderInventoryController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+2012/05/06 22:06:34 [error] [php] require(C:\wamp\www\b_accounting\protected_detailPorderInventory) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\web\CBaseController.php:131)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): JAppendo->renderFile()
+#1 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#2 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): BPorderInventoryController->widget()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): BPorderInventoryController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#11 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): BPorderInventoryController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+2012/05/06 22:08:16 [error] [php] require(C:\wamp\www\b_accounting\protected/views/_detailPorderInventory) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\web\CBaseController.php:131)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): JAppendo->renderFile()
+#1 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#2 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): BPorderInventoryController->widget()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): BPorderInventoryController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#11 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): BPorderInventoryController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+2012/05/06 22:08:26 [error] [php] require(C:\wamp\www\b_accounting\protected/jAppendo/_detailPorderInventory) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\web\CBaseController.php:131)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): JAppendo->renderFile()
+#1 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#2 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): BPorderInventoryController->widget()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): BPorderInventoryController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#11 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): BPorderInventoryController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+2012/05/06 22:09:26 [error] [php] require(C:\wamp\www\b_accounting\protected/jAppendo/_detailPorderInventory) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\web\CBaseController.php:131)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): JAppendo->renderFile()
+#1 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#2 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): BPorderInventoryController->widget()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): BPorderInventoryController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#11 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): BPorderInventoryController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+2012/05/06 22:10:00 [error] [php] require(C:\wamp\www\b_accounting\protected/jAppendo/_detailPorderInventory.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\web\CBaseController.php:131)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): JAppendo->renderFile()
+#1 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#2 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): BPorderInventoryController->widget()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): BPorderInventoryController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#11 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): BPorderInventoryController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+2012/05/06 22:11:04 [error] [php] require(C:\wamp\www\b_accounting\protected/views/jAppendo/_detailPorderInventory) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\web\CBaseController.php:131)
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\extensions\appendo\JAppendo.php(154): JAppendo->renderFile()
+#1 C:\wamp\www\framework\web\CBaseController.php(174): JAppendo->run()
+#2 C:\wamp\www\b_accounting\protected\views\bPorderInventory\_form.php(97): BPorderInventoryController->widget()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#6 C:\wamp\www\b_accounting\protected\views\bPorderInventory\create.php(20): BPorderInventoryController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#11 C:\wamp\www\b_accounting\protected\controllers\BPorderInventoryController.php(108): BPorderInventoryController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=bPorderInventory/create
+2012/05/07 23:46:27 [error] [php] Undefined variable: model2 (C:\wamp\www\b_accounting\protected\reports\cashFlow1.php:67)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): TAccountReportController->runAction()
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): TAccountReportController->filterAccessControl()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): TAccountReportController->runActionWithFilters()
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): TAccountReportController->run()
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=tAccountReport
+2012/05/07 23:50:36 [error] [php] Undefined variable: _subtotal (C:\wamp\www\b_accounting\protected\reports\cashFlow1.php:75)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): TAccountReportController->runAction()
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): TAccountReportController->filterAccessControl()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): TAccountReportController->runActionWithFilters()
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): TAccountReportController->run()
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=tAccountReport
+2012/05/08 11:29:04 [error] [php] Trying to get property of non-object (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): BootDataColumn->renderDataCellContent()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): BootDataColumn->renderDataCell()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): BootGridView->renderTableRow()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): BootGridView->renderTableBody()
+#4 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): BootGridView->renderItems()
+#5 unknown(0): BootGridView->renderSection()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): BootGridView->renderContent()
+#8 C:\wamp\www\framework\web\CBaseController.php(174): BootGridView->run()
+#9 C:\wamp\www\b_accounting\protected\views\mAccpayable\index.php(182): MAccpayableController->widget()
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#11 C:\wamp\www\framework\web\CBaseController.php(96): MAccpayableController->renderInternal()
+#12 C:\wamp\www\framework\web\CController.php(870): MAccpayableController->renderFile()
+#13 C:\wamp\www\framework\web\CController.php(783): MAccpayableController->renderPartial()
+#14 C:\wamp\www\b_accounting\protected\controllers\MAccpayableController.php(56): MAccpayableController->render()
+#15 unknown(0): MAccpayableController->actionIndex()
+#16 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#17 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#18 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MAccpayableController->runAction()
+#20 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#22 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MAccpayableController->filterAccessControl()
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#24 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(266): MAccpayableController->runActionWithFilters()
+#26 C:\wamp\www\framework\web\CWebApplication.php(276): MAccpayableController->run()
+#27 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#28 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=mAccpayable
+2012/05/08 11:29:19 [error] [php] Trying to get property of non-object (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): BootDataColumn->renderDataCellContent()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): BootDataColumn->renderDataCell()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): BootGridView->renderTableRow()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): BootGridView->renderTableBody()
+#4 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): BootGridView->renderItems()
+#5 unknown(0): BootGridView->renderSection()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): BootGridView->renderContent()
+#8 C:\wamp\www\framework\web\CBaseController.php(174): BootGridView->run()
+#9 C:\wamp\www\b_accounting\protected\views\mAccpayable\index.php(182): MAccpayableController->widget()
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#11 C:\wamp\www\framework\web\CBaseController.php(96): MAccpayableController->renderInternal()
+#12 C:\wamp\www\framework\web\CController.php(870): MAccpayableController->renderFile()
+#13 C:\wamp\www\framework\web\CController.php(783): MAccpayableController->renderPartial()
+#14 C:\wamp\www\b_accounting\protected\controllers\MAccpayableController.php(56): MAccpayableController->render()
+#15 unknown(0): MAccpayableController->actionIndex()
+#16 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#17 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#18 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MAccpayableController->runAction()
+#20 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#22 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MAccpayableController->filterAccessControl()
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#24 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(266): MAccpayableController->runActionWithFilters()
+#26 C:\wamp\www\framework\web\CWebApplication.php(276): MAccpayableController->run()
+#27 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#28 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\wamp\www\b_accounting\index.php(19): CWebApplication->run()
+REQUEST_URI=/b_accounting/index.php?r=mAccpayable
+2012/05/09 12:11:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page?view=namodule".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('page?view=namod...')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('page?view=namod...')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/page?view=...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/page?view=namodule
+HTTP_REFERER=http://localhost/b_accounting/
+---
+2012/05/09 12:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page?view=namodule".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('page?view=namod...')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('page?view=namod...')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/page?view=...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=site/page?view=namodule
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=menu
+---
+2012/05/09 16:45:17 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 16:45:20 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 16:52:25 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 16:52:52 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:02:42 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:04:15 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:05:44 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:06:16 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:28:51 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:31:19 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:31:56 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:32:18 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:32:39 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 17:33:02 [warning] [application] Failed to set unsafe attribute "status" of "sUser".
+2012/05/09 19:46:41 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(46): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(190): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&uJournal%5Bsystem_ref%5D=GL-201202-00846&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal%2Findex&uJournal%5Bsystem_ref%5D=GL-201202-00846
+---
+2012/05/09 21:33:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 410400
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 410400
+						WHERE yearmonth_periode = 201202 AND parent_id = 15.
+2012/05/09 21:33:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 410400
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 410400
+						WHERE yearmonth_periode = 201202 AND parent_id = 15' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(166): CDbCommand->execute()
+#1 [internal function]: TPostingController->actionPosting('121')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TPostingController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TPostingController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('posting')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/postin...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/posting&id=121
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=tPosting
+---
+2012/05/09 21:34:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15.
+2012/05/09 21:34:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(166): CDbCommand->execute()
+#1 [internal function]: TPostingController->actionPosting('160')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TPostingController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TPostingController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('posting')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/postin...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/posting&id=160
+---
+2012/05/09 21:34:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;.
+2012/05/09 21:34:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(166): CDbCommand->execute()
+#1 [internal function]: TPostingController->actionPosting('160')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TPostingController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TPostingController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('posting')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/postin...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/posting&id=160
+---
+2012/05/09 21:37:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;.
+2012/05/09 21:37:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(166): CDbCommand->execute()
+#1 [internal function]: TPostingController->actionPosting('160')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TPostingController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TPostingController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('posting')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/postin...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/posting&id=160
+---
+2012/05/09 21:39:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;.
+2012/05/09 21:39:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = ' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 326600
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(168): CDbCommand->execute()
+#1 [internal function]: TPostingController->actionPosting('160')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TPostingController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TPostingController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('posting')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/postin...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/posting&id=160
+---
+2012/05/09 21:40:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 20120' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;.
+2012/05/09 21:40:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 20120' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(168): CDbCommand->execute()
+#1 [internal function]: TPostingController->actionPosting('160')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TPostingController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TPostingController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('posting')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/postin...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/posting&id=160
+---
+2012/05/09 21:40:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 20120' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;.
+2012/05/09 21:40:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 20120' at line 2. The SQL statement executed was: 
+						UPDATE  t_balance_sheet SET
+						debit = ,
+						credit = ,
+						end_balance = 0
+						WHERE yearmonth_periode = 201202 AND parent_id = 15;' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\b_accounting\protected\controllers\TPostingController.php(168): CDbCommand->execute()
+#1 [internal function]: TPostingController->actionPosting('160')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TPostingController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TPostingController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('posting')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/postin...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/posting&id=160
+---
+2012/05/10 17:26:06 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\b_accounting\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(174): YiinfiniteScroller->run()
+#1 C:\wamp\www\b_accounting\protected\views\uJournal\index.php(46): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\b_accounting\protected\controllers\UJournalController.php(190): CController->render('index', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UJournalController->actionIndex()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('uJournal/index')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=uJournal/index&uJournal%5Bsystem_ref%5D=1469&yt0=&page=2
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=uJournal%2Findex&uJournal%5Bsystem_ref%5D=1469&yt0=
+---
+2012/05/11 08:56:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "closingPeriodExecution".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('closingPeriodEx...')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('closingPeriodEx...')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tPosting/closin...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=tPosting/closingPeriodExecution
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=tClosing/closingPeriod
+---
+2012/05/11 08:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tClosing/')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php?r=tClosing/
+---

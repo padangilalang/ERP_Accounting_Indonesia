@@ -102,8 +102,11 @@ class sParameter extends CActiveRecord
 				'params'=>array(':type'=>$type),
 		));
 
-		if ($all !=null)
+		if ($all ==1) {
 			self::$_items[$type][0]='*inherited*';
+		} elseif ($all ==2) {
+			self::$_items[$type][0]='ALL';
+		}
 
 		foreach($models as $model)
 			self::$_items[$type][$model->code]=$model->name;

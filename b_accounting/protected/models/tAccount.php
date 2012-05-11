@@ -587,6 +587,17 @@ class tAccount extends CActiveRecord
 
 	}
 
+	public function entityList() {
+		$list=array();
+		foreach($this->entity_many as $l)
+			$list[]=$l->branch_code;
+			
+		$_imList=implode(", ",$list);	
+
+		return $_imList;
+
+	}
+
 	public static function accountDetail()
 	{
 		$_items=array();

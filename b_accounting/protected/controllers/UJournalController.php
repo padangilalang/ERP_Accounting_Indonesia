@@ -203,7 +203,7 @@ class UJournalController extends Controller
 		$res =array();
 		if (isset($_GET['term'])) {
 			$qtxt =
-			"SELECT system_ref FROM u_journal WHERE module_id = 1 AND system_ref LIKE :name ORDER BY system_ref LIMIT 20";
+			"SELECT system_ref FROM u_journal WHERE module_id = 1 AND system_ref LIKE :name ORDER BY system_ref DESC LIMIT 20";
 			$command =Yii::app()->db->createCommand($qtxt);
 			$command->bindValue(":name", '%'.$_GET['term'].'%', PDO::PARAM_STR);
 			$res =$command->queryColumn();

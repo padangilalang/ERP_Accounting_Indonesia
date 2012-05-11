@@ -433,7 +433,7 @@ class TAccountController extends Controller
 				$pdf->AddPage();
 				$pdf->SetFont('Arial','',12);
 
-				$pdf->report($model->account_no_id,$model->begindate,$model->enddate);
+				$pdf->report($model->account_no_id,$model->begindate,$model->enddate,$model->post_id);
 				$pdf->Output();
 
 			}

@@ -24,8 +24,18 @@ class TClosingController extends Controller
 		);
 	}
 
-	public function transferNewPeriod()
+	public function actionIndex()
 	{
+		$this->render('/tPosting/closingPeriod',array(
+		));
+
+	}
+
+	public function actionClosingPeriodExecution()
+	{
+		uJournal::model()->updateAll(array('state_id'=>3,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id),
+				'state_id !=4 AND yearmonth_periode = '.Yii::app()->settings->get("System", "cCurrentPeriod"));
+
 		$_curPeriod = Yii::app()->settings->get("System", "cCurrentPeriod");
 		$_nextPeriod = sParameter::cBeginDateAfter(Yii::app()->settings->get("System", "cCurrentPeriod"));
 
@@ -50,24 +60,13 @@ class TClosingController extends Controller
 
 			tBalanceSheet::model()->updateAll(array('type_balance_id'=>2),'yearmonth_periode = '.$_curPeriod);
 		}
-	}
-
-	public function actionClosingPeriod()
-	{
-		$this->render('/tPosting/closingPeriod',array(
-		));
-
-	}
-
-	public function actionClosingPeriodExecution()
-	{
-		uJournal::model()->updateAll(array('state_id'=>3,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id),
-				'state_id !=4 AND yearmonth_periode = '.Yii::app()->settings->get("System", "cCurrentPeriod"));
-
-		$this->transferNewPeriod();
 
 		$_nextPeriod = sParameter::cBeginDateAfter(Yii::app()->settings->get("System", "cCurrentPeriod"));
 		Yii::app()->settings->set("System", "cCurrentPeriod", $_nextPeriod, $toDatabase=true);
+		
+		Yii::app()->user->setFlash('success','<strong>Great!</strong> Closing Period has been successful...');
+		$this->redirect(array('index'));
+
 
 	}
 }

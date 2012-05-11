@@ -32,6 +32,10 @@ class BootCarousel extends CWidget
 	/**
 	 * @var string[] the JavaScript event handlers.
 	 */
+	public $noNav = false;
+	/**
+	 * @var string[] the JavaScript event handlers.
+	 */
 	public $events = array();
 	/**
 	 * @var array the HTML attributes for the widget container.
@@ -65,8 +69,10 @@ class BootCarousel extends CWidget
 		echo '<div class="carousel-inner">';
 		$this->renderItems($this->items);
 		echo '</div>';
-		echo '<a class="carousel-control left" href="#'.$id.'" data-slide="prev">'.$this->prev.'</a>';
-		echo '<a class="carousel-control right" href="#'.$id.'" data-slide="next">'.$this->next.'</a>';
+		if (!$this->noNav) {
+			echo '<a class="carousel-control left" href="#'.$id.'" data-slide="prev">'.$this->prev.'</a>';
+			echo '<a class="carousel-control right" href="#'.$id.'" data-slide="next">'.$this->next.'</a>';
+		}
 		echo '</div>';
 
 		/** @var CClientScript $cs */

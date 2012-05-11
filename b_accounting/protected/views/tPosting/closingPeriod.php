@@ -73,9 +73,9 @@ Yii::app()->clientScript->registerScript('myCap', "
 //echo Yii::app()->settings->get("System", "cCurrentPeriod");
 ?>
 <?php
-//echo tAccount::labarugiDitahan();
-//echo "<br/>";
-//echo tAccount::netprofit();
+echo tAccount::labarugiDitahan(201202);
+echo "<br/>";
+echo tAccount::netprofit(201202);
 //echo "<br/>";
 
 //$modelBalanceCurrent=tBalanceSheet::model()->find(array('condition'=>'parent_id = 124 AND yearmonth_periode = 201201'));
@@ -114,7 +114,7 @@ Yii::app()->clientScript->registerScript('myCap', "
 			'buttonType'=>'link',
 			'id'=>'myCap',
 			'name'=>'btnGo7',
-			'url'=>Yii::app()->createUrl("/tPosting/closingPeriodExecution"),
+			'url'=>Yii::app()->createUrl("/tClosing/closingPeriodExecution"),
 			'caption'=>'Closing Month Period',
 			'options'=>array(
 				//'icons'=>'js:{secondary:"ui-icon-extlink"}',

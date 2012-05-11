@@ -3,9 +3,11 @@
 	<?php $form=$this->beginWidget('BootActiveForm', array(
 			'action'=>Yii::app()->createUrl($this->route),
 			'method'=>'get',
+			'id'=>'searchForm',
 			'htmlOptions'=>array('class'=>'form-inline'),
 	)); ?>
 
+		
 	<?php 
 	$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
 			'model'=>$model,
@@ -13,14 +15,15 @@
 			'source'=>$this->createUrl('uJournal/journalAutoComplete'),
 			'options'=>array(
 					'minLength'=>'2',
-					//'select'=>'js:function( event, ui ) {
-					//	window.open("'.$this->createUrl('tAccount/index',array("tAccount[account_name]"=>"penj","q"=>"Search")).'","_self");
-					//	return false;
-					//}',
-					//'select'=>'js:function( event, ui ) {
-					//	alert("Testing: "+'.time().');
-					//	return false;
-					//}',
+					'focus'=> 'js:function( event, ui ) {
+						$("#'.CHtml::activeId($model,'system_ref').'").val(ui.item.label);
+						return false;
+					}',
+					'select'=> 'js:function( event, ui ) {
+						$("#searchForm").submit();
+						return false;
+					}',
+					
 			),
 			'htmlOptions'=>array(
 					'class'=>'input-medium',

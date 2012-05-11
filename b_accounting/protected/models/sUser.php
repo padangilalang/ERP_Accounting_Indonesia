@@ -18,9 +18,10 @@ class sUser extends CActiveRecord
 	{
 		return array(
 				array('username, password, default_group, status_id', 'required'),
-				//array('password_repeat', 'compare', 'compareAttribute'=>'password'),
 				array('status_id', 'numerical', 'integerOnly'=>true),
 				array('username, created_by', 'length', 'max'=>15),
+				array('password_repeat', 'required', 'on'=>'password'),
+				array('password_repeat', 'compare', 'compareAttribute'=>'password', 'on'=>'password'),
 				array('password, password_repeat, salt, default_group', 'length', 'max'=>100),
 				array('last_login', 'safe'),
 				array('username, default_group, status_id', 'safe', 'on'=>'search'),

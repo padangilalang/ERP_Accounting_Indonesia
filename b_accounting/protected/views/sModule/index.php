@@ -19,7 +19,10 @@ $this->menu4=sModule::getTopOther();
 		Data Module
 	</h1>
 </div>
-<?php $this->widget('bootstrap.widgets.BootGridView', array(
+<?php 
+	//$this->widget('bootstrap.widgets.BootGridView', array(
+	$this->widget('ext.groupgridview.GroupGridView', array(
+		'extraRowColumns' => array('getparent.title'),
 		'id'=>'module-module-grid',
 		'dataProvider'=>$model->search(),
 		'itemsCssClass'=>'table table-striped table-bordered',
@@ -29,11 +32,11 @@ $this->menu4=sModule::getTopOther();
 						'class'=>'bootstrap.widgets.BootButtonColumn',
 						'template'=>'{update}{delete}',
 				),
+				//array(
+				//		'name'=>'id',
+				//),
 				array(
-						'name'=>'id',
-				),
-				array(
-						'name'=>'parent_id',
+						'name'=>'getparent.title',
 				),
 				array(
 						'name'=>'sort',
@@ -44,6 +47,10 @@ $this->menu4=sModule::getTopOther();
 						'value'=>'CHtml::link("$data->title",Yii::app()->createUrl("/sModule/view",array("id"=>$data->id)))'
 				),
 				'link',
+				array(
+						'header'=>'User List',
+						'value'=>'implode($data->getUserList(),", ")'
+				),
 		),
 )); ?>
 <hr>

@@ -53,7 +53,7 @@ class sModule extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('parent_id',$this->parent_id,true);
+		$criteria->compare('parent_id!',0);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('link',$this->link,true);
@@ -61,7 +61,18 @@ class sModule extends CActiveRecord
 
 		return new CActiveDataProvider(get_class($this), array(
 				'criteria'=>$criteria,
+				'pagination'=> array(
+						'pageSize'=>50,
+				),
 		));
+	}
+
+	public function getUserList()
+	{
+		$list=array();
+		foreach($this->userList as $l)
+			$list[]=$l->username;
+		return $list;
 	}
 
 

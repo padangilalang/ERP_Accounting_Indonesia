@@ -63,12 +63,28 @@ class TPostingController extends Controller
 		uJournal::model()->updateByPk((int)$id, array('state_id'=>2,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
 	}
 
+	public function actionRePosting ()  //backup Posting only
+	{
+		$criteria=new CDbCriteria;
+		$criteria->compare('state_id',99);
+		$criteria->compare('yearmonth_periode',Yii::app()->settings->get("System", "cCurrentPeriod"));
+		$models=uJournal::model()->findAll($criteria);
+		
+		foreach ($models as $model) {
+			$this->actionPosting($model->id);
+		}
+	
+		Yii::app()->user->setFlash('success','<strong>Great!</strong> Reposting finished..');
+		$this->redirect(array('/menu'));
+	
+	}
+	
 	public function actionPosting($id)
 	{
 		$_curPeriod = Yii::app()->settings->get("System", "cCurrentPeriod");
 		$_lastPeriod = sParameter::cBeginDateBefore(Yii::app()->settings->get("System", "cCurrentPeriod"));
 
-		$locked=uJournal::model()->updateByPk((int)$id, array('state_id'=>4,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
+		uJournal::model()->updateByPk((int)$id, array('state_id'=>4,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
 
 		$models=uJournalDetail::model()->with('journal')->findAll(array('condition'=>'parent_id ='.$id));
 
@@ -78,11 +94,12 @@ class TPostingController extends Controller
 
 			$_debit=$model->debit;
 			$_credit=$model->credit;
+			$_endbalance=0;
 
 			if ($modelBalanceCurrent == null) { //New Account on This Period. Create New Account on Current Period
 				$modelBalanceLast=tBalanceSheet::model()->find(array('condition'=>'parent_id =' . $model->account_no_id. ' AND yearmonth_periode = '.$_lastPeriod));
 
-				if ($modelBalanceLast != null && $model->account->getTypeValue() == 1) {
+				if ($modelBalanceLast != null && $model->account->getTypeValue() == 1) {  //Account Neraca
 					$_endbalance=$modelBalanceLast->end_balance;
 				} else
 					$_endbalance=0;
@@ -92,11 +109,6 @@ class TPostingController extends Controller
 				} else { //Pasiva, Income
 					$_newendbalance=$_endbalance+$_credit-$_debit;
 				}
-
-				//if (isset($model->account->reverse)) {  //reverse_back
-				//$_debit = -$_debit;
-				//$_credit = -$_credit;
-				//}
 
 				$command=Yii::app()->db->createCommand('
 						INSERT INTO t_balance_sheet (parent_id, yearmonth_periode, type_balance_id, remark, budget, beginning_balance,debit,credit,end_balance) VALUES ('
@@ -111,14 +123,31 @@ class TPostingController extends Controller
 				$command->execute();
 
 			} else  {  //Update Current Record
-				$_curdebit=$modelBalanceCurrent->debit+$_debit;
-				$_curcredit=$modelBalanceCurrent->credit+$_credit;
-				$_curbalance=$modelBalanceCurrent->end_balance;
+			
+				$_udebit = Yii::app()->db->createCommand('
+					SELECT Sum(b.debit) AS sdebit 
+					FROM u_journal a 
+					INNER JOIN u_journal_detail b ON a.id = b.parent_id
+					GROUP BY a.yearmonth_periode, a.state_id, b.account_no_id			
+					HAVING a.state_id=4 AND a.yearmonth_periode='.$_curPeriod.' AND b.account_no_id ='.$model->account_no_id.';
+				')->queryScalar();
+				
+				$_ucredit = Yii::app()->db->createCommand('
+					SELECT Sum(b.credit) AS scredit 
+					FROM u_journal a 
+					INNER JOIN u_journal_detail b ON a.id = b.parent_id
+					GROUP BY a.yearmonth_periode, a.state_id, b.account_no_id			
+					HAVING a.state_id=4 AND a.yearmonth_periode='.$_curPeriod.' AND b.account_no_id = '.$model->account_no_id.';
+				')->queryScalar();
+
+				$_curdebit=($_udebit !=null) ? $_udebit : 0;
+				$_curcredit=($_ucredit !=null) ? $_ucredit : 0;
+				$_curbalance=$modelBalanceCurrent->beginning_balance;
 
 				if ($model->account->getSideValue() == 1 || isset($model->account->reverse)) { //Asset, Expense
-					$_endbalance=$_curbalance+$_debit-$_credit;
+					$_endbalance=$_curbalance+$_curdebit-$_curcredit;
 				} else { //Pasiva, Income
-					$_endbalance=$_curbalance+$_credit-$_debit;
+					$_endbalance=$_curbalance+$_curcredit-$_curdebit;
 				}
 
 				$command=Yii::app()->db->createCommand('
@@ -126,20 +155,22 @@ class TPostingController extends Controller
 						debit = '.$_curdebit.',
 						credit = '.$_curcredit.',
 						end_balance = '.$_endbalance.'
-						WHERE yearmonth_periode = '.$_curPeriod.' AND parent_id = '.$model->account_no_id);
+						WHERE yearmonth_periode = '.$_curPeriod.' AND parent_id = '.$model->account_no_id.';');
 
 				$command->execute();
 
 				//LOG
 				$commandLog=Yii::app()->db->createCommand('
-						INSERT INTO t_balance_sheet_log (journal_id, yearmonth_periode, type_balance_id, remark, budget, account_no_id, beginning_balance,debit,credit,end_balance) VALUES ('
+						INSERT INTO t_balance_sheet_log (journal_id, yearmonth_periode, type_balance_id, remark, budget, account_no_id, beginning_balance,debit,credit,end_balance,created_date, created_id) VALUES ('
 						.$model->parent_id.','
 						.$_curPeriod.', 1, "UPDATE LOG", 0,'
 						.$model->account_no_id.','
 						.$_curbalance.','
 						.$_debit.','
 						.$_credit.','
-						.$_endbalance.')
+						.$_endbalance.','
+						.time().',
+						"1")
 						');
 
 				$commandLog->execute();
@@ -166,6 +197,7 @@ class TPostingController extends Controller
 
 			$_debit=$model->debit;
 			$_credit=$model->credit;
+			$_endbalance=0;
 
 			$_curdebit=$modelBalanceCurrent->debit-$_debit;
 			$_curcredit=$modelBalanceCurrent->credit-$_credit;
@@ -185,6 +217,20 @@ class TPostingController extends Controller
 					WHERE yearmonth_periode = '.$_curPeriod.' AND parent_id = '.$model->account_no_id);
 
 			$command->execute();
+			
+			//LOG
+			$commandLog=Yii::app()->db->createCommand('
+					INSERT INTO t_balance_sheet_log (journal_id, yearmonth_periode, type_balance_id, remark, budget, account_no_id, beginning_balance,debit,credit,end_balance) VALUES ('
+					.$model->parent_id.','
+					.$_curPeriod.', 1, "UNPOSTING LOG", 0,'
+					.$model->account_no_id.','
+					.$_curbalance.','
+					.$_debit.','
+					.$_credit.','
+					.$_endbalance.')
+					');
+
+			$commandLog->execute();
 		}
 	}
 
