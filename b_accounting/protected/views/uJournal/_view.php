@@ -11,7 +11,7 @@
 
 
 	<div class="raw">
-		<b><?php 
+		<h4><?php 
 			//echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/live_journal.png') . CHtml::link(CHtml::encode($data->system_ref), array('view', 'id'=>$data->id));
 			echo CHtml::link(CHtml::encode($data->system_reff()), array('view', 'id'=>$data->id));
 			echo " ( ";
@@ -29,11 +29,11 @@
 			?> 
 			<?php echo CHtml::link('detail<i class="icon-chevron-right"></i>','#',array('class'=>'hide-info'.$data->id));
 			echo ($data->journalSum != $data->journalSumCek) ? " WARNING!!!... FAULT BY SYSTEM. JOURNAL IS NOT BALANCE, PLEASE DELETE.." : "";
-		?> </b>
+		?> </h4>
 		
 		<div class="raw">
 			<?php if ($data->remark !=null) { ?>
-				<i><?php echo CHtml::encode($data->remark); ?> </i>
+				<div style="color: #999; font-size: 11px"><?php echo CHtml::encode($data->remark); ?> </div>
 			<?php }; ?>
 		</div>
 		<br/>

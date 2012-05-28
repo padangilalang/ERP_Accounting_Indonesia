@@ -1,8 +1,8 @@
 <?php if (!Yii::app()->user->isGuest) {
 	$this->widget('bootstrap.widgets.BootNavbar', array(
-			'fixed'=>false,
-			'brand'=>false,
-			'brandUrl'=>'#',
+			'fixed'=>true,
+			'brand'=>Yii::app()->name,
+			'brandUrl'=>Yii::app()->createUrl('/menu'),
 			'collapse'=>true, // requires bootstrap-responsive.css
 			'items'=>array(
 					array(

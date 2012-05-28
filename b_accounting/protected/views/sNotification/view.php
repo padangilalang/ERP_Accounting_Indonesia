@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('index')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/sNotification')),
 );
 
 $this->menu1=sNotification::getTopUpdated();

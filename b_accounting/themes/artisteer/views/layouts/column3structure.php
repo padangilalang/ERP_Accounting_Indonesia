@@ -12,7 +12,7 @@
 
 						
 						<div class="art-layout-cell art-sidebar2">
-							<?php $this->beginContent('/layouts/_sbRightMenu'); $this->endContent(); ?>
+							<?php $this->beginContent('/layouts/_sbRightOperation'); $this->endContent(); ?>
 						</div>
 				</div>
 				

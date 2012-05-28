@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/bPorder')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/bPorder')),
 );
 
 $this->menu1=bPorder::getTopUpdated(2);

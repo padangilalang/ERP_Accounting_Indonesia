@@ -58,6 +58,7 @@ class journalVoucherList1 extends fpdf
 		$criteria->group='t.id, module_id, input_date, yearmonth_periode, system_ref, state_id';
 		$criteria->join='INNER JOIN u_journal_detail tt ON t.id = tt.parent_id';
 		$criteria->compare('tt.account_no_id',$acc_id);
+		$criteria->order='t.input_date';
 		
 		if ($post_id !=0)  $criteria->compare('state_id',$post_id);
 

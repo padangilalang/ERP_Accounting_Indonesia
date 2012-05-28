@@ -113,7 +113,7 @@ class uJournal extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->system_ref, 'label' => $model->system_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->system_ref, 'label' => $model->system_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -136,9 +136,9 @@ class uJournal extends CActiveRecord
 
 		foreach ($models as $model) {
 			if ($model->module_id == 1) {
-				$returnarray[] = array('id' => $model->system_ref, 'label' => $model->system_ref, 'url' => array('/uJournal/view','id'=>$model->id));
+				$returnarray[] = array('id' => $model->system_ref, 'label' => $model->system_ref, 'icon'=>'list-alt', 'url' => array('/uJournal/view','id'=>$model->id));
 			} else {
-				$returnarray[] = array('id' => $model->system_ref, 'label' => $model->system_ref, 'url' => array('/mCashbank/view','id'=>$model->id));
+				$returnarray[] = array('id' => $model->system_ref, 'label' => $model->system_ref, 'icon'=>'list-alt', 'url' => array('/mCashbank/view','id'=>$model->id));
 			
 			}
 			

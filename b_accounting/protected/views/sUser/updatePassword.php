@@ -6,8 +6,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/sUser')),
-		array('label'=>'View', 'url'=>array('view','id'=>$model->id)),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/sUser')),
+		array('label'=>'View', 'icon'=>'zoom-in', 'url'=>array('view','id'=>$model->id)),
 );
 
 $this->menu2=sUser::getTopCreated();

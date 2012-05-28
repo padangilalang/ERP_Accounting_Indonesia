@@ -1,3 +1,27 @@
+<?php if (!empty($this->menu5)): ?>	
+
+<br/>
+<ul class="nav nav-list">
+<?php
+	$this->widget('zii.widgets.jui.CJuiButton', array(
+			'buttonType'=>'link',
+			'name'=>'btnGo7',
+			'url'=>Yii::app()->createUrl($this->id."/create"),
+			'caption'=>'Create New '.$this->menu5[0],
+			'options'=>array(
+					//'icons'=>'js:{secondary:"ui-icon-extlink"}',
+			),
+			'htmlOptions'=>array(
+					'class'=>'ui-button-primary',
+			),
+
+	));
+?>
+</ul>
+<br/>
+
+<?php endif; ?>		 
+
 <ul class="nav nav-list">
 	<li class="nav-header">Operation</li>
 </ul>

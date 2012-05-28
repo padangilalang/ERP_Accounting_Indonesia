@@ -5,10 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		//array('label'=>'Create', 'url'=>array('create')),
+		
 );
 
 $this->menu2=sUser::getTopCreated();
+$this->menu4=sParameter::getTopOther();
 
 
 ?>

@@ -4,11 +4,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Create', 'url'=>array('create')),
+		
 );
 
 $this->menu1=sNotification::getTopUpdated();
 $this->menu2=sNotification::getTopCreated();
+$this->menu4=sParameter::getTopOther();
+$this->menu5=array('Notification');
 
 
 ?>

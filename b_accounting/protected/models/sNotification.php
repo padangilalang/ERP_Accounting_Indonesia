@@ -133,7 +133,11 @@ class sNotification extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->id, 'label' => $model->sender_ref, 'url' => array('view','id'=>$model->id));
+			if ($model->sender_ref !=null) {
+				$returnarray[] = array('id' => $model->id, 'label' => $model->sender_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
+			} else
+				$returnarray[] = array('id' => $model->id, 'label' => substr($model->long_desc,0,30).'...', 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
+			
 		}
 
 		return $returnarray;
@@ -151,7 +155,10 @@ class sNotification extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->id, 'label' => $model->sender_ref, 'url' => array('view','id'=>$model->id));
+			if ($model->sender_ref !=null) {
+				$returnarray[] = array('id' => $model->id, 'label' => $model->sender_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
+			} else
+				$returnarray[] = array('id' => $model->id, 'label' => substr($model->long_desc,0,30).'...', 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;

@@ -4,7 +4,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		//array('label'=>'Create', 'url'=>array('create')),
+		
 );
 
 $this->menu1=uJournal::getTopUpdated(1);

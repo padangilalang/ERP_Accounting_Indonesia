@@ -18,14 +18,16 @@ if ($model->structure_id ==3) {
 }
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/aOrganization')),
-		array('label'=>'Create', 'url'=>array('create')),
-		array('label'=>'View', 'url'=>array('view', 'id'=>$model->id)),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/aOrganization')),
+		
+		array('label'=>'View', 'icon'=>'zoom-in', 'url'=>array('view', 'id'=>$model->id)),
 );
 
 $this->menu1=aOrganization::getTopUpdated();
 $this->menu2=aOrganization::getTopCreated();
 $this->menu3=aOrganization::getTopRelated($model->id);
+$this->menu5=array('Organization');
+
 
 ?>
 

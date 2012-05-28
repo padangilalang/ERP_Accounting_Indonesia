@@ -5,12 +5,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/mAccpayable/')),
-		array('label'=>'Approval', 'url'=>array('/mAccpayable/','id'=>1)),
-		array('label'=>'Payment', 'url'=>array('/mAccpayable/','id'=>2)),
-		array('label'=>'Paid', 'url'=>array('/mAccpayable/','id'=>3)),
-		array('label'=>'Show All', 'url'=>array('/mAccpayable/','id'=>0)),
-		array('label'=>'Print', 'url'=>array('print', 'id'=>$model->id)),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/mAccpayable/')),
+		array('label'=>'Approval', 'icon'=>'lock', 'url'=>array('/mAccpayable/','id'=>1)),
+		array('label'=>'Payment', 'icon'=>'plus', 'url'=>array('/mAccpayable/','id'=>2)),
+		array('label'=>'Paid', 'icon'=>'gift', 'url'=>array('/mAccpayable/','id'=>3)),
+		array('label'=>'Show All', 'icon'=>'zoom-in', 'url'=>array('/mAccpayable/','id'=>0)),
+		array('label'=>'Print', 'icon'=>'print', 'url'=>array('print', 'id'=>$model->id)),
 );
 
 $this->menu1=bPorder::getTopUpdated(1);
@@ -21,6 +21,7 @@ $this->menu2=bPorder::getTopCreated(1);
 
 <div class="page-header">
 	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/payment.png') ?>
 		Account Payable:
 		<?php echo $model->system_ref; 		
 		if ($model->state_id != 1) echo " (" .sParameter::item("cStatus",$model->state_id) .")";

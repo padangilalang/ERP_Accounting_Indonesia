@@ -279,4 +279,20 @@ class sParameter extends CActiveRecord
 
 	}
 
+	public function getTopOther() {
+
+		$returnarray = array();
+
+		$returnarray[] = array('id' =>1, 'label' => 'User', 'icon'=>'list-alt', 'url' => array('/sUser'));
+		$returnarray[] = array('id' =>2, 'label' => 'Organization', 'icon'=>'list-alt', 'url' => array('/aOrganization'));
+		$returnarray[] = array('id' =>3, 'label' => 'Level Access', 'icon'=>'list-alt', 'url' => array('/sMatrix'));
+		$returnarray[] = array('id' =>4, 'label' => 'Module', 'icon'=>'list-alt', 'url' => array('/sModule'));
+		$returnarray[] = array('id' =>5, 'label' => 'Notification', 'icon'=>'list-alt', 'url' => array('/sNotification'));
+		$returnarray[] = array('id' =>6, 'label' => 'Parameter', 'icon'=>'list-alt', 'url' => array('/sParameter'));
+		$returnarray[] = array('id' =>7, 'label' => 'SMS In', 'icon'=>'list-alt', 'url' => array('/sSmsin'));
+
+		return $returnarray;
+	}
+
+	
 }

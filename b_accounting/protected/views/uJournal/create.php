@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/uJournal')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/uJournal')),
 );
 
 $this->menu1=uJournal::getTopUpdated(1);

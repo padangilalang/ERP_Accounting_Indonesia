@@ -49,6 +49,7 @@ class TAccountReportController extends Controller
 			}
 		}
 
+		$model->periode_date=Yii::app()->settings->get("System", "cCurrentPeriod");
 		$this->render('index',array('model'=>$model));	
 	}
 

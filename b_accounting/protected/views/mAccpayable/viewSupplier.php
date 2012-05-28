@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home AP','url'=>array('/mAccpayable/')),
-		array('label'=>'Home Supplier','url'=>array('/mAccpayable/indexSupplier')),
+		array('label'=>'Home AP', 'icon'=>'home', 'url'=>array('/mAccpayable/')),
+		array('label'=>'Home Supplier', 'icon'=>'home', 'url'=>array('/mAccpayable/indexSupplier')),
 );
 
 $this->menu1=cSupplier::getTopUpdated();

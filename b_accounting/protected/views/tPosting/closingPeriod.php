@@ -4,7 +4,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		//array('label'=>'Create', 'url'=>array('create')),
+		
 );
 
 //$this->widget('ext.loading.LoadingWidget');

@@ -5,8 +5,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Create', 'url'=>array('create')),
+		
 );
+
+$this->menu4=sParameter::getTopOther();
+
+
 ?>
 
 <div class="page-header">

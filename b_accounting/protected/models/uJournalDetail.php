@@ -86,7 +86,7 @@ class uJournalDetail extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -99,7 +99,7 @@ class uJournalDetail extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;

@@ -15,6 +15,7 @@ class sNotificationDetail extends CActiveRecord
 	public function rules()
 	{
 		return array(
+				array('long_desc', 'required'),
 				array('sender_date, type_id, broadcast_code, sender_id, receiver_date, receiver_id, receiver_ref, category_id, read_id', 'numerical', 'integerOnly'=>true),
 				array('sender_ref', 'length', 'max'=>25),
 				array('link', 'length', 'max'=>100),

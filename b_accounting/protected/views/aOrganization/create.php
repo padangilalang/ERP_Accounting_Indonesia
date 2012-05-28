@@ -18,7 +18,7 @@ if ($model->structure_id ==3) {
 }
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/aOrganization')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/aOrganization')),
 );
 
 $this->menu1=aOrganization::getTopUpdated();

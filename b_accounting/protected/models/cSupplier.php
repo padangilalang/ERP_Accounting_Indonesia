@@ -178,7 +178,7 @@ class cSupplier extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->id, 'label' => $model->company_name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->id, 'label' => $model->company_name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -197,7 +197,7 @@ class cSupplier extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->id, 'label' => $model->company_name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->id, 'label' => $model->company_name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;

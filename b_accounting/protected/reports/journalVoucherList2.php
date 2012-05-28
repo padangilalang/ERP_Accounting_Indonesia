@@ -78,6 +78,7 @@ class journalVoucherList2 extends fpdf
 		$criteria= new CDbCriteria;
 		$criteria->with=array('journalDetail');
 		$criteria->compare('journalDetail.account_no_id',$acc_id);
+		$criteria->order='t.input_date';
 
 		if ($post_id !=0)  $criteria->compare('state_id',$post_id);
 

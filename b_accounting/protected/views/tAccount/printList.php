@@ -4,14 +4,17 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/tAccount')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/tAccount')),
 );
 
 
 ?>
 
 <div class="page-header">
-	<h1>Print List Journal</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/tree_diagramm_new.png') ?>
+		Print List Journal
+	</h1>
 </div>
 
 <?php $form=$this->beginWidget('BootActiveForm', array(

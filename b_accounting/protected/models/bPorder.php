@@ -306,7 +306,7 @@ class bPorder extends CActiveRecord
 		foreach ($models as $model) {
 			$_system_ref= (strlen($model->system_ref) >15) ? substr($model->system_ref,0,15)."..." : $model->system_ref;
 
-			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -326,7 +326,7 @@ class bPorder extends CActiveRecord
 		foreach ($models as $model) {
 			$_system_ref= (strlen($model->system_ref) >15) ? substr($model->system_ref,0,15)."..." : $model->system_ref;
 
-			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -346,7 +346,7 @@ class bPorder extends CActiveRecord
 		foreach ($models as $model) {
 			$_system_ref= (strlen($model->system_ref) >15) ? substr($model->system_ref,0,15)."..." : $model->system_ref;
 
-			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'url' => array('/mAccpayable/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('/mAccpayable/view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -366,7 +366,7 @@ class bPorder extends CActiveRecord
 		foreach ($models as $model) {
 			$_system_ref= (strlen($model->system_ref) >15) ? substr($model->system_ref,0,15)."..." : $model->system_ref;
 
-			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'url' => array('/mAccpayable/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('/mAccpayable/view','id'=>$model->id));
 		}
 
 		return $returnarray;

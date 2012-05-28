@@ -5,21 +5,23 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/mCashbank')),
-		array('label'=>'Create', 'url'=>array('create')),
-		array('label'=>'Update', 'url'=>array('update', 'id'=>$model->id)),
-		array('label'=>'Delete', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>$model->state_id == 1),
-		array('label'=>'Print', 'url'=>array('print', 'id'=>$model->id)),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/mCashbank')),
+		
+		array('label'=>'Update', 'icon'=>'edit', 'url'=>array('update', 'id'=>$model->id)),
+		array('label'=>'Delete', 'icon'=>'remove', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>$model->state_id == 1),
+		array('label'=>'Print', 'icon'=>'print', 'url'=>array('print', 'id'=>$model->id)),
 );
 
 $this->menu1=uJournal::getTopUpdated(2);
 $this->menu2=uJournal::getTopCreated(2);
 //$this->menu3=uJournal::getTopRelated($model->user_ref);
+$this->menu5=array('Journal');
 
 ?>
 
 <div class="page-header">
 	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/bank.png') ?>
 		Cash and Bank:
 		<?php echo $model->system_reff(); ?>
 	</h1>

@@ -4,14 +4,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/tAccount')),
-		array('label'=>'Create New Root Account', 'url'=>array('create')),
-		array('label'=>'Print List', 'url'=>array('printList')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/tAccount')),
+		array('label'=>'New Root Account', 'icon'=>'plus', 'url'=>array('/tAccount/create')),
+		array('label'=>'Print List', 'icon'=>'print', 'url'=>array('printList')),
 );
 
 
 $this->menu1=tAccount::getTopUpdated();
 //$this->menu2=tAccount::getTopCreated();
+//$this->menu5=array('Root Account');
 
 
 ?>
@@ -23,8 +24,10 @@ $this->menu1=tAccount::getTopUpdated();
 </div>
 
 <div class="page-header">
-		<h1><?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/tree_diagramm_new.png') ?>
-	Chart of Accounts</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/tree_diagramm_new.png') ?>
+		Chart of Accounts
+	</h1>
 </div>
 
 

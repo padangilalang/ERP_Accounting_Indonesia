@@ -6,10 +6,11 @@ $this->breadcrumbs=array(
 
 
 $this->menu=array(
-		//array('label'=>'Create', 'url'=>array('create')),
+		
 );
 
-$this->menu4=sModule::getTopOther();
+$this->menu3=sModule::getTopOther();
+$this->menu4=sParameter::getTopOther();
 
 ?>
 

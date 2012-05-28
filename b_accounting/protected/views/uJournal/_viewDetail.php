@@ -12,21 +12,42 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 				),
 				//'sub_account_id',
 				array(
+					  'class'=>'ext.gridcolumns.TotalColumn',
+					  'name'=>'debit',
+					  //'output'=>'$data->creditf()',
+					  'output'=>'Yii::app()->numberFormatter->format("#,##0.00",$value)',
+					  'type'=>'raw',
+					  'footer'=>true,
+						'htmlOptions'=>array(
+								'style'=>'text-align: right; padding-right: 5px;'
+						),
+					 ),
+				/*array(
 						'name'=>'debit',
 						'value'=>'$data->debitf()',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
-				),
+				),*/
 				array(
+					  'class'=>'ext.gridcolumns.TotalColumn',
+					  'name'=>'credit',
+					  //'output'=>'$data->creditf()',
+					  'output'=>'Yii::app()->numberFormatter->format("#,##0.00",$value)',
+					  'type'=>'raw',
+					  'footer'=>true,
+						'htmlOptions'=>array(
+								'style'=>'text-align: right; padding-right: 5px;'
+						),
+					 ),
+				/*array(
 						'name'=>'credit',
 						'value'=>'$data->creditf()',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
-				),
+				),*/
 				'user_remark',
-
 				//'system_remark',
 		),
 )); ?>
@@ -47,4 +68,6 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 						'visible'=>(uJournal::model()->findByPk((int)$id)->journalSum != uJournal::model()->findByPk((int)$id)->journalSumCek),
 				),
 		),
-)); ?>
+)); 
+
+?>

@@ -27,14 +27,15 @@ if (isset($model->getparent->getparent->getparent->account_name)) {
 
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('index')),
-		array('label'=>'Create', 'url'=>array('create')),
-		array('label'=>'View', 'url'=>array('view', 'id'=>$model->id)),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/tAccount')),
+		
+		array('label'=>'View', 'icon'=>'zoom-in', 'url'=>array('view', 'id'=>$model->id)),
 );
 
 $this->menu1=tAccount::getTopUpdated();
 $this->menu2=tAccount::getTopCreated();
 $this->menu3=tAccount::getTopRelated($model->account_name);
+$this->menu5=array('Root Account');
 
 ?>
 

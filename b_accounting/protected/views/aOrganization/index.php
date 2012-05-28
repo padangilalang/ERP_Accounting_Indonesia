@@ -3,12 +3,13 @@ $this->breadcrumbs=array(
 		'Organization Structure',
 );
 
-$this->menu=array(
-		array('label'=>'Create', 'url'=>array('create')),
-);
+//$this->menu=array(
+		
+//);
 
 $this->menu1=aOrganization::getTopUpdated();
 $this->menu2=aOrganization::getTopCreated();
+$this->menu5=array('Organization');
 
 
 ?>

@@ -71,6 +71,7 @@ class TPostingController extends Controller
 		$models=uJournal::model()->findAll($criteria);
 		
 		foreach ($models as $model) {
+			set_time_limit(0);  //
 			$this->actionPosting($model->id);
 		}
 	

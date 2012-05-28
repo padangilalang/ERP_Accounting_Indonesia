@@ -5,11 +5,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home','url'=>array('index')),
-		array('label'=>'Create','url'=>array('create')),
-		array('label'=>'Update','url'=>array('update','id'=>$model->id)),
-		array('label'=>'Delete','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/cProduct')),
+		//array('label'=>'Create','url'=>array('create')),
+		array('label'=>'Update', 'icon'=>'pencil', 'url'=>array('update','id'=>$model->id)),
+		array('label'=>'Delete', 'icon'=>'trash', 'url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 );
+
+$this->menu5=array('Product');
+
 ?>
 
 <div class="page-header">

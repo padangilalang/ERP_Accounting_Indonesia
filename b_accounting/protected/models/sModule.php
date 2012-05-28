@@ -156,7 +156,7 @@ class sModule extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->id, 'label' => $model->title, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->id, 'label' => $model->title, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;

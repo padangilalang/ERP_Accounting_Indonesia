@@ -63,7 +63,9 @@ class tAccountEntity extends CActiveRecord
 		$criteria->compare('entity_id',$id);
 		$criteria->with=array('account');
 		$criteria->order=('account.account_no');
-
+		$criteria->condition='account_no is not null';
+		$criteria->group='account_no, account_name';
+		
 		return new CActiveDataProvider($this, array(
 				'criteria'=>$criteria,
 				'pagination'=>array(

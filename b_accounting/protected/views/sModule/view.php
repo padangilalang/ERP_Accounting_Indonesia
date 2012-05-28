@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/sModule')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/sModule')),
 );
 
 $this->menu4=sModule::getTopOther();

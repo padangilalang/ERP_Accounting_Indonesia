@@ -4,12 +4,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Create PO General', 'url'=>array('create')),
-		array('label'=>'Home PO Inventory', 'url'=>array('/bPorderInventory')),
+		//array('label'=>'Create PO General', 'url'=>array('create')),
+		array('label'=>'Home PO Inventory', 'icon'=>'home', 'url'=>array('/bPorderInventory')),
 );
 
 $this->menu1=bPorder::getTopUpdated(2);
 $this->menu2=bPorder::getTopCreated(2);
+$this->menu5=array('PO General');
+
 ?>
 
 <div class="page-header">

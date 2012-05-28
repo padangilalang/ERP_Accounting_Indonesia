@@ -19,7 +19,12 @@ class monthpicker extends CWidget {
 
 		$options=empty($this->options) ? '' : CJavaScript::encode($this->options);
 
-		Yii::app()->getClientScript()->registerScript(__CLASS__.'#'.$this->id,"
+		echo CHtml::activeTextField($this->model,$this->name,$this->options);
+		
+		if (!isset($this->options['onChanged']))
+			$this->options['onChanged']="js:function( callback ) { jQuery('#{$this->id}').val(callback);}";
+
+			Yii::app()->getClientScript()->registerScript(__CLASS__.'#'.$this->id,"
 				jQuery('#{$this->id}').monthpicker();
 				");
 

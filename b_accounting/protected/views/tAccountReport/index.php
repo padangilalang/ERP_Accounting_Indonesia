@@ -7,7 +7,9 @@ $this->breadcrumbs=array(
 
 <div class="page-header">
 	<h1>
-Accounting Report</h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/report.png') ?>
+		Accounting Report
+	</h1>
 </div>
 
 
@@ -26,12 +28,12 @@ Accounting Report</h1>
 			<?php
 			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 					'model'=>$model,
-					'value'=>CTimestamp::formatDate('yyyy-MM-dd',$model->periode_date),
+					//'value'=>CTimestamp::formatDate('yyyy-MM-dd',$model->periode_date),
 					'attribute'=>'periode_date',
 					// additional javascript options for the date picker plugin
 					'options'=>array(
 						'showAnim'=>'fold',
-						'dateFormat'=>'yymm',
+						'dateFormat'=>'yymm', 
 					),
 					'htmlOptions'=>array(
 					),

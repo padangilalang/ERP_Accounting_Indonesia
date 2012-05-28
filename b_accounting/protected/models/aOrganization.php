@@ -92,7 +92,7 @@ class aOrganization extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -105,7 +105,7 @@ class aOrganization extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;

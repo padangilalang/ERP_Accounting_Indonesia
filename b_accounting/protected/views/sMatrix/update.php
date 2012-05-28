@@ -6,8 +6,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/sMatrix')),
-		array('label'=>'View', 'url'=>array('view','id'=>$model->id)),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/sMatrix')),
+		array('label'=>'View', 'icon'=>'zoom-in', 'url'=>array('view','id'=>$model->id)),
 );
 ?>
 

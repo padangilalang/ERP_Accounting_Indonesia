@@ -4,13 +4,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/uJournal')),
-		array('label'=>'Create', 'url'=>array('create')),
+		array('label'=>'Home', 'icon'=>'home','url'=>array('/uJournal')),
 );
 
 
 $this->menu1=uJournal::getTopUpdated(1);
 $this->menu2=uJournal::getTopCreated(1);
+$this->menu5=array('Journal');
 
 
 

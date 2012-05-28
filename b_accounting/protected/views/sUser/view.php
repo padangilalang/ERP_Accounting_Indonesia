@@ -5,9 +5,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/sUser')),
-		array('label'=>'Update', 'url'=>array('update','id'=>$model->id)),
-		array('label'=>'Update Password', 'url'=>array('updatePassword','id'=>$model->id)),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/sUser')),
+		array('label'=>'Update', 'icon'=>'edit', 'url'=>array('update','id'=>$model->id)),
+		array('label'=>'Update Password', 'icon'=>'pencil', 'url'=>array('updatePassword','id'=>$model->id)),
 );
 
 $this->menu2=sUser::getTopCreated();

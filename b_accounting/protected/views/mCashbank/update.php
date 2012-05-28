@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/mCashbank')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/mCashbank')),
 );
 
 $this->menu1=uJournal::getTopUpdated(2);
@@ -16,7 +16,10 @@ $this->menu2=uJournal::getTopCreated(2);
 
 
 <div class="page-header">
-	<h1>Cash and Bank</h1>
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/bank.png') ?>
+		Cash and Bank
+	</h1>
 </div>
 
 <?php

@@ -2,8 +2,67 @@
 
 class sUser extends CActiveRecord
 {
+
+	/**
+	 * @var integer ID of this record
+	 * @soap
+	 */
+	public $id;
+
+	/**
+	 * @var string password_repeat
+	 * @soap
+	 */
 	public $password_repeat;
 
+	/**
+	 * @var string username
+	 * @soap
+	 */
+	public $username;
+	
+	/**
+	 * @var string password
+	 * @soap
+	 */
+	public $password;
+	
+	/**
+	 * @var string salt
+	 * @soap
+	 */
+	public $salt;
+
+	/**
+	 * @var integer default_group
+	 * @soap
+	 */
+	public $default_group;
+
+	/**
+	 * @var integer status_id
+	 * @soap
+	 */
+	public $status_id;
+
+	/**
+	 * @var integer created_date
+	 * @soap
+	 */
+	public $created_date;
+
+	/**
+	 * @var integer created_by
+	 * @soap
+	 */
+	public $created_by;
+
+	/**
+	 * @var integer last_login
+	 * @soap
+	 */
+	public $last_login;
+	
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -304,7 +363,7 @@ class sUser extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->username, 'label' => $model->username, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->username, 'label' => $model->username, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;

@@ -2,8 +2,10 @@
 $this->breadcrumbs=array(
 		'Purchase Order'=>array('index'),
 		'Create',
-);$this->menu=array(
-		array('label'=>'Home', 'url'=>array('/bPorderGeneral')),
+);
+
+$this->menu=array(
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/bPorderGeneral')),
 );
 
 $this->menu1=bPorder::getTopUpdated(2);

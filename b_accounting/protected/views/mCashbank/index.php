@@ -4,13 +4,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'Home', 'url'=>array('/mCashbank')),
-		array('label'=>'Create', 'url'=>array('create')),
+		array('label'=>'Home', 'icon'=>'home', 'url'=>array('/mCashbank')),
 );
 
 
 $this->menu1=uJournal::getTopUpdated(2);
 $this->menu2=uJournal::getTopCreated(2);
+$this->menu5=array('Journal');
 
 
 Yii::app()->clientScript->registerScript('search', "
