@@ -4,10 +4,10 @@
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
 		'type'=>'list',
 		'items'=>array(
-				array('label'=>'SMS','url'=>'#'),
-				array('label'=>'Email','url'=>'#'),
-				array('label'=>'Chat','url'=>'#'),
-				array('label'=>'Click To Call','url'=>'#'),
+				array('label'=>'SMS', 'icon'=>'list-alt','url'=>'#'),
+				array('label'=>'Email', 'icon'=>'list-alt','url'=>'#'),
+				array('label'=>'Chat', 'icon'=>'list-alt','url'=>'#'),
+				array('label'=>'Click To Call', 'icon'=>'list-alt','url'=>'#'),
 		),
 )); ?>
 <br />

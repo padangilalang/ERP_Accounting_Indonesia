@@ -13,7 +13,7 @@
 	'options'=>array(
 		'interval'=>5000,
 	),
-	//'noNav'=>true,
+	'noNav'=>true,
 )); 
 ?>
 

@@ -10360,3 +10360,45 @@ Stack trace:
 REQUEST_URI=/b_accounting/index.php?r=tAccount/index&page=13
 HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount
 ---
+2012/05/29 18:29:44 [error] [exception.CException] exception 'CException' with message 'Property "BootCarousel.noNav" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(162): CComponent->__set('noNav', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(MenuController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\_header.php(17): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\mainFixed.php(44): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#14 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????<div clas...')
+#16 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????<div clas...')
+#17 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#18 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#19 C:\wamp\www\b_accounting\themes\artisteer\views\layouts\main.php(17): CBaseController->endContent()
+#20 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#21 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#22 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#23 C:\wamp\www\b_accounting\protected\controllers\MenuController.php(63): CController->render('index', Array)
+#24 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MenuController->actionIndex()
+#25 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#26 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#27 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#28 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#29 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#30 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#31 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#32 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#33 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#34 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('menu')
+#35 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#36 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#37 {main}
+REQUEST_URI=/b_accounting/index.php?r=menu
+---
