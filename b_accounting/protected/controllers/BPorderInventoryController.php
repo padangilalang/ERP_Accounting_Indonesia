@@ -59,6 +59,7 @@ class BPorderInventoryController extends Controller
 	public function actionCreate() //PO Inventory
 	{
 		$model=new bPorder;
+		$modelD=new bPorderDetail;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -74,22 +75,23 @@ class BPorderInventoryController extends Controller
 				$model->periode_date=Yii::app()->settings->get("System", "cCurrentPeriod");
 				$model->payment_state_id=1;
 				$model->po_type_id=1; //PO Inventory
+				$model->remark=$modelD->item_id[0];
 
 				$model->save();
 
 				//Detail...
-				$model->item_id=$_POST['item_id'];
-				$model->description=$_POST['description'];
-				$model->qty=$_POST['qty'];
-				$model->amount=$_POST['amount'];
+				//$model->item_id=$_POST['item_id'];
+				//$model->description=$_POST['description'];
+				//$model->qty=$_POST['qty'];
+				//$model->amount=$_POST['amount'];
 
-				for($i = 0; $i < sizeof($model->item_id); ++$i):
+				for($i = 0; $i < sizeof($modelD->item_id); ++$i):
 				$modelDetail=new bPorderDetail;
 				$modelDetail->parent_id=$model->id;
-				$modelDetail->item_id=$model->item_id[$i];
-				$modelDetail->description=$model->description[$i];
-				($model->qty[$i] != null) ? $modelDetail->qty=$model->qty[$i] : $modelDetail->qty=1;
-				($model->amount[$i] != null) ? $modelDetail->amount=$model->amount[$i] : $modelDetail->amount=0;
+				$modelDetail->item_id=$modelD->item_id[$i];
+				$modelDetail->description=$modelD->description[$i];
+				($modelD->qty[$i] != null) ? $modelDetail->qty=$modelD->qty[$i] : $modelDetail->qty=1;
+				($modelD->amount[$i] != null) ? $modelDetail->amount=$modelD->amount[$i] : $modelDetail->amount=0;
 
 				$modelDetail->save();
 				endfor;
@@ -105,6 +107,7 @@ class BPorderInventoryController extends Controller
 
 		$this->render('create',array(
 				'model'=>$model,
+				'modelD'=>$modelD,
 		));
 	}
 
@@ -169,16 +172,17 @@ class BPorderInventoryController extends Controller
 
 		$modelDetail = bPorderDetail::model()->findAll(array('condition'=>'parent_id ='.$model->id,'order'=>'id'));
 
-		foreach ($modelDetail as $mm) {
+		//foreach ($modelDetail as $mm) {
 
-			$model->item_id[]=$mm->item_id;
-			$model->description[]=$mm->description;
-			$model->qty[]=$mm->qty;
-			$model->amount[]=$mm->amount;
-		}
+		//	$model->item_id[]=$mm->item_id;
+		//	$model->description[]=$mm->description;
+		//	$model->qty[]=$mm->qty;
+		//	$model->amount[]=$mm->amount;
+		//}
 
 		$this->render('update',array(
 				'model'=>$model,
+				'modelD'=>$modelDetail,
 		));
 	}
 

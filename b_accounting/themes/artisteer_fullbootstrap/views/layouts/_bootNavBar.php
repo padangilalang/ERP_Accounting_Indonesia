@@ -2,7 +2,7 @@
 <?php if (!Yii::app()->user->isGuest) {
 
 	$this->widget('bootstrap.widgets.BootNavbar', array(
-			'fixed'=>false,
+			'fixed'=>true,
 			'brand'=>Yii::app()->name,
 			'brandUrl'=>Yii::app()->createUrl("menu"),
 			'collapse'=>true, // requires bootstrap-responsive.css
@@ -23,7 +23,7 @@
 	));
 } else {
 	$this->widget('bootstrap.widgets.BootNavbar', array(
-			'fixed'=>false,
+			'fixed'=>true,
 			'brand'=>Yii::app()->name,
 			'brandUrl'=>'#',
 			'collapse'=>true, // requires bootstrap-responsive.css

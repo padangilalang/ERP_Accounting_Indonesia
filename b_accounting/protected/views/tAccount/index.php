@@ -30,6 +30,12 @@ $this->menu1=tAccount::getTopUpdated();
 	</h1>
 </div>
 
+<b>
+<?php
+	echo "Account";
+?>
+	<div style="margin-right:25%; float: right; color: #999; font-size: 11px">Entity</div>
+</b>
 
 <div id="posts">
 <?php foreach($dataProvider as $data): ?>
@@ -44,27 +50,38 @@ Yii::app()->clientScript->registerScript('search'.$data->id, "
 ");
 ?>
 
-<p>
-
-	<b><?php 
+	<?php 
 	if ($data->parent_id == 0) {
-		echo CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
+		if ($data->childs) echo "<b>";
+		echo CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		if ($data->childs) echo "</b>";
 	} elseif ($data->getparent->parent_id == 0) {
-		echo "--- ". CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
+		if ($data->childs) echo "<b>";
+		echo "--- ". CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		if ($data->childs) echo "</b>";
 	} elseif ($data->getparent->getparent->parent_id == 0) {
-		echo "------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
+		if ($data->childs) echo "<b>";
+		echo "------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		if ($data->childs) echo "</b>";
 	} elseif ($data->getparent->getparent->getparent->parent_id == 0) {
-		echo "--------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
+		if ($data->childs) echo "<b>";
+		echo "--------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		if ($data->childs) echo "</b>";
 	} elseif ($data->getparent->getparent->getparent->getparent->parent_id == 0) {
-		echo "------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
+		if ($data->childs) echo "<b>";
+		echo "------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		if ($data->childs) echo "</b>";
 	} elseif ($data->getparent->getparent->getparent->getparent->getparent->parent_id == 0) {
-		echo "--------------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
+		if ($data->childs) echo "<b>";
+		echo "--------------- ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		if ($data->childs) echo "</b>";
 	} else {
-		echo "------------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id))."  (".$data->entityList().")";
-
+		if ($data->childs) echo "<b>";
+		echo "------------------ ".CHtml::link($data->account_concat(), array('view', 'id'=>$data->id));
+		if ($data->childs) echo "</b>";
 	}
-
-	?> </b>
+	?>
+	<div style="margin-right:25%; float: right; color: #999; font-size: 11px"><?php echo $data->entityList(); ?> </div>
 
 	<?php /*
 	<?php echo CHtml::link('<i class="icon-chevron-right"></i>','#',array('class'=>'hide-info'.$data->id)); ?>

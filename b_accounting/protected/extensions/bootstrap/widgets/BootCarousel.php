@@ -32,10 +32,6 @@ class BootCarousel extends CWidget
 	/**
 	 * @var string[] the JavaScript event handlers.
 	 */
-	public $noNav = false;
-	/**
-	 * @var string[] the JavaScript event handlers.
-	 */
 	public $events = array();
 	/**
 	 * @var array the HTML attributes for the widget container.
@@ -69,30 +65,20 @@ class BootCarousel extends CWidget
 		echo '<div class="carousel-inner">';
 		$this->renderItems($this->items);
 		echo '</div>';
-		if (!$this->noNav) {
-			echo '<a class="carousel-control left" href="#'.$id.'" data-slide="prev">'.$this->prev.'</a>';
-			echo '<a class="carousel-control right" href="#'.$id.'" data-slide="next">'.$this->next.'</a>';
-		}
+		echo '<a class="carousel-control left" href="#'.$id.'" data-slide="prev">'.$this->prev.'</a>';
+		echo '<a class="carousel-control right" href="#'.$id.'" data-slide="next">'.$this->next.'</a>';
 		echo '</div>';
 
 		/** @var CClientScript $cs */
 		$cs = Yii::app()->getClientScript();
 		$options = !empty($this->options) ? CJavaScript::encode($this->options) : '';
-		$cs->registerScript(__CLASS__.'#'.$id, "jQuery('{$id}').carousel({$options});");
+		$cs->registerScript(__CLASS__.'#'.$id, "jQuery('#{$id}').carousel({$options});");
 
-        // Register the "slide" event-handler.
-        if (isset($this->events['slide']))
-        {
-            $fn = CJavaScript::encode($this->events['slide']);
-	        $cs->registerScript(__CLASS__.'#'.$id.'.slide', "jQuery('#{$id}').on('slide', {$fn});");
-        }
-
-        // Register the "slid" event-handler.
-        if (isset($this->events['slid']))
-        {
-            $fn = CJavaScript::encode($this->events['slid']);
-	        $cs->registerScript(__CLASS__.'#'.$id.'.slid', "jQuery('#{$id}').on('slid', {$fn});");
-        }
+		foreach ($this->events as $name => $handler)
+		{
+			$handler = CJavaScript::encode($handler);
+			$cs->registerScript(__CLASS__.'#'.$id.'_'.$name, "jQuery('#{$id}').on('".$name."', {$handler});");
+		}
 	}
 
 	/**

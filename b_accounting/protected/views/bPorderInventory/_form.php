@@ -115,54 +115,58 @@ function addNewProduct()
 
 <?php echo $form->textAreaRow($model,'remark',array('rows'=>2, 'class'=>'span5')); ?>
 
+<?php /*
 <?php echo CHtml::link('Create New Product', "",  // the link for open the dialog
 		array(
 				'style'=>'cursor: pointer; text-decoration: underline;',
 				'onclick'=>"{addNewProduct(); $('#dialogProduct').dialog('open');}"));
 		?>
+*/
+?>
 
 <a id="copylink" href="#" rel=".row">Add Row</a>
 
 <table class="appendo-gii" id="copylink">
 	<thead>
 		<tr>
-			<th>Budget</th>
+			<th>Item</th>
 			<th>Desc</th>
 			<th>Qty</th>
 			<th>Amount</th>
 		</tr>
 	</thead>
 	<tbody>
-		<?php if (empty($model->budget_id)): ?>	
+		<?php if (empty($modelD)): ?>	
 			<tr class="row">
-				<td><?php echo CHtml::dropDownList('budget_id[]','',tAccount::item()); ?>
+				<td><?php echo CHtml::dropDownList('ModelD[budget_id][]','',tAccount::item()); ?>
 				</td>
-				<td><?php echo CHtml::textField('description[]','',array()); ?></td>
-				<td><?php echo CHtml::textField('qty[]','',array('maxlength'=>15)); ?>
+				<td><?php echo CHtml::textField('ModelD[description][]','',array()); ?></td>
+				<td><?php echo CHtml::textField('ModelD[qty][]','',array('maxlength'=>15)); ?>
 				</td>
-				<td><?php echo CHtml::textField('amount[]','',array('maxlength'=>15)); ?>
+				<td><?php echo CHtml::textField('ModelD[amount][]','',array('maxlength'=>15)); ?>
 				</td>
 			</tr>
 		<?php else: ?>
 			<?php
 			$idx = 0;
-			$count = count($model->budget_id);
+			$count = count($modelD);
 	 
-			foreach($model->budget_id as $model):
+			foreach($modelD as $mod):
 				//the last added row is the row to copy
 				$copyClass = ($idx == $count-1) ? ' copy' : '';
 
 				?>
 				<tr class="row<?php echo $copyClass;  ?>">		 
-					<td><?php echo CHtml::dropDownList('budget_id[]',$model->budget_id[$i],tAccount::item()); ?>
+					<td><?php echo CHtml::dropDownList('item_id[]',$mod->item_id,pProduct::items()); ?>
 					</td>
-					<td><?php echo CHtml::textField('description[]',$model->description[$i],array()); ?>
+					<td><?php echo CHtml::textField('description[]',$mod->description,array()); ?>
 					</td>
-					<td><?php echo CHtml::textField('qty[]',$model->qty[$i],array('maxlength'=>15)); ?>
+					<td><?php echo CHtml::textField('qty[]',$mod->qty,array('maxlength'=>15)); ?>
 					</td>
-					<td><?php echo CHtml::textField('amount[]',$model->amount[$i],array('maxlength'=>15)); ?>
+					<td><?php echo CHtml::textField('amount[]',$mod->amount,array('maxlength'=>15)); ?>
 					</td>
-					<a class="nocopy" onclick="$(this).parent().remove(); return false;" href="#"><?php echo $removeText;  ?></a>
+					<td><a class="nocopy" onclick="$(this).parent().remove(); return false;" href="#"><?php echo "Remove";  ?></a>
+					</td>
 				</tr>
 		<?php 
 			$idx++; 
@@ -178,3 +182,4 @@ function addNewProduct()
 </div>
 
 <?php $this->endWidget(); ?>
+
