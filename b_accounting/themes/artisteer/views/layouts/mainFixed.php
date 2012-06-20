@@ -14,6 +14,9 @@
 	href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css"
 	type="text/css" media="screen" />
 
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/knockout.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/jquery.validate.js"></script>
+
 <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
 	

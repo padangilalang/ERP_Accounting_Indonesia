@@ -10,19 +10,23 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<link rel="stylesheet"
+	href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css"
+	type="text/css" media="screen" />
+
 </head>
+
 
 <body>
 
+
 	<div class="container">
-
+	<div class="art-shadow">
 		<div class="row">
-			<div class="span12">
-				<?php echo $content ?>
-			</div>
+			<?php echo $content; ?>
 		</div>
-
 	</div>
-	<!-- /container -->
+	</div>
 </body>
+
 </html>

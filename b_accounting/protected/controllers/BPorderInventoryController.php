@@ -59,7 +59,6 @@ class BPorderInventoryController extends Controller
 	public function actionCreate() //PO Inventory
 	{
 		$model=new bPorder;
-		$modelD=new bPorderDetail;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -68,14 +67,19 @@ class BPorderInventoryController extends Controller
 		{
 
 			$model->attributes=$_POST['bPorder'];
+			
 
 			if($model->validate()) {
 
+				echo print_r($_POST);
+				die;
+				
 				$model->organization_id=sUser::model()->getGroup() ; //default user Group
 				$model->periode_date=Yii::app()->settings->get("System", "cCurrentPeriod");
 				$model->payment_state_id=1;
+				$model->journal_state_id=1;
+				$model->budgetcomp_id=0;
 				$model->po_type_id=1; //PO Inventory
-				$model->remark=$modelD->item_id[0];
 
 				$model->save();
 
@@ -86,14 +90,14 @@ class BPorderInventoryController extends Controller
 				//$model->amount=$_POST['amount'];
 
 				for($i = 0; $i < sizeof($modelD->item_id); ++$i):
-				$modelDetail=new bPorderDetail;
-				$modelDetail->parent_id=$model->id;
-				$modelDetail->item_id=$modelD->item_id[$i];
-				$modelDetail->description=$modelD->description[$i];
-				($modelD->qty[$i] != null) ? $modelDetail->qty=$modelD->qty[$i] : $modelDetail->qty=1;
-				($modelD->amount[$i] != null) ? $modelDetail->amount=$modelD->amount[$i] : $modelDetail->amount=0;
+					$modelDetail=new bPorderDetail;
+					$modelDetail->parent_id=$model->id;
+					$modelDetail->item_id=$modelD->item_id[$i];
+					$modelDetail->description=$modelD->description[$i];
+					($modelD->qty[$i] != null) ? $modelDetail->qty=$modelD->qty[$i] : $modelDetail->qty=1;
+					($modelD->amount[$i] != null) ? $modelDetail->amount=$modelD->amount[$i] : $modelDetail->amount=0;
 
-				$modelDetail->save();
+					$modelDetail->save();
 				endfor;
 
 				//Create System_ref
@@ -107,7 +111,6 @@ class BPorderInventoryController extends Controller
 
 		$this->render('create',array(
 				'model'=>$model,
-				'modelD'=>$modelD,
 		));
 	}
 
@@ -251,4 +254,9 @@ class BPorderInventoryController extends Controller
 
 	}
 
+	public function actionGrid()
+	{
+		$this->render('grid',array(
+		));
+	}
 }

@@ -17,7 +17,7 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'p-product-grid',
 		'dataProvider'=>cSupplier::model()->search(),
 		'itemsCssClass'=>'table table-striped table-bordered',
-		'template'=>'{items}{pager}{summary}',
+		'template'=>'{items}{pager}',
 		'columns'=>array(
 				array(
 						'name'=>'company_name',

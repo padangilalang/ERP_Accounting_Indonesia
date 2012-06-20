@@ -146,7 +146,7 @@ class sNotificationController extends Controller
 	public function actionMarkRead($id)
 	{
 		//$model=sNotification::model()->findByPk((int)$id);
-		$model=sNotification::model()->findByPk((int)$id, array('condition'=>'receiver_id = '. Yii::app()->user->id ));
+		$model=sNotification::model()->findByPk((int)$id, array('condition'=>'receiver_id = '. Yii::app()->user->id));
 
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
@@ -163,7 +163,7 @@ class sNotificationController extends Controller
 
 	public function actionMarkArchive($id)
 	{
-		$model=sNotification::model()->findByPk((int)$id, array('condition'=>'sender_id = '. Yii::app()->user->id ));
+		$model=sNotification::model()->findByPk((int)$id, array('condition'=>'sender_id = '. Yii::app()->user->id));
 
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');

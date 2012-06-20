@@ -97,7 +97,7 @@ class SParameterController extends Controller
 
 	public function loadModel($pk1,$pk2)
 	{
-		$model=sParameter::model()->find(array('condition'=>'type = "'.$pk1.'" AND code = '.$pk2));
+		$model=sParameter::model()->find(array('condition'=>'type = \''.$pk1.'\' AND code = \''.$pk2  .'\''));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

@@ -76,6 +76,14 @@ return array(
 						'allowAutoLogin'=>true,
 				),
 				'db'=>array(
+						'connectionString'=>'pgsql:host=localhost;port=5432;dbname=b_accounting',
+						'emulatePrepare' => true,
+						'username' => 'postgres',
+						'password' => '1234qwe',
+						'charset' => 'utf8',
+						'tablePrefix' => '',
+				),
+/*				'db'=>array(
 						'connectionString' => 'mysql:host=localhost;dbname=accounting',
 						'emulatePrepare' => true,
 						'username' => 'accounting',
@@ -83,7 +91,7 @@ return array(
 						'charset' => 'utf8',
 						'tablePrefix' => '',
 				),
-				'errorHandler'=>array(
+*/				'errorHandler'=>array(
 						// use 'site/error' action to display errors
 						'errorAction'=>'site/error',
 				),
@@ -111,7 +119,7 @@ return array(
 										'categories'=>'vardump',
 										'showInFireBug'=>true
 								),
-*/
+								*/
 						),
 				),
 		),

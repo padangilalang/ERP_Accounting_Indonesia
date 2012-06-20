@@ -70,13 +70,16 @@ class BPorderGeneralController extends Controller
 				$model->payment_state_id=1;
 				$model->po_type_id=2; //PO General
 
-				$model->save();
+				//$model->save();
 
 				//Detail...
 				$model->budget_id=$_POST['budget_id'];
 				$model->description=$_POST['description'];
 				$model->qty=$_POST['qty'];
 				$model->amount=$_POST['amount'];
+				
+				echo print_r($_POST);
+				die;
 
 				for($i = 0; $i < sizeof($model->budget_id); ++$i):
 				$modelDetail=new bPorderDetail;

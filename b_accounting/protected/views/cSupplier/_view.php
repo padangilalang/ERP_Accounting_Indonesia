@@ -1,4 +1,4 @@
-
+<div class="span5 well">
 <b><?php echo CHtml::link(CHtml::encode($data->company_name),array('view','id'=>$data->id)); ?>
 </b>
 <br />
@@ -67,3 +67,4 @@
 <br />
 
 */ ?>
+</div>

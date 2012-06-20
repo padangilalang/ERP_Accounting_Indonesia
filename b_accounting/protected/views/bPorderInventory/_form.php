@@ -1,90 +1,98 @@
 <?php
-$this->widget('ext.jqrelcopy.JQRelcopy',array(
- 
- //the id of the 'Copy' link in the view, see below.
- 'id' => 'copylink',
- 
-  //add a icon image tag instead of the text
-  //leave empty to disable removing
- 'removeText' => 'Remove',
- 
- //htmlOptions of the remove link
- 'removeHtmlOptions' => array('style'=>'color:red'),
- 
- //options of the plugin, see http://www.andresvidal.com/labs/relcopy.html
- 'options' => array(
- 
-       //A class to attach to each copy
-      'copyClass'=>'newcopy',
- 
-      // The number of allowed copies. Default: 0 is unlimited
-      'limit'=>5,
- 
-      //Option to clear each copies text input fields or textarea
-      'clearInputs'=>true,
- 
-      //A jQuery selector used to exclude an element and its children
-      'excludeSelector'=>'.skipcopy',
- 
-      //Additional HTML to attach at the end of each copy.
-      'append'=>CHtml::tag('span',array('class'=>'hint'),''),
-   )
-));
+Yii::app()->clientScript->registerScript('knockout', "
 
-?>					   
+
+////////AUTOCOMPLETE
+ko.bindingHandlers.autocomplete = {
+        init: function (element, params) {
+            var options = params().split(' ');
+            $(element).bind(\"focus\", function () {
+                $(element).change();
+            });
+            $(element).autocomplete({ 
+			source: function( request, response ) {
+				$.ajax({
+					url: \""  .$this->createUrl('/tAccount/AccountAutoComplete'). "\",
+					dataType: \"json\",
+					data: {
+						term: request.term
+					},
+					success: function( data ) {
+						response($.map( data, function(item) {
+							  return {
+								label: item,
+								value: item
+							  }
+						}));
+					}
+				})
+			},
+            });
+        },
+        update: function (element, params) {
+        }
+    };
+////////AUTOCOMPLETE
+
+var GiftModel = function(gifts) {
+    var self = this;
+    self.gifts = ko.observableArray(gifts);
+ 
+    self.addGift = function() {
+        self.gifts.push({
+            item_id: \"\",
+            description: \"\",
+            qty: \"\",
+            amount: \"\"
+        });
+    };
+ 
+    self.removeGift = function(gift) {
+        self.gifts.remove(gift);
+    };
+ 
+    //self.save = function(form) {
+        //alert(ko.utils.stringifyJson(self.gifts));
+		//ko.utils.postJson($(\"form\"), { gifts: self.gifts });  
+		//ko.utils.postJson($(\"form\"), self.gifts);
+    //};
+	
+	self.save = function (form) {
+		$.ajax({
+			url: \""  .$this->route . "\",
+			type: 'post',
+			data: ko.toJSON(this),
+			contentType: 'application/json',
+			success: function (result) {
+				alert(result);
+			}
+		});
+	};
+	
+};
+ 
+var viewModel = new GiftModel([
+    { item_id: \"\", description: \"\", qty: \"\", amount: \"\"},
+]);
+
+
+ko.applyBindings(viewModel);
+ 
+// Activate jQuery Validation
+$(\"form\").validate({ submitHandler: viewModel.save });
+
+
+
+
+");
+?>
+
 					   
-<?php
-$this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
-		'id'=>'dialogProduct',
-		'options'=>array(
-				'title'=>'Create New Product',
-				'autoOpen'=>false,
-				'modal'=>true,
-				'width'=>'600px',
-				'height'=>'400px',
-		),
-));?>
-<div class="divForForm"></div>
-
-<?php $this->endWidget();?>
-
-<script type="text/javascript">
-// here is the magic
-function addNewProduct()
-{
-    <?php echo CHtml::ajax(array(
-            'url'=>array('pProduct/create'),
-            'data'=> "js:$(this).serialize()",
-            'type'=>'post',
-            'dataType'=>'json',
-            'success'=>"function(data)
-            {
-                if (data.status == 'failure')
-                {
-                    $('#dialogProduct div.divForForm').html(data.div);
-                          // Here is the trick: on submit-> once again this function!
-                    $('#dialogProduct div.divForForm form').submit(addNewProduct);
-                }
-                else
-                {
-                    $('#dialogProduct div.divForForm').html(data.div);
-					$('#item_id');
-                    setTimeout(\"$('#dialogProduct').dialog('close') \",3000);
-					$('#item_id').serialize()
-                }
- 
-            } ",
-            ))?>;
-    return false; 
- 
-}
- 
-</script>
-
-
-<?php $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(	'id'=>'bporder-form',
+<?php $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(	
+		'id'=>'bporder-form',
 		'type' => 'horizontal',
 		'enableAjaxValidation'=>false,
+		//'htmlOptions'=>array('data-bind'=>"submit: save"),
 ));
 ?>
 
@@ -115,71 +123,29 @@ function addNewProduct()
 
 <?php echo $form->textAreaRow($model,'remark',array('rows'=>2, 'class'=>'span5')); ?>
 
-<?php /*
-<?php echo CHtml::link('Create New Product', "",  // the link for open the dialog
-		array(
-				'style'=>'cursor: pointer; text-decoration: underline;',
-				'onclick'=>"{addNewProduct(); $('#dialogProduct').dialog('open');}"));
-		?>
-*/
-?>
-
-<a id="copylink" href="#" rel=".row">Add Row</a>
-
-<table class="appendo-gii" id="copylink">
-	<thead>
-		<tr>
-			<th>Item</th>
-			<th>Desc</th>
-			<th>Qty</th>
-			<th>Amount</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php if (empty($modelD)): ?>	
-			<tr class="row">
-				<td><?php echo CHtml::dropDownList('ModelD[budget_id][]','',tAccount::item()); ?>
-				</td>
-				<td><?php echo CHtml::textField('ModelD[description][]','',array()); ?></td>
-				<td><?php echo CHtml::textField('ModelD[qty][]','',array('maxlength'=>15)); ?>
-				</td>
-				<td><?php echo CHtml::textField('ModelD[amount][]','',array('maxlength'=>15)); ?>
-				</td>
-			</tr>
-		<?php else: ?>
-			<?php
-			$idx = 0;
-			$count = count($modelD);
-	 
-			foreach($modelD as $mod):
-				//the last added row is the row to copy
-				$copyClass = ($idx == $count-1) ? ' copy' : '';
-
-				?>
-				<tr class="row<?php echo $copyClass;  ?>">		 
-					<td><?php echo CHtml::dropDownList('item_id[]',$mod->item_id,pProduct::items()); ?>
-					</td>
-					<td><?php echo CHtml::textField('description[]',$mod->description,array()); ?>
-					</td>
-					<td><?php echo CHtml::textField('qty[]',$mod->qty,array('maxlength'=>15)); ?>
-					</td>
-					<td><?php echo CHtml::textField('amount[]',$mod->amount,array('maxlength'=>15)); ?>
-					</td>
-					<td><a class="nocopy" onclick="$(this).parent().remove(); return false;" href="#"><?php echo "Remove";  ?></a>
-					</td>
-				</tr>
-		<?php 
-			$idx++; 
-			endforeach; 
-		?>
-		<?php endif; ?>		 
-	</tbody>
-</table>
 
 
-<div class="form-actions">
-	<?php echo CHtml::htmlButton('<i class="icon-ok"></i>'.$model->isNewRecord ? 'Create':'Save', array('class'=>'btn', 'type'=>'submit')); ?>
-</div>
+    <table data-bind='visible: gifts().length > 0'>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody data-bind='foreach: gifts'>
+            <tr>
+				<td><?php echo $form->textField($model,'item_id',array('class'=>'span3','data-bind'=>"value: item_id, autocomplete: '',uniqueName: true")); ?></td>
+				<td><?php echo $form->textField($model,'description',array('class'=>'span4','data-bind'=>"value: description, uniqueName: true")); ?></td>
+				<td><?php echo $form->textField($model,'qty',array('class'=>'span1 required number','data-bind'=>"value: qty, uniqueName: true")); ?></td>
+				<td><?php echo $form->textField($model,'qty',array('class'=>'span2 required number','data-bind'=>"value: amount, uniqueName: true")); ?></td>
+                <td><a href='#' data-bind='click: $root.removeGift'>Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+ 
+    <button data-bind='click: addGift'>Add Row</button>
+    <button data-bind='enable: gifts().length > 0' type='submit'>Submit</button>
 
 <?php $this->endWidget(); ?>
-

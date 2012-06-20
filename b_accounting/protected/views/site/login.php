@@ -21,10 +21,22 @@ if ($browser['name'] =='Internet Explorer')
 				'enableAjaxValidation'=>true,
 		)); ?>
 
+		<?php echo $form->errorSummary($model); ?>
+		
 		<?php echo $form->textFieldRow($model,'username',array('class'=>'span3')); ?>
 		<?php echo $form->passwordFieldRow($model,'password',array('class'=>'span3')); ?>
 		<?php echo $form->checkBoxRow($model,'rememberMe'); ?>
 
+		<?php if($model->scenario == 'captchaRequired'): ?>
+			<div class="control-group">
+				<?php echo $form->labelEx($model,'verifyCode',array('class'=>'control-label')); ?>
+				<div class="controls">
+					<?php $this->widget('CCaptcha'); ?>
+					<?php echo $form->TextField($model,'verifyCode'); ?>
+				</div>
+			</div>
+        <?php endif; ?>
+		
 		<div class="form-actions">
 			<?php echo CHtml::htmlButton('<i class="icon-ok"></i> Submit', array('class'=>'btn-large', 'type'=>'submit')); ?>
 		</div>

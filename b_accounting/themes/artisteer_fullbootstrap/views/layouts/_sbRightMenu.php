@@ -1,3 +1,7 @@
+<?php
+//      $this->widget('SearchBlock', array(
+//      )); 
+?>
 
 <?php
 $this->widget('communication');

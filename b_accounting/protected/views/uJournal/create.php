@@ -36,7 +36,7 @@ $this->menu2=uJournal::getTopCreated(1);
 		<?php
 		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 				'model'=>$model,
-				'value'=>CTimestamp::formatDate('yyyy-MM-dd',$model->input_date),
+				'value'=>CTimestamp::formatDate('dd-MM-yyyy',$model->input_date),
 				'attribute'=>'input_date',
 				// additional javascript options for the date picker plugin
 				'options'=>array(

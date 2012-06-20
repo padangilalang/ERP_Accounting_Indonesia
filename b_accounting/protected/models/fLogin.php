@@ -8,12 +8,17 @@ class fLogin extends CFormModel
 
 	private $_identity;
 
+	public $verifyCode;
+
 	public function rules()
 	{
 		return array(
 				array('username, password', 'required'),
 				array('rememberMe', 'boolean'),
 				array('password', 'authenticate'),
+				array('username,password,verifyCode','required','on'=>'captchaRequired'),
+                //array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),  
+                array('verifyCode', 'captcha', 'allowEmpty'=>true),  				
 		);
 	}
 

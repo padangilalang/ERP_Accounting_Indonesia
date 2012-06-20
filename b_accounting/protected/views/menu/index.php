@@ -18,6 +18,10 @@
         array('label'=>'System Notification', 'content'=>$this->renderPartial("_tabSystem", array("model"=>$model3,"dataProvider"=>$dataProvider3), true)),
         array('label'=>'Chat', 'content'=>$this->renderPartial("_tabChat", array("model"=>$model), true),),
         array('label'=>'Admin ', 'content'=>$this->renderPartial("_tabAdmin", array("model"=>$model,"dataProvider"=>$dataProvider),true),'visible'=>Yii::app()->user->name=='admin'),
+		array('label'=>'Create New', 'items'=>array(
+            array('label'=>'Journal', 'content'=>'Test'),
+            array('label'=>'@mdo', 'content'=>'Test2'),
+        )),
 	),
 )); 
 

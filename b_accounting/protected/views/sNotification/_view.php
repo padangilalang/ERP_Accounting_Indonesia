@@ -14,7 +14,7 @@
 			</h6>
 
 			<?php 
-			$comment=sNotificationDetail::model()->findAll(array('condition'=>'parent_id = '. $data->id));
+			$comment=sNotificationDetail::model()->findAll(array('condition'=>'parent_id = '. $data->id ));
 
 			if (isset($comment)) {
 				echo "<br/>";

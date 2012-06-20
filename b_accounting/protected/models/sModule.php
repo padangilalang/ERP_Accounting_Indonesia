@@ -139,7 +139,7 @@ class sModule extends CActiveRecord
 				FROM s_module a
 				INNER JOIN s_user_module b ON a.id = b.s_module_id
 				INNER JOIN s_user c ON b.s_user_id = c.id
-				LEFT JOIN s_parameter d ON d.code = c.status_id AND d.type = "cStatus"
+				LEFT JOIN s_parameter d ON d.code = c.status_id AND d.type = \'cStatus\'
 				where a.id = '.$uid )->queryAll() ;
 
 		return new CArrayDataProvider($rawData, array(

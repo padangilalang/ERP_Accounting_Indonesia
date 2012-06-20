@@ -199,17 +199,17 @@ class TAccountController extends Controller
 			$model->haschild_id=2; //to prevent error validation
 			if($model->save()) {
 				//accmain_id
-				$modelProperties0=tAccountProperties::model()->find(array('condition'=>'mkey = "accmain_id" AND parent_id = '.$id));
+				$modelProperties0=tAccountProperties::model()->find(array('condition'=>'mkey = \'accmain_id\' AND parent_id = '.$id));
 				$modelProperties0->mvalue=$_POST['tAccount']['accmain_id'];
 				$modelProperties0->save();
 
 				//currency_id
-				$modelProperties2=tAccountProperties::model()->find(array('condition'=>'mkey = "currency_id" AND parent_id = '.$id));
+				$modelProperties2=tAccountProperties::model()->find(array('condition'=>'mkey = \'currency_id\' AND parent_id = '.$id));
 				$modelProperties2->mvalue=$_POST['tAccount']['currency_id'];
 				$modelProperties2->save();
 
 				//state_id
-				$modelProperties3=tAccountProperties::model()->find(array('condition'=>'mkey = "state_id" AND parent_id = '.$id));
+				$modelProperties3=tAccountProperties::model()->find(array('condition'=>'mkey = \'state_id\' AND parent_id = '.$id));
 				$modelProperties3->mvalue=$_POST['tAccount']['state_id'];
 				$modelProperties3->save();
 
@@ -373,12 +373,21 @@ class TAccountController extends Controller
 		if (isset($_GET['root']) && $_GET['root'] !== 'source') {
 			$parentId = (int) $_GET['root'];
 		}
+		//mySQL
+		/*$req = Yii::app()->db->createCommand(
+				"SELECT m1.id, m1.account_name AS text, m2.id IS NOT NULL AS hasChildren
+				FROM t_account AS m1 LEFT JOIN t_account AS m2 ON m1.id=m2.parent_id
+				WHERE m1.parent_id = $parentId
+				GROUP BY m1.id ORDER BY m1.account_no ASC"
+		);*/
+		
+		//Postgree
 		$req = Yii::app()->db->createCommand(
 				"SELECT m1.id, m1.account_name AS text, m2.id IS NOT NULL AS hasChildren
 				FROM t_account AS m1 LEFT JOIN t_account AS m2 ON m1.id=m2.parent_id
-				WHERE m1.parent_id <=> $parentId
-				GROUP BY m1.id ORDER BY m1.account_no ASC"
+				WHERE m1.parent_id = $parentId"
 		);
+		
 		$children = $req->queryAll();
 
 		$treedata=array();
@@ -405,14 +414,14 @@ class TAccountController extends Controller
 	{
 		$res =array();
 		if (isset($_GET['term'])) {
-			$qtxt ="SELECT account_name FROM t_account WHERE account_name LIKE :name ORDER BY account_name LIMIT 20";
+			$qtxt ="SELECT account_name as name FROM t_account WHERE account_name LIKE :name ORDER BY account_name LIMIT 20";
 			$command =Yii::app()->db->createCommand($qtxt);
 			$command->bindValue(":name", '%'.$_GET['term'].'%', PDO::PARAM_STR);
 			$res =$command->queryColumn();
 			//$res =$command->query();
 
 		}
-		echo CJSON::encode($res);
+		echo CJSON::encode($res);		
 	}
 
 	public function actionPrintList()

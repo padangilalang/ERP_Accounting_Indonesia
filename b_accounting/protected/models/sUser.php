@@ -91,7 +91,7 @@ class sUser extends CActiveRecord
 	{
 		return array(
 				'organization' => array(self::BELONGS_TO, 'aOrganization', 'default_group'),
-				'status' => array(self::HAS_ONE, 'sParameter', array('code'=>'status_id'),'condition'=>'type = "cStatusP"'),
+				'status' => array(self::HAS_ONE, 'sParameter', array('code'=>'status_id'),'condition'=>'type = \'cStatusP\''),
 				'module' => array(self::HAS_MANY, 'sUserModule', 's_user_id'),
 				'moduleList' => array(self::MANY_MANY, 'sModule','s_user_module(s_user_id,s_module_id)'),
 		);
@@ -208,7 +208,7 @@ class sUser extends CActiveRecord
 		self::$_items2[$type]=array();
 		$models2=self::model()->findAllBySql('SELECT a.id, a.username FROM s_user a
 				INNER JOIN s_user_module b ON a.id = b.s_user_id
-				WHERE b.s_module_id = "' . $type . '"');
+				WHERE b.s_module_id = \'' . $type . '\'');
 		foreach($models2 as $model2) {
 			self::$_items2[$type][$model2->id]=$model2->username;
 		}
@@ -229,7 +229,7 @@ class sUser extends CActiveRecord
 		self::$_items[$type]=array();
 		$models=self::model()->findAllBySql('SELECT a.id, a.username FROM s_user a
 				INNER JOIN s_user_module b ON a.id = b.s_user_id
-				WHERE b.s_matrix_id = 5 and b.s_module_id = "' . $type . '"');
+				WHERE b.s_matrix_id = 5 and b.s_module_id = \'' . $type . '\'');
 		foreach($models as $model) {
 			self::$_items[$type][$model->id]=$model->username;
 		}
@@ -343,7 +343,7 @@ class sUser extends CActiveRecord
 		$_items=array();
 		$models=self::model()->findAllBySql('SELECT a.id, a.username FROM s_user a
 				INNER JOIN s_user_module b ON a.id = b.s_user_id
-				WHERE b.s_module_id = ' . $mid );
+				WHERE b.s_module_id = \'' . $mid .'\'');
 		$_items[]='admin';
 
 		if ($models != null) {

@@ -18,5 +18,6 @@ $this->menu=array(
 
 <?php $this->widget('ext.bootstrap.widgets.BootListView',array(
 		'dataProvider'=>$dataProvider,
+		'template'=>'{items}{pager}',
 		'itemView'=>'_view',
 )); ?>

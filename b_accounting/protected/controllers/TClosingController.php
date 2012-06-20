@@ -45,13 +45,13 @@ class TClosingController extends Controller
 			if ($model->account->getTypeValue() == 1) {
 				$sql='INSERT INTO t_balance_sheet (parent_id, yearmonth_periode, type_balance_id, remark, budget, beginning_balance,debit,credit,end_balance) VALUES ('
 				.$model->parent_id.','
-				.$_nextPeriod.', 1, "Automated posted", 0,'
+				.$_nextPeriod.', 1, \'Automated posted\', 0,'
 				.$model->end_balance.',0,0,'
 				.$model->end_balance.')';
 			} else {
 				$sql='INSERT INTO t_balance_sheet (parent_id, yearmonth_periode, type_balance_id, remark, budget, beginning_balance,debit,credit,end_balance) VALUES ('
 				.$model->parent_id.','
-				.$_nextPeriod.', 1, "Automated posted", 0,0,0,0,0)';
+				.$_nextPeriod.', 1, \'Automated posted\', 0,0,0,0,0)';
 			}
 
 			$command=Yii::app()->db->createCommand($sql);

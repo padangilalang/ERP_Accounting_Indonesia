@@ -64,9 +64,9 @@ class bPorder extends CActiveRecord
 				'organization' => array(self::BELONGS_TO, 'aOrganization', 'organization_id'),
 				'budgetcomp' => array(self::BELONGS_TO, 'tAccount', 'budgetcomp_id'),
 				'supplier' => array(self::BELONGS_TO, 'cSupplier', 'supplier_id'),
-				'payment_state' => array(self::BELONGS_TO, 'sParameter', array('payment_state_id'=>'code'),'condition'=>'type = "cPayment"'),
-				'journal_state' => array(self::BELONGS_TO, 'sParameter', array('journal_state_id'=>'code'),'condition'=>'type = "cJournalState"'),
-				'po_type' => array(self::BELONGS_TO, 'sParameter', array('po_type_id'=>'code'),'condition'=>'type = "cPOtype"'),
+				'payment_state' => array(self::BELONGS_TO, 'sParameter', array('payment_state_id'=>'code'),'condition'=>'type = \'cPayment\''),
+				'journal_state' => array(self::BELONGS_TO, 'sParameter', array('journal_state_id'=>'code'),'condition'=>'type = \'cJournalState\''),
+				'po_type' => array(self::BELONGS_TO, 'sParameter', array('po_type_id'=>'code'),'condition'=>'type = \'cPOtype\''),
 				'payment' => array(self::STAT, 'bPorderPayment', 'parent_id','select'=>'sum(amount)'),
 		);
 	}

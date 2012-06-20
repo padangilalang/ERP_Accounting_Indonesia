@@ -74,7 +74,7 @@ class SSmsinController extends Controller
 			$model->attributes=$_POST['FSms'];
 			if($model->validate())
 
-				$myfile = date("Ymd-His").".txt";
+				$myfile = date(\'Ymd-His\').".txt";
 			$fh = fopen("C:\\wamp\\www\\yii\\playsms\\outgoing\\".$myfile, "w")
 			or die("can't open file");
 			$stringData = "To: " .$model->hp ."\n";

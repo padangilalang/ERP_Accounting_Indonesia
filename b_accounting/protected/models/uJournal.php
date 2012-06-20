@@ -32,8 +32,8 @@ class uJournal extends CActiveRecord
 				'journalSumCek' => array(self::STAT, 'uJournalDetail', 'parent_id','select'=>'sum(credit)'),
 				'journalDetail' => array(self::HAS_MANY, 'uJournalDetail', 'parent_id'),
 				'journal_many' => array(self::MANY_MANY, 'tAccount', 'u_journal_detail(parent_id,account_no_id)'),
-				'status' => array(self::HAS_ONE, 'sParameter', array('code'=>'state_id'),'condition'=>'type = "cStatus"'),
-				'module' => array(self::HAS_ONE, 'sParameter', array('code'=>'module_id'),'condition'=>'type = "cModule"'),
+				'status' => array(self::HAS_ONE, 'sParameter', array('code'=>'state_id'),'condition'=>'type = \'cStatus\''),
+				'module' => array(self::HAS_ONE, 'sParameter', array('code'=>'module_id'),'condition'=>'type = \'cModule\''),
 				'entity' => array(self::BELONGS_TO, 'aOrganization', array('entity_id'=>'id')),
 		);
 	}

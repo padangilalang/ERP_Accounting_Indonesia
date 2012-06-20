@@ -24,7 +24,7 @@ $this->menu=array(
 )); ?>
 
 
-<?php //echo $form->errorSummary($model); ?>
+<?php echo $form->errorSummary($model); ?>
 
 <?php echo $form->dropDownListRow($model, 'account_no_id', tAccount::item()); ?>
 

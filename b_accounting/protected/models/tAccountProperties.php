@@ -27,9 +27,9 @@ class tAccountProperties extends CActiveRecord
 		return array(
 				'parentAccount' => array(self::BELONGS_TO, 'tAccountMain', 'mvalue'),
 				'getparent' => array(self::BELONGS_TO, 'tAccount', 'parent_id'),
-				'currencyName' => array(self::BELONGS_TO, 'sParameter', array('mvalue'=>'code'),'condition'=>'type="cCurrency"'),
-				'stateName' => array(self::BELONGS_TO, 'sParameter', array('mvalue'=>'code'),'condition'=>'type="cStatusP"'),
-				'childName' => array(self::BELONGS_TO, 'sParameter', array('mvalue'=>'code'),'condition'=>'type="cHasChild"'),
+				'currencyName' => array(self::BELONGS_TO, 'sParameter', array('mvalue'=>'code'),'condition'=>'type=\'cCurrency\''),
+				'stateName' => array(self::BELONGS_TO, 'sParameter', array('mvalue'=>'code'),'condition'=>'type=\'cStatusP\''),
+				'childName' => array(self::BELONGS_TO, 'sParameter', array('mvalue'=>'code'),'condition'=>'type=\'cHasChild\''),
 		);
 	}
 

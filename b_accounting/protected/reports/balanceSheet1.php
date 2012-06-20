@@ -57,7 +57,7 @@ class balanceSheet1 extends fpdf
 
 		$w=array(130,20);
 
-		$model1=tAccountMain::model()->with('account_list')->findAll('type_id= 1');
+		$model1=tAccountMain::model()->with('account_list')->findAll('type_id = 1');
 
 		$_labarugi=tAccount::labarugiDitahan($periode_date);
 

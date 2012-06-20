@@ -69,13 +69,12 @@ Yii::app()->clientScript->registerScript('myCap', "
 </div>
 
 <?php
-//Yii::app()->settings->set("System", "cCurrentPeriod", 201201, $toDatabase=true);
-//echo Yii::app()->settings->get("System", "cCurrentPeriod");
+//Yii::app()->settings->set("System", "cCurrentPeriod", 201202, $toDatabase=true);
 ?>
 <?php
-echo tAccount::labarugiDitahan(201202);
-echo "<br/>";
-echo tAccount::netprofit(201202);
+//echo tAccount::labarugiDitahan(201202);
+//echo "<br/>";
+//echo tAccount::netprofit(201202);
 //echo "<br/>";
 
 //$modelBalanceCurrent=tBalanceSheet::model()->find(array('condition'=>'parent_id = 124 AND yearmonth_periode = 201201'));

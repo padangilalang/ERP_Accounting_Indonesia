@@ -39,8 +39,8 @@ class CmsSettings extends CApplicationComponent
 		parent::init();
 		Yii::app()->attachEventHandler('onEndRequest', array($this, 'whenRequestEnds'));
 
-		if($this->getCreateTable())
-			$this->createTable();
+		//if($this->getCreateTable())
+		//	$this->createTable();
 	}
 
 
@@ -247,7 +247,7 @@ class CmsSettings extends CApplicationComponent
 		if(!$items)
 		{
 			$connection=$this->getDbComponent();
-			$command=$connection->createCommand('SELECT `key`, `value` FROM '.$this->getTableName().' WHERE category=:cat');
+			$command=$connection->createCommand('SELECT key, value FROM '.$this->getTableName().' WHERE category=:cat');
 			$command->bindParam(':cat', $category);
 			$result=$command->queryAll();
 
@@ -411,16 +411,16 @@ class CmsSettings extends CApplicationComponent
 	protected function addDbItem($category='system', $key, $value)
 	{
 		$connection=$this->getDbComponent();
-		$command=$connection->createCommand('SELECT id FROM '.$this->getTableName().' WHERE `category`=:cat AND `key`=:key LIMIT 1');
+		$command=$connection->createCommand('SELECT id FROM '.$this->getTableName().' WHERE category=:cat AND key=:key LIMIT 1');
 		$command->bindParam(':cat', $category);
 		$command->bindParam(':key', $key);
 		$result=$command->queryRow();
 		$value=@serialize($value);
 
 		if(!empty($result))
-			$command=$connection->createCommand('UPDATE '.$this->getTableName().' SET `value`=:value WHERE `category`=:cat AND `key`=:key');
+			$command=$connection->createCommand('UPDATE '.$this->getTableName().' SET value=:value WHERE category=:cat AND key=:key');
 		else
-			$command=$connection->createCommand('INSERT INTO '.$this->getTableName().' (`category`,`key`,`value`) VALUES(:cat,:key,:value)');
+			$command=$connection->createCommand('INSERT INTO '.$this->getTableName().' (category,key,value) VALUES(:cat,:key,:value)');
 
 		$command->bindParam(':cat', $category);
 		$command->bindParam(':key', $key);
@@ -437,7 +437,7 @@ class CmsSettings extends CApplicationComponent
 			foreach($this->deleteCategoriesFromDatabase AS $catName)
 			{
 				$connection=$this->getDbComponent();
-				$command=$connection->createCommand('DELETE FROM '.$this->getTableName().' WHERE `category`=:cat');
+				$command=$connection->createCommand('DELETE FROM '.$this->getTableName().' WHERE category=:cat');
 				$command->bindParam(':cat', $catName);
 				$command->execute();
 				$this->cacheNeedsFlush[]=$catName;
@@ -465,7 +465,7 @@ class CmsSettings extends CApplicationComponent
 				$names=implode(',', array_keys($params));
 
 				$connection=$this->getDbComponent();
-				$query='DELETE FROM '.$this->getTableName().' WHERE `category`=:cat AND `key` IN('.$names.')';
+				$query='DELETE FROM '.$this->getTableName().' WHERE category=:cat AND key IN('.$names.')';
 				$command=$connection->createCommand($query);
 				$command->bindParam(':cat', $catName);
 
@@ -509,13 +509,13 @@ class CmsSettings extends CApplicationComponent
 	{
 		$connection=$this->getDbComponent();
 		$tableName=$connection->tablePrefix.str_replace(array('{{','}}'), '', $this->getTableName());
-		$sql='CREATE TABLE IF NOT EXISTS `'.$tableName.'` (
-		`id` int(11) NOT NULL auto_increment,
-		`category` varchar(64) NOT NULL default \'system\',
-		`key` varchar(255) NOT NULL,
-		`value` text NOT NULL,
-		PRIMARY KEY  (`id`),
-		KEY `category_key` (`category`,`key`)
+		$sql='CREATE TABLE IF NOT EXISTS '.$tableName.' (
+		id int(11) NOT NULL auto_increment,
+		category varchar(64) NOT NULL default \'system\',
+		key varchar(255) NOT NULL,
+		value text NOT NULL,
+		PRIMARY KEY  (id),
+		KEY category_key (category,key)
 		) '.($this->getDbEngine() ? 'ENGINE='.$this->getDbEngine() : '').'  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; ';
 		$command=$connection->createCommand($sql);
 		$command->execute();

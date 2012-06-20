@@ -3,7 +3,10 @@
 class SiteController extends Controller
 {
 	public $layout='//layouts/column1';
-
+	
+	public $attempts = 5; // allowed 5 attempts
+	public $counter;
+	
 	public function actions()
 	{
 		return array(
@@ -28,10 +31,15 @@ class SiteController extends Controller
 		}
 	}
 
-
+	private function captchaRequired()
+	{           
+		return Yii::app()->session->itemAt('captchaRequired') >= $this->attempts;
+	}
+	
 	public function actionLogin()
 	{
-		$model=new fLogin;
+		//$model=new fLogin;
+		$model = $this->captchaRequired()? new fLogin('captchaRequired') : new fLogin;
 
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
@@ -48,8 +56,12 @@ class SiteController extends Controller
 				sUser::model()->updateByPk((int)Yii::app()->user->id,array('last_login'=>time()));
 				
 				$this->redirect(Yii::app()->user->returnUrl);
+			} else {
+				$this->counter = Yii::app()->session->itemAt('captchaRequired') + 1;
+				Yii::app()->session->add('captchaRequired',$this->counter);			
 			}
 		}
+
 		if  (Yii::app()->user->isGuest) {
 			$this->render('login',array('model'=>$model));
 		} else {

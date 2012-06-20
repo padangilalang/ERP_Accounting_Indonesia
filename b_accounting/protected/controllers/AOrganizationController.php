@@ -157,17 +157,6 @@ class AOrganizationController extends Controller
 		exit();
 	}
 
-	public function actionKabupatenUpdate() {
-		$cat_id = $_POST['aOrganization']['propinsi_id'];
-		$data=sKabupatenPropinsi::model()->findAll(array('condition'=>'parent_id = '.$cat_id,'order'=>'sort'));
-
-		$data=CHtml::listData($data,'id','nama');
-		foreach($data as $value=>$kabupaten_id)  {
-			echo CHtml::tag('option',
-					array('value'=>$value),CHtml::encode($kabupaten_id),true);
-		}
-	}
-
 
 
 }

@@ -15,7 +15,7 @@ $this->menu2=bPorder::getTopCreated(1);
 <div class="page-header">
 	<h1>
 		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/shopcart.png') ?>
-		New PO
+		New PO (*TESTING DEVELOPMENT*)
 	</h1>
 </div>
 

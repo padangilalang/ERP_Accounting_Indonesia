@@ -79,7 +79,7 @@ class cSupplier extends CActiveRecord
 		return array(
 				'sort_po_created' => array(self::HAS_ONE, 'bPorder', 'supplier_id','order'=>'sort_po_created.created_date DESC'),
 				'sort_po_updated' => array(self::HAS_ONE, 'bPorder', 'supplier_id','order'=>'sort_po_updated.updated_date DESC'),
-				'status' => array(self::HAS_ONE, 'sParameter', array('code'=>'status_id'),'condition'=>'type = "cStatusP"'),
+				'status' => array(self::HAS_ONE, 'sParameter', array('code'=>'status_id'),'condition'=>'type = \'cStatusP\''),
 		);
 	}
 

@@ -25,7 +25,7 @@ class tAccountMain extends CActiveRecord
 	public function relations()
 	{
 		return array(
-				'account_list' => array(self::HAS_MANY, 'tAccountProperties','mvalue','condition'=>'mkey = "accmain_id"'),
+				'account_list' => array(self::HAS_MANY, 'tAccountProperties','mvalue','condition'=>'mkey = \'accmain_id\''),
 				'account_name' => array(self::HAS_ONE, 'tAccount','account_list.parent_id','through'=>'account_list'),
 		);
 	}
