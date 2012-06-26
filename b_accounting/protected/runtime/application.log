@@ -2800,3 +2800,1474 @@ Stack trace:
 REQUEST_URI=/b_accounting/index.php?r=tAccount/ajaxFillTree&root=source
 HTTP_REFERER=http://localhost/b_accounting/index.php?r=tAccount
 ---
+2012/06/20 11:55:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 11:55:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 11:55:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 11:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 11:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 11:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:02:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:02:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:02:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:02:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:02:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:02:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:04:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:04:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:04:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:05:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:05:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:05:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:06:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:06:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:06:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:07:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/menu
+---
+2012/06/20 12:07:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/menu
+---
+2012/06/20 12:07:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/menu
+---
+2012/06/20 12:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:15:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:15:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:15:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:17:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:17:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:17:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount
+---
+2012/06/20 12:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/images...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view?id=8
+---
+2012/06/20 12:17:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/8')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:17:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:17:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:17:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:18:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:18:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:18:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:18:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:18:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:18:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('tAccount/view/i...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/tAccount/view/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/tAccount/view/8
+---
+2012/06/20 12:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header2.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank
+---
+2012/06/20 12:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header3.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank
+---
+2012/06/20 12:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/header.jpg".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon/hea...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/b_accounting/index.php/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank
+---
+2012/06/20 12:18:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/view?id=1589
+---
+2012/06/20 12:18:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/view?id=1589
+---
+2012/06/20 12:18:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/view?id=1589
+---
+2012/06/20 12:18:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1589".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('1589')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('1589')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/1589')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:18:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:18:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:18:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:19:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/view/...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/view/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/view/1589
+---
+2012/06/20 12:19:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/view/...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/view/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/view/1589
+---
+2012/06/20 12:19:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/view/...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/view/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/view/1589
+---
+2012/06/20 12:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/158...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:21:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1589".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('1589')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('1589')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/1589')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1589".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('1589')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('1589')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/1589')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1589".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('1589')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('1589')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/1589')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/1589
+---
+2012/06/20 12:25:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/158...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:44:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v1589".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v1589')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v1589')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v1589')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v1589
+---
+2012/06/20 12:44:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v1589
+---
+2012/06/20 12:44:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v1589
+---
+2012/06/20 12:44:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/image...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v1589
+---
+2012/06/20 12:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/20 12:44:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "v".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('v')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('v')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('mCashbank/v/ima...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/b_accounting/index.php/mCashbank/v/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/b_accounting/index.php/mCashbank/v/1589
+---
+2012/06/24 19:09:48 [error] [exception.CDbException] exception 'CDbException' with message 'The table "s_group" for active record class "sGroup" cannot be found in the database.' in C:\wamp\www\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(sGroup))
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('sGroup')
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\wamp\www\b_accounting\protected\controllers\SUserController.php(83): CActiveRecord->__construct()
+#4 C:\wamp\www\b_accounting\protected\controllers\SUserController.php(29): SUserController->newUserGroup('1')
+#5 [internal function]: SUserController->actionView('1')
+#6 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SUserController), Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SUserController), Object(ReflectionMethod), Array)
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sUser/view')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=sUser/view&id=1
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=sUser/updatePassword&id=1
+---
+2012/06/24 19:09:53 [error] [exception.CDbException] exception 'CDbException' with message 'The table "s_group" for active record class "sGroup" cannot be found in the database.' in C:\wamp\www\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(sGroup))
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('sGroup')
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\wamp\www\b_accounting\protected\controllers\SUserController.php(83): CActiveRecord->__construct()
+#4 C:\wamp\www\b_accounting\protected\controllers\SUserController.php(29): SUserController->newUserGroup('1')
+#5 [internal function]: SUserController->actionView('1')
+#6 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SUserController), Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SUserController), Object(ReflectionMethod), Array)
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sUser/view')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#20 {main}
+REQUEST_URI=/b_accounting/index.php?r=sUser/view&id=1
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=sUser/updatePassword&id=1
+---
+2012/06/24 19:17:36 [error] [exception.CDbException] exception 'CDbException' with message 'The table "s_matrix" for active record class "sMatrix" cannot be found in the database.' in C:\wamp\www\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(sMatrix))
+#1 C:\wamp\www\b_accounting\protected\models\sMatrix.php(7): CActiveRecord::model('sMatrix')
+#2 C:\wamp\www\b_accounting\protected\models\sMatrix.php(71): sMatrix::model()
+#3 C:\wamp\www\b_accounting\protected\models\sMatrix.php(64): sMatrix::loadItems('SMatrix')
+#4 C:\wamp\www\b_accounting\protected\views\sUser\_formModuleAdd.php(15): sMatrix::items('SMatrix')
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#8 C:\wamp\www\b_accounting\protected\views\sUser\_tabUser.php(51): CController->renderPartial('_formModuleAdd', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\b_accounting\protected\views\sUser\view.php(50): CController->renderPartial('_tabUser', Array, true)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#17 C:\wamp\www\b_accounting\protected\controllers\SUserController.php(35): CController->render('view', Array)
+#18 [internal function]: SUserController->actionView('1')
+#19 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SUserController), Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SUserController), Object(ReflectionMethod), Array)
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#28 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#30 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sUser/view')
+#31 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#33 {main}
+REQUEST_URI=/b_accounting/index.php?r=sUser/view&id=1
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=sUser/updatePassword&id=1
+---
+2012/06/24 19:17:38 [error] [exception.CDbException] exception 'CDbException' with message 'The table "s_matrix" for active record class "sMatrix" cannot be found in the database.' in C:\wamp\www\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(sMatrix))
+#1 C:\wamp\www\b_accounting\protected\models\sMatrix.php(7): CActiveRecord::model('sMatrix')
+#2 C:\wamp\www\b_accounting\protected\models\sMatrix.php(71): sMatrix::model()
+#3 C:\wamp\www\b_accounting\protected\models\sMatrix.php(64): sMatrix::loadItems('SMatrix')
+#4 C:\wamp\www\b_accounting\protected\views\sUser\_formModuleAdd.php(15): sMatrix::items('SMatrix')
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#8 C:\wamp\www\b_accounting\protected\views\sUser\_tabUser.php(51): CController->renderPartial('_formModuleAdd', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#12 C:\wamp\www\b_accounting\protected\views\sUser\view.php(50): CController->renderPartial('_tabUser', Array, true)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\b_a...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\b_a...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\b_a...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#17 C:\wamp\www\b_accounting\protected\controllers\SUserController.php(35): CController->render('view', Array)
+#18 [internal function]: SUserController->actionView('1')
+#19 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SUserController), Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SUserController), Object(ReflectionMethod), Array)
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#28 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#30 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sUser/view')
+#31 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 C:\wamp\www\b_accounting\index.php(19): CApplication->run()
+#33 {main}
+REQUEST_URI=/b_accounting/index.php?r=sUser/view&id=1
+HTTP_REFERER=http://localhost/b_accounting/index.php?r=sUser/updatePassword&id=1
+---

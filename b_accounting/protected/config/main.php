@@ -75,7 +75,7 @@ return array(
 						// enable cookie-based authentication
 						'allowAutoLogin'=>true,
 				),
-				'db'=>array(
+/*				'db'=>array(
 						'connectionString'=>'pgsql:host=localhost;port=5432;dbname=b_accounting',
 						'emulatePrepare' => true,
 						'username' => 'postgres',
@@ -83,7 +83,7 @@ return array(
 						'charset' => 'utf8',
 						'tablePrefix' => '',
 				),
-/*				'db'=>array(
+*/				'db'=>array(
 						'connectionString' => 'mysql:host=localhost;dbname=accounting',
 						'emulatePrepare' => true,
 						'username' => 'accounting',
@@ -91,19 +91,23 @@ return array(
 						'charset' => 'utf8',
 						'tablePrefix' => '',
 				),
-*/				'errorHandler'=>array(
+				'errorHandler'=>array(
 						// use 'site/error' action to display errors
 						'errorAction'=>'site/error',
 				),
 
-				/*		'urlManager'=>array(
-				 'urlFormat'=>'path',
+				/*
+				'urlManager'=>array(
+					'urlFormat'=>'path',
 						//'showScriptName'=>false,
 						'rules'=>array(
 								'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-						),
+								'<controller:\w+>/v/<id:\d+>'=>'<controller>/view',
+								
+					),
 				),
-*/
+				*/
+				
 				'log'=>array(
 						'class'=>'CLogRouter',
 						'routes'=>array(
