@@ -107,4 +107,20 @@ class CProductController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	public function actionCProductAutoComplete()
+	{
+		$res =array();
+		if (isset($_GET['term'])) {
+			$qtxt ="SELECT CONCAT(item,' | ',id) as name FROM c_product WHERE item LIKE :name ORDER BY item LIMIT 20";
+			//$qtxt ="SELECT item as name, id as label FROM c_product WHERE item LIKE :name ORDER BY item LIMIT 20";
+			$command =Yii::app()->db->createCommand($qtxt);
+			$command->bindValue(":name", '%'.$_GET['term'].'%', PDO::PARAM_STR);
+			$res =$command->queryColumn();
+			//$res =$command->queryAll();
+
+		}
+		echo CJSON::encode($res);		
+	}
+	
 }

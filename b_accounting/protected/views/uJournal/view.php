@@ -48,7 +48,5 @@ $this->widget('ext.XDetailView', array(
 		),
 )); ?>
 
-<br />
-
 <?php echo $this->renderPartial('/uJournal/_viewDetail', array('id'=>$model->id)); ?>
 

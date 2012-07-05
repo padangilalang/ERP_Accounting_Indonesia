@@ -22,6 +22,7 @@
 class bPorder extends CActiveRecord
 {
 	public $item_id;
+	public $item_name;
 	public $budget_id;
 	public $description;
 	public $qty;

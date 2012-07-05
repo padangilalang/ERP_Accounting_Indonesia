@@ -374,20 +374,22 @@ class TAccountController extends Controller
 			$parentId = (int) $_GET['root'];
 		}
 		//mySQL
-		/*$req = Yii::app()->db->createCommand(
+		/**/
+		$req = Yii::app()->db->createCommand(
 				"SELECT m1.id, m1.account_name AS text, m2.id IS NOT NULL AS hasChildren
 				FROM t_account AS m1 LEFT JOIN t_account AS m2 ON m1.id=m2.parent_id
 				WHERE m1.parent_id = $parentId
 				GROUP BY m1.id ORDER BY m1.account_no ASC"
-		);*/
+		);
+		/**/
 		
 		//Postgree
-		$req = Yii::app()->db->createCommand(
+		/*$req = Yii::app()->db->createCommand(
 				"SELECT m1.id, m1.account_name AS text, m2.id IS NOT NULL AS hasChildren
 				FROM t_account AS m1 LEFT JOIN t_account AS m2 ON m1.id=m2.parent_id
 				WHERE m1.parent_id = $parentId"
 		);
-		
+		*/
 		$children = $req->queryAll();
 
 		$treedata=array();
@@ -415,10 +417,11 @@ class TAccountController extends Controller
 		$res =array();
 		if (isset($_GET['term'])) {
 			$qtxt ="SELECT account_name as name FROM t_account WHERE account_name LIKE :name ORDER BY account_name LIMIT 20";
+			//$qtxt ="SELECT account_name as label, id FROM t_account WHERE account_name LIKE :name ORDER BY account_name LIMIT 20";
 			$command =Yii::app()->db->createCommand($qtxt);
 			$command->bindValue(":name", '%'.$_GET['term'].'%', PDO::PARAM_STR);
 			$res =$command->queryColumn();
-			//$res =$command->query();
+			//$res =$command->queryAll();
 
 		}
 		echo CJSON::encode($res);		

@@ -61,3 +61,9 @@ if ($browser['name'] =='Internet Explorer')
 	</div>
 </div>
 
+<?php
+//Yii::app()->settings->set("System", "cCurrentPeriod", "201203", $toDatabase=true);  
+//Yii::app()->settings->deleteCache();
+//echo Yii::app()->settings->get("System", "cCurrentPeriod");
+
+?>

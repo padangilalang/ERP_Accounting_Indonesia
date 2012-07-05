@@ -1,11 +1,11 @@
-<?php
+<?php if ( ! defined('YII_PATH')) exit('No direct script access allowed');
 /**
  * CmsSettings
  *
  * @package OneTwist CMS
  * @author twisted1919 (cristian.serban@onetwist.com)
  * @copyright OneTwist CMS (www.onetwist.com)
- * @version 1.1e
+ * @version 1.2
  * @since 1.0
  * @access public
  *
@@ -14,20 +14,24 @@
 class CmsSettings extends CApplicationComponent
 {
 
-	protected $_saveItemsToDatabase=array();
-	protected $_deleteItemsFromDatabase=array();
-	protected $_deleteCategoriesFromDatabase=array();
-	protected $_cacheNeedsFlush=array();
+	protected $saveItemsToDatabase=array();
+	protected $deleteItemsFromDatabase=array();
+	protected $deleteCategoriesFromDatabase=array();
+	protected $cacheNeedsFlush=array();
+	protected $cacheRegistry=array();
+	protected $initCacheRegistry=array();
+	protected $deleteFromCacheRegistry = array();
 
-	protected $_items=array();
-	protected $_loaded=array();
+	protected $items=array();
+	protected $loaded=array();
 
 	protected $_cacheComponentId='cache';
 	protected $_cacheId='global_website_settings';
 	protected $_cacheTime=0;
 
 	protected $_dbComponentId='db';
-	protected $_tableName='settings';
+	//protected $_tableName='{{settings}}';
+	protected $_tableName='s_settings';
 	protected $_createTable=false;
 	protected $_dbEngine='InnoDB';
 
@@ -36,8 +40,8 @@ class CmsSettings extends CApplicationComponent
 		parent::init();
 		Yii::app()->attachEventHandler('onEndRequest', array($this, 'whenRequestEnds'));
 
-		if($this->getCreateTable())
-			$this->createTable();
+		//if($this->getCreateTable())
+		//	$this->createTable();
 	}
 
 
@@ -62,15 +66,15 @@ class CmsSettings extends CApplicationComponent
 		{
 			if($toDatabase)
 			{
-				if(isset($this->_saveItemsToDatabase[$category])&&is_array($this->_saveItemsToDatabase[$category]))
-					$this->_saveItemsToDatabase[$category]=array_merge($this->_saveItemsToDatabase[$category], array($key=>$value));
+				if(isset($this->saveItemsToDatabase[$category])&&is_array($this->saveItemsToDatabase[$category]))
+					$this->saveItemsToDatabase[$category]=CMap::mergeArray($this->saveItemsToDatabase[$category], array($key=>$value));
 				else
-					$this->_saveItemsToDatabase[$category]=array($key=>$value);
+					$this->saveItemsToDatabase[$category]=array($key=>$value);
 			}
-			if(isset($this->_items[$category])&&is_array($this->_items[$category]))
-				$this->_items[$category]=array_merge($this->_items[$category], array($key=>$value));
+			if(isset($this->items[$category])&&is_array($this->items[$category]))
+				$this->items[$category]=CMap::mergeArray($this->items[$category], array($key=>$value));
 			else
-				$this->_items[$category]=array($key=>$value);
+				$this->items[$category]=array($key=>$value);
 		}
 		return $this;
 	}
@@ -89,11 +93,11 @@ class CmsSettings extends CApplicationComponent
 	 */
 	public function get($category='system', $key='', $default=null)
 	{
-		if(!isset($this->_loaded[$category]))
+		if(!isset($this->loaded[$category]))
 			$this->load($category);
 
 		if(empty($key)&&empty($default)&&!empty($category))
-			return isset($this->_items[$category])?$this->_items[$category]:null;
+			return isset($this->items[$category])?$this->items[$category]:null;
 
 		if(!empty($key)&&is_array($key))
 		{
@@ -108,8 +112,8 @@ class CmsSettings extends CApplicationComponent
 			return $toReturn;
 		}
 
-		if(isset($this->_items[$category][$key]))
-			return $this->_items[$category][$key];
+		if(isset($this->items[$category][$key]))
+			return $this->items[$category][$key];
 		return $default;
 	}
 
@@ -131,9 +135,10 @@ class CmsSettings extends CApplicationComponent
 
 		if(!empty($category)&&empty($key))
 		{
-			$this->_deleteCategoriesFromDatabase[]=$category;
-			if(isset($this->_items[$category]))
-				unset($this->_items[$category]);
+			$this->deleteCategoriesFromDatabase[]=$category;
+			$this->deleteCache($category);
+			if(isset($this->items[$category]))
+				unset($this->items[$category]);
 			return;
 		}
 		if(is_array($key))
@@ -143,14 +148,88 @@ class CmsSettings extends CApplicationComponent
 		}
 		else
 		{
-			if(isset($this->_items[$category][$key]))
+			if(isset($this->items[$category][$key]))
 			{
-				unset($this->_items[$category][$key]);
-				if(empty($this->_deleteItemsFromDatabase[$category]))
-					$this->_deleteItemsFromDatabase[$category]=array();
-				$this->_deleteItemsFromDatabase[$category][]=$key;
+				unset($this->items[$category][$key]);
+				if(empty($this->deleteItemsFromDatabase[$category]))
+					$this->deleteItemsFromDatabase[$category]=array();
+				$this->deleteItemsFromDatabase[$category][]=$key;
 			}
 		}
+		return $this;
+	}
+
+	/**
+	 * load the cache registry
+	 * @return $cacheRegistry array containing all the cached categories
+	 */
+	protected function loadCacheRegistry()
+	{
+		if(!empty($this->cacheRegistry))
+			return $this->cacheRegistry;
+
+		$cacheRegistry=$this->getCacheComponent()->get('__cache_registry_'.$this->getCacheId());
+
+		if(empty($cacheRegistry)||!is_array($cacheRegistry))
+			$cacheRegistry=array();
+
+		$this->cacheRegistry=$cacheRegistry;
+		$this->initCacheRegistry=$cacheRegistry;
+
+		return $this->cacheRegistry;
+	}
+
+	/**
+	 * add to cache registry
+	 *
+	 * @param $category - the category to be added to cache.
+	 * @return CmsSettings
+	 */
+	protected function addToCacheRegistry($category)
+	{
+		$cacheRegistry=$this->loadCacheRegistry();
+		if(!in_array($category, $cacheRegistry))
+		{
+			$this->cacheRegistry[]=$category;
+		}
+		return $this;
+	}
+
+	/**
+	 * delete one/more/all categories from cache
+	 *
+	 * @param mixed $category the name of the category
+	 * if $category is empty will delete all cached categories.
+	 * if $category is an array, will delete all provided categories
+	 * if $category is a string, will delete only that particular category
+	 * @return CmsSettings
+	 */
+	public function deleteCache($category='')
+	{
+		$cacheRegistry=$this->loadCacheRegistry();
+
+		if(empty($category))
+		{
+			$this->deleteFromCacheRegistry=CMap::mergeArray($this->deleteFromCacheRegistry, $cacheRegistry);
+			$cacheRegistry=array();
+		}
+		elseif(is_string($category) && in_array($category, $cacheRegistry))
+		{
+			unset($cacheRegistry[array_search($category, $cacheRegistry)]);
+			$this->deleteFromCacheRegistry[]=$category;
+		}
+		elseif(is_array($category))
+		{
+			foreach($category AS $catName)
+			{
+				if(in_array($catName, $cacheRegistry))
+				{
+					unset($cacheRegistry[array_search($catName, $cacheRegistry)]);
+					$this->deleteFromCacheRegistry[]=$catName;
+				}
+			}
+		}
+		$this->cacheRegistry=$cacheRegistry;
 		return $this;
 	}
 
@@ -163,13 +242,13 @@ class CmsSettings extends CApplicationComponent
 	public function load($category)
 	{
 		$items=$this->getCacheComponent()->get($category.'_'.$this->getCacheId());
-		$this->_loaded[$category]=true;
+		$this->loaded[$category]=true;
+		$this->addToCacheRegistry($category);
 
 		if(!$items)
 		{
 			$connection=$this->getDbComponent();
-			$command=$connection->createCommand('SELECT `key`, `value` FROM '.$this->getTableName().' WHERE category=:cat');
-			$command->bindParam(':cat', $category);
+			$command=$connection->createCommand('SELECT \'key\', value FROM '.$this->getTableName().' WHERE \'category\'= \''.$category.'\'');
 			$result=$command->queryAll();
 
 			if(empty($result))
@@ -178,11 +257,11 @@ class CmsSettings extends CApplicationComponent
 			$items=array();
 			foreach($result AS $row)
 				$items[$row['key']] = @unserialize($row['value']);
-			$this->getCacheComponent()->add($category.'_'.$this->getCacheId(), $items, $this->getCacheTime());
+			$this->getCacheComponent()->set($category.'_'.$this->getCacheId(), $items, $this->getCacheTime());
 		}
 
-		if(isset($this->_items[$category]))
-			$items=array_merge($items, $this->_items[$category]);
+		if(isset($this->items[$category]))
+			$items=CMap::mergeArray($items, $this->items[$category]);
 
 		$this->set($category, $items, null, false);
 		return $items;
@@ -190,7 +269,7 @@ class CmsSettings extends CApplicationComponent
 
 	public function toArray()
 	{
-		return $this->_items;
+		return $this->items;
 	}
 
 	/**
@@ -332,85 +411,104 @@ class CmsSettings extends CApplicationComponent
 	protected function addDbItem($category='system', $key, $value)
 	{
 		$connection=$this->getDbComponent();
-		$command=$connection->createCommand('SELECT id FROM '.$this->getTableName().' WHERE `category`=:cat AND `key`=:key LIMIT 1');
-		$command->bindParam(':cat', $category);
-		$command->bindParam(':key', $key);
+		//$command=$connection->createCommand('SELECT id FROM '.$this->getTableName().' WHERE \'category\'=:cat AND \'key\'=:key LIMIT 1');
+		$command=$connection->createCommand(array(
+			'select'=> array('id'),
+			'from'=>$this->getTableName(),
+			'where'=>'\'category\'=\''.$category.'\' AND \'key\'= \''.$key. '\'',
+			'limit'=>1,
+		));
 		$result=$command->queryRow();
 		$value=@serialize($value);
 
 		if(!empty($result))
-			$command=$connection->createCommand('UPDATE '.$this->getTableName().' SET `value`=:value WHERE `category`=:cat AND `key`=:key');
+			//$command=$connection->createCommand('UPDATE '.$this->getTableName().' SET value=:value WHERE \'category\'=:cat AND \'key\'=:key');
+			$command1=$connection->createCommand()->update($this->getTableName(), array(
+				'value'=>$value,
+			),
+			array(	
+				'category'=>$category,
+				'key'=>$key,
+			));
 		else
-			$command=$connection->createCommand('INSERT INTO '.$this->getTableName().' (`category`,`key`,`value`) VALUES(:cat,:key,:value)');
+			//$command=$connection->createCommand('INSERT INTO '.$this->getTableName().' (\'category\',\'key\',value) VALUES(:cat,:key,:value)');
+			$command1=$connection->createCommand()->insert($this->getTableName(),array (
+				'category'=>$category,
+				'key'=>$key,
+				'value'=>$value,
+			));
 
-		$command->bindParam(':cat', $category);
-		$command->bindParam(':key', $key);
-		$command->bindParam(':value', $value);
 		$command->execute();
 	}
 
 	protected function whenRequestEnds()
 	{
-		$this->_cacheNeedsFlush=array();
+		$this->cacheNeedsFlush=array();
 
-		if(count($this->_deleteCategoriesFromDatabase)>0)
+		if(count($this->deleteCategoriesFromDatabase)>0)
 		{
-			foreach($this->_deleteCategoriesFromDatabase AS $catName)
+			foreach($this->deleteCategoriesFromDatabase AS $catName)
 			{
 				$connection=$this->getDbComponent();
-				$command=$connection->createCommand('DELETE FROM '.$this->getTableName().' WHERE `category`=:cat');
-				$command->bindParam(':cat', $catName);
+				$command=$connection->createCommand('DELETE FROM '.$this->getTableName().' WHERE \'category\'='.$catName);
 				$command->execute();
-				$this->_cacheNeedsFlush[]=$catName;
+				$this->cacheNeedsFlush[]=$catName;
 
-				if(isset($this->_deleteItemsFromDatabase[$catName]))
-					unset($this->_deleteItemsFromDatabase[$catName]);
-				if(isset($this->_saveItemsToDatabase[$catName]))
-					unset($this->_saveItemsToDatabase[$catName]);
+				if(isset($this->deleteItemsFromDatabase[$catName]))
+					unset($this->deleteItemsFromDatabase[$catName]);
+				if(isset($this->saveItemsToDatabase[$catName]))
+					unset($this->saveItemsToDatabase[$catName]);
 			}
 		}
 
-		if(count($this->_deleteItemsFromDatabase)>0)
+		if(count($this->deleteItemsFromDatabase)>0)
 		{
-			foreach($this->_deleteItemsFromDatabase AS $catName=>$keys)
+			foreach($this->deleteItemsFromDatabase AS $catName=>$keys)
 			{
 				$params=array();
 				$i=0;
 				foreach($keys AS $v)
 				{
-					if(isset($this->_saveItemsToDatabase[$catName][$v]))
-						unset($this->_saveItemsToDatabase[$catName][$v]);
+					if(isset($this->saveItemsToDatabase[$catName][$v]))
+						unset($this->saveItemsToDatabase[$catName][$v]);
 					$params[':p'.$i]=$v;
 					++$i;
 				}
 				$names=implode(',', array_keys($params));
 
 				$connection=$this->getDbComponent();
-				$query='DELETE FROM '.$this->getTableName().' WHERE `category`=:cat AND `key` IN('.$names.')';
+				$query='DELETE FROM '.$this->getTableName().' WHERE \'category\'=\''.$catName.'\' AND \'key\' IN('.$names.')';
 				$command=$connection->createCommand($query);
-				$command->bindParam(':cat', $catName);
 
 				foreach($params AS $key=>$value)
 					$command->bindParam($key, $value);
 
 				$command->execute();
-				$this->_cacheNeedsFlush[]=$catName;
+				$this->cacheNeedsFlush[]=$catName;
 			}
 		}
 
-		if(count($this->_saveItemsToDatabase)>0)
+		if(count($this->saveItemsToDatabase)>0)
 		{
-			foreach($this->_saveItemsToDatabase AS $catName=>$keyValues)
+			foreach($this->saveItemsToDatabase AS $catName=>$keyValues)
 			{
 				foreach($keyValues AS $k=>$v)
 					$this->addDbItem($catName, $k, $v);
-				$this->_cacheNeedsFlush[]=$catName;
+				$this->cacheNeedsFlush[]=$catName;
 			}
 		}
 
-		if(count($this->_cacheNeedsFlush)>0)
+		if(count($this->cacheRegistry)==0 && count($this->initCacheRegistry)>0)
+			$this->getCacheComponent()->delete('__cache_registry_'.$this->getCacheId());
+		elseif(count(array_diff($this->initCacheRegistry,$this->cacheRegistry))>0||count(array_diff($this->cacheRegistry,$this->initCacheRegistry))>0)
+		$this->getCacheComponent()->set('__cache_registry_'.$this->getCacheId(), $this->cacheRegistry, $this->getCacheTime());
+
+		if(count($this->deleteFromCacheRegistry)>0)
+			$this->cacheNeedsFlush=array_unique(CMap::mergeArray($this->cacheNeedsFlush, $this->deleteFromCacheRegistry));
+
+		if(count($this->cacheNeedsFlush)>0)
 		{
-			foreach($this->_cacheNeedsFlush AS $catName)
+			foreach($this->cacheNeedsFlush AS $catName)
 				$this->getCacheComponent()->delete($catName.'_'.$this->getCacheId());
 		}
 	}
@@ -422,13 +520,13 @@ class CmsSettings extends CApplicationComponent
 	{
 		$connection=$this->getDbComponent();
 		$tableName=$connection->tablePrefix.str_replace(array('{{','}}'), '', $this->getTableName());
-		$sql='CREATE TABLE IF NOT EXISTS `'.$tableName.'` (
-		`id` int(11) NOT NULL auto_increment,
-		`category` varchar(64) NOT NULL default \'system\',
-		`key` varchar(255) NOT NULL,
-		`value` text NOT NULL,
-		PRIMARY KEY  (`id`),
-		KEY `category_key` (`category`,`key`)
+		$sql='CREATE TABLE IF NOT EXISTS '.$tableName.' (
+		id int(11) NOT NULL auto_increment,
+		category varchar(64) NOT NULL default \'system\',
+		key varchar(255) NOT NULL,
+		value text NOT NULL,
+		PRIMARY KEY  (id),
+		KEY category_key (\'category\',\'key\')
 		) '.($this->getDbEngine() ? 'ENGINE='.$this->getDbEngine() : '').'  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; ';
 		$command=$connection->createCommand($sql);
 		$command->execute();

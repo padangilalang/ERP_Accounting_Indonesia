@@ -63,6 +63,9 @@ class BPorderGeneralController extends Controller
 
 			$model->attributes=$_POST['bPorder'];
 
+			echo print_r($_POST['bPorder']);
+			die;		
+
 			if($model->validate()) {
 
 				$model->organization_id=sUser::model()->getGroup() ; //default user Group

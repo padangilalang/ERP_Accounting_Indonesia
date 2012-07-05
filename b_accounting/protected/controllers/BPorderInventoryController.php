@@ -60,20 +60,18 @@ class BPorderInventoryController extends Controller
 	{
 		$model=new bPorder;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['bPorder']))
+		if(isset($_POST['gifts'])) 
 		{
+			$_cArray=CJSON::decode($_POST['gifts']);
+			$model->attributes=$_cArray[0];
 
-			$model->attributes=$_POST['bPorder'];
-			
+			//echo print_r($_POST['bPorder']);
+			//die;		
 
 			if($model->validate()) {
+				echo print_r(CJSON::decode($_POST['gifts']));
+				die;		
 
-				echo print_r($_POST);
-				die;
-				
 				$model->organization_id=sUser::model()->getGroup() ; //default user Group
 				$model->periode_date=Yii::app()->settings->get("System", "cCurrentPeriod");
 				$model->payment_state_id=1;
@@ -83,19 +81,21 @@ class BPorderInventoryController extends Controller
 
 				$model->save();
 
-				//Detail...
-				//$model->item_id=$_POST['item_id'];
-				//$model->description=$_POST['description'];
-				//$model->qty=$_POST['qty'];
-				//$model->amount=$_POST['amount'];
 
-				for($i = 0; $i < sizeof($modelD->item_id); ++$i):
+				for($i = 0; $i < sizeof($_cArray); ++$i):
 					$modelDetail=new bPorderDetail;
 					$modelDetail->parent_id=$model->id;
-					$modelDetail->item_id=$modelD->item_id[$i];
-					$modelDetail->description=$modelD->description[$i];
-					($modelD->qty[$i] != null) ? $modelDetail->qty=$modelD->qty[$i] : $modelDetail->qty=1;
-					($modelD->amount[$i] != null) ? $modelDetail->amount=$modelD->amount[$i] : $modelDetail->amount=0;
+
+					//$_item_id = explode("|", $_cArray[$i]['item_name']);
+					//$modelDetail->item_id=$_item_id[1];
+
+					$modelDetail->item_id=1;
+					
+					$modelDetail->description=$_cArray[$i]['description'];
+					//($modelD->qty[$i] != null) ? $modelDetail->qty=$modelD->qty[$i] : $modelDetail->qty=1;
+					//($modelD->amount[$i] != null) ? $modelDetail->amount=$modelD->amount[$i] : $modelDetail->amount=0;
+					$modelDetail->qty=$_cArray[$i]['qty'];
+					$modelDetail->amount=$_cArray[$i]['amount'];
 
 					$modelDetail->save();
 				endfor;
@@ -256,7 +256,25 @@ class BPorderInventoryController extends Controller
 
 	public function actionGrid()
 	{
+		if(isset($_POST['gifts'])) 
+		{
+			$_cArray=CJSON::decode($_POST['gifts']);
+			$model->attributes=$_cArray[0];
+
+			echo print_r($_POST['bPorder']);
+			die;		
+		}
+
 		$this->render('grid',array(
 		));
+	}
+	
+	public function actionWsdl()
+	{
+		$xml = simplexml_load_file("https://twitter.com/statuses/user_timeline.xml?id=peterjkambey");
+		//$client = new SoapClient("https://twitter.com/statuses/user_timeline.xml?id=peterjkambey");
+		echo $xml->children();
+		die();
+
 	}
 }

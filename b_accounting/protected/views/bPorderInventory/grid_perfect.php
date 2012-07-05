@@ -126,8 +126,8 @@ Yii::app()->clientScript->registerScript('knockout1', "
 };
  
 var viewModel = new GiftModel([
-    { name: \"\", price: \"\"},
-    { name: \"\", price: \"\"}
+    { name: \"Tall Hat\", price: \"39.95\"},
+    { name: \"Long Cloak\", price: \"120.00\"}
 ]);
 
 ko.applyBindings(viewModel);

@@ -39,7 +39,8 @@ return array(
 		),
 		/**/
 
-		'defaultController'=>'menu',
+
+   'defaultController'=>'menu',
 
 		'timeZone'=>'Asia/Jakarta',
 		'sourceLanguage'=>'id_id',
@@ -51,6 +52,10 @@ return array(
 		// application components
 		'components'=>array(
 
+				//'session' => array(
+				//  'timeout' => 10,
+				//),
+				
 				'cache'=>array(
 						'class'=>'system.caching.CFileCache',
 				),
@@ -83,7 +88,8 @@ return array(
 						'charset' => 'utf8',
 						'tablePrefix' => '',
 				),
-*/				'db'=>array(
+*/
+/**/				'db'=>array(
 						'connectionString' => 'mysql:host=localhost;dbname=accounting',
 						'emulatePrepare' => true,
 						'username' => 'accounting',
@@ -91,6 +97,7 @@ return array(
 						'charset' => 'utf8',
 						'tablePrefix' => '',
 				),
+/**/
 				'errorHandler'=>array(
 						// use 'site/error' action to display errors
 						'errorAction'=>'site/error',
