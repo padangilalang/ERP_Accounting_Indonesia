@@ -25,6 +25,10 @@ username: admin
 password: kamerad
 
 ----------------------------------
+04-08-2012
+[ENH] Upgrade ke versi 2 Beta. Accounting pindah ke module, Budgeting+Purchasing module tersendiri. Fitur standard masuk ke non-module
+
+
 11-05-2012   
 [BUG] Perbaikan Closing Process. 
 [ENH] Penambahan status Posting di Print List Accounting
