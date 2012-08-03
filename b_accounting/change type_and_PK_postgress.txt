@@ -1,8 +1,0 @@
-ALTER TABLE s_user 
-  ALTER COLUMN id 
-    TYPE INT 
-    USING CAST(id AS INT); 
-	
-	
-ALTER TABLE "s_user" ADD PRIMARY KEY ("id");
-	

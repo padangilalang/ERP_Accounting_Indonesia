@@ -1,1 +1,0 @@
-<ul class="nav nav-list">	<li class="nav-header">Search (EXP)</li></ul><?php        echo CHtml::beginForm(array('tAccount/searchIndex'), 'get', array('type'=>'inline')) .        CHtml::textField('q', '', array('placeholder'=> 'search...','style'=>'width:120px;')) .        CHtml::submitButton('Go!',array('style'=>'width:30px;')) .        CHtml::endForm('');?><br />
