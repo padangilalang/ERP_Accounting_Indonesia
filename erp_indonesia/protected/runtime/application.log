@@ -1,0 +1,746 @@
+2012/08/02 14:15:25 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:15:25 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:15:25 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:15:25 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:15:25 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:15:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					.
+2012/08/02 14:15:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(178): CDbCommand->execute()
+#1 [internal function]: BPorderInventoryController->actionUpdate('49')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+---
+2012/08/02 14:17:47 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:17:47 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:17:47 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:17:47 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:17:47 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:17:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					.
+2012/08/02 14:17:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(178): CDbCommand->execute()
+#1 [internal function]: BPorderInventoryController->actionUpdate('49')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+---
+2012/08/02 14:18:35 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:35 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:35 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:35 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:35 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:36 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:36 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:36 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:36 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:36 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:37 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:38 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:38 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:38 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:38 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:38 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:39 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:39 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:39 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:39 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:39 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:18:40 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:19:22 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:19:22 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:19:22 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:19:22 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:19:22 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:19:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					.
+2012/08/02 14:19:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(178): CDbCommand->execute()
+#1 [internal function]: BPorderInventoryController->actionUpdate('49')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+---
+2012/08/02 14:20:19 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:20:19 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:20:19 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:20:19 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:20:19 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:20:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					.
+2012/08/02 14:20:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '', , )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', , '', , )
+					' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(178): CDbCommand->execute()
+#1 [internal function]: BPorderInventoryController->actionUpdate('49')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+---
+2012/08/02 14:22:07 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:22:07 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:22:07 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:22:07 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:22:07 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:22:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', 2, '', , )
+					.
+2012/08/02 14:22:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' )' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49', 2, '', , )
+					' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(178): CDbCommand->execute()
+#1 [internal function]: BPorderInventoryController->actionUpdate('49')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+---
+2012/08/02 14:23:11 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:23:11 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:23:11 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:23:11 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:23:11 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:23:12 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:23:12 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:23:12 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:23:12 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:23:12 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:23:13 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:23:54 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:23:54 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:23:54 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:23:54 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:23:54 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:24:34 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:24:34 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:24:34 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:24:34 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:24:34 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:25:10 [warning] [application] Failed to set unsafe attribute "item_name" of "bPorder".
+2012/08/02 14:25:10 [warning] [application] Failed to set unsafe attribute "item_id" of "bPorder".
+2012/08/02 14:25:10 [warning] [application] Failed to set unsafe attribute "description" of "bPorder".
+2012/08/02 14:25:10 [warning] [application] Failed to set unsafe attribute "qty" of "bPorder".
+2012/08/02 14:25:10 [warning] [application] Failed to set unsafe attribute "amount" of "bPorder".
+2012/08/02 14:25:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''test',1,1)' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49',,'test',1,1);
+					.
+2012/08/02 14:25:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''test',1,1)' at line 2. The SQL statement executed was: 
+						INSERT INTO b_porder_detail_temp (parent_id,item_id,description,qty,amount)
+						VALUES ('49',,'test',1,1);
+					' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(183): CDbCommand->execute()
+#1 [internal function]: BPorderInventoryController->actionUpdate('49')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m2/bPorderInventory/update&id=49
+---
+2012/08/02 14:31:19 [error] [exception.CException] exception 'CException' with message 'Property "fPorder.id" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\_form.php(88): CComponent->__get('id')
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\create.php(22): CController->renderPartial('_form', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#9 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(147): CController->render('create', Array)
+#10 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#11 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#20 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#21 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#23 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/create
+---
+2012/08/02 14:31:58 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/02 14:42:32 [error] [php] Undefined variable: dataProvider (C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\_formDetail.php:3)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#1 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(280): BPorderInventoryController->renderPartial()
+#2 unknown(0): BPorderInventoryController->actionDeleteTempById()
+#3 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/DeleteTempById&id=108&bPorder%5Binput_date%5D=12-06-2012&bPorder%5Bsupplier_id%5D=1&bPorder%5Bremark%5D=&bPorder%5Bitem_name%5D=&bPorder%5Bitem_id%5D=&bPorder%5Bdescription%5D=&bPorder%5Bqty%5D=&bPorder%5Bamount%5D=&_=1343893352722
+2012/08/02 14:44:38 [error] [php] Undefined variable: dataProvider (C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\_formDetail.php:3)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#1 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(280): BPorderInventoryController->renderPartial()
+#2 unknown(0): BPorderInventoryController->actionDeleteTempById()
+#3 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/DeleteTempById&id=108
+2012/08/02 14:47:01 [error] [php] Undefined variable: model (C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php:280)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/DeleteTempById&id=108
+2012/08/02 14:47:16 [error] [php] Undefined variable: model (C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php:287)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/DeleteTempById&id=108
+2012/08/02 14:55:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/bPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/DeleteTempById&id=113
+---
+2012/08/02 14:58:25 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/02 15:55:20 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/02 15:59:01 [error] [php] Object of class fPorder could not be converted to string (C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#1 C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\create.php(22): BPorderInventoryController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): BPorderInventoryController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): BPorderInventoryController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): BPorderInventoryController->renderPartial()
+#6 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(148): BPorderInventoryController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): BPorderInventoryController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): BPorderInventoryController->runAction()
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): BPorderInventoryController->filterAccessControl()
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): BPorderInventoryController->runActionWithFilters()
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): BPorderInventoryController->run()
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory/create
+2012/08/02 16:05:07 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/02 17:25:56 [warning] [application] Failed to set unsafe attribute "var_account" of "fJournal".
+2012/08/02 17:25:56 [warning] [application] Failed to set unsafe attribute "remark" of "fJournal".
+2012/08/02 17:26:21 [warning] [application] Failed to set unsafe attribute "remark" of "fJournal".
+2012/08/02 17:51:05 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootMenu" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\framework\YiiBase.php:343
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(BPorderInventoryController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\index.php(35): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(297): CController->render('index', Array)
+#9 [internal function]: BPorderInventoryController->actionIndex(1)
+#10 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('')
+#21 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/bPorderInven...')
+#22 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory
+---
+2012/08/02 17:52:13 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootGridView1" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(BPorderInventoryController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\index.php(124): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(297): CController->render('index', Array)
+#9 [internal function]: BPorderInventoryController->actionIndex(1)
+#10 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('')
+#21 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/bPorderInven...')
+#22 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory
+---
+2012/08/02 17:53:34 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootGridView1" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(BPorderInventoryController), 'bootstrap.widge...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\bPorderInventory\index.php(124): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\BPorderInventoryController.php(297): CController->render('index', Array)
+#9 [internal function]: BPorderInventoryController->actionIndex(1)
+#10 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(BPorderInventoryController), Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(BPorderInventoryController), Object(ReflectionMethod), Array)
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('')
+#21 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/bPorderInven...')
+#22 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/bPorderInventory
+---
+2012/08/02 18:15:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aPorder/create".' in C:\wamp\www\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('aPorder/create')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=aPorder/create
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=menu
+---
+2012/08/02 23:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aPorder/create".' in C:\wamp\www\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('aPorder/create')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=aPorder/create
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=menu
+---
+2012/08/02 23:03:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aPorder/create".' in C:\wamp\www\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('aPorder/create')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=aPorder/create
+---
+2012/08/02 23:21:45 [error] [exception.CException] exception 'CException' with message 'Communication cannot find the view "communication".' in C:\wamp\www\framework\web\widgets\CWidget.php:246
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\components\communication.php(9): CWidget->render('communication')
+#1 C:\wamp\www\framework\zii\widgets\CPortlet.php(95): Communication->renderContent()
+#2 C:\wamp\www\framework\web\CBaseController.php(174): CPortlet->run()
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_sbRightMenu.php(12): CBaseController->widget('communication')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(24): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('')
+#26 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/default')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#29 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/default
+---
+2012/08/02 23:22:42 [error] [exception.CException] exception 'CException' with message 'Communication cannot find the view "communication".' in C:\wamp\www\framework\web\widgets\CWidget.php:246
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\components\communication.php(9): CWidget->render('communication')
+#1 C:\wamp\www\framework\zii\widgets\CPortlet.php(95): Communication->renderContent()
+#2 C:\wamp\www\framework\web\CBaseController.php(174): CPortlet->run()
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_sbRightMenu.php(12): CBaseController->widget('communication')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(24): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('')
+#26 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#29 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2
+---
+2012/08/02 23:22:58 [error] [php] include(C:\wamp\www\erp_indonesia\protected\modules\m2\components\communication.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): import()
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 C:\wamp\www\framework\web\CBaseController.php(173): DefaultController->createWidget()
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_sbRightMenu.php(12): DefaultController->widget()
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#5 C:\wamp\www\framework\web\CBaseController.php(96): DefaultController->renderInternal()
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): DefaultController->renderFile()
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#9 C:\wamp\www\framework\web\CBaseController.php(207): CContentDecorator->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): DefaultController->endWidget()
+#11 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(24): DefaultController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#13 C:\wamp\www\framework\web\CBaseController.php(96): DefaultController->renderInternal()
+#14 C:\wamp\www\framework\web\CController.php(785): DefaultController->renderFile()
+#15 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): DefaultController->render()
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#25 C:\wamp\www\framework\web\CWebApplication.php(283): DefaultController->run()
+#26 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php?r=m2
+2012/08/02 23:23:53 [error] [exception.CException] exception 'CException' with message 'Communication cannot find the view "communication".' in C:\wamp\www\framework\web\widgets\CWidget.php:246
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\components\communication.php(9): CWidget->render('communication')
+#1 C:\wamp\www\framework\zii\widgets\CPortlet.php(95): Communication->renderContent()
+#2 C:\wamp\www\framework\web\CBaseController.php(174): CPortlet->run()
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_sbRightMenu.php(12): CBaseController->widget('communication')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(24): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('')
+#26 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#29 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2
+---
+2012/08/02 23:25:44 [error] [exception.CException] exception 'CException' with message 'Communication cannot find the view "communication".' in C:\wamp\www\framework\web\widgets\CWidget.php:246
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\components\communication.php(9): CWidget->render('communication')
+#1 C:\wamp\www\framework\zii\widgets\CPortlet.php(95): Communication->renderContent()
+#2 C:\wamp\www\framework\web\CBaseController.php(174): CPortlet->run()
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_sbRightMenu.php(12): CBaseController->widget('communication')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#9 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(24): CBaseController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('')
+#26 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#29 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2
+---
+2012/08/02 23:26:25 [error] [php] include(personalization.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(147): import()
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 C:\wamp\www\framework\web\CBaseController.php(173): DefaultController->createWidget()
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_sbRightMenu.php(16): DefaultController->widget()
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#5 C:\wamp\www\framework\web\CBaseController.php(96): DefaultController->renderInternal()
+#6 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): DefaultController->renderFile()
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#8 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#9 C:\wamp\www\framework\web\CBaseController.php(207): CContentDecorator->run()
+#10 C:\wamp\www\framework\web\CBaseController.php(301): DefaultController->endWidget()
+#11 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(24): DefaultController->endContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#13 C:\wamp\www\framework\web\CBaseController.php(96): DefaultController->renderInternal()
+#14 C:\wamp\www\framework\web\CController.php(785): DefaultController->renderFile()
+#15 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): DefaultController->render()
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#25 C:\wamp\www\framework\web\CWebApplication.php(283): DefaultController->run()
+#26 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php?r=m2
+2012/08/03 15:03:10 [warning] [application] Failed to set unsafe attribute "remark" of "fJournal".

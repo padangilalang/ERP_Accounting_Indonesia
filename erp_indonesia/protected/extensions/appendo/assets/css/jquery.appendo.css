@@ -1,0 +1,37 @@
+.appendoButtons {
+	background: #79B4DC;
+}
+
+.appendoButtons button {
+	margin-right: 10px;
+	background: white;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+.appendo-gii {
+	font-size: 100%;
+	width: 100% !important;
+}
+
+.appendo-gii thead tr {
+	border: 0;
+	border-width: 1px;
+	border-collapse: collapse;
+	width: 100% !important;
+}
+
+.appendo-gii tbody tr {
+	border: 0;
+	border-width: 1px;
+	border-collapse: collapse;
+	width: 100% !important;
+}
+
+.appendo-gii tbody tr td {
+	width: 25%;
+}
+
+.appendo-gii tbody tr td input {
+	width: 95%;
+}
