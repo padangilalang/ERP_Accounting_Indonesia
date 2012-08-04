@@ -744,3 +744,766 @@ Stack trace:
 #28 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
 REQUEST_URI=/erp_indonesia/index.php?r=m2
 2012/08/03 15:03:10 [warning] [application] Failed to set unsafe attribute "remark" of "fJournal".
+2012/08/04 08:50:31 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\YiiBase.php:195
+Stack trace:
+#0 C:\wamp\www\framework\base\CModule.php(387): YiiBase::createComponent(Array)
+#1 C:\wamp\www\framework\base\CStatePersister.php(81): CModule->getComponent('cache')
+#2 C:\wamp\www\framework\base\CApplication.php(652): CStatePersister->load()
+#3 C:\wamp\www\framework\base\CApplication.php(592): CApplication->loadGlobalState()
+#4 C:\wamp\www\framework\base\CSecurityManager.php(101): CApplication->getGlobalState('Yii.CSecurityMa...')
+#5 C:\wamp\www\framework\base\CSecurityManager.php(283): CSecurityManager->getValidationKey()
+#6 C:\wamp\www\framework\base\CSecurityManager.php(250): CSecurityManager->computeHMAC('a:4:{i:0;s:1:"1...', NULL)
+#7 C:\wamp\www\framework\web\auth\CWebUser.php(504): CSecurityManager->hashData('a:4:{i:0;s:1:"1...')
+#8 C:\wamp\www\framework\web\auth\CWebUser.php(233): CWebUser->saveToCookie(2592000)
+#9 C:\wamp\www\erp_indonesia\protected\models\fLogin.php(68): CWebUser->login(Object(UserIdentity), 2592000)
+#10 C:\wamp\www\erp_indonesia\protected\controllers\SiteController.php(60): fLogin->login()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('login')
+#16 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#19 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=site/login
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=site/login
+---
+2012/08/04 08:53:49 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:54:05 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:54:06 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:54:07 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:54:07 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:54:08 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:54:09 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:54:09 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m1/aBudget&id=71&pro_id=1
+---
+2012/08/04 08:57:59 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\wamp\www\framework\yiilite.php:85
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1045): YiiBase::createComponent(Array)
+#1 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(321): CModule->getComponent('cache')
+#2 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(165): CmsSettings->getCacheComponent()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\CmsSettings.php(93): CmsSettings->load('System')
+#4 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\_bootNavBar.php(32): CmsSettings->get('System', 'cCurrentPeriod')
+#5 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#11 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\layouts\mainFixed.php(40): CBaseController->endContent()
+#13 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\yiilite.php(3221): COutputProcessor->run()
+#19 C:\wamp\www\framework\yiilite.php(3259): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\yiilite.php(3555): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\DefaultController.php(42): CController->render('index')
+#25 C:\wamp\www\framework\yiilite.php(3821): DefaultController->actionIndex()
+#26 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#29 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#33 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#35 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/default')
+#36 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/default
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=menu
+---
+2012/08/04 09:30:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('id')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('id')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m1/aBudget/id/1...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/aBudget/id/108/pro_id/1
+---
+2012/08/04 10:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header3.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/default
+---
+2012/08/04 10:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header2.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/default
+---
+2012/08/04 10:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/default
+---
+2012/08/04 10:35:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header3.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory
+---
+2012/08/04 10:35:59 [error] [php] copy(C:\wamp\www\erp_indonesia\assets\70cb51c5\img\glyphicons-halflings.png) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (C:\wamp\www\framework\utils\CFileHelper.php:130)
+Stack trace:
+#0 C:\wamp\www\framework\utils\CFileHelper.php(59): copyDirectoryRecursive()
+#1 C:\wamp\www\framework\web\CAssetManager.php(248): copyDirectory()
+#2 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\components\Bootstrap.php(345): CAssetManager->publish()
+#3 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\components\Bootstrap.php(101): Bootstrap->getAssetsUrl()
+#4 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\components\Bootstrap.php(84): Bootstrap->registerCss()
+#5 C:\wamp\www\framework\yiilite.php(1046): Bootstrap->init()
+#6 C:\wamp\www\framework\yiilite.php(1092): CWebApplication->getComponent()
+#7 C:\wamp\www\framework\yiilite.php(1137): CWebApplication->preloadComponents()
+#8 C:\wamp\www\framework\yiilite.php(55): CWebApplication->__construct()
+#9 C:\wamp\www\framework\yiilite.php(47): createApplication()
+#10 C:\wamp\www\erp_indonesia\index.php(11): createWebApplication()
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header.jpg
+2012/08/04 10:35:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header2.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory
+---
+2012/08/04 10:36:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:36:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:36:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:36:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:36:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:36:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:37:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:37:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:37:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:38:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+---
+2012/08/04 10:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header3.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/default
+---
+2012/08/04 10:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/default
+---
+2012/08/04 10:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header2.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/default
+---
+2012/08/04 10:40:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory
+---
+2012/08/04 10:40:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header2.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory
+---
+2012/08/04 10:40:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/header3.jpg".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory
+---
+2012/08/04 10:40:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:40:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:40:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:45:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header3.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---
+2012/08/04 10:45:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/bPorderInven...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
+---

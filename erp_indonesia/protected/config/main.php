@@ -61,9 +61,14 @@ return array(
 						'class' => 'JasPHP',
 				),
 				'cache'=>array(
-						'class'=>'system.caching.CFileCache',
+					'class'=>'system.caching.CFileCache',
+					//'cache'=>'CZendDataCache',
 				),
 					
+				'session' => array(
+					'class' => 'CCacheHttpSession',
+				),
+				
 				'settings'=>array(
 						'class'                 => 'CmsSettings',
 						'cacheComponentId'  => 'cache',
@@ -92,25 +97,24 @@ return array(
 						'tablePrefix' => '',
 						'enableProfiling'=>true,
 						'enableParamLogging' => true,
+						'schemaCachingDuration' => 180,						
 				),
 				'errorHandler'=>array(
 						// use 'site/error' action to display errors
 						'errorAction'=>'site/error',
 				),
 
-				/*
+				/**/
 				 'urlManager'=>array(
 				 		'urlFormat'=>'path',
 				 		//'showScriptName'=>false,
 				 		'rules'=>array(
-				 				//'<id:\d+>'=>'sUser/view',
-
 				 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 				 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				 		),
 				 ),
-*/
+				/**/
 
 				'log'=>array(
 						'class'=>'CLogRouter',
