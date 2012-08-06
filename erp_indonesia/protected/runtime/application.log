@@ -1507,3 +1507,307 @@ Stack trace:
 REQUEST_URI=/erp_indonesia/index.php/m2/bPorderInventory/images/icon/header2.jpg
 HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/bPorderInventory/create
 ---
+2012/08/04 17:00:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:01:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:01:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/mCashbank/im...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank/index?uJournal%5Bsystem_ref%5D=CB-B2-201202-EXP-00939
+---
+2012/08/04 17:03:25 [error] [exception.CHttpException.404] exception 'CHttpException' in C:\wamp\www\erp_indonesia\protected\extensions\yiinfinite-scroll\YiinfiniteScroller.php:43
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3207): YiinfiniteScroller->run()
+#1 C:\wamp\www\erp_indonesia\protected\modules\m2\views\mCashbank\index.php(75): CBaseController->widget('ext.yiinfinite-...', Array)
+#2 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#3 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#4 C:\wamp\www\framework\yiilite.php(3585): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#5 C:\wamp\www\framework\yiilite.php(3553): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MCashbankController.php(343): CController->render('index', Array)
+#7 [internal function]: MCashbankController->actionIndex(0)
+#8 C:\wamp\www\framework\yiilite.php(3802): ReflectionMethod->invokeArgs(Object(MCashbankController), Array)
+#9 C:\wamp\www\framework\yiilite.php(3819): CAction->runWithParamsInternal(Object(MCashbankController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#13 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#17 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\yiilite.php(1699): CController->run('index')
+#19 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/mCashbank/in...')
+#20 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#21 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/index/uJournal%5Bsystem_ref%5D/CB-B2-201202-EXP-00939/page/2
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank/index?uJournal%5Bsystem_ref%5D=CB-B2-201202-EXP-00939
+---
+2012/08/04 17:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/m2/mCashbank/index/uJournal[system_ref]/CB-B2-201202-EXP-00939/pid/5".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/m2/mCashbank...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/m2/mCashbank/index/uJournal%5Bsystem_ref%5D/CB-B2-201202-EXP-00939/pid/5
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank/index?uJournal%5Bsystem_ref%5D=CB-B2-201202-EXP-00939
+---
+2012/08/04 17:05:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/mCashbank/im...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank/index?uJournal%5Bsystem_ref%5D=CB-B2-201202-EXP-00939
+---
+2012/08/04 17:05:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:05:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/m2/mCashbank/index/pid/4".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/m2/mCashbank...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/m2/mCashbank/index/pid/4
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/m2/mCashbank/index/pid/4".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/m2/mCashbank...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/m2/mCashbank/index/pid/4
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:11:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:11:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:11:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/m2/mCashbank/index/pid/4".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/m2/mCashbank...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/m2/mCashbank/index/pid/4
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:13:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/m2/mCashbank/index".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/m2/mCashbank...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php?r=m2/m2/mCashbank/index&pid=4
+HTTP_REFERER=http://localhost/erp_indonesia/index.php?r=m2/mCashbank
+---
+2012/08/04 17:15:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:15:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/m2/mCashbank/index/pid/4".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/m2/mCashbank...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/m2/mCashbank/index/pid/4
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/04 17:18:53 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m2\views\mCashbank\index.php:55)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): MCashbankController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): MCashbankController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MCashbankController.php(343): MCashbankController->render()
+#3 unknown(0): MCashbankController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3802): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\yiilite.php(3819): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\yiilite.php(6264): MCashbankController->runAction()
+#8 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#9 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(6306): MCashbankController->filterAccessControl()
+#11 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#12 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#13 C:\wamp\www\framework\yiilite.php(3308): MCashbankController->runActionWithFilters()
+#14 C:\wamp\www\framework\yiilite.php(1699): MCashbankController->run()
+#15 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#16 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#17 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/index/pid/40000'
+2012/08/04 17:19:25 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m2\views\mCashbank\index.php:55)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): MCashbankController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): MCashbankController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MCashbankController.php(343): MCashbankController->render()
+#3 unknown(0): MCashbankController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3802): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\yiilite.php(3819): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\yiilite.php(6264): MCashbankController->runAction()
+#8 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#9 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(6306): MCashbankController->filterAccessControl()
+#11 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#12 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#13 C:\wamp\www\framework\yiilite.php(3308): MCashbankController->runActionWithFilters()
+#14 C:\wamp\www\framework\yiilite.php(1699): MCashbankController->run()
+#15 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#16 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#17 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/index/pid/40000'
+2012/08/04 17:19:49 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m2\views\mCashbank\index.php:55)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): MCashbankController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): MCashbankController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MCashbankController.php(343): MCashbankController->render()
+#3 unknown(0): MCashbankController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3802): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\yiilite.php(3819): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\yiilite.php(6264): MCashbankController->runAction()
+#8 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#9 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(6306): MCashbankController->filterAccessControl()
+#11 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#12 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#13 C:\wamp\www\framework\yiilite.php(3308): MCashbankController->runActionWithFilters()
+#14 C:\wamp\www\framework\yiilite.php(1699): MCashbankController->run()
+#15 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#16 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#17 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/index/pid/40000'
+2012/08/04 17:20:01 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m2\views\mCashbank\index.php:55)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): MCashbankController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): MCashbankController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MCashbankController.php(343): MCashbankController->render()
+#3 unknown(0): MCashbankController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3802): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\yiilite.php(3819): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\yiilite.php(6264): MCashbankController->runAction()
+#8 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#9 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(6306): MCashbankController->filterAccessControl()
+#11 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#12 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#13 C:\wamp\www\framework\yiilite.php(3308): MCashbankController->runActionWithFilters()
+#14 C:\wamp\www\framework\yiilite.php(1699): MCashbankController->run()
+#15 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#16 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#17 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/index/pid/40000'
+2012/08/04 17:20:22 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m2\views\mCashbank\index.php:55)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): MCashbankController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): MCashbankController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MCashbankController.php(343): MCashbankController->render()
+#3 unknown(0): MCashbankController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3802): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\yiilite.php(3819): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\yiilite.php(6264): MCashbankController->runAction()
+#8 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#9 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(6306): MCashbankController->filterAccessControl()
+#11 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#12 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#13 C:\wamp\www\framework\yiilite.php(3308): MCashbankController->runActionWithFilters()
+#14 C:\wamp\www\framework\yiilite.php(1699): MCashbankController->run()
+#15 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#16 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#17 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/index/pid/-40000'
+2012/08/04 17:20:42 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m2\views\mCashbank\index.php:55)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): MCashbankController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): MCashbankController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MCashbankController.php(343): MCashbankController->render()
+#3 unknown(0): MCashbankController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3802): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\yiilite.php(3819): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\yiilite.php(6264): MCashbankController->runAction()
+#8 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#9 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(6306): MCashbankController->filterAccessControl()
+#11 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#12 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#13 C:\wamp\www\framework\yiilite.php(3308): MCashbankController->runActionWithFilters()
+#14 C:\wamp\www\framework\yiilite.php(1699): MCashbankController->run()
+#15 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#16 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#17 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/index/pid/-40000'
+2012/08/04 17:28:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/m2/mCashbank/index/pid/5".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/m2/mCashbank...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/m2/mCashbank/index/pid/5
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank/index/
+---
+2012/08/04 17:29:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\wamp\www\framework\yiilite.php:3431
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3313): CController->missingAction('images')
+#1 C:\wamp\www\framework\yiilite.php(1699): CController->run('images')
+#2 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/mCashbank/im...')
+#3 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank/index?uJournal%5Bsystem_ref%5D=CB-B1-201203-EXP-01581
+---
