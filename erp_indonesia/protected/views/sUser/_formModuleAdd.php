@@ -10,9 +10,9 @@ $form=$this->beginWidget('BootActiveForm', array(
 		'enableAjaxValidation'=>false,
 )); ?>
 
-<?php echo $form->dropDownListRow($model, 's_module_id', SModule::itemsAll(),array('class'=>'span8','multiple'=>'multiple')); ?>
+<?php echo $form->dropDownListRow($model, 's_module_id', sModule::itemsAll(),array('class'=>'span8','multiple'=>'multiple')); ?>
 
-<?php echo $form->dropDownListRow($model,'s_matrix_id', SMatrix::items('SMatrix'),array('class'=>'span3')); ?>
+<?php echo $form->dropDownListRow($model,'s_matrix_id', sMatrix::items('sMatrix'),array('class'=>'span3')); ?>
 
 <div class="form-actions">
 	<?php echo CHtml::htmlButton($model->isNewRecord ? '<i class="icon-ok"></i> Create':'<i class="icon-ok"></i> Save', array('class'=>'btn', 'type'=>'submit')); ?>

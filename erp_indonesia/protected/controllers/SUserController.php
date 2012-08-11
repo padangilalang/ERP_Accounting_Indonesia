@@ -8,6 +8,7 @@ class SUserController extends Controller
 	{
 		return array(
 				'accessControl',
+				'ajaxOnly + delete, deleteModule',
 		);
 	}
 
@@ -143,12 +144,18 @@ class SUserController extends Controller
 	{
 		$this->loadModel($id)->delete();
 
-		$command=Yii::app()->db->createCommand('delete from s_user_module where s_user_id ='.$id);
+		$command=Yii::app()->db->createCommand('delete from s_user_module where s_user_id = :id');
+		$command->bindParam(":id", $id, PDO::PARAM_STR);
 		$command->execute();
 
-		$this->redirect(array('/sUser'));
 	}
 
+	public function actionDeleteModule($id)
+	{
+		$command=Yii::app()->db->createCommand('delete from s_user_module where id = :id');
+		$command->bindParam(":id", $id, PDO::PARAM_STR);
+		$command->execute();
+	}
 
 	public function actionIndex()
 	{
@@ -214,13 +221,6 @@ class SUserController extends Controller
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
-	}
-
-	public function actionDeleteModule($id)
-	{
-		$_mid=$this->loadModelUserModule($id)->s_user_id;
-		$this->loadModelUserModule($id)->delete();
-		$this->redirect(array('view','id'=>$_mid));
 	}
 
 	public function loadModelUserGroup($id)

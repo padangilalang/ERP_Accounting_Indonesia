@@ -1,6 +1,6 @@
 
-<div class="raw">
-
+<div class="row-fluid">
+<div class="span12">
 	<?php
 	$this->widget('bootstrap.widgets.BootDetailView', array(
 			//$this->widget('ext.XDetailView', array(
@@ -15,6 +15,7 @@
 					array('name'=>'group_joindate', 'label'=>'Group Join Date'),
 			),
 	)); ?>
+</div>
 </div>
 
 <?php 

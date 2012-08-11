@@ -32,3 +32,4 @@ $this->menu2=gLeave::getTopCreated();
 		'dataProvider'=>$dataProvider,
 		'itemView'=>'_view',
 )); ?>
+

@@ -1,7 +1,8 @@
 <?php
 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/../framework/yiilite.php';
+//$yii=dirname(__FILE__).'/../framework/yiilite.php';
+$yii=dirname(__FILE__).'/../framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
 
 // remove the following line when in production mode

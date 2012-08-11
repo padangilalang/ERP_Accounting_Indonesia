@@ -1,4 +1,25 @@
 <?php
+Yii::app()->clientScript->registerScriptFile(Yii::app()->getClientScript()->getCoreScriptUrl().'/jui/css/2jui-bootstrap/js/jquery-ui-1.8.16.custom.min.js');
+Yii::app()->clientScript->registerCssFile(Yii::app()->getClientScript()->getCoreScriptUrl().'/jui/css/2jui-bootstrap/jquery-ui.css');
+Yii::app()->getClientScript()->registerCoreScript('maskedinput');
+
+Yii::app()->clientScript->registerScript('datepicker', "
+	$(function() {
+		$( \"#".CHtml::activeId($model,'input_date')."\" ).datepicker({
+		'dateFormat' : 'dd-mm-yy',
+		});
+		$( \"#".CHtml::activeId($model,'periode_date')."\" ).datepicker({
+			'dateFormat':'yymm',
+		});
+		$( \"#".CHtml::activeId($model,'input_date')."\" ).mask('99-99-9999');
+		$( \"#".CHtml::activeId($model,'periode_date')."\" ).mask('999999');
+		$( \"#".CHtml::activeId($model,'no_ref')."\" ).mask('aa/9999/9999');
+	});
+
+");
+?>
+
+<?php
 $this->breadcrumbs=array(
 		'Purchase Order with Dept'=>array('index'),
 		'Create',
@@ -30,49 +51,11 @@ $this->menu2=aPorder::getTopCreated();?>
 		'type'=>'horizontal',
 		'enableAjaxValidation'=>false,
 )); ?>
-<div class="control-group">
-	<?php echo $form->labelEx($model,'input_date',array("class"=>'control-label')); ?>
-	<div class="controls">
-		<?php
-		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
-				'model'=>$model,
-				'value'=>cTimestamp::formatDate('yyyy-MM-dd',$model->input_date),
-				'attribute'=>'input_date',
-				// additional javascript options for the date picker plugin
-				'options'=>array(
-						'showAnim'=>'fold',
-						'dateFormat'=>'dd-mm-yy',
-				),
-				'htmlOptions'=>array(
 
-				)
-		));
-		?>
-	</div>
-</div>
+<?php echo $form->textFieldRow($model,'input_date'); ?>
 
 <?php echo $form->textFieldRow($model,'no_ref',array('class'=>'span3')); ?>
-<div class="control-group">
-	<?php echo $form->labelEx($model,'periode_date',array("class"=>"control-label")); ?>
-	<div class="controls">
-		<?php
-		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
-				'model'=>$model,
-				'id'=>'balance-begin1',
-				'value'=>cTimestamp::formatDate('yyyy-MM-dd',$model->periode_date),
-				'attribute'=>'periode_date',
-				// additional javascript options for the date picker plugin
-				'options'=>array(
-						'showAnim'=>'fold',
-						'dateFormat'=>'yymm',
-				),
-				'htmlOptions'=>array(
-
-				),
-		));
-		?>
-	</div>
-</div>
+<?php echo $form->textFieldRow($model,'periode_date'); ?>
 
 <?php echo $form->dropDownListRow($model,'budgetcomp_id',aBudget::mainComponent()); ?>
 

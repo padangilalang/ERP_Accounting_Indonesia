@@ -23,7 +23,10 @@ class menu extends CActiveRecord
 	public function getListed() {
 		$subitems = array();
 
-		$model=sUserModule::model()->find(array('condition'=>'s_module_id = \''.$this->id . '\' AND s_user_id = \''.Yii::app()->user->id .'\''));
+		$model=sUserModule::model()->find(array(
+			'condition'=>'s_module_id = :module AND s_user_id = :user',
+			'params'=>array(':module'=>$this->id,':user'=>Yii::app()->user->id)
+		));
 		if ($model !=null or Yii::app()->user->name == 'admin') {
 			if($this->childs) foreach($this->childs as $child)
 				$subitems[] = $child->getListed();

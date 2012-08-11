@@ -60,14 +60,15 @@ class GLeaveController extends Controller
 		if(isset($_POST['gLeave']))
 		{
 			$model->attributes=$_POST['gLeave'];
-			$model->parent_id=gPerson::model()->find('userid = '.Yii::app()->user->id)->id;  //default PETER
+			//$model->parent_id=gPerson::model()->find('userid = '.Yii::app()->user->id)->id;  //default PETER
 			$model->approved_id =1; ///request
 			if($model->save())
 				//$this->redirect(array('view','id'=>$model->id));
-				$this->redirect(array('view','id'=>gPerson::model()->find('userid = '.Yii::app()->user->id)->id));
+				//$this->redirect(array('view','id'=>gPerson::model()->find('userid = '.Yii::app()->user->id)->id));
+				$this->redirect(array('/m1/gLeave'));
 		}
 
-		$this->render('create',array(
+		$this->render('createWithEmp',array(
 				'model'=>$model,
 		));
 	}
@@ -79,7 +80,7 @@ class GLeaveController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$model=$this->loadModelLeave($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -88,7 +89,7 @@ class GLeaveController extends Controller
 		{
 			$model->attributes=$_POST['gLeave'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('/m1/gLeave'));
 		}
 
 		$this->render('update',array(
@@ -106,7 +107,7 @@ class GLeaveController extends Controller
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			$this->loadModelLeave($id)->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))

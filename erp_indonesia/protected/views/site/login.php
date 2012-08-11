@@ -13,6 +13,27 @@ if ($browser['name'] =='Internet Explorer')
 
 ?>
 
+<?php
+
+  $tag="landscape";
+  $tag = urlencode($tag);
+
+  $api_key = "3febaac31cc6a34b93349523beacbfee";
+  $per_page="6";
+  $url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={$api_key}&tags={$tag}&per_page={$per_page}";
+
+  //$feed = getResource($url);
+  $chandle = curl_init();
+  curl_setopt($chandle, CURLOPT_URL, $url);
+  curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
+  $result = curl_exec($chandle);
+  curl_close($chandle);
+
+  $xml = simplexml_load_string($result);
+  
+  
+?>
+
 <div class="row-fluid">
 	<div class="span6 well">
 		<?php $form=$this->beginWidget('BootActiveForm', array(
@@ -33,8 +54,9 @@ if ($browser['name'] =='Internet Explorer')
 	</div>
 	<div class="span5">
 		<?php 
-		$_slide="slide".Yii::app()->dateFormatter->format("d",time()).".JPG";
-		echo CHtml::image(Yii::app()->request->baseUrl.'/images/photo/'.$_slide,'image',array('style'=>'width: 100%')); ?>
+			$_slide="slide".Yii::app()->dateFormatter->format("d",time()).".jpg";
+			echo CHtml::image(Yii::app()->request->baseUrl.'/images/photo/'.$_slide,'image',array('style'=>'width: 100%')); 
+		?>
 	</div>
 </div>
 
@@ -49,3 +71,27 @@ if ($browser['name'] =='Internet Explorer')
 	</div>
 </div>
 
+<div class="row-fluid">
+
+		<?php 
+			//$_slide="slide".Yii::app()->dateFormatter->format("d",time()).".jpg";
+			//echo CHtml::image(Yii::app()->request->baseUrl.'/images/photo/'.$_slide,'image',array('style'=>'width: 100%')); 
+			
+			foreach ($xml->photos->photo as $photo) {
+				$title = $photo['title'];
+				$farmid = $photo['farm'];
+				$serverid = $photo['server'];
+				$id = $photo['id'];
+				$secret = $photo['secret'];
+				$owner = $photo['owner'];
+				$thumb_url = "http://farm{$farmid}.static.flickr.com/{$serverid}/{$id}_{$secret}_t.jpg";
+				//$image = "http://farm{$farmid}.static.flickr.com/{$serverid}/{$id}_{$secret}.jpg";
+				$page_url = "http://www.flickr.com/photos/{$owner}/{$id}";
+				$image_html= "<a href='{$page_url}'><img alt='{$title}' src='{$thumb_url}' height='160px' width='100%'/></a>";
+				print "<div class='span2'>$image_html</div>";
+			}
+		
+		?>
+</div>
+<p>
+Powered by: <a href="http://www.flikr.com" target="_blank">Flickr</a>

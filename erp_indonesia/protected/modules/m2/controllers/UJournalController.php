@@ -82,7 +82,10 @@ class UJournalController extends Controller
 
 				$modelHeader->save();
 
-				$t=uJournalDetail::model()->deleteAll('parent_id = '.$id); //delete All Journal
+				$t=uJournalDetail::model()->deleteAll(array(
+					'condition'=>'parent_id = :id',
+					'params'=>array(':id'=>$id),
+				)); //delete All Journal
 
 				$_tdebet = 0;
 				$_tcredit = 0;
@@ -121,7 +124,11 @@ class UJournalController extends Controller
 			$model->system_ref=$modelHeader->system_ref;
 			$model->master_id=$modelHeader->id;
 
-			$modelDetail = uJournalDetail::model()->findAll('parent_id ='.$modelHeader->id);
+			$modelDetail = uJournalDetail::model()->findAll(array(
+				'condition'=>'parent_id = :id',
+				'params'=>array(':id'=>$modelHeader->id),
+			
+			));
 
 			foreach ($modelDetail as $mm) {
 				$model->account_no_id[]=$mm->account_no_id;

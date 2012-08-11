@@ -159,7 +159,11 @@ class aOrganizationController extends Controller
 
 	public function actionKabupatenUpdate() {
 		$cat_id = $_POST['aOrganization']['propinsi_id'];
-		$data=sKabupatenPropinsi::model()->findAll(array('condition'=>'parent_id = '.$cat_id,'order'=>'sort'));
+		$data=sKabupatenPropinsi::model()->findAll(array(
+			'condition'=>'parent_id = :cat_id',
+			'params'=>array(':cat_id'=>$cat_id),
+			'order'=>'sort'
+		));
 
 		$data=CHtml::listData($data,'id','nama');
 		foreach($data as $value=>$kabupaten_id)  {

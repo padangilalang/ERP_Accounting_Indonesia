@@ -62,12 +62,12 @@ class cashFlow1 extends fpdf
 				GROUP BY b.account_no_id
 				HAVING T_credit <>0'
 		);
-		
+
 	return new CArrayDataProvider($rawData, array(
 			//'pagination'=>false,
 			//),
 	);
-		
+
 
 	}
 	*/

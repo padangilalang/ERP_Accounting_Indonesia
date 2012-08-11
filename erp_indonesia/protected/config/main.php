@@ -18,14 +18,11 @@ return array(
 				'application.components.*',
 				'application.extensions.*',
 				'application.reports.*',
-				'application.extensions.fpdf.*',
-				'application.extensions.phpmailer.*',
+				'ext.fpdf.*',
 				'ext.bootstrap.widgets.*',
-				'ext.facebook.*',
-				'ext.facebook.lib.*',
+				//'ext.facebook.*',
+				//'ext.facebook.lib.*',
 				'ext.JasPHP.*',
-				//'application.extensions.coolfieldset.*',
-				//'application.extensions.php-sip.*',   //on trial
 
 		),
 		'modules'=>array(
@@ -56,7 +53,15 @@ return array(
 
 		// application components
 		'components'=>array(
-
+				//'widgetFactory'=>array(
+				//	'widgets'=>array(
+						//'CJuiAutoComplete'=>array(
+						//	'options'=>array(
+						//		'minLength'=>'3',
+						//	),
+						//),
+				//	),
+				//),
 				'jasPHP' => array(
 						'class' => 'JasPHP',
 				),

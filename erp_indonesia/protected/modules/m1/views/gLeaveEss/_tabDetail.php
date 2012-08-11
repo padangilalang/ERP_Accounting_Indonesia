@@ -1,4 +1,4 @@
-<div class="raw">
+<div class="row">
 	<div class="span3 well">
 		<?php 
 		if ($model->c_pathfoto == null) {

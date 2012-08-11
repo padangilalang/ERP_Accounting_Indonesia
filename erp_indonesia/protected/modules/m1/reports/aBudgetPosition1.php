@@ -88,7 +88,7 @@ class aBudgetPosition1 extends fpdf
 			$this->Ln();
 
 			$_total = 0;
-				
+
 			foreach($model->ch as $mod)
 			{
 				$this->SetFont('Arial','',6);
@@ -139,7 +139,7 @@ class aBudgetPosition1 extends fpdf
 					//$this->Cell($w[6],4,'',0,0,'R');
 					$this->Cell($w[7],4,number_format($_balance2,0,',','.'),'LR',0,'R');
 					$this->Ln();
-						
+
 					$_total =$_total+$modelT2;
 					if ($this->GetY()>=250) {
 						$this->Cell(array_sum($w)-46,4,'','T');

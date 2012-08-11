@@ -215,7 +215,7 @@ class aApprovalForm1 extends fpdf
 			$_total =$_total+$mod->qty*$mod->amount;
 			$_counter++;
 			$_countert++;
-				
+
 			$y1 = $this->GetY();
 			if ($y1 >235) {
 				$this->Cell($w[0],1,'','B');
@@ -237,7 +237,7 @@ class aApprovalForm1 extends fpdf
 				$this->Cell($w[5],0,'','B');
 				$this->Ln();
 			}
-				
+
 		}
 
 

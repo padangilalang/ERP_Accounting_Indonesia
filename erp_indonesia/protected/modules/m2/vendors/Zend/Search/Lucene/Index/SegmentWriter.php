@@ -291,7 +291,7 @@ abstract class Zend_Search_Lucene_Index_SegmentWriter
 			$fnmFile->writeByte(($field->isIndexed       ? 0x01 : 0x00) |
 					($field->storeTermVector ? 0x02 : 0x00)
 					// not supported yet            0x04 /* term positions are stored with the term vectors */ |
-			// not supported yet            0x08 /* term offsets are stored with the term vectors */   |
+					// not supported yet            0x08 /* term offsets are stored with the term vectors */   |
 			);
 
 			if ($field->isIndexed) {

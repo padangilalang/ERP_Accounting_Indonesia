@@ -9,6 +9,8 @@ $this->breadcrumbs=array(
 	<h1>Email to Peter (BETA)</h1>
 </div>
 
+<div class="raw-fluid">
+<div class="span11">
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
 <div class="flash-success">
@@ -50,6 +52,8 @@ $this->breadcrumbs=array(
 
 <?php endif; ?>
 
+</div>
+<div class="span1">
 <!-- Facebook Badge START -->
 <a href="http://www.facebook.com/peterjkambey" target="_TOP"
 	style="font-family: &amp; amp; amp; amp; amp; amp; amp; quot; lucida grande&amp;amp; amp; amp; amp; amp; amp; quot; , tahoma ,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;"
@@ -60,3 +64,5 @@ $this->breadcrumbs=array(
 	src="http://badge.facebook.com/badge/1166386373.377.2084341022.png"
 	width="120" height="286" style="border: 0px;" /> </a>
 <!-- Facebook Badge END -->
+</div>
+</div>

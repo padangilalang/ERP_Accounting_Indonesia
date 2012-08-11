@@ -25,5 +25,5 @@ $this->widget('bootstrap.widgets.BootTabbable', array(
 				//array('label'=>'Sub Account','content'=>$this->renderPartial("_tabSub", array("model"=>$model), true)),
 				//array('label'=>'Linked Module','content'=>$this->renderPartial("_tabModule", array("model"=>$model), true)),
 		),
-		));
+));
 ?>

@@ -8,7 +8,6 @@
 
 
 <?php echo $form->textFieldRow($model,'branch_code',array('class'=>'span3',)); ?>
-<?php echo $form->dropDownListRow($model,'structure_id',sParameter::items("cStructure")); ?>
 <?php echo $form->textFieldRow($model,'name',array('class'=>'span3')); ?>
 <?php echo $form->textFieldRow($model,'address',array('class'=>'span3')); ?>
 <?php echo $form->textFieldRow($model,'address2',array('class'=>'span3')); ?>

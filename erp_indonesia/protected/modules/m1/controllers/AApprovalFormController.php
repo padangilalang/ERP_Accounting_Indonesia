@@ -15,6 +15,7 @@ class AApprovalFormController extends Controller
 	{
 		return array(
 				'accessControl', // perform access control for CRUD operations
+				'ajaxOnly + UpdatePaid, UpdateDetailPaid,UpdateApproved'
 		);
 	}
 
@@ -146,7 +147,10 @@ class AApprovalFormController extends Controller
 	public function actionUpdatePaid($id)
 	{
 		aPorder::model()->updateByPk((int)$id,array('payment_state_id'=>3,'payment_date'=>new CDbExpression('NOW()')));
-		aPorderDetail::model()->updateAll(array('detail_payment_id'=>3),'parent_id = '.$id);
+		aPorderDetail::model()->updateAll(array('detail_payment_id'=>3),array(
+			'condition'=>'parent_id = :id',
+			'params'=>array(':id'=>$id),
+		));
 	}
 
 	public function actionUpdateDetailPaid($id)
@@ -161,7 +165,10 @@ class AApprovalFormController extends Controller
 
 			#----------------------------------------
 			#Budget Detail
-			$modelbd=aBudgetDetail::model()->find(array('condition'=>'parent_id = ' . $model->budgetcomp_id));
+			$modelbd=aBudgetDetail::model()->find(array(
+				'condition'=>'parent_id = :parent',
+				'params'=>array(':parent'=>$model->budgetcomp_id),
+			));
 			
 		if($modelbd==null) { //Step 1. null berarti saldo baru berjalan, jadi cek saldo awal
 
@@ -183,12 +190,14 @@ class AApprovalFormController extends Controller
 		$command=Yii::app()->db->createCommand(
 				'INSERT INTO a_budget_detail (parent_id, input_date, periode_date, no_ref, prequest_id, tcredit, balance, remark, created_date, created_by)
 				SELECT a.budgetcomp_id, a.input_date, a.periode_date, a.no_ref, a.id, Sum(b.qty*b.amount),
-				'.$bd_balance. ' - Sum(b.qty*b.amount), \'Automatic Posting\', '.time().',\''.Yii::app()->user->name .'\'
+				:balance - Sum(b.qty*b.amount), \'Automatic Posting\', '.time().',\''.Yii::app()->user->name .'\'
 				FROM a_porder a
 				INNER JOIN a_porder_detail b ON a.id = b.parent_id
-				WHERE a.id = ' . $model->id . '
+				WHERE a.id = :id
 				GROUP BY a.budgetcomp_id, a.input_date, a.no_ref, a.id');
-
+				
+		$command->bindParam(":id", $id, PDO::PARAM_STR);
+		$command->bindParam(":balance", $balance, PDO::PARAM_STR);
 		$command->execute();
 			
 		#------------------------------------

@@ -272,7 +272,10 @@ class aOrganization extends CActiveRecord
 	public function getListPersonalia() {
 		$subitems = array();
 
-		$model=$this->find(array('condition'=>'id = '.$this->id));
+		$model=$this->find(array(
+			'condition'=>'id = :id',
+			'params'=>array(':id'=>$this->id),
+		));
 		if($this->childs) foreach($this->childs as $child)
 			$subitems[] = $child->getListPersonalia();
 
@@ -288,7 +291,10 @@ class aOrganization extends CActiveRecord
 	public function getListAbsence() {
 		$subitems = array();
 
-		$model=$this->find(array('condition'=>'id = '.$this->id));
+		$model=$this->find(array(
+			'condition'=>'id = :id',
+			'params'=>array(':id'=>$this->id),
+		));
 		if($this->childs) foreach($this->childs as $child)
 			$subitems[] = $child->getListAbsence();
 

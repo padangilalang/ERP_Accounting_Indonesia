@@ -31,8 +31,8 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 	background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%);
 	background-image: -o-linear-gradient(bottom, #eeeeee 0%, #ffffff 50%);
 	background-image: -ms-linear-gradient(top, #eeeeee 0%, #ffffff 50%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  '#eeeeee',
-		endColorstr=  '#ffffff', GradientType=  0 );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=   '#eeeeee',
+		endColorstr=   '#ffffff', GradientType=   0 );
 	background-image: linear-gradient(top, #eeeeee 0%, #ffffff 50%);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -114,8 +114,8 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 	background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
 	background-image: -o-linear-gradient(bottom, #ccc 0%, #eee 60%);
 	background-image: -ms-linear-gradient(top, #cccccc 0%, #eeeeee 60%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  '#cccccc',
-		endColorstr=  '#eeeeee', GradientType=  0 );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=   '#cccccc',
+		endColorstr=   '#eeeeee', GradientType=   0 );
 	background-image: linear-gradient(top, #cccccc 0%, #eeeeee 60%);
 	border-left: 1px solid #aaa;
 	position: absolute;
@@ -223,7 +223,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 	background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
 	background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
 	background-image: -ms-linear-gradient(top, #ffffff 0%, #eeeeee 50%);
-	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#ffffff',
+	filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#ffffff',
 		endColorstr='#eeeeee', GradientType=0 );
 	background-image: linear-gradient(top, #ffffff 0%, #eeeeee 50%);
 	-webkit-border-bottom-left-radius: 0;
@@ -439,7 +439,7 @@ disabled look for already selected choices in the results dropdown
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
 	background-color: #e4e4e4;
-	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#f4f4f4',
+	filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#f4f4f4',
 		endColorstr='#eeeeee', GradientType=0 );
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4),
 		color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8),

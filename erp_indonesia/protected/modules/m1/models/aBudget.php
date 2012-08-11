@@ -360,7 +360,11 @@ class aBudget extends CActiveRecord
 	public function getTotalComponent($id=0)
 	{
 
-		$models=self::model()->findAll('department_id = 1 and parent_id ='.$id);
+		$models=self::model()->findAll(array(
+			'condition'=>'department_id = 1 and parent_id = :id',
+			'params'=>array(':id'=>$id),
+		));
+		
 		$_total=0;
 
 		foreach($models as $model)

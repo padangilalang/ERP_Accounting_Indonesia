@@ -1,7 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-		'G Cutis'=>array('index'),
+		'Leave'=>array('index'),
 		'Create',
+);
+
+$this->menu=array(
+		array('label'=>'Home','url'=>array('/m1/gLeave')),
+		//array('label'=>'Manage gPerson','url'=>array('admin')),
 );
 
 $this->menu1=gLeave::getTopUpdated();

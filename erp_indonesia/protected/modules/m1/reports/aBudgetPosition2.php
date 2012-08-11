@@ -86,8 +86,8 @@ class aBudgetPosition2 extends fpdf
 			$_unpaid=$_real-$_paid;
 			$_unpaidP= ($_real !=0) ? ($_unpaid/$_real)*100 : 0;
 			$_endBalance= isset($model->end_balance) ? $model->end_balance->balance : $_amount;
-				
-				
+
+
 			$this->SetFont('Arial','',7);
 			$this->Cell($w[0],6,$model->code.". ".$model->name,'L');
 			$this->Cell($w[1],6,number_format($_amount,2,',','.'),'LR',0,'R');
@@ -104,7 +104,7 @@ class aBudgetPosition2 extends fpdf
 			$_realization = $_realization+$_real;
 			$_payment = $_payment+$_paid;
 			$_unpayment = $_unpayment+$_unpaid;
-				
+
 			$_balance = $_balance+$_endBalance;
 
 		}

@@ -37,5 +37,5 @@ $this->menu=array(
 				'pt_kodept',
 				'py_kodeproyek',
 				'f_cover',
-	),
+		),
 )); ?>

@@ -28,7 +28,7 @@ class waktu {
 		if($now >= $unix_date) {
 			$difference     = $now - $unix_date;
 			$tense         = "yang lalu";
-				
+
 		} else {
 			$difference     = $unix_date - $now;
 			$tense         = "dari sekarang";

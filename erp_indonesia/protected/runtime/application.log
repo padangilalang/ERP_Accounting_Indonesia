@@ -1811,3 +1811,1893 @@ Stack trace:
 REQUEST_URI=/erp_indonesia/index.php/m2/mCashbank/images/icon/loading.gif
 HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank/index?uJournal%5Bsystem_ref%5D=CB-B1-201203-EXP-01581
 ---
+2012/08/06 16:06:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/06 16:12:44 [error] [php] Undefined variable: id (C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php:7)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): TAccountReportController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): TAccountReportController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\TAccountReportController.php(53): TAccountReportController->render()
+#3 C:\wamp\www\framework\yiilite.php(3821): TAccountReportController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\yiilite.php(6264): TAccountReportController->runAction()
+#6 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\yiilite.php(6306): TAccountReportController->filterAccessControl()
+#9 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#11 C:\wamp\www\framework\yiilite.php(3308): TAccountReportController->runActionWithFilters()
+#12 C:\wamp\www\framework\yiilite.php(1699): TAccountReportController->run()
+#13 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#14 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/tAccountReport
+2012/08/06 16:13:45 [error] [php] Undefined variable: js (C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php:7)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): TAccountReportController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): TAccountReportController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\TAccountReportController.php(53): TAccountReportController->render()
+#3 C:\wamp\www\framework\yiilite.php(3821): TAccountReportController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\yiilite.php(6264): TAccountReportController->runAction()
+#6 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\yiilite.php(6306): TAccountReportController->filterAccessControl()
+#9 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#11 C:\wamp\www\framework\yiilite.php(3308): TAccountReportController->runActionWithFilters()
+#12 C:\wamp\www\framework\yiilite.php(1699): TAccountReportController->run()
+#13 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#14 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/tAccountReport
+2012/08/06 16:14:36 [error] [php] Missing argument 2 for CClientScript::registerScript(), called in C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php on line 7 and defined (C:\wamp\www\framework\yiilite.php:5963)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3161): TAccountReportController->renderInternal()
+#1 C:\wamp\www\framework\yiilite.php(3585): TAccountReportController->renderFile()
+#2 C:\wamp\www\framework\yiilite.php(3553): TAccountReportController->renderPartial()
+#3 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\TAccountReportController.php(53): TAccountReportController->render()
+#4 C:\wamp\www\framework\yiilite.php(3821): TAccountReportController->actionIndex()
+#5 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#6 C:\wamp\www\framework\yiilite.php(6264): TAccountReportController->runAction()
+#7 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#8 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#9 C:\wamp\www\framework\yiilite.php(6306): TAccountReportController->filterAccessControl()
+#10 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#11 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#12 C:\wamp\www\framework\yiilite.php(3308): TAccountReportController->runActionWithFilters()
+#13 C:\wamp\www\framework\yiilite.php(1699): TAccountReportController->run()
+#14 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#15 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#16 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/tAccountReport
+2012/08/06 16:15:19 [error] [php] Undefined variable: masked (C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php:7)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): TAccountReportController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): TAccountReportController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\TAccountReportController.php(53): TAccountReportController->render()
+#3 C:\wamp\www\framework\yiilite.php(3821): TAccountReportController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\yiilite.php(6264): TAccountReportController->runAction()
+#6 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\yiilite.php(6306): TAccountReportController->filterAccessControl()
+#9 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#11 C:\wamp\www\framework\yiilite.php(3308): TAccountReportController->runActionWithFilters()
+#12 C:\wamp\www\framework\yiilite.php(1699): TAccountReportController->run()
+#13 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#14 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/tAccountReport
+2012/08/06 16:29:10 [error] [php] Undefined variable: jQuery (C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php:9)
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(3585): TAccountReportController->renderFile()
+#1 C:\wamp\www\framework\yiilite.php(3553): TAccountReportController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\TAccountReportController.php(53): TAccountReportController->render()
+#3 C:\wamp\www\framework\yiilite.php(3821): TAccountReportController->actionIndex()
+#4 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\yiilite.php(6264): TAccountReportController->runAction()
+#6 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\yiilite.php(6306): TAccountReportController->filterAccessControl()
+#9 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#10 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#11 C:\wamp\www\framework\yiilite.php(3308): TAccountReportController->runActionWithFilters()
+#12 C:\wamp\www\framework\yiilite.php(1699): TAccountReportController->run()
+#13 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#14 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/tAccountReport
+2012/08/06 16:33:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/jquery-ui-1.8.16.custom.min.js".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/jquery-ui-1....')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/jquery-ui-1.8.16.custom.min.js
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccountReport
+---
+2012/08/06 16:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/jquery-ui.min.js".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/jquery-ui.mi...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/jquery-ui.min.js
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccountReport
+---
+2012/08/06 16:45:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/jquery-ui.min.js".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/jquery-ui.mi...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/jquery-ui.min.js
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccountReport
+---
+2012/08/06 17:00:15 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.param" is not defined.' in C:\wamp\www\framework\yiilite.php:596
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(903): CComponent->__get('param')
+#1 C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php(3): CModule->__get('param')
+#2 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#3 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#4 C:\wamp\www\framework\yiilite.php(3585): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#5 C:\wamp\www\framework\yiilite.php(3553): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\TAccountReportController.php(53): CController->render('index', Array)
+#7 C:\wamp\www\framework\yiilite.php(3821): TAccountReportController->actionIndex()
+#8 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#11 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#15 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#17 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/tAccountRepo...')
+#18 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#19 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#20 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/tAccountReport
+---
+2012/08/06 17:03:10 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "clientScript".' in C:\wamp\www\framework\yiilite.php:690
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php(3): CComponent->__call('clientScript', Array)
+#1 C:\wamp\www\erp_indonesia\protected\modules\m2\views\tAccountReport\index.php(3): CWebApplication->clientScript()
+#2 C:\wamp\www\framework\yiilite.php(3182): require('C:\wamp\www\erp...')
+#3 C:\wamp\www\framework\yiilite.php(3161): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#4 C:\wamp\www\framework\yiilite.php(3585): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#5 C:\wamp\www\framework\yiilite.php(3553): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\TAccountReportController.php(53): CController->render('index', Array)
+#7 C:\wamp\www\framework\yiilite.php(3821): TAccountReportController->actionIndex()
+#8 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\yiilite.php(6264): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#11 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#15 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\yiilite.php(1699): CController->run('')
+#17 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/tAccountRepo...')
+#18 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#19 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#20 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/tAccountReport
+---
+2012/08/06 18:08:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/06 19:31:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/06 19:32:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/06 19:32:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/06 19:33:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/06 19:33:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/06 19:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/06 19:35:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\yiilite.php:1703
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/06 21:55:13 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 21:55:15 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 21:55:15 [error] [php] include(bPOrder.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\yiilite.php:238)
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\VPorderInventoryController.php(88): spl_autoload_call()
+#1 C:\wamp\www\framework\yiilite.php(3821): VPorderInventoryController->actionCreate()
+#2 C:\wamp\www\framework\yiilite.php(3333): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\yiilite.php(6264): VPorderInventoryController->runAction()
+#4 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#5 C:\wamp\www\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#6 C:\wamp\www\framework\yiilite.php(6306): VPorderInventoryController->filterAccessControl()
+#7 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter()
+#8 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#9 C:\wamp\www\framework\yiilite.php(3308): VPorderInventoryController->runActionWithFilters()
+#10 C:\wamp\www\framework\yiilite.php(1699): VPorderInventoryController->run()
+#11 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController()
+#12 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#13 C:\wamp\www\erp_indonesia\index.php(11): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/create
+2012/08/06 21:55:58 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 21:56:10 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 21:56:18 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 21:56:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\yiilite.php:3705
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(6306): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#3 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\yiilite.php(1699): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 21:56:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\yiilite.php:3705
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(6306): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#3 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\yiilite.php(1699): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 21:56:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\yiilite.php:3705
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(6306): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#3 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\yiilite.php(1699): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 21:57:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\yiilite.php:3705
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(6306): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#3 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\yiilite.php(1699): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 21:59:04 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\yiilite.php:3705
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(6306): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#3 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\yiilite.php(1699): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 22:00:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\yiilite.php:3705
+Stack trace:
+#0 C:\wamp\www\framework\yiilite.php(6306): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\yiilite.php(6273): CFilterChain->run()
+#3 C:\wamp\www\framework\yiilite.php(3711): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\yiilite.php(6306): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\yiilite.php(6261): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\yiilite.php(3323): CFilterChain->run()
+#7 C:\wamp\www\framework\yiilite.php(3308): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\yiilite.php(1699): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\yiilite.php(1619): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\yiilite.php(1144): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(11): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 22:02:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:02:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:03:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/1
+---
+2012/08/06 22:03:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:04:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id
+---
+2012/08/06 22:04:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:05:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "DeleteTempById".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('DeleteTempById')
+#1 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#2 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:05:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:05:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:05:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/115
+---
+2012/08/06 22:07:05 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 22:07:07 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 22:15:56 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 22:15:59 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 22:16:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/118
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 22:16:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/117
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/06 22:28:03 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 22:28:08 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 22:30:05 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/06 22:30:10 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/07 11:05:03 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/07 11:05:05 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/07 11:10:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/bPOrderInventory".' in C:\wamp\www\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/bPOrderInven...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPOrderInventory
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/07 11:11:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/bPOrderInventory".' in C:\wamp\www\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/bPOrderInven...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/bPOrderInventory
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/create
+---
+2012/08/07 11:14:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(283): CController->run('DeleteTempById')
+#9 C:\wamp\www\framework\web\CWebApplication.php(142): CWebApplication->runController('m2/vPorderInven...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory/DeleteTempById/id/125
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/vPorderInventory/update/id/51
+---
+2012/08/08 10:05:25 [error] [php] Undefined offset: 0 (C:\wamp\www\erp_indonesia\protected\modules\m1\views\layouts\_sbRightOperation.php:25)
+Stack trace:
+#0 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): GLeaveController->renderFile()
+#1 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#2 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#3 C:\wamp\www\framework\web\CBaseController.php(207): CContentDecorator->run()
+#4 C:\wamp\www\framework\web\CBaseController.php(301): GLeaveController->endWidget()
+#5 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\column2.php(20): GLeaveController->endContent()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(785): GLeaveController->renderFile()
+#9 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(197): GLeaveController->render()
+#10 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#11 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#13 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#15 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#19 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#20 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#21 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave
+2012/08/08 10:07:27 [error] [php] Undefined variable: id (C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(197): GLeaveController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave
+2012/08/08 12:22:51 [error] [exception.CException] exception 'CException' with message 'GLeaveController cannot find the requested view "createWithEmp1".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('createWithEmp1', Array, true)
+#1 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(72): CController->render('createWithEmp1', Array)
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionCreate()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave/creat...')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#15 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/create
+---
+2012/08/08 12:23:22 [error] [exception.CException] exception 'CException' with message 'Property "gLeave.parent_name" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('parent_name')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('parent_name')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(gLeave), 'parent_name')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(gLeave), 'parent_name', Array)
+#4 C:\wamp\www\framework\zii\widgets\jui\CJuiAutoComplete.php(84): CHtml::activeTextField(Object(gLeave), 'parent_name', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(174): CJuiAutoComplete->run()
+#6 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_formWithEmp.php(85): CBaseController->widget('zii.widgets.jui...', Array)
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#8 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#10 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\createWithEmp.php(20): CController->renderPartial('_formWithEmp', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('createWithEmp', Array, true)
+#15 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(72): CController->render('createWithEmp', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionCreate()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave/creat...')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#29 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/create
+---
+2012/08/08 13:12:32 [warning] [application] Failed to set unsafe attribute "parent_name" of "gLeave".
+2012/08/08 14:15:19 [warning] [application] Failed to set unsafe attribute "parent_name" of "gLeave".
+2012/08/08 17:40:48 [error] [exception.CException] exception 'CException' with message 'Property "gPerson.d_cuti" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('d_cuti')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('d_cuti')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(gPerson), 'd_cuti')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(gPerson), 'd_cuti', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(gPerson), 'd_cuti', Array)
+#5 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(185): CActiveForm->textField(Object(gPerson), 'd_cuti', Array)
+#6 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInput.php(125): BootInputHorizontal->textField()
+#7 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(24): BootInput->run()
+#8 C:\wamp\www\framework\web\CBaseController.php(174): BootInputHorizontal->run()
+#9 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\BootActiveForm.php(494): CBaseController->widget('bootstrap.widge...', Array)
+#10 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\BootActiveForm.php(183): BootActiveForm->inputRow('textfield', Object(gPerson), 'd_cuti', NULL, Array)
+#11 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_form.php(43): BootActiveForm->textFieldRow(Object(gPerson), 'd_cuti')
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\update.php(21): CController->renderPartial('_form', Array)
+#16 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#17 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#19 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#20 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(97): CController->render('update', Array)
+#21 [internal function]: GLeaveController->actionUpdate('2161')
+#22 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GLeaveController), Array)
+#23 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GLeaveController), Object(ReflectionMethod), Array)
+#24 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#25 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#26 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#27 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#29 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#31 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#33 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave/updat...')
+#34 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#35 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#36 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/update/id/2161
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m1/gLeave
+---
+2012/08/08 17:41:03 [error] [exception.CException] exception 'CException' with message 'Property "gPerson.d_cuti" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('d_cuti')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('d_cuti')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(gPerson), 'd_cuti')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(gPerson), 'd_cuti', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(gPerson), 'd_cuti', Array)
+#5 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(185): CActiveForm->textField(Object(gPerson), 'd_cuti', Array)
+#6 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInput.php(125): BootInputHorizontal->textField()
+#7 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(24): BootInput->run()
+#8 C:\wamp\www\framework\web\CBaseController.php(174): BootInputHorizontal->run()
+#9 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\BootActiveForm.php(494): CBaseController->widget('bootstrap.widge...', Array)
+#10 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\BootActiveForm.php(183): BootActiveForm->inputRow('textfield', Object(gPerson), 'd_cuti', NULL, Array)
+#11 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_form.php(43): BootActiveForm->textFieldRow(Object(gPerson), 'd_cuti')
+#12 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#13 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\update.php(21): CController->renderPartial('_form', Array)
+#16 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#17 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#19 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#20 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(97): CController->render('update', Array)
+#21 [internal function]: GLeaveController->actionUpdate('2161')
+#22 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GLeaveController), Array)
+#23 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GLeaveController), Object(ReflectionMethod), Array)
+#24 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#25 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#26 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#27 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#29 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#31 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#33 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave/updat...')
+#34 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#35 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#36 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/update/id/2161
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m1/gLeave
+---
+2012/08/08 17:45:13 [error] [exception.CException] exception 'CException' with message 'Property "gPerson.vc_name" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('vc_name')
+#1 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\update.php(19): CActiveRecord->__get('vc_name')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(97): CController->render('update', Array)
+#7 [internal function]: GLeaveController->actionUpdate('2161')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GLeaveController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GLeaveController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave/updat...')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#22 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/update/id/2161
+---
+2012/08/08 18:33:25 [error] [php] Trying to get property of non-object (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CButtonColumn.php(293): CButtonColumn->renderButton()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CButtonColumn->renderDataCellContent()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CButtonColumn->renderDataCell()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): BootGridView->renderTableRow()
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): BootGridView->renderTableBody()
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): BootGridView->renderItems()
+#6 unknown(0): BootGridView->renderSection()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): BootGridView->renderContent()
+#9 C:\wamp\www\framework\web\CBaseController.php(174): BootGridView->run()
+#10 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_tabList.php(83): GLeaveController->widget()
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#12 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#13 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#14 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\view.php(44): GLeaveController->renderPartial()
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#16 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#17 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#18 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#19 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(46): GLeaveController->render()
+#20 unknown(0): GLeaveController->actionView()
+#21 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#22 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#23 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#25 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#27 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#28 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#29 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#30 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#31 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#32 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#33 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/view/id/2981
+2012/08/08 18:33:30 [error] [php] Trying to get property of non-object (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CButtonColumn.php(293): CButtonColumn->renderButton()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CButtonColumn->renderDataCellContent()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CButtonColumn->renderDataCell()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): BootGridView->renderTableRow()
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): BootGridView->renderTableBody()
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): BootGridView->renderItems()
+#6 unknown(0): BootGridView->renderSection()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): BootGridView->renderContent()
+#9 C:\wamp\www\framework\web\CBaseController.php(174): BootGridView->run()
+#10 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_tabList.php(83): GLeaveController->widget()
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#12 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#13 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#14 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\view.php(44): GLeaveController->renderPartial()
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#16 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#17 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#18 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#19 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(46): GLeaveController->render()
+#20 unknown(0): GLeaveController->actionView()
+#21 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#22 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#23 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#25 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#27 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#28 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#29 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#30 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#31 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#32 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#33 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/view/id/2161
+2012/08/08 18:36:46 [error] [php] Trying to get property of non-object (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CButtonColumn.php(293): CButtonColumn->renderButton()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CButtonColumn->renderDataCellContent()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CButtonColumn->renderDataCell()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): BootGridView->renderTableRow()
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): BootGridView->renderTableBody()
+#5 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): BootGridView->renderItems()
+#6 unknown(0): BootGridView->renderSection()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): BootGridView->renderContent()
+#9 C:\wamp\www\framework\web\CBaseController.php(174): BootGridView->run()
+#10 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_tabList.php(83): GLeaveController->widget()
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#12 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#13 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#14 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\view.php(44): GLeaveController->renderPartial()
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#16 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#17 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#18 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#19 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(46): GLeaveController->render()
+#20 unknown(0): GLeaveController->actionView()
+#21 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#22 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#23 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#25 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#27 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#28 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#29 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#30 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#31 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#32 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#33 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/view/id/2161
+2012/08/08 18:44:04 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\update.php:19)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(97): GLeaveController->render()
+#3 unknown(0): GLeaveController->actionUpdate()
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/update/id/3096
+2012/08/08 18:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php:281
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(110): GLeaveController->loadModel('3096')
+#1 [internal function]: GLeaveController->actionDelete('3096')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GLeaveController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GLeaveController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave/delet...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/delete/id/3096?ajax=g-person-grid
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m1/gLeave
+---
+2012/08/08 18:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php:281
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(110): GLeaveController->loadModel('3095')
+#1 [internal function]: GLeaveController->actionDelete('3095')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(GLeaveController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(GLeaveController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave/delet...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#16 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/delete/id/3095?ajax=g-person-grid
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m1/gLeave
+---
+2012/08/08 19:37:35 [warning] [application] Failed to set unsafe attribute "parent_name" of "gLeave".
+2012/08/08 19:43:21 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php:106)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): GLeaveController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/
+2012/08/08 19:44:08 [error] [php] Use of undefined constant contact - assumed 'contact' (C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php:106)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): GLeaveController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/
+2012/08/08 19:44:20 [error] [php] Undefined index: contact (C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php:106)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): GLeaveController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/
+2012/08/08 19:45:39 [error] [php] include(CVardumper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php(106): spl_autoload_call()
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#2 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#3 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#4 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#5 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): GLeaveController->render()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#9 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#11 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/
+2012/08/08 19:45:46 [error] [php] include(CVardump.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php(106): spl_autoload_call()
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#2 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#3 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#4 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#5 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): GLeaveController->render()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#9 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#11 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/
+2012/08/08 19:46:24 [error] [php] include(CVardumper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php(106): spl_autoload_call()
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#2 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#3 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#4 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#5 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): GLeaveController->render()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#9 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#11 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/
+2012/08/08 19:46:37 [error] [php] include(CVardumper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php(106): spl_autoload_call()
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#2 C:\wamp\www\framework\web\CBaseController.php(96): GLeaveController->renderInternal()
+#3 C:\wamp\www\framework\web\CController.php(870): GLeaveController->renderFile()
+#4 C:\wamp\www\framework\web\CController.php(783): GLeaveController->renderPartial()
+#5 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): GLeaveController->render()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(134): GLeaveController->runAction()
+#9 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#11 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): GLeaveController->filterAccessControl()
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(266): GLeaveController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): GLeaveController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave/
+2012/08/09 14:57:34 [error] [php] Undefined variable: feed (C:\wamp\www\erp_indonesia\protected\views\site\login.php:32)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\controllers\SiteController.php(74): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/site/login
+2012/08/09 15:45:43 [error] [php] Trying to get property of non-object (C:\wamp\www\erp_indonesia\protected\views\site\login.php:80)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\erp_indonesia\protected\controllers\SiteController.php(74): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/site/login
+2012/08/10 23:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/10 23:35:54 [error] [exception.CException] exception 'CException' with message 'Property "CJuiAutoComplete.minLength" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(162): CComponent->__set('minLength', 3)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(GLeaveController), 'zii.widgets.jui...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_search.php(31): CBaseController->widget('zii.widgets.jui...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php(21): CController->renderPartial('_search', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): CController->render('index', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#26 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m1/default
+---
+2012/08/10 23:36:32 [error] [exception.CException] exception 'CException' with message 'Property "CJuiAutoComplete.minLength" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(162): CComponent->__set('minLength', '3')
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(GLeaveController), 'zii.widgets.jui...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_search.php(31): CBaseController->widget('zii.widgets.jui...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php(21): CController->renderPartial('_search', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): CController->render('index', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#26 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave
+---
+2012/08/10 23:39:47 [error] [exception.CException] exception 'CException' with message 'Property "CJuiAutoComplete.minLength" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(162): CComponent->__set('minLength', '3')
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(GLeaveController), 'zii.widgets.jui...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.jui...', Array)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\_search.php(31): CBaseController->widget('zii.widgets.jui...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\erp_indonesia\protected\modules\m1\views\gLeave\index.php(21): CController->renderPartial('_search', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\GLeaveController.php(198): CController->render('index', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): GLeaveController->actionIndex()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/gLeave')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#26 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/gLeave
+---
+2012/08/11 10:31:11 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `s_parameter` `t` WHERE type = :type  ORDER BY code DESC LIMIT 1. Bound with :type1='cAgama'.
+2012/08/11 10:31:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `s_parameter` `t` WHERE type = :type  ORDER BY code DESC LIMIT 1. Bound with :type1='cAgama'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\erp_indonesia\protected\models\sParameter.php(47): CActiveRecord->find(Array)
+#4 C:\wamp\www\erp_indonesia\protected\controllers\SParameterController.php(43): sParameter->lastItem('cAgama')
+#5 C:\wamp\www\erp_indonesia\protected\controllers\SParameterController.php(84): SParameterController->newParameter('cAgama')
+#6 [internal function]: SParameterController->actionIndex('cAgama')
+#7 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SParameterController), Array)
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SParameterController), Object(ReflectionMethod), Array)
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sParameter/inde...')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#21 {main}
+REQUEST_URI=/erp_indonesia/index.php/sParameter/index?type=cAgama
+---
+2012/08/11 10:37:09 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `s_user_module` `t` WHERE s_module_id = :module AND s_user_id = :user LIMIT 1. Bound with :module1='194', :user='1'.
+2012/08/11 10:37:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `s_user_module` `t` WHERE s_module_id = :module AND s_user_id = :user LIMIT 1. Bound with :module1='194', :user='1'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\erp_indonesia\protected\models\menu.php(30): CActiveRecord->find(Array)
+#4 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\_bootNavBar.php(15): menu->getListed()
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('')
+#9 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('')
+#10 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#11 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#12 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\mainFixed.php(46): CBaseController->endContent()
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#15 C:\wamp\www\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#16 C:\wamp\www\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??????????????<...')
+#17 C:\wamp\www\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??????????????<...')
+#18 C:\wamp\www\framework\web\CBaseController.php(207): COutputProcessor->run()
+#19 C:\wamp\www\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#20 C:\wamp\www\erp_indonesia\themes\artisteer_bootstrap\views\layouts\main.php(29): CBaseController->endContent()
+#21 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#22 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#23 C:\wamp\www\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#24 C:\wamp\www\erp_indonesia\protected\controllers\MenuController.php(85): CController->render('index', Array)
+#25 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MenuController->actionIndex()
+#26 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#27 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#28 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#29 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#30 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#33 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#35 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('menu')
+#36 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#37 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#38 {main}
+REQUEST_URI=/erp_indonesia/index.php/menu
+---
+2012/08/11 10:42:16 [error] [php] include(sUsersModule.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\controllers\SUserController.php(213): spl_autoload_call()
+#1 C:\wamp\www\erp_indonesia\protected\controllers\SUserController.php(221): SUserController->loadModelUserModule()
+#2 unknown(0): SUserController->actionDeleteModule()
+#3 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): SUserController->runAction()
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): SUserController->filterAccessControl()
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): SUserController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): SUserController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/sUser/deleteModule?id=235&ajax=mat-user-module-grid
+2012/08/11 10:45:47 [error] [exception.CException] exception 'CException' with message 'SUserController and its behaviors do not have a method or closure named "loadModel1".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\controllers\SUserController.php(197): CComponent->__call('loadModel1', Array)
+#1 C:\wamp\www\erp_indonesia\protected\controllers\SUserController.php(197): SUserController->loadModel1('222')
+#2 [internal function]: SUserController->actionUpdateModule('222', '28')
+#3 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SUserController), Array)
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SUserController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('updateModule')
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sUser/updateMod...')
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#17 {main}
+REQUEST_URI=/erp_indonesia/index.php/sUser/updateModule?id=222&s_user_id=28&asDialog=1&gridId=mat-user-module-grid
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/sUser/view?id=28
+---
+2012/08/11 10:50:13 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:1133
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAjaxOnly(Object(CFilterChain))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sUser/delete')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/erp_indonesia/index.php/sUser/delete?id=24
+---
+2012/08/11 10:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/aOrganization".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/aOrganizatio...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/aOrganization
+---
+2012/08/11 10:55:49 [error] [exception.CException] exception 'CException' with message 'Property "aOrganization.structure_id" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('structure_id')
+#1 C:\wamp\www\erp_indonesia\protected\views\aOrganization\update.php(2): CActiveRecord->__get('structure_id')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#6 C:\wamp\www\erp_indonesia\protected\controllers\AOrganizationController.php(66): CController->render('update', Array)
+#7 [internal function]: aOrganizationController->actionUpdate('2')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(aOrganizationController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(aOrganizationController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('aOrganization/u...')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#22 {main}
+REQUEST_URI=/erp_indonesia/index.php/aOrganization/update?id=2
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/aOrganization/view?id=2
+---
+2012/08/11 10:56:32 [error] [exception.CException] exception 'CException' with message 'Property "aOrganization.structure_id" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('structure_id')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('structure_id')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1402): CHtml::resolveValue(Object(aOrganization), 'structure_id')
+#3 C:\wamp\www\framework\web\widgets\CActiveForm.php(681): CHtml::activeDropDownList(Object(aOrganization), 'structure_id', Array, Array)
+#4 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(92): CActiveForm->dropDownList(Object(aOrganization), 'structure_id', Array, Array)
+#5 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInput.php(97): BootInputHorizontal->dropDownList()
+#6 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\input\BootInputHorizontal.php(24): BootInput->run()
+#7 C:\wamp\www\framework\web\CBaseController.php(174): BootInputHorizontal->run()
+#8 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\BootActiveForm.php(494): CBaseController->widget('bootstrap.widge...', Array)
+#9 C:\wamp\www\erp_indonesia\protected\extensions\bootstrap\widgets\BootActiveForm.php(109): BootActiveForm->inputRow('dropdownlist', Object(aOrganization), 'structure_id', Array, Array)
+#10 C:\wamp\www\erp_indonesia\protected\views\aOrganization\_form.php(11): BootActiveForm->dropDownListRow(Object(aOrganization), 'structure_id', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#14 C:\wamp\www\erp_indonesia\protected\views\aOrganization\update.php(25): CController->renderPartial('_form', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#19 C:\wamp\www\erp_indonesia\protected\controllers\AOrganizationController.php(66): CController->render('update', Array)
+#20 [internal function]: aOrganizationController->actionUpdate('2')
+#21 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(aOrganizationController), Array)
+#22 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(aOrganizationController), Object(ReflectionMethod), Array)
+#23 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#25 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#30 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#32 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('aOrganization/u...')
+#33 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#35 {main}
+REQUEST_URI=/erp_indonesia/index.php/aOrganization/update?id=2
+---
+2012/08/11 11:00:52 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `s_parameter` `t` WHERE type = :pk1 AND code = :pk2 LIMIT 1. Bound with :pk12='AG', :pk2='1'.
+2012/08/11 11:00:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `s_parameter` `t` WHERE type = :pk1 AND code = :pk2 LIMIT 1. Bound with :pk12='AG', :pk2='1'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\erp_indonesia\protected\controllers\SParameterController.php(103): CActiveRecord->find(Array)
+#4 C:\wamp\www\erp_indonesia\protected\controllers\SParameterController.php(52): SParameterController->loadModel('AG', '1')
+#5 [internal function]: SParameterController->actionUpdate('AG', '1')
+#6 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SParameterController), Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SParameterController), Object(ReflectionMethod), Array)
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('sParameter/upda...')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#20 {main}
+REQUEST_URI=/erp_indonesia/index.php/sParameter/update?pk1=AG&pk2=1&asDialog=1&gridId=parameter-grid
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/sParameter
+---
+2012/08/11 11:15:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `a_budget` `t` WHERE department_id = 1 and parent_id = :id. Bound with :id ==300.
+2012/08/11 11:15:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `a_budget` `t` WHERE department_id = 1 and parent_id = :id. Bound with :id ==300' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m1\models\aBudget.php(366): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\erp_indonesia\protected\modules\m1\views\aBudget\_component.php(93): aBudget->getTotalComponent(300)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\erp_indonesia\protected\modules\m1\views\aBudget\index.php(56): CController->renderPartial('_component', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\ABudgetController.php(130): CController->render('index', Array)
+#14 [internal function]: aBudgetController->actionIndex(300, 1)
+#15 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(aBudgetController), Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(aBudgetController), Object(ReflectionMethod), Array)
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/aBudget')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#29 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/aBudget
+---
+2012/08/11 11:17:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `a_budget` `t` WHERE department_id = 1 and parent_id = :id. Bound with :id==300.
+2012/08/11 11:17:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `a_budget` `t` WHERE department_id = 1 and parent_id = :id. Bound with :id==300' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\erp_indonesia\protected\modules\m1\models\aBudget.php(366): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\erp_indonesia\protected\modules\m1\views\aBudget\_component.php(93): aBudget->getTotalComponent(300)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#8 C:\wamp\www\erp_indonesia\protected\modules\m1\views\aBudget\index.php(56): CController->renderPartial('_component', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\erp...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\erp...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\erp...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#13 C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\ABudgetController.php(130): CController->render('index', Array)
+#14 [internal function]: aBudgetController->actionIndex(300, 1)
+#15 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(aBudgetController), Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(aBudgetController), Object(ReflectionMethod), Array)
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m1/aBudget')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#29 {main}
+REQUEST_URI=/erp_indonesia/index.php/m1/aBudget
+---
+2012/08/11 11:35:55 [error] [php] Indirect modification of overloaded property CWebUser::$name has no effect (C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\AApprovalFormController.php:199)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): AApprovalFormController->runAction()
+#3 C:\wamp\www\framework\web\CController.php(1131): CFilterChain->run()
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): AApprovalFormController->filterAjaxOnly()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): AApprovalFormController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): AApprovalFormController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): AApprovalFormController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/aApprovalForm/updateApproved/id/208?_=1344659755138
+2012/08/11 11:40:33 [error] [php] Undefined variable: time (C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\AApprovalFormController.php:198)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): AApprovalFormController->runAction()
+#3 C:\wamp\www\framework\web\CController.php(1131): CFilterChain->run()
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): AApprovalFormController->filterAjaxOnly()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): AApprovalFormController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): AApprovalFormController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): AApprovalFormController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/aApprovalForm/updateApproved/id/208?_=1344660033358
+2012/08/11 11:42:12 [error] [php] Indirect modification of overloaded property CWebUser::$name has no effect (C:\wamp\www\erp_indonesia\protected\modules\m1\controllers\AApprovalFormController.php:199)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): AApprovalFormController->runAction()
+#3 C:\wamp\www\framework\web\CController.php(1131): CFilterChain->run()
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): AApprovalFormController->filterAjaxOnly()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): AApprovalFormController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): AApprovalFormController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): AApprovalFormController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m1/aApprovalForm/updateApproved/id/208?_=1344660132400
+2012/08/11 12:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:18:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:18:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:18:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:18:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:18:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:19:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 12:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/11 12:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/11 13:24:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/vPorderInven...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory
+---
+2012/08/11 13:26:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/vPorderInven...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/vPorderInventory
+---
+2012/08/11 13:29:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/tAccount
+---
+2012/08/11 13:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/uJournal
+---
+2012/08/11 13:29:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/11 13:29:27 [error] [php] include(bPorder.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\erp_indonesia\protected\modules\m2\views\mAccpayable\index.php(10): spl_autoload_call()
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#2 C:\wamp\www\framework\web\CBaseController.php(96): MAccpayableController->renderInternal()
+#3 C:\wamp\www\framework\web\CController.php(870): MAccpayableController->renderFile()
+#4 C:\wamp\www\framework\web\CController.php(783): MAccpayableController->renderPartial()
+#5 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MAccpayableController.php(56): MAccpayableController->render()
+#6 unknown(0): MAccpayableController->actionIndex()
+#7 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MAccpayableController->runAction()
+#11 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MAccpayableController->filterAccessControl()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(266): MAccpayableController->runActionWithFilters()
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): MAccpayableController->run()
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mAccpayable
+2012/08/11 13:29:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/11 13:29:36 [error] [php] include(bPorder.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): spl_autoload_call()
+#1 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#2 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): BootDataColumn->evaluateExpression()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): BootDataColumn->renderDataCellContent()
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): BootDataColumn->renderDataCell()
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): BootGridView->renderTableRow()
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): BootGridView->renderTableBody()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): BootGridView->renderItems()
+#8 unknown(0): BootGridView->renderSection()
+#9 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#10 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): BootGridView->renderContent()
+#11 C:\wamp\www\framework\web\CBaseController.php(174): BootGridView->run()
+#12 C:\wamp\www\erp_indonesia\protected\modules\m2\views\mAccpayable\indexSupplier.php(61): MAccpayableController->widget()
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#14 C:\wamp\www\framework\web\CBaseController.php(96): MAccpayableController->renderInternal()
+#15 C:\wamp\www\framework\web\CController.php(870): MAccpayableController->renderFile()
+#16 C:\wamp\www\framework\web\CController.php(783): MAccpayableController->renderPartial()
+#17 C:\wamp\www\erp_indonesia\protected\modules\m2\controllers\MAccpayableController.php(274): MAccpayableController->render()
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MAccpayableController->actionIndexSupplier()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): MAccpayableController->runAction()
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): MAccpayableController->filterAccessControl()
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): MAccpayableController->runActionWithFilters()
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): MAccpayableController->run()
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\erp_indonesia\index.php(12): CWebApplication->run()
+REQUEST_URI=/erp_indonesia/index.php/m2/mAccpayable/indexSupplier
+2012/08/11 13:29:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "m2/images/icon/loading.gif".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('m2/images/icon/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\erp_indonesia\index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/erp_indonesia/index.php/m2/images/icon/loading.gif
+HTTP_REFERER=http://localhost/erp_indonesia/index.php/m2/mCashbank
+---
+2012/08/11 14:08:36 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".
+2012/08/11 14:08:38 [warning] [application] Failed to set unsafe attribute "remark" of "fPorder".

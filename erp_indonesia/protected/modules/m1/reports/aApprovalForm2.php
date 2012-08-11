@@ -137,7 +137,7 @@ class aApprovalForm2 extends fpdf
 			$x = $this->GetX();
 			$y = $this->GetY();
 			$_dept=0;
-				
+
 			foreach($modp->po_detail as $mod)
 			{
 
@@ -156,7 +156,7 @@ class aApprovalForm2 extends fpdf
 			}
 			$this->Cell(array_sum($w),4,'','T');
 			$this->Ln(2);
-				
+
 		}
 
 	}

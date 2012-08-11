@@ -39,7 +39,11 @@ class sParameter extends CActiveRecord
 	}
 
 	public function lastItem($type) {
-		$_item=self::model()->find(array('condition'=>'type ="'.$type.'"','order'=>'code DESC'));
+		$_item=self::model()->find(array(
+			'order'=>'code DESC',
+			'condition'=>'type = :type ',
+			'params'=>array(':type'=>$type),
+			));
 		if (isset($_item)) {
 			$_code=$_item->code+1;
 		} else

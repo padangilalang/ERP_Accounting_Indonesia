@@ -203,68 +203,68 @@ class Zend_Search_Lucene_Search_Query_Preprocessing_Phrase extends Zend_Search_L
 		}
 		$this->_matches = $query->getQueryTerms();
 		return $query;
-		}
-
-		/**
-		 * Query specific matches highlighting
-		 *
-		 * @param Zend_Search_Lucene_Search_Highlighter_Interface $highlighter  Highlighter object (also contains doc for highlighting)
-		 */
-		protected function _highlightMatches(Zend_Search_Lucene_Search_Highlighter_Interface $highlighter)
-		{
-			/** Skip fields detection. We don't need it, since we expect all fields presented in the HTML body and don't differentiate them */
-
-			/** Skip exact term matching recognition, keyword fields highlighting is not supported */
-
-			/** Skip wildcard queries recognition. Supported wildcards are removed by text analyzer */
-
-
-			// tokenize phrase using current analyzer and process it as a phrase query
-			require_once 'Zend/Search/Lucene/Analysis/Analyzer.php';
-			$tokens = Zend_Search_Lucene_Analysis_Analyzer::getDefault()->tokenize($this->_phrase, $this->_phraseEncoding);
-
-			if (count($tokens) == 0) {
-				// Do nothing
-				return;
-			}
-
-			if (count($tokens) == 1) {
-				$highlighter->highlight($tokens[0]->getTermText());
-				return;
-			}
-
-			//It's non-trivial phrase query
-			$words = array();
-			foreach ($tokens as $token) {
-				$words[] = $token->getTermText();
-			}
-			$highlighter->highlight($words);
-		}
-
-		/**
-		 * Print a query
-		 *
-		 * @return string
-		 */
-		public function __toString()
-		{
-			// It's used only for query visualisation, so we don't care about characters escaping
-			if ($this->_field !== null) {
-				$query = $this->_field . ':';
-			} else {
-				$query = '';
-			}
-
-			$query .= '"' . $this->_phrase . '"';
-
-			if ($this->_slop != 0) {
-				$query .= '~' . $this->_slop;
-			}
-
-			if ($this->getBoost() != 1) {
-				$query .= '^' . round($this->getBoost(), 4);
-			}
-
-			return $query;
-		}
 	}
+
+	/**
+	 * Query specific matches highlighting
+	 *
+	 * @param Zend_Search_Lucene_Search_Highlighter_Interface $highlighter  Highlighter object (also contains doc for highlighting)
+	 */
+	protected function _highlightMatches(Zend_Search_Lucene_Search_Highlighter_Interface $highlighter)
+	{
+		/** Skip fields detection. We don't need it, since we expect all fields presented in the HTML body and don't differentiate them */
+
+		/** Skip exact term matching recognition, keyword fields highlighting is not supported */
+
+		/** Skip wildcard queries recognition. Supported wildcards are removed by text analyzer */
+
+
+		// tokenize phrase using current analyzer and process it as a phrase query
+		require_once 'Zend/Search/Lucene/Analysis/Analyzer.php';
+		$tokens = Zend_Search_Lucene_Analysis_Analyzer::getDefault()->tokenize($this->_phrase, $this->_phraseEncoding);
+
+		if (count($tokens) == 0) {
+			// Do nothing
+			return;
+		}
+
+		if (count($tokens) == 1) {
+			$highlighter->highlight($tokens[0]->getTermText());
+			return;
+		}
+
+		//It's non-trivial phrase query
+		$words = array();
+		foreach ($tokens as $token) {
+			$words[] = $token->getTermText();
+		}
+		$highlighter->highlight($words);
+	}
+
+	/**
+	 * Print a query
+	 *
+	 * @return string
+	 */
+	public function __toString()
+	{
+		// It's used only for query visualisation, so we don't care about characters escaping
+		if ($this->_field !== null) {
+			$query = $this->_field . ':';
+		} else {
+			$query = '';
+		}
+
+		$query .= '"' . $this->_phrase . '"';
+
+		if ($this->_slop != 0) {
+			$query .= '~' . $this->_slop;
+		}
+
+		if ($this->getBoost() != 1) {
+			$query .= '^' . round($this->getBoost(), 4);
+		}
+
+		return $query;
+	}
+}

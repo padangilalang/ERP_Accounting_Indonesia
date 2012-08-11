@@ -18,5 +18,5 @@ $this->breadcrumbs=array(
 </p>
 <p>
 	You may customize this page by editing
-		<?php echo __FILE__; ?>
+	<?php echo __FILE__; ?>
 </p>

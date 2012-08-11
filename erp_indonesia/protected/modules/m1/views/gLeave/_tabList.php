@@ -1,5 +1,4 @@
 
-<div class="raw">
 
 	<?php
 	$this->widget('bootstrap.widgets.BootDetailView', array(
@@ -15,7 +14,6 @@
 					array('name'=>'group_joindate', 'label'=>'Group Join Date'),
 			),
 	)); ?>
-</div>
 
 <?php 
 $this->widget('bootstrap.widgets.BootGridView', array(

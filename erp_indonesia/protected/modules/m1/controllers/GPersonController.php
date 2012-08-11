@@ -175,11 +175,11 @@ class GPersonController extends Controller
 	{
 		$res =array();
 		if (isset($_GET['term'])) {
-			$qtxt ="SELECT vc_psnama as name FROM g_person WHERE vc_psnama LIKE :name ORDER BY vc_psnama LIMIT 20";
+			$qtxt ="SELECT vc_psnama as label, id FROM g_person WHERE vc_psnama LIKE :name ORDER BY vc_psnama LIMIT 20";
 			$command =Yii::app()->db->createCommand($qtxt);
 			$command->bindValue(":name", '%'.$_GET['term'].'%', PDO::PARAM_STR);
-			$res =$command->queryColumn();
-			//$res =$command->queryAll();
+			//$res =$command->queryColumn();
+			$res =$command->queryAll();
 
 		}
 		echo CJSON::encode($res);

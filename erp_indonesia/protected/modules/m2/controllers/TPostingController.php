@@ -32,7 +32,10 @@ class TPostingController extends Controller
 
 		$_lraccount=tAccount::model()->with('accmain')->find('accmain.mvalue=8')->id;
 
-		$modelBalanceCurrent=tBalanceSheet::model()->find(array('condition'=>'parent_id = ' . $_lraccount. ' AND yearmonth_periode = '.$_curPeriod ));
+		$modelBalanceCurrent=tBalanceSheet::model()->find(array(
+			'condition'=>'parent_id = :account AND yearmonth_periode = :period',
+			'params'=>array(':account'=>$_lraccount, ':period'=>$_curPeriod), 
+		));
 
 		if ($modelBalanceCurrent == null) { //New Account on This Period
 			$sql='INSERT INTO t_balance_sheet (parent_id, yearmonth_periode, type_balance_id, remark, budget, beginning_balance,debit,credit,end_balance) VALUES ('
@@ -87,18 +90,27 @@ class TPostingController extends Controller
 
 		uJournal::model()->updateByPk((int)$id, array('state_id'=>4,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
 
-		$models=uJournalDetail::model()->with('journal')->findAll(array('condition'=>'parent_id = '.$id));
+		$models=uJournalDetail::model()->with('journal')->findAll(array(
+			'condition'=>'parent_id = :id',
+			'params'=>array(':id'=>$id),
+		));
 
 		foreach ($models as $model)
 		{
-			$modelBalanceCurrent=tBalanceSheet::model()->find(array('condition'=>'parent_id =  ' . $model->account_no_id. ' AND yearmonth_periode = '.$_curPeriod ));
+			$modelBalanceCurrent=tBalanceSheet::model()->find(array(
+				'condition'=>'parent_id =  :accid AND yearmonth_periode = :curperiod', 
+				'params'=>array(':accid'=>$model->account_no_id, ':curperiod'=>$_curPeriod),
+			));
 
 			$_debit=$model->debit;
 			$_credit=$model->credit;
 			$_endbalance=0;
 
 			if ($modelBalanceCurrent == null) { //New Account on This Period. Create New Account on Current Period
-				$modelBalanceLast=tBalanceSheet::model()->find(array('condition'=>'parent_id = ' . $model->account_no_id. ' AND yearmonth_periode = '.$_lastPeriod ));
+				$modelBalanceLast=tBalanceSheet::model()->find(array(
+					'condition'=>'parent_id = :accid AND yearmonth_periode = :period',
+					'params'=>array(':accid'=>$model->account_no_id, ':period'=>$_lastPeriod),
+				));
 
 				if ($modelBalanceLast != null && $model->account->getTypeValue() == 1) {  //Account Neraca
 					$_endbalance=$modelBalanceLast->end_balance;
@@ -112,15 +124,14 @@ class TPostingController extends Controller
 				}
 
 				$command=Yii::app()->db->createCommand('
-						INSERT INTO t_balance_sheet (parent_id, yearmonth_periode, type_balance_id, remark, budget, beginning_balance,debit,credit,end_balance) VALUES (\''
-						.$model->account_no_id.'\','
-						.$_curPeriod.', 1, \'Automated posted\', 0,'
-						.$_endbalance.','
-						.$_debit.','
-						.$_credit.','
-						.$_newendbalance.')
+						INSERT INTO t_balance_sheet (parent_id, yearmonth_periode, type_balance_id, remark, budget, beginning_balance,debit,credit,end_balance) VALUES (\':acc\',:curp, 1, \'Automated posted\', 0,:endb,:debit,:credit,:neweb)
 						');
-
+				$command->bindParam(":acc", $model->account_no_id, PDO::PARAM_STR);
+				$command->bindParam(":curp", $_curPeriod, PDO::PARAM_STR);
+				$command->bindParam(":endb", $_endbalance, PDO::PARAM_STR);
+				$command->bindParam(":debit", $_debit, PDO::PARAM_STR);
+				$command->bindParam(":credit", $_credit, PDO::PARAM_STR);
+				$command->bindParam(":neweb", $_newendbalance, PDO::PARAM_STR);
 				$command->execute();
 
 			} else  {  //Update Current Record
@@ -190,11 +201,17 @@ class TPostingController extends Controller
 
 		$locked=uJournal::model()->updateByPk((int)$id, array('state_id'=>2,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
 
-		$models=uJournalDetail::model()->with('journal')->findAll(array('condition'=>'parent_id = '.$id ));
+		$models=uJournalDetail::model()->with('journal')->findAll(array(
+			'condition'=>'parent_id = :id', 
+			'params'=>array(':id'=>$id), 
+		));
 
 		foreach ($models as $model)
 		{
-			$modelBalanceCurrent=tBalanceSheet::model()->find(array('condition'=>'parent_id = ' . $model->account_no_id. ' AND yearmonth_periode = '.$_curPeriod ));
+			$modelBalanceCurrent=tBalanceSheet::model()->find(array(
+				'condition'=>'parent_id = :accid AND yearmonth_periode = :period', 
+				'params'=>array(':accid'=>$model->account_no_id, ':period'=>$_curPeriod), 
+			));
 
 			$_debit=$model->debit;
 			$_credit=$model->credit;

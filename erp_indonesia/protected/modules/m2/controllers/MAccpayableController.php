@@ -25,7 +25,7 @@ class MAccpayableController extends Controller
 
 	public function actionView($id)
 	{
-		//$model=bPorder::model()->findByPk($id);
+		//$model=vPorder::model()->findByPk($id);
 
 		$payment=$this->newPayment($id);
 
@@ -42,7 +42,7 @@ class MAccpayableController extends Controller
 
 	public function actionViewRelated($id)
 	{
-		//$model=bPorder::model()->findByPk($id);
+		//$model=vPorder::model()->findByPk($id);
 
 		$this->render('viewRelated',array(
 				'model'=>$this->loadModel($id),
@@ -66,12 +66,12 @@ class MAccpayableController extends Controller
 
 			foreach($_POST['journal_id'] as $a=>$val)
 			{
-				$model=bPorder::model()->findByPk((int)$val);
+				$model=vPorder::model()->findByPk((int)$val);
 				if ($model->journal_state_id ==1) {
 					$total=$total+$model->sum_po;
 					$m_ref[]=$model->system_ref;
 					$m_ref2[]=$model->system_ref.' ('.$model->sum_pof().')';
-					bPorder::model()->updateByPk((int)$val,array('journal_state_id'=>2));
+					vPorder::model()->updateByPk((int)$val,array('journal_state_id'=>2));
 				}
 
 				if ($total ==0) {
@@ -139,14 +139,14 @@ class MAccpayableController extends Controller
 
 			foreach($_POST['journal_id'] as $a=>$val)
 			{
-				$model=bPorder::model()->findByPk((int)$val);
+				$model=vPorder::model()->findByPk((int)$val);
 				$total=$total+$model->sum_po;
 				$m_ref[]=$model->system_ref;
 				if ($model->journal_state_id ==3) {
 					Yii::app()->user->setFlash("error","<strong>Error!</strong> This PO already journalled...");
 					$this->redirect(array('/m2/mAccpayable','id'=>3));
 				} else
-					bPorder::model()->updateByPk((int)$val,array('journal_state_id'=>3));
+					vPorder::model()->updateByPk((int)$val,array('journal_state_id'=>3));
 			}
 
 			$modelHeader=new uJournal;
@@ -178,7 +178,7 @@ class MAccpayableController extends Controller
 			$modelDetail->save();
 
 
-			$modelPayment=bPorderPayment::model()->findAll('parent_id = '.$model->id);
+			$modelPayment=vPorderPayment::model()->findAll('parent_id = '.$model->id);
 
 			foreach ($modelPayment as $payment) {
 				$modelDetail=new uJournalDetail;
@@ -217,24 +217,24 @@ class MAccpayableController extends Controller
 
 	public function newPayment($id)
 	{
-		$model=new bPorderPayment;
+		$model=new vPorderPayment;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['bPorderPayment']))
+		if(isset($_POST['vPorderPayment']))
 		{
-			$model->attributes=$_POST['bPorderPayment'];
+			$model->attributes=$_POST['vPorderPayment'];
 			$model->parent_id=$id;
 			if($model->save()) {
 				//Create System_ref
 				$_ref ="AP-".str_pad($model->id,5,"0",STR_PAD_LEFT);
-				bPorderPayment::model()->updateByPk((int)$model->id,array('payment_ref'=>$_ref));
+				vPorderPayment::model()->updateByPk((int)$model->id,array('payment_ref'=>$_ref));
 
 				$modelPO=$this->loadModel($id);
 
 				if ($modelPO->payment >= $modelPO->sum_po)
-					bPorder::model()->updateByPk((int)$modelPO->id,array('payment_state_id'=>2));
+					vPorder::model()->updateByPk((int)$modelPO->id,array('payment_state_id'=>2));
 
 				$this->redirect(array('view','id'=>$id));
 			}
@@ -246,13 +246,13 @@ class MAccpayableController extends Controller
 	public function actionSetApproved($id)
 	{
 		$_date= Yii::app()->dateFormatter->format("yyyy-MM-dd",time());
-		bPorder::model()->updateByPk((int)$id,array('approved_date'=>$_date));
+		vPorder::model()->updateByPk((int)$id,array('approved_date'=>$_date));
 
 	}
 
 	public function loadModel($id)
 	{
-		$model=bPorder::model()->findByPk($id);
+		$model=vPorder::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -284,7 +284,7 @@ class MAccpayableController extends Controller
 
 	public function actionViewSupplierDetail($id)
 	{
-		$model=bPorder::model()->findByPk($id);
+		$model=vPorder::model()->findByPk($id);
 
 		//----- begin new code --------------------
 		if (!empty($_GET['asDialog']))
@@ -298,7 +298,7 @@ class MAccpayableController extends Controller
 
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='bPorder-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='vPorder-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

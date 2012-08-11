@@ -36,6 +36,8 @@
  */
 class gLeave extends CActiveRecord
 {
+	public $parent_name;
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -62,7 +64,7 @@ class gLeave extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-				array('d_cuti,d_dari, d_sampai, n_jmlhari, r_cuti, d_h_masuk', 'required'),
+				array('parent_id, d_cuti,d_dari, d_sampai, n_jmlhari, r_cuti, d_h_masuk', 'required'),
 				array('approved_id, parent_id, n_jmlhari, n_cutiii, c_masal, c_pribadi, n_sisacuti, tahunke', 'numerical', 'integerOnly'=>true),
 				array('n_cuti', 'length', 'max'=>255),
 				array('c_hriskd, c_h_masuk, c_ajukan, c_ketahui, c_setuju', 'length', 'max'=>10),
@@ -100,7 +102,8 @@ class gLeave extends CActiveRecord
 	{
 		return array(
 				'id' => 'ID',
-				'parent_id' => 'Parent',
+				'parent_name' => 'Employee Name',
+				'parent_id' => 'parent',
 				'n_cuti' => 'N Cuti',
 				'd_cuti' => 'Input Date',
 				'c_hriskd' => 'HRID Code',

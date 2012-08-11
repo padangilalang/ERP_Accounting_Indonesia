@@ -37,5 +37,5 @@ $this->menu=array(
 				'py_kodeproyek',
 				'pf_ipk',
 				't_jenis',
-	),
+		),
 )); ?>

@@ -11,13 +11,13 @@ $this->breadcrumbs=array(
 	</h1>
 </div>
 
-<div class="raw">
-	<div class="span6">
+<div class="row-fluid">
+	<div class="span5">
 		<?php
 			echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/accounting.jpg','image',array('style'=>'width: 100%')); 
 		?>
 	</div>
-	<div class="span6">
+	<div class="span7">
 		<?php $this->beginWidget('bootstrap.widgets.BootHero', array(
 			//'heading'=>'Welcome!!',
 		)); ?>

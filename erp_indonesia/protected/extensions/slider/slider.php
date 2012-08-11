@@ -26,7 +26,7 @@
 
  'sliderBase'=>'/slider/',
  'imagesPath'=>'banners',
- 	
+
  'container'=>'slideshow',
  'width'=>960,
  'height'=>240,

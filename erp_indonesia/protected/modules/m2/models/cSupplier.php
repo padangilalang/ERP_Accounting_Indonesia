@@ -77,8 +77,8 @@ class cSupplier extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-				'sort_po_created' => array(self::HAS_ONE, 'bPorder', 'supplier_id','order'=>'sort_po_created.created_date DESC'),
-				'sort_po_updated' => array(self::HAS_ONE, 'bPorder', 'supplier_id','order'=>'sort_po_updated.updated_date DESC'),
+				'sort_po_created' => array(self::HAS_ONE, 'vPorder', 'supplier_id','order'=>'sort_po_created.created_date DESC'),
+				'sort_po_updated' => array(self::HAS_ONE, 'vPorder', 'supplier_id','order'=>'sort_po_updated.updated_date DESC'),
 				'status' => array(self::HAS_ONE, 'sParameter', array('code'=>'status_id'),'condition'=>'type = \'cStatusP\''),
 		);
 	}

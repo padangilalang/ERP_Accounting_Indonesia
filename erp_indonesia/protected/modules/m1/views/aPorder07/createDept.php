@@ -1,23 +1,21 @@
 <?php
-Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/css/jui-bootstrap/js/jquery-ui-1.8.16.custom.min.js');
-Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/jui-bootstrap/jquery-ui-1.8.16.custom.css');
-
+Yii::app()->clientScript->registerScriptFile(Yii::app()->getClientScript()->getCoreScriptUrl().'/jui/css/2jui-bootstrap/js/jquery-ui-1.8.16.custom.min.js');
+Yii::app()->clientScript->registerCssFile(Yii::app()->getClientScript()->getCoreScriptUrl().'/jui/css/2jui-bootstrap/jquery-ui.css');
+Yii::app()->getClientScript()->registerCoreScript('maskedinput');
 
 Yii::app()->clientScript->registerScript('datepicker', "
-		$(function() {
+	$(function() {
 		$( \"#".CHtml::activeId($model,'input_date')."\" ).datepicker({
-			
 		'dateFormat' : 'dd-mm-yy',
-});
-});
-		$(function() {
+		});
 		$( \"#".CHtml::activeId($model,'periode_date')."\" ).datepicker({
-			
-		'dateFormat':'yymm',
-});
-});
+			'dateFormat':'yymm',
+		});
+		$( \"#".CHtml::activeId($model,'input_date')."\" ).mask('99-99-9999');
+		$( \"#".CHtml::activeId($model,'periode_date')."\" ).mask('999999');
+	});
 
-		");
+");
 ?>
 
 <?php

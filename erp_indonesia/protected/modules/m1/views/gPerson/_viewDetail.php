@@ -10,8 +10,7 @@
 		<?php echo CHtml::encode($data->vc_pstemlhr); ?>
 		<br /> <b><?php echo CHtml::encode($data->getAttributeLabel('d_pstgllhr')); ?>:</b>
 		<?php echo CHtml::encode($data->d_pstgllhr); ?>
-		<br/>
-		<b><?php echo CHtml::encode($data->getAttributeLabel('b_psjkel')); ?>:</b>
+		<br /> <b><?php echo CHtml::encode($data->getAttributeLabel('b_psjkel')); ?>:</b>
 		<?php echo isset($data->sex) ? $data->sex->name : ""; ?>
 		<br /> <b><?php echo CHtml::encode($data->getAttributeLabel('c_rfagama')); ?>:</b>
 		<?php echo CHtml::encode($data->c_rfagama); ?>

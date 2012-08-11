@@ -133,7 +133,10 @@ class sSmsoutController extends Controller
 			$model->save();
 
 			//Create Send SMS File
-			$models=dAddressbookGroupDetail::model()->findAll(array('condition'=>'parent_id = '.$model->receivergroup_id));
+			$models=dAddressbookGroupDetail::model()->findAll(array(
+				'condition'=>'parent_id = :parent',
+				'params'=>array(':parent'=>$model->receivergroup_id),
+			));
 
 			foreach ($models as $model1) :
 			$_rand=mt_rand(100,999);

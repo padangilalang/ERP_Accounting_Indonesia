@@ -62,7 +62,8 @@ class sUser extends CActiveRecord
 	{
 		$criteria=new CDbCriteria;
 		$criteria->join='LEFT JOIN s_user_module b ON t.id = b.s_user_id';
-		$criteria->condition='b.s_module_id = '.$id;
+		$criteria->condition='b.s_module_id = :id';
+		$criteria->params=array(':id'=>$id);
 
 		return new CActiveDataProvider(get_class($this), array(
 				'criteria'=>$criteria,

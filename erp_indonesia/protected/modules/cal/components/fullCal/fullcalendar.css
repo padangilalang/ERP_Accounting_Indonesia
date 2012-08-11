@@ -200,7 +200,7 @@ table.fc-header {
 .fc-cell-overlay { /* semi-transparent rectangle while dragging */
 	background: #9cf;
 	opacity: .2;
-	filter: alpha(opacity =       20); /* for IE */
+	filter: alpha(opacity =         20); /* for IE */
 }
 
 .fc-view { /* prevents dragging outside of widget */
@@ -350,7 +350,7 @@ table.fc-header {
 
 .fc-grid .fc-other-month .fc-day-number {
 	opacity: 0.3;
-	filter: alpha(opacity =       30); /* for IE */
+	filter: alpha(opacity =         30); /* for IE */
 	/* opacity with small font can sometimes look too faded
 	   might want to set the 'color' property instead
 	   making day-numbers bold also fixes the problem */
@@ -511,7 +511,7 @@ table.fc-header {
 	height: 100%;
 	background: #fff;
 	opacity: .3;
-	filter: alpha(opacity =       30); /* for IE */
+	filter: alpha(opacity =         30); /* for IE */
 }
 
 /* resizable */

@@ -15,6 +15,7 @@ class GAbsenceController extends Controller
 	{
 		return array(
 				'accessControl', // perform access control for CRUD operations
+				'ajaxOnly + PersonAutoComplete',
 		);
 	}
 

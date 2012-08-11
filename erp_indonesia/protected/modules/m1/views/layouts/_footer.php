@@ -9,14 +9,27 @@
 			<div class="art-footer-wrapper">
 				<div class="art-footer-text">
 
+					<?php echo Yii::app()->params['title']?>
+					::
+					<?php echo Yii::app()->params['subtitle']?>
+					<br/>
+
 					Copyright &copy;
 					<?php echo date('Y'); ?>
-					by Office Management Information System :: Agung Podomoro Land, Tbk<br />
-					All Rights Reserved.<br /> <br /> <a
-						href="http://www.yiiframework.com/">Yii Framework</a> | <a
-						href="http://www.artisteer.com/?p=website_templates">Artisteer</a>
-					| <a href="http://www.jquery.com/">JQuery</a> | <a
-						href="http://findicons.com/">Find Icons</a>
+					by
+					<?php echo Yii::app()->params['adminName']?>
+					(
+					<?php echo Yii::app()->params['adminEmail']?>
+					::
+					<?php echo Yii::app()->params['adminHp']?>
+					)<br /> All Rights Reserved :: Version <?php echo Yii::app()->params['appVersion']?>
+					<br />
+					<br /> <a
+						href="http://www.yiiframework.com/">Yii Framework JQuery JQueryUI</a> | <a
+						href="http://www.artisteer.com/">Artisteer</a> | <a
+						href="http://www.yiiframework.com/extensions/">Yii Framework Extension</a> | <a
+						href="http://findicons.com/">Find Icon</a> | <a
+						href="http://twitter.github.com/bootstrap/">Bootstrap</a> 
 				</div>
 			</div>
 		</div>

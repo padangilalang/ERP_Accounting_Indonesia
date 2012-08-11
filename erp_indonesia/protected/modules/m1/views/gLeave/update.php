@@ -6,16 +6,22 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'List gLeave','url'=>array('index')),
-		array('label'=>'Create gLeave','url'=>array('create')),
-		array('label'=>'View gLeave','url'=>array('view','id'=>$model->id)),
-		array('label'=>'Manage gLeave','url'=>array('admin')),
+		array('label'=>'Home','url'=>array('/m1/gLeave')),
+		//array('label'=>'Manage gPerson','url'=>array('admin')),
 );
+
+$this->menu1=gLeave::getTopUpdated();
+$this->menu2=gLeave::getTopCreated();
+
 ?>
 
-<h1>
-	Update gLeave
-	<?php echo $model->id; ?>
-</h1>
+<div class="page-header">
+	<h1>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
+		Update: <?php echo $model->person->vc_psnama; ?>
+	</h1>
+</div>
+
+
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

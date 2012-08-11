@@ -21,8 +21,7 @@
 					<?php foreach($this->getRecentData() as $data): ?>
 					<li><?php 
 					echo CHtml::link(SModule::model()->findByPk($data->s_module_id)->title,array(SModule::model()->findByPk($data->s_module_id)->link)) ;
-					?>
-					</li>
+					?></li>
 
 					<?php endforeach; ?>
 				</ul>

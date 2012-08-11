@@ -114,7 +114,10 @@ class sNotification extends CActiveRecord
 
 	public function getCountComment($id)
 	{
-		$model=sNotificationDetail::model()->count(array('condition'=>'parent_id = ' .$id));
+		$model=sNotificationDetail::model()->count(array(
+			'condition'=>'parent_id = :id',
+			'params'=>array(':id'=>$id),
+		));
 		if ($model == null) {
 			return 0;
 		} else {

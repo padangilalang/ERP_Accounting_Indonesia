@@ -141,7 +141,7 @@ class uJournal extends CActiveRecord
 				$returnarray[] = array('id' => $model->system_ref, 'label' => '...'.substr($model->system_ref,strlen($model->system_ref)-15,15), 'icon'=>'list-alt', 'url' => array('/mCashbank/view','id'=>$model->id));
 					
 			}
-				
+
 		}
 
 		return $returnarray;
@@ -209,7 +209,10 @@ class uJournal extends CActiveRecord
 		$log->userid=       Yii::app()->user->id;
 		$log->save();
 
-		uJournalDetail::model()->deleteAll('parent_id = '.$this->id);
+		uJournalDetail::model()->deleteAll(array(
+				'condition'=>'parent_id = :parent',
+				'params'=>array(':parent'=>$this->id),
+		));
 		return true;
 	}
 

@@ -1,4 +1,4 @@
-<div class="raw well">
+<div class="well">
 
 	<?php
 	Yii::app()->clientScript->registerScript('search'.$data->id, "
@@ -10,7 +10,6 @@
 	?>
 
 
-	<div class="raw">
 		<h4><?php 
 			//echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/live_journal.png') . CHtml::link(CHtml::encode($data->system_ref), array('view', 'id'=>$data->id));
 			echo CHtml::link(CHtml::encode($data->system_reff()), array('view', 'id'=>$data->id));
@@ -31,15 +30,11 @@
 			echo ($data->journalSum != $data->journalSumCek) ? " WARNING!!!... FAULT BY SYSTEM. JOURNAL IS NOT BALANCE, PLEASE DELETE.." : "";
 		?> </h4>
 		
-		<div class="raw">
-			<?php if ($data->remark !=null) { ?>
-				<div style="color: #999; font-size: 11px"><?php echo CHtml::encode($data->remark); ?> </div>
-			<?php }; ?>
-		</div>
+		<?php if ($data->remark !=null) { ?>
+			<div style="color: #999; font-size: 11px"><?php echo CHtml::encode($data->remark); ?> </div>
+		<?php }; ?>
 		<br/>
-	</div>
 
-	<div class="raw">
 
 		<?php
 			//$this->widget('bootstrap.widgets.BootDetailView', array(
@@ -61,7 +56,6 @@
 						array('name'=>'total', 'label'=>'Total'),
 				),
 		)); ?>
-	</div>
 	
 	<div class="list<?php echo $data->id ?>" style="display: none">
 

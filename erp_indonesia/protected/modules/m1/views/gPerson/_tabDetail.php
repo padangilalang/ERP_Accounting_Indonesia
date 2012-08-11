@@ -1,4 +1,4 @@
-<div class="raw">
+<div class="row">
 	<div class="span3 well">
 		<?php 
 		if ($model->c_pathfoto == null) {
@@ -79,7 +79,7 @@
 
 <hr/>
 
-<div class="raw-fluid">
+<div class="row-fluid">
 	<div class="span12">
 		<h3>Related Employee</h3>
 		<?php $this->widget('bootstrap.widgets.BootGridView',array(

@@ -47,5 +47,5 @@ $this->menu=array(
 				'py_kodeproyek',
 				't_status',
 				't_stat',
-	),
+		),
 )); ?>
