@@ -7,8 +7,8 @@ $this->menu=array(
 		//array('label'=>'Create PO', 'url'=>array('create')),
 );
 
-$this->menu1=bPorder::getTopUpdated();
-$this->menu2=bPorder::getTopCreated();
+$this->menu1=vPorder::getTopUpdated();
+$this->menu2=vPorder::getTopCreated();
 ?>
 
 <div class="page-header">
@@ -55,7 +55,7 @@ if ($id ==2) {
 
 <?php $this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'bporder-grid',
-		'dataProvider'=>bPorder::model()->searchAP($id),
+		'dataProvider'=>vPorder::model()->searchAP($id),
 		'itemsCssClass'=>'table table-striped table-bordered',
 		'template'=>'{items}{pager}{summary}',
 		'selectableRows'=>null,
@@ -95,13 +95,13 @@ if ($id ==2) {
 				//'remark',
 				array(
 						'header'=>'Total',
-						'value'=>'$data->sum_pof()',
+						'value'=>'$data->sum_ttlf()',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{myView}{print}',
 						//'template'=>'{print}',
 						'buttons'=>array
@@ -125,36 +125,35 @@ if ($id ==2) {
 				),
 				array(
 						'header'=>'Take_Action',
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{approved}{payment}{paid}',
 						'buttons'=>array
 						(
 								'approved' => array
 								(
-										'label'=>'Approval <i class="icon-forward"></i> ',
+										'label'=>'Approval',
 										//'imageUrl'=>Yii::app()->request->baseUrl.'/images/icon/process.png',
 										'url'=>'Yii::app()->createUrl("/m2/mAccpayable/setApproved", array("id"=>$data->id))',
 										'visible'=>'!isset($data->approved_date)',
+										'options'=>array('class'=>'btn btn-mini'),
 										'click'=>'
 										function(){
-										$.ajax({
-										type : "get",
-										url  : $(this).attr("href"),
-										data: "",
-										success : function(r){
-}
-})
-										$.fn.yiiGridView.update("bporder-grid", {
-										data: $(this).serialize()
-});
-										return false;
-}
+											$.ajax({
+												type : "get",
+												url  : $(this).attr("href"),
+											})
+											$.fn.yiiGridView.update("bporder-grid", {
+												data: $(this).serialize()
+											});
+											return false;
+										}
 										',
 								),
 								'payment' => array
 								(
-										'label'=>'Payment <i class="icon-forward"></i>',
+										'label'=>'Payment',
 										//'imageUrl'=>Yii::app()->request->baseUrl.'/images/icon/process.png',
+										'options'=>array('class'=>'btn btn-mini'),
 										'url'=>'Yii::app()->createUrl("/m2/mAccpayable/view", array("id"=>$data->id))',
 										'visible'=>'(isset($data->approved_date) && $data->payment_state_id ==1 && $data->journal_state_id ==2)',
 								),

@@ -1,10 +1,10 @@
-<div class="span5 well">
+<div class="well">
 <b><?php echo CHtml::link(CHtml::encode($data->company_name),array('view','id'=>$data->id)); ?>
 </b>
 <br />
 <br />
 
-<br />
+<?php /*
 <b><?php echo CHtml::encode($data->getAttributeLabel('pic')); ?>:</b>
 <?php echo CHtml::encode($data->pic); ?>
 <br />
@@ -21,7 +21,6 @@
 <?php echo CHtml::encode($data->address3); ?>
 <br />
 
-<?php /*
 <b><?php echo CHtml::encode($data->getAttributeLabel('city')); ?>:</b>
 <?php echo CHtml::encode($data->city); ?>
 <br />
@@ -66,5 +65,27 @@
 <?php echo CHtml::encode($data->status_id); ?>
 <br />
 
-*/ ?>
+*/ 
+
+$this->widget('BootDetailView', array(
+		'data'=>array(
+				'id'=>1, 
+				'pic'=>$data->pic,
+				'address'=>$data->address,
+				'address1'=>$data->address1,
+				'address2'=>$data->address2,
+				'address3'=>$data->address3,
+		),
+		'attributes'=>array(
+				array('name'=>'pic', 'label'=>'Account Type'),
+				array('name'=>'address'),
+				array('name'=>'address1'),
+				array('name'=>'address2'),
+				array('name'=>'address3'),
+		),
+		'cssFile' => Yii::app()->theme->baseUrl.'/css/peter_custom.css',
+
+)); 
+
+?>
 </div>

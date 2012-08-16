@@ -17,7 +17,7 @@
 
 
 						<div class="art-layout-cell art-sidebar1">
-							<?php //$this->beginContent('/layouts/_sbRightNotification'); $this->endContent(); ?>
+							<?php $this->beginContent('/layouts/_sbRightNotification'); $this->endContent(); ?>
 						</div>
 						
 						<div class="art-layout-cell art-sidebar2">

@@ -45,7 +45,7 @@ $this->breadcrumbs=array(
 				'message',
 				'created_date',
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 		),
 )); ?>

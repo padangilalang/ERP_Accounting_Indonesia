@@ -7,13 +7,13 @@
 	'columns'=>array(
 		array(
 			'header'=>'Item',
-			'value'=>'CProduct::model()->findByPk($data["item_id"])->item',
+			'value'=>'xProduct::model()->findByPk($data["item_id"])->item',
 		),
 		'description',
 		'qty',
 		'amount',
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'BootButtonColumn',
 			'template'=>'{myDelete}',
 			'buttons'=>array
 			(

@@ -43,7 +43,7 @@ Yii::app()->clientScript->registerScript('datepicker', "
 		$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
 			'model'=>$model,
 			'attribute'=>'item_name',
-			'sourceUrl' => Yii::app()->createUrl('/m2/CProduct/CProductAutoComplete'),
+			'sourceUrl' => Yii::app()->createUrl('/m2/xProduct/xProductAutoComplete'),
 			'options'=>array(
 				'minLength'=>'2',
 				'focus'=> 'js:function( event, ui ) {

@@ -13,9 +13,9 @@ $this->menu=array(
 		array('label'=>'Print', 'icon'=>'print', 'url'=>array('print', 'id'=>$model->id)),
 );
 
-$this->menu1=bPorder::getTopUpdated(1);
-$this->menu2=bPorder::getTopCreated(1);
-//$this->menu3=bPorder::getTopRelated($model->user_ref);
+$this->menu1=vPorder::getTopUpdated(1);
+$this->menu2=vPorder::getTopCreated(1);
+//$this->menu3=vPorder::getTopRelated($model->user_ref);
 
 ?>
 

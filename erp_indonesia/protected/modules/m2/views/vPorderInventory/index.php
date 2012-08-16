@@ -71,7 +71,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 						),
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{myUpdate}{myView}{myDelete}',
 						'buttons'=>array
 						(

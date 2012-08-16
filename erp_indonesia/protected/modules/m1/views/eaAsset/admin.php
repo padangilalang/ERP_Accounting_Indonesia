@@ -30,7 +30,7 @@ $this->breadcrumbs=array(
 		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 				array(
 						'name'=>'inventory_type',

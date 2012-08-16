@@ -7,7 +7,6 @@
  * @property integer $id
  * @property integer $organization_id
  * @property string $input_date
- * @property string $af_date
  * @property string $system_ref
  * @property integer $periode_date
  * @property integer $po_type_id
@@ -45,13 +44,13 @@ class vPorder extends CActiveRecord
 		// will receive user inputs.
 		return array(
 				array('input_date', 'required'),
-				array('item_id, budget_id, qty, amount, organization_id, periode_date, po_type_id, budgetcomp_id, supplier_id, approved_date, payment_state_id, journal_state_id, created_date, updated_date', 'numerical', 'integerOnly'=>true),
+				array('item_id, budget_id, qty, amount, organization_id, periode_date, po_type_id, budgetcomp_id, supplier_id, approved_date, payment_state_id, journal_state_id, created_date, updated_date, total_amount', 'numerical', 'integerOnly'=>true),
 				array('system_ref, item_name, description', 'length', 'max'=>100),
 				array('created_id, updated_id', 'length', 'max'=>15),
-				array('af_date, remark, payment_date', 'safe'),
+				array('remark, payment_date', 'safe'),
 				// The following rule is used by search().
 				// Please remove those attributes that should not be searched.
-				array('id, organization_id, input_date, af_date, system_ref, periode_date, po_type_id, approved_date, remark, payment_state_id, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
+				array('id, organization_id, input_date, system_ref, periode_date, po_type_id, approved_date, remark, payment_state_id, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +68,7 @@ class vPorder extends CActiveRecord
 				'journal_state' => array(self::BELONGS_TO, 'sParameter', array('journal_state_id'=>'code'),'condition'=>'type = \'cJournalState\''),
 				'po_type' => array(self::BELONGS_TO, 'sParameter', array('po_type_id'=>'code'),'condition'=>'type = \'cPOtype\''),
 				'payment' => array(self::STAT, 'vPorderPayment', 'parent_id','select'=>'sum(amount)'),
+				'po_ext' => array(self::HAS_ONE, 'vPorderExt', 'id'),
 		);
 	}
 
@@ -80,7 +80,6 @@ class vPorder extends CActiveRecord
 				'supplier_id' => 'Supplier',
 				'budgetcomp_id' => 'Budget Comp',
 				'input_date' => 'Input Date',
-				'af_date' => 'AF Date',
 				'system_ref' => 'System Ref',
 				'periode_date' => 'Periode Date',
 				'po_type_id' => 'PO Type',
@@ -88,6 +87,7 @@ class vPorder extends CActiveRecord
 				'remark' => 'Remark',
 				'payment_state_id' => 'Payment State',
 				'journal_state_id' => 'Journal State',
+				'total_amount' => 'Total Amount',
 				'created_date' => 'Created Date',
 				'created_id' => 'Created By',
 				'updated_date' => 'Updated Date',
@@ -229,6 +229,12 @@ class vPorder extends CActiveRecord
 
 	public function sum_pof() {
 		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->sum_po);
+
+		return $_format;
+	}
+
+	public function sum_ttlf() {
+		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->total_amount);
 
 		return $_format;
 	}

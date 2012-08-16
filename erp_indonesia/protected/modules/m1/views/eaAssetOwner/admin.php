@@ -42,7 +42,7 @@ $this->breadcrumbs=array(
 				'owner',
 				'remarks',
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 		),
 )); ?>

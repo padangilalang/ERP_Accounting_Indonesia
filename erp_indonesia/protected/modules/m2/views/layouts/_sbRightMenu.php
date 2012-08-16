@@ -4,7 +4,7 @@
 ?>
 
 <?php
-      $this->widget('createNewM2', array(
+      $this->widget('createNew', array(
       )); 
 ?>
 

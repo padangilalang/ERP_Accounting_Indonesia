@@ -16,10 +16,22 @@ $this->menu=array(
 	</h1>
 </div>
 
-<?php $this->widget('zii.widgets.CListView',array(
+<?php 
+/*
+	$this->widget('zii.widgets.CListView',array(
 		'dataProvider'=>$dataProvider,
 		'itemView'=>'_view',
 		'template'=>'{items}{pager}',
-		'cssFile' => Yii::app()->theme->baseUrl.'/css/grid.css',
-)); ?>
+		'cssFile' => Yii::app()->theme->baseUrl.'/css/peter_custom.css',
+)); 
+*/
+?>
 
+<?php
+$this->widget('ext.EColumnListView', array(
+    'dataProvider' => $dataProvider,
+    'itemView' => '_view',
+    'columns' => 3
+));
+
+?>

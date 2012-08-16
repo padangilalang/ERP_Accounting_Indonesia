@@ -50,7 +50,7 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 		'template'=>'{items}{pager}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 				'filename',
 				'cfrom',

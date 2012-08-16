@@ -9,7 +9,7 @@ return array(
 		'adminEmail'=>'peterjkambey@gmail.com',
 		'adminHp'=>'082 1100 46 046',
 		'userEmail'=>'peterjkambey@yahoo.co.id',
-		'juiTheme'=>'2jui-bootstrap',
+		'twittername'=>'agungpodomoro',
 		'appVersion'=>'2.0.1',
 );
 

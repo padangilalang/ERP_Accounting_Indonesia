@@ -64,7 +64,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 						'value'=>'$data->leave->approved->name',
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{unblock}',
 						'buttons'=>array
 						(

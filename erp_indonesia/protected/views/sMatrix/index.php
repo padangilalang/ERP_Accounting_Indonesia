@@ -21,7 +21,7 @@ $this->menu=array(
 		'template'=>'{items}{pager}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 				'level',
 				'level_r',

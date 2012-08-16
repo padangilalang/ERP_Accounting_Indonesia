@@ -67,7 +67,7 @@ if (empty($_GET['asDialog'])) {
 		//'filter'=>$model,
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{payment}',
 						'buttons'=>array
 						(

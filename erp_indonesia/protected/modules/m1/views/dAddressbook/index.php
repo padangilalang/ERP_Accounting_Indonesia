@@ -34,7 +34,7 @@ $this->breadcrumbs=array(
 		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 				'complete_name',
 				'company_name',

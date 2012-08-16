@@ -42,13 +42,13 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 		//'filter'=>$model,
 		'columns'=>array(
 				/*array(
-				 'class'=>'CButtonColumn',
+				 'class'=>'BootButtonColumn',
 						'template'=>'{update}{delete}',
 						'updateButtonUrl'=>'Yii::app()->createUrl("/m1/cAbsence//updateAbsence",array("id"=>$data->id,"pid"=>$data->parent_id))',
 						'deleteButtonUrl'=>'Yii::app()->createUrl("/m1/cAbsence//deleteAbsence",array("id"=>$data->id))',
 				),*/
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{sakit}{alpha}{permission}',
 						'buttons'=>array
 						(

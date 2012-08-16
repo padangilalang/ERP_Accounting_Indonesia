@@ -73,7 +73,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 						'deleteButtonUrl'=>'Yii::app()->createUrl("/m1/gLeave/delete",array("id"=>$data->leave->id))',
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{approved}',
 						'buttons'=>array
 						(

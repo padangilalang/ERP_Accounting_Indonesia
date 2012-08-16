@@ -1,6 +1,6 @@
 
 <?php
-$this->widget('createNewM1');
+$this->widget('createNew');
 ?>
 
 <?php
@@ -10,3 +10,5 @@ $this->widget('communication');
 <?php
 $this->widget('personalization');
 ?>
+
+

@@ -35,7 +35,7 @@ $this->breadcrumbs=array(
 		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 				'input_date',
 				array(

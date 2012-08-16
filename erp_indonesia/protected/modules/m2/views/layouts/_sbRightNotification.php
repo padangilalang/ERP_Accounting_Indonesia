@@ -13,7 +13,7 @@
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
 		'type'=>'list',
-		'items'=>bPorder::getTopUnApprovedPO(),
+		'items'=>vPorder::getTopUnApprovedPO(),
 		'htmlOptions'=>array('style'=>'font-size:12px; '),
 )); ?>
 <br />
@@ -23,7 +23,7 @@
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
 		'type'=>'list',
-		'items'=>bPorder::getTopUnPaidPO(),
+		'items'=>vPorder::getTopUnPaidPO(),
 		'htmlOptions'=>array('style'=>'font-size:12px; '),
 )); ?>
 <br />

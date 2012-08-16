@@ -7,7 +7,7 @@
 		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{approved}{payment}',
 						'buttons'=>array
 						(
@@ -53,7 +53,7 @@
 
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{print}',
 						'buttons'=>array
 						(
@@ -71,7 +71,7 @@
 
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{budgetposition}',
 						'buttons'=>array
 						(
@@ -116,7 +116,7 @@
 						),
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{myView}',
 						'buttons'=>array
 						(

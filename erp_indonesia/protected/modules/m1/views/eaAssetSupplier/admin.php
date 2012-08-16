@@ -43,7 +43,7 @@ $this->breadcrumbs=array(
 				'fax',
 				'remarks',
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 		),
 )); ?>

@@ -43,7 +43,7 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 						'value'=>'$data->approved->name',
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{print}',
 						'buttons'=>array
 						(
@@ -61,7 +61,7 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{summary}',
 						'buttons'=>array
 						(

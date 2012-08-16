@@ -1,4 +1,5 @@
 <?php
+/*
 $this->widget('application.extensions.fullcalendar.FullcalendarGraphWidget',
 		array(
 		'data' => array(
@@ -20,4 +21,5 @@ $this->widget('application.extensions.fullcalendar.FullcalendarGraphWidget',
 				),
 		)
 );
+*/
 ?>

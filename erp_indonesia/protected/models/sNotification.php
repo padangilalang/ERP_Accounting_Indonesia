@@ -17,6 +17,7 @@ class sNotification extends CActiveRecord
 		return array(
 				array('long_desc', 'required'),
 				array('sender_date, type_id, broadcast_code, sender_id, receiver_date, receiver_id, receiver_ref, category_id, read_id', 'numerical', 'integerOnly'=>true),
+				array('long_desc','filter','filter'=>array($obj=new CHtmlPurifier(),'purify')),
 				array('sender_ref', 'length', 'max'=>25),
 				array('link', 'length', 'max'=>100),
 				//array('long_desc', 'length', 'max'=>250),

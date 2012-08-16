@@ -1,0 +1,22 @@
+.grid-item{
+padding: 10px;
+border: 1px solid #C9E0ED;
+float: left;
+margin-bottom: 20px;
+}
+
+.pager {
+clear: both;
+}
+
+/*
+	Detail view
+*/
+table.detail-view .null {
+	color: #FFC0CB;
+}
+
+table.detail-view th {
+	text-align: left;
+	width: 160px;
+}

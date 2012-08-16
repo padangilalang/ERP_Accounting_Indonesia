@@ -1,21 +1,20 @@
-<div class="art-header">
-	<div class="art-header-clip">
-		<div class="art-header-center">
-			<div class="art-header-png"></div>
-			<div class="art-header-jpeg"></div>
-		</div>
-	</div>
-	<div class="art-headerobjectLeft"></div>
-	<div class="art-headerobject"></div>
-	<div class="art-logo">
-		<h1 class="art-logo-name">
-			<a href="<?php echo Yii::app()->createUrl('menu') ?>  "><?php echo Yii::app()->name ?>
-			</a>
-		</h1>
-		<h2 class="art-logo-text">
-			<?php echo Yii::app()->params['subTitle'] ?>
-		</h2>
-	</div>
-</div>
-<div class="cleared reset-box"></div>
+<?php $this->widget('bootstrap.widgets.BootCarousel', array(
+    'items'=>array(
+        array('image'=>Yii::app()->baseUrl.DIRECTORY_SEPARATOR.'images/icon/header.jpg', 
+			'caption'=>Yii::app()->name,
+		),
+        array('image'=>Yii::app()->baseUrl.DIRECTORY_SEPARATOR.'images/icon/header2.jpg', 
+			//'caption'=>'Second Menu label'
+		),
+        array('image'=>Yii::app()->baseUrl.DIRECTORY_SEPARATOR.'images/icon/header3.jpg', 
+			//'caption'=>'Third Menu label'
+		),
+    ),
+	'options'=>array(
+		'interval'=>5000,
+	),
+	'noNav'=>true,
+)); 
+?>
+
 

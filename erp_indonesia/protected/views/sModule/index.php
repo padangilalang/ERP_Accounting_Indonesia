@@ -24,7 +24,7 @@ $this->menu4=sModule::getTopOther();
 		'template'=>'{items}{pager}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{update}{delete}',
 				),
 				array(

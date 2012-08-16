@@ -43,7 +43,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{print}',
 						'buttons'=>array
 						(
@@ -91,7 +91,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 				'approved_date',
 				'payment_date',
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{myView}{myUpdate}',
 						'buttons'=>array
 						(
@@ -112,7 +112,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{delete}',
 						'deleteButtonLabel'=>'<i class="icon-trash"></i>',
 						'deleteButtonImageUrl'=>false,

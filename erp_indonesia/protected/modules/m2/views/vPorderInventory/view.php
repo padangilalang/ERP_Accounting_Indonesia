@@ -47,6 +47,25 @@ $this->widget('ext.XDetailView', array(
 						'label'=>'Payment Status',
 						'value'=>$model->paymentCheck(),
 				),
+				array(
+						'label'=>'Total Amount',
+						'value'=>$model->sum_ttlf(),
+				),
+		),
+)); ?>
+
+<?php 
+//$this->widget('bootstrap.widgets.BootDetailView', array(
+$this->widget('ext.XDetailView', array(
+		'ItemColumns' => 2,
+
+		'data'=>$model,
+		'attributes'=>array(
+				array(
+						'label'=>'AF Date',
+						'value'=>$model->po_ext->af_date,
+				),
+				null,
 		),
 )); ?>
 

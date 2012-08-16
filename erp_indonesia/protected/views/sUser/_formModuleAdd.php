@@ -10,6 +10,8 @@ $form=$this->beginWidget('BootActiveForm', array(
 		'enableAjaxValidation'=>false,
 )); ?>
 
+<?php echo $form->errorSummary($model); ?>
+
 <?php echo $form->dropDownListRow($model, 's_module_id', sModule::itemsAll(),array('class'=>'span8','multiple'=>'multiple')); ?>
 
 <?php echo $form->dropDownListRow($model,'s_matrix_id', sMatrix::items('sMatrix'),array('class'=>'span3')); ?>

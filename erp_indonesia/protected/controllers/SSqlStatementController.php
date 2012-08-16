@@ -39,7 +39,7 @@ class SSqlStatementController extends Controller
 				$this->refresh();
 			}
 		}
-		$this->render('/sReport/sqlstatement',array('model'=>$model));
+		$this->render('/sParameter/sqlstatement',array('model'=>$model));
 	}
 
 }

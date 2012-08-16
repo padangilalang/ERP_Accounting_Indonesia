@@ -22,7 +22,7 @@
 				),
 				'notes',
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 		),
 )); ?>

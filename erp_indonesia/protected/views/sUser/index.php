@@ -30,7 +30,7 @@ $this->menu2=sUser::getTopCreated();
 						'template'=>'{delete}{update}',
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{password}',
 						'buttons'=>array
 						(

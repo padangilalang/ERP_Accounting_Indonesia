@@ -47,7 +47,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 $this->widget('bootstrap.widgets.BootTabbable', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
 		'tabs'=>array(
-				array('label'=>'Module', 'content'=>$this->renderPartial("_tabUser", array("model"=>$model,"modelModule"=>$modelModule), true),'active'=>true),
+				array('label'=>'Module', 'content'=>$this->renderPartial("_tabModule", array("model"=>$model,"modelModule"=>$modelModule), true),'active'=>true),
 				array('label'=>'Group', 'content'=>$this->renderPartial("_tabGroup", array("model"=>$model,"modelGroup"=>$modelGroup), true)),
 		),
 ));

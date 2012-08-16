@@ -1,6 +1,6 @@
 <?php $this->widget('bootstrap.widgets.BootGridView',array(
 		'id'=>'g-family-grid',
-		'dataProvider'=>gFamily::model()->search($model->id),
+		'dataProvider'=>gPersonFamily::model()->search($model->id),
 		'template'=>'{items}',
 		//'filter'=>$model,
 		'columns'=>array(

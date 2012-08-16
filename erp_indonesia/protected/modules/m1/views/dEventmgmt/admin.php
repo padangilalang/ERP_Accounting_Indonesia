@@ -52,7 +52,7 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 				),
 				array(
 						'name'=>'event_id',

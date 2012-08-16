@@ -1,6 +1,6 @@
 <?php $this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'csupplierap-grid',
-		'dataProvider'=>bPorder::model()->searchSupplier($model->id),
+		'dataProvider'=>vPorder::model()->searchSupplier($model->id),
 		'itemsCssClass'=>'table table-striped table-bordered',
 		'template'=>'{items}{pager}{summary}',
 		'columns'=>array(
@@ -24,7 +24,7 @@
 						),
 				),
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{myView}',
 						'buttons'=>array
 						(
@@ -62,13 +62,13 @@ $this->widget('ext.XDetailView', array(
 		'ItemColumns' => 3,
 		'data'=>array(
 			'id'=>1, 
-			'countPO'=>bPorder::model()->count("supplier_id = ".$model->id), 
-			'unApproved'=>bPorder::model()->count("approved_date is null AND supplier_id = ".$model->id), 
-			'unPaid'=>bPorder::model()->count("approved_date is not null AND payment_state_id = 1 AND supplier_id = ".$model->id),
-			'paid'=>bPorder::model()->count("payment_state_id = 2 AND supplier_id = ".$model->id),
-			'amountPO'=>bPorder::model()->hutangPerSupplier($model->id),
-			'payment'=>bPorder::model()->paymentPerSupplier($model->id),
-			'balance'=>bPorder::model()->balancePerSupplier($model->id),
+			'countPO'=>vPorder::model()->count("supplier_id = ".$model->id), 
+			'unApproved'=>vPorder::model()->count("approved_date is null AND supplier_id = ".$model->id), 
+			'unPaid'=>vPorder::model()->count("approved_date is not null AND payment_state_id = 1 AND supplier_id = ".$model->id),
+			'paid'=>vPorder::model()->count("payment_state_id = 2 AND supplier_id = ".$model->id),
+			'amountPO'=>vPorder::model()->hutangPerSupplier($model->id),
+			'payment'=>vPorder::model()->paymentPerSupplier($model->id),
+			'balance'=>vPorder::model()->balancePerSupplier($model->id),
 		),
 		'attributes'=>array(
 			array(

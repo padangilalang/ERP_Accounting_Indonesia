@@ -24,7 +24,8 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 $this->widget('ext.XDetailView', array(
 		'ItemColumns' => 2,
 		'data'=>array(
-				'id'=>1, 'account_type'=>$model->getRoot(),
+				'id'=>1, 
+				'account_type'=>$model->getRoot(),
 				'currency'=>$model->getCurrency(),
 				'state'=>$model->getState(),
 				'has_child'=>(isset($model->haschild)) ? $model->haschild->childName->name : "Not Set",
@@ -41,7 +42,8 @@ $this->widget('ext.XDetailView', array(
 				array('name'=>'hutang', 'label'=>'Payable Account'),
 				array('name'=>'inventory', 'label'=>'Inventory Account'),
 		),
-)); ?>
+)); 
+?>
 
 
 

@@ -74,7 +74,7 @@
 						),
 				),
 				array(
-						'class' => 'application.components.BootProgressColumn',
+						'class' => 'ext.BootProgressColumn',
 						//'name' => 'percentage',
 						//'value'=>'$data->amount',
 						'percent' => 100,

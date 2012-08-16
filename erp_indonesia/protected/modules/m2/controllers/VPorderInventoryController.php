@@ -171,20 +171,10 @@ class VPorderInventoryController extends Controller
 					
 				if(Yii::app()->request->isAjaxRequest) {
 
-					$sqlinsert="
-					INSERT INTO v_porder_detail_temp (parent_id,item_id,description,qty,amount)
-					VALUES (':id', :item, ':desc', :qty, :amount)
-					";
-
-					$command = Yii::app()->db->createCommand($sql);
-					$command->bindParam(":id", $model->id, PDO::PARAM_STR);
-					$command->bindParam(":item", $model->item_id, PDO::PARAM_STR);
-					$command->bindParam(":desc", $model->description, PDO::PARAM_STR);
-					$command->bindParam(":qty", $model->qty, PDO::PARAM_STR);
-					$command->bindParam(":amount", $model->amount, PDO::PARAM_STR);
+					$sqlinsert="INSERT INTO v_porder_detail_temp (parent_id, item_id, description, qty, amount)
+					VALUES (".$model->id.", ".$model->item_id.", '".$model->description."', ".$model->qty.", ".$model->amount.")";
+					$command = Yii::app()->db->createCommand($sqlinsert);
 					$command->execute();		
-						
-					Yii::app()->db->createCommand($sqlinsert)->execute();
 
 				} else {
 
@@ -221,30 +211,23 @@ class VPorderInventoryController extends Controller
 			$criteria->compare('parent_id',$model->id);
 			$models=vPorderDetail::model()->findAll($criteria);
 
-			$sqlcount="select count(*) FROM v_porder_detail_temp WHERE parent_id = ':id'";
+			$sqlcount="select count(*) FROM v_porder_detail_temp WHERE parent_id = '".$model->id."'";
 			$command = Yii::app()->db->createCommand($sqlcount);
-			$command->bindParam(":id", $model->id, PDO::PARAM_STR);
 			$_count=$command->queryScalar();		
 				
 			if($_count ==0) {
 				foreach ($models as $mod) {
 					$sql="INSERT INTO v_porder_detail_temp (parent_id, item_id, description, qty, amount)
-					VALUES (:pid, :item, ':desc', :qty, :amount)";
+					VALUES (".$mod->parent_id.", ".$mod->item_id.", '".$mod->description."', ".$mod->qty.", ".$mod->amount.")";
 					$command = Yii::app()->db->createCommand($sql);
-					$command->bindParam(":pid", $mod->parent_id, PDO::PARAM_STR);
-					$command->bindParam(":item", $mod->item_id, PDO::PARAM_STR);
-					$command->bindParam(":desc", $mod->description, PDO::PARAM_STR);
-					$command->bindParam(":qty", $mod->qty, PDO::PARAM_STR);
-					$command->bindParam(":amount", $mod->amount, PDO::PARAM_STR);
 					$command->execute();		
 						
 				}
 			}
 		}
 
-		$sql="SELECT * FROM v_porder_detail_temp WHERE parent_id = ':id'";
+		$sql="SELECT * FROM v_porder_detail_temp WHERE parent_id = '".$model->id."'";
 		$command = Yii::app()->db->createCommand($sql);
-		$command->bindParam(":id", $model->id, PDO::PARAM_STR);
 		$rawData=$command->queryAll();		
 		
 		$dataProvider=new CArrayDataProvider($rawData, array(

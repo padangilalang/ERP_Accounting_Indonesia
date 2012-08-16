@@ -23,6 +23,7 @@ if ($browser['name'] =='Internet Explorer')
   $url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={$api_key}&tags={$tag}&per_page={$per_page}";
 
   //$feed = getResource($url);
+if  (in_array  ('curl', get_loaded_extensions())) {
   $chandle = curl_init();
   curl_setopt($chandle, CURLOPT_URL, $url);
   curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
@@ -30,7 +31,7 @@ if ($browser['name'] =='Internet Explorer')
   curl_close($chandle);
 
   $xml = simplexml_load_string($result);
-  
+}  
   
 ?>
 
@@ -76,22 +77,22 @@ if ($browser['name'] =='Internet Explorer')
 		<?php 
 			//$_slide="slide".Yii::app()->dateFormatter->format("d",time()).".jpg";
 			//echo CHtml::image(Yii::app()->request->baseUrl.'/images/photo/'.$_slide,'image',array('style'=>'width: 100%')); 
-			
-			foreach ($xml->photos->photo as $photo) {
-				$title = $photo['title'];
-				$farmid = $photo['farm'];
-				$serverid = $photo['server'];
-				$id = $photo['id'];
-				$secret = $photo['secret'];
-				$owner = $photo['owner'];
-				$thumb_url = "http://farm{$farmid}.static.flickr.com/{$serverid}/{$id}_{$secret}_t.jpg";
-				//$image = "http://farm{$farmid}.static.flickr.com/{$serverid}/{$id}_{$secret}.jpg";
-				$page_url = "http://www.flickr.com/photos/{$owner}/{$id}";
-				$image_html= "<a href='{$page_url}'><img alt='{$title}' src='{$thumb_url}' height='160px' width='100%'/></a>";
-				print "<div class='span2'>$image_html</div>";
+			if (isset($xml->photos->photo)) {
+				foreach ($xml->photos->photo as $photo) {
+					$title = $photo['title'];
+					$farmid = $photo['farm'];
+					$serverid = $photo['server'];
+					$id = $photo['id'];
+					$secret = $photo['secret'];
+					$owner = $photo['owner'];
+					$thumb_url = "http://farm{$farmid}.static.flickr.com/{$serverid}/{$id}_{$secret}_t.jpg";
+					//$image = "http://farm{$farmid}.static.flickr.com/{$serverid}/{$id}_{$secret}.jpg";
+					$page_url = "http://www.flickr.com/photos/{$owner}/{$id}";
+					$image_html= "<a href='{$page_url}'><img alt='{$title}' src='{$thumb_url}' height='160px' width='100%'/></a>";
+					print "<div class='span2'>$image_html</div>";
+				}
+				echo "<p>";
+				echo "Powered by: <a href=\"http://www.flikr.com\" target=\"_blank\">Flickr</a>";
 			}
-		
 		?>
 </div>
-<p>
-Powered by: <a href="http://www.flikr.com" target="_blank">Flickr</a>

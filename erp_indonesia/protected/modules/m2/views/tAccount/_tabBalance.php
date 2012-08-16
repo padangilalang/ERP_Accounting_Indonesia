@@ -79,7 +79,7 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 		'itemsCssClass'=>'table table-striped table-bordered',
 		'columns'=>array(
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{post}',
 						'buttons'=>array
 						(
@@ -146,7 +146,7 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 				),
 				'user_remark',
 				array(
-						'class'=>'CButtonColumn',
+						'class'=>'BootButtonColumn',
 						'template'=>'{detail}',
 						'buttons'=>array
 						(
