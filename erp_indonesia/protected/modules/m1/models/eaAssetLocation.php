@@ -9,7 +9,7 @@
  * @property string $location
  * @property string $remarks
  */
-class eaAssetLocation extends CActiveRecord
+class eaAssetLocation extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

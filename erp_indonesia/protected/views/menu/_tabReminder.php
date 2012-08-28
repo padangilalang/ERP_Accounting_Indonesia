@@ -29,5 +29,5 @@
 
 <hr />
 
-<?php echo $this->renderPartial('_formTask', array('model'=>$modeltask)); ?>
+<?php echo $this->renderPartial('_formReminder', array('model'=>$modeltask)); ?>
 

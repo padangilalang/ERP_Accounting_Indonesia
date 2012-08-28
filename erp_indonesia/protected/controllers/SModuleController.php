@@ -1,6 +1,6 @@
 <?php
 
-class sModuleController extends Controller
+class SModuleController extends Controller
 {
 	public $layout='//layouts/column2';
 

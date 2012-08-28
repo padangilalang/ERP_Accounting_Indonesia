@@ -12,5 +12,5 @@ $this->widget('personalization');
 ?>
 
 <?php
-$this->widget('twitter');
+//$this->widget('twitter');
 ?>

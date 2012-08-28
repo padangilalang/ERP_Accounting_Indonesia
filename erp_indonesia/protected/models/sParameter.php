@@ -1,6 +1,6 @@
 <?php
 
-class sParameter extends CActiveRecord
+class sParameter extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -40,10 +40,10 @@ class sParameter extends CActiveRecord
 
 	public function lastItem($type) {
 		$_item=self::model()->find(array(
-			'order'=>'code DESC',
-			'condition'=>'type = :type ',
-			'params'=>array(':type'=>$type),
-			));
+				'order'=>'code DESC',
+				'condition'=>'type = :type ',
+				'params'=>array(':type'=>$type),
+		));
 		if (isset($_item)) {
 			$_code=$_item->code+1;
 		} else

@@ -148,8 +148,8 @@ class AApprovalFormController extends Controller
 	{
 		aPorder::model()->updateByPk((int)$id,array('payment_state_id'=>3,'payment_date'=>new CDbExpression('NOW()')));
 		aPorderDetail::model()->updateAll(array('detail_payment_id'=>3),array(
-			'condition'=>'parent_id = :id',
-			'params'=>array(':id'=>$id),
+				'condition'=>'parent_id = :id',
+				'params'=>array(':id'=>$id),
 		));
 	}
 
@@ -166,19 +166,21 @@ class AApprovalFormController extends Controller
 			#----------------------------------------
 			#Budget Detail
 			$modelbd=aBudgetDetail::model()->find(array(
-				'condition'=>'parent_id = :parent',
-				'params'=>array(':parent'=>$model->budgetcomp_id),
+					'condition'=>'parent_id = :parent',
+					'params'=>array(':parent'=>$model->budgetcomp_id),
 			));
 			
 		if($modelbd==null) { //Step 1. null berarti saldo baru berjalan, jadi cek saldo awal
 
 
 			$modelbd1=new aBudgetDetail;
-			$modelbd1->input_date = new CDbExpression("now()");
 			$modelbd1->parent_id=$model->budgetcomp_id;
+			$modelbd1->input_date = new CDbExpression("now()");
+			$modelbd1->periode_date=0;
+			$modelbd1->no_ref='temp';
+			$modelbd1->prequest_id =0;
 			$modelbd1->tdebt=$model->budgetcomp->amount;
 			$modelbd1->balance=$model->budgetcomp->amount;
-			$modelbd1->prequest_id =0;
 			$modelbd1->created_by='admin';
 			$modelbd1->created_date=time();
 			$modelbd1->save();
@@ -188,21 +190,21 @@ class AApprovalFormController extends Controller
 		$bd_balance=aBudgetDetail::model()->getSaldo($model->budgetcomp_id);
 			
 		$command=Yii::app()->db->createCommand(
-				'INSERT INTO a_budget_detail (parent_id, input_date, periode_date, no_ref, prequest_id, tcredit, balance, remark, created_date, created_by)
-				SELECT a.budgetcomp_id, a.input_date, a.periode_date, a.no_ref, a.id, Sum(b.qty*b.amount),
+				'INSERT INTO a_budget_detail (parent_id, input_date, periode_date, no_ref, prequest_id, tdebt, tcredit, balance, remark, created_date, created_by)
+				SELECT a.budgetcomp_id, a.input_date, a.periode_date, a.no_ref, a.id, 0, Sum(b.qty*b.amount),
 				:balance - Sum(b.qty*b.amount), \'Automatic Posting\', '.time().',\''.Yii::app()->user->name .'\'
 				FROM a_porder a
 				INNER JOIN a_porder_detail b ON a.id = b.parent_id
 				WHERE a.id = :id
 				GROUP BY a.budgetcomp_id, a.input_date, a.no_ref, a.id');
-				
+
 		$command->bindParam(":id", $id, PDO::PARAM_STR);
-		$command->bindParam(":balance", $balance, PDO::PARAM_STR);
+		$command->bindParam(":balance", $bd_balance, PDO::PARAM_STR);
 		$command->execute();
 			
 		#------------------------------------
 		#Budget Department
-		foreach ($model->po_detail_group as $mod) {
+/*		foreach ($model->po_detail_group as $mod) {
 
 			$criteria=new CDbCriteria;
 			$criteria->compare('parent_id',$mod->budget_id);
@@ -216,11 +218,14 @@ class AApprovalFormController extends Controller
 				if($modelbd==null) { //Step 1. Cek Existing Data. Jika belom pernah diisi, maka diisi
 
 					$modelbd1=new aBudgetDepartment;
-					$modelbd1->input_date = new CDbExpression("now()");
 					$modelbd1->parent_id=$mod->budget_id;
-					$modelbd1->tdebt=$cekDeptBudget->amount; //karena budget-nya ada, amountnya diambil
-					$modelbd1->balance=$cekDeptBudget->amount; //karena budget-nya ada, amountnya diambil
+					$modelbd1->input_date = new CDbExpression("now()");
+					$modelbd1->periode_date=0;
+					$modelbd1->no_ref='temp';
 					$modelbd1->department_id =$mod->department_id;
+					$modelbd1->tdebt=$cekDeptBudget->amount; //karena budget-nya ada, amountnya diambil
+					$modelbd1->tcredit=0; 
+					$modelbd1->balance=$cekDeptBudget->amount; //karena budget-nya ada, amountnya diambil
 					$modelbd1->created_by='admin';
 					$modelbd1->created_date=time();
 					$modelbd1->save();
@@ -241,14 +246,15 @@ class AApprovalFormController extends Controller
 					'periode_date'=>$model->periode_date,
 					'no_ref'=>$model->no_ref,
 					'department_id'=>$mod->department_id,
+					'tdebt'=>0,
 					'tcredit'=>$mod->sub_total,
 					'balance'=>$bd_balanceDept-$mod->sub_total,
 					'remark'=>"Automatic Posting",
 					'created_date'=>time(),
-					'created_by'=>Yii::app()->user->name,
+					'created_by'=>Yii::app()->user->id,
 			));
 		}
-
+*/
 		$_date= Yii::app()->dateFormatter->format("yyyy-MM-dd",time());
 		aPorder::model()->updateByPk((int)$model->id,array('approved_date'=>$_date));
 		}

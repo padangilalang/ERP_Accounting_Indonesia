@@ -95,7 +95,7 @@ if ($id ==2) {
 				//'remark',
 				array(
 						'header'=>'Total',
-						'value'=>'$data->sum_ttlf()',
+						'value'=>'Yii::app()->indoFormat->number($data->total_amount)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
@@ -118,7 +118,7 @@ if ($id ==2) {
 								(
 										'label'=>'<i class="icon-print"></i>',
 										//'imageUrl'=>Yii::app()->request->baseUrl.'/images/icon/process.png',
-										'url'=>'Yii::app()->createUrl("bPorder/report1", array("id"=>$data->id))',
+										'url'=>'Yii::app()->createUrl("/m2/vPorder/report1", array("id"=>$data->id))',
 								),
 						),
 
@@ -168,7 +168,7 @@ if ($id ==2) {
 				//'approved_date',
 				array(
 						'header'=>'Payment',
-						'value'=>'$data->paymentf()',
+						'value'=>'Yii::app()->indoFormat->number($data->payment)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),

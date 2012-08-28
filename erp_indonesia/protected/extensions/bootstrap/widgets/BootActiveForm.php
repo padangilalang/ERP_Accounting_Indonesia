@@ -30,7 +30,10 @@ class BootActiveForm extends CActiveForm
 	 * @var string the form type. See class constants.
 	 */
 	public $type = self::TYPE_VERTICAL;
-
+	/**
+	 * @var string input class.
+	 */
+	public $input;
 	/**
 	 * @var boolean flag that indicates if the errors should be displayed as blocks.
 	 */
@@ -205,7 +208,7 @@ class BootActiveForm extends CActiveForm
 	 */
 	public function captchaRow($model, $attribute, $htmlOptions = array())
 	{
-		return $this->inputRow(BootInput::TYPE_CAPTCHA, $model, $attribute, $htmlOptions);
+		return $this->inputRow(BootInput::TYPE_CAPTCHA, $model, $attribute, null, $htmlOptions);
 	}
 
 	/**
@@ -501,25 +504,29 @@ class BootActiveForm extends CActiveForm
 	 */
 	protected function getInputClassName()
 	{
-		// Determine the input widget class name.
-		switch ($this->type)
+		if (isset($this->input))
+			return $this->input;
+		else
 		{
-			case self::TYPE_HORIZONTAL:
-				return self::INPUT_HORIZONTAL;
-				break;
+			switch ($this->type)
+			{
+				case self::TYPE_HORIZONTAL:
+					return self::INPUT_HORIZONTAL;
+					break;
 
-			case self::TYPE_INLINE:
-				return self::INPUT_INLINE;
-				break;
+				case self::TYPE_INLINE:
+					return self::INPUT_INLINE;
+					break;
 
-			case self::TYPE_SEARCH:
-				return self::INPUT_SEARCH;
-				break;
+				case self::TYPE_SEARCH:
+					return self::INPUT_SEARCH;
+					break;
 
-			case self::TYPE_VERTICAL:
-			default:
-				return self::INPUT_VERTICAL;
-				break;
+				case self::TYPE_VERTICAL:
+				default:
+					return self::INPUT_VERTICAL;
+					break;
+			}
 		}
 	}
 }

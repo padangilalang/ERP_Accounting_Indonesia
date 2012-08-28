@@ -33,8 +33,8 @@ class TPostingController extends Controller
 		$_lraccount=tAccount::model()->with('accmain')->find('accmain.mvalue=8')->id;
 
 		$modelBalanceCurrent=tBalanceSheet::model()->find(array(
-			'condition'=>'parent_id = :account AND yearmonth_periode = :period',
-			'params'=>array(':account'=>$_lraccount, ':period'=>$_curPeriod), 
+				'condition'=>'parent_id = :account AND yearmonth_periode = :period',
+				'params'=>array(':account'=>$_lraccount, ':period'=>$_curPeriod),
 		));
 
 		if ($modelBalanceCurrent == null) { //New Account on This Period
@@ -63,7 +63,7 @@ class TPostingController extends Controller
 
 	public function actionUnlock($id)
 	{
-		uJournal::model()->updateByPk((int)$id, array('state_id'=>2,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
+		uJournal::model()->updateByPk((int)$id, array('state_id'=>2,'updated_date'=>time(),'updated_by'=>Yii::app()->user->id));
 	}
 
 	public function actionRePosting ()  //backup Posting only
@@ -88,18 +88,18 @@ class TPostingController extends Controller
 		$_curPeriod = Yii::app()->settings->get("System", "cCurrentPeriod");
 		$_lastPeriod = sParameter::cBeginDateBefore(Yii::app()->settings->get("System", "cCurrentPeriod"));
 
-		uJournal::model()->updateByPk((int)$id, array('state_id'=>4,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
+		uJournal::model()->updateByPk((int)$id, array('state_id'=>4,'updated_date'=>time(),'updated_by'=>Yii::app()->user->id));
 
 		$models=uJournalDetail::model()->with('journal')->findAll(array(
-			'condition'=>'parent_id = :id',
-			'params'=>array(':id'=>$id),
+				'condition'=>'parent_id = :id',
+				'params'=>array(':id'=>$id),
 		));
 
 		foreach ($models as $model)
 		{
 			$modelBalanceCurrent=tBalanceSheet::model()->find(array(
-				'condition'=>'parent_id =  :accid AND yearmonth_periode = :curperiod', 
-				'params'=>array(':accid'=>$model->account_no_id, ':curperiod'=>$_curPeriod),
+					'condition'=>'parent_id =  :accid AND yearmonth_periode = :curperiod',
+					'params'=>array(':accid'=>$model->account_no_id, ':curperiod'=>$_curPeriod),
 			));
 
 			$_debit=$model->debit;
@@ -108,8 +108,8 @@ class TPostingController extends Controller
 
 			if ($modelBalanceCurrent == null) { //New Account on This Period. Create New Account on Current Period
 				$modelBalanceLast=tBalanceSheet::model()->find(array(
-					'condition'=>'parent_id = :accid AND yearmonth_periode = :period',
-					'params'=>array(':accid'=>$model->account_no_id, ':period'=>$_lastPeriod),
+						'condition'=>'parent_id = :accid AND yearmonth_periode = :period',
+						'params'=>array(':accid'=>$model->account_no_id, ':period'=>$_lastPeriod),
 				));
 
 				if ($modelBalanceLast != null && $model->account->getTypeValue() == 1) {  //Account Neraca
@@ -173,7 +173,7 @@ class TPostingController extends Controller
 
 				//LOG
 				$commandLog=Yii::app()->db->createCommand('
-						INSERT INTO t_balance_sheet_log (journal_id, yearmonth_periode, type_balance_id, remark, budget, account_no_id, beginning_balance,debit,credit,end_balance,created_date, created_id) VALUES ('
+						INSERT INTO t_balance_sheet_log (journal_id, yearmonth_periode, type_balance_id, remark, budget, account_no_id, beginning_balance,debit,credit,end_balance,created_date, created_by) VALUES ('
 						.$model->parent_id.','
 						.$_curPeriod.', 1, \'UPDATE LOG\', 0,'
 						.$model->account_no_id.','
@@ -199,18 +199,18 @@ class TPostingController extends Controller
 		$_curPeriod = Yii::app()->settings->get("System", "cCurrentPeriod");
 		$_lastPeriod = sParameter::cBeginDateBefore(Yii::app()->settings->get("System", "cCurrentPeriod"));
 
-		$locked=uJournal::model()->updateByPk((int)$id, array('state_id'=>2,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id));
+		$locked=uJournal::model()->updateByPk((int)$id, array('state_id'=>2,'updated_date'=>time(),'updated_by'=>Yii::app()->user->id));
 
 		$models=uJournalDetail::model()->with('journal')->findAll(array(
-			'condition'=>'parent_id = :id', 
-			'params'=>array(':id'=>$id), 
+				'condition'=>'parent_id = :id',
+				'params'=>array(':id'=>$id),
 		));
 
 		foreach ($models as $model)
 		{
 			$modelBalanceCurrent=tBalanceSheet::model()->find(array(
-				'condition'=>'parent_id = :accid AND yearmonth_periode = :period', 
-				'params'=>array(':accid'=>$model->account_no_id, ':period'=>$_curPeriod), 
+					'condition'=>'parent_id = :accid AND yearmonth_periode = :period',
+					'params'=>array(':accid'=>$model->account_no_id, ':period'=>$_curPeriod),
 			));
 
 			$_debit=$model->debit;
@@ -235,7 +235,7 @@ class TPostingController extends Controller
 					WHERE yearmonth_periode = '.$_curPeriod.' AND parent_id = '.$model->account_no_id);
 
 			$command->execute();
-				
+
 			//LOG
 			$commandLog=Yii::app()->db->createCommand('
 					INSERT INTO t_balance_sheet_log (journal_id, yearmonth_periode, type_balance_id, remark, budget, account_no_id, beginning_balance,debit,credit,end_balance) VALUES ('
@@ -260,7 +260,7 @@ class TPostingController extends Controller
 		$criteria=new CDbCriteria;
 		$criteria1=new CDbCriteria;
 		$criteria->condition='state_id = 1 OR state_id = 2';
-		//$criteria->compare('updated_id',4);
+		//$criteria->compare('updated_by',4);
 
 		if(isset($_GET['uJournal'])) {
 			$model->attributes=$_GET['uJournal'];
@@ -281,7 +281,9 @@ class TPostingController extends Controller
 
 		$criteria->mergeWith($criteria1);
 
-		$dataProvider=new CActiveDataProvider('uJournal', array(
+		//$dataProvider=new CActiveDataProvider('uJournal', array(
+		$dataProvider=new EActiveDataProviderEx('uJournal', array(
+				'cache' => array(3600),
 				'criteria'=>$criteria,
 				'pagination'=>array (
 						'pageSize'=>20,
@@ -323,7 +325,9 @@ class TPostingController extends Controller
 
 		$criteria->mergeWith($criteria1);
 
-		$dataProvider=new CActiveDataProvider('uJournal', array(
+		//$dataProvider=new CActiveDataProvider('uJournal', array(
+		$dataProvider=new EActiveDataProviderEx('uJournal', array(
+				'cache' => array(3600),
 				'criteria'=>$criteria,
 				'pagination'=>array (
 						'pageSize'=>20,

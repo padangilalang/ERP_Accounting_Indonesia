@@ -1,11 +1,12 @@
 <?php
 
-class aOrganization extends CActiveRecord
+class aOrganization extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
+
 
 	public function tableName()
 	{
@@ -133,32 +134,10 @@ class aOrganization extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
-
-	public function behaviors()
-	{
-		return array('datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'));
 	}
 
 	public static function items()
@@ -251,9 +230,9 @@ class aOrganization extends CActiveRecord
 		$_items1=array();
 
 		foreach($models as $model)
-			$_items[$model->name]=array('label' => $model->name, 'url' => array('index', 'id'=>$model->id));
+			$_items[$model->name]=array('label' => $model->name, 'icon'=>'list-alt', 'url' => array('index', 'id'=>$model->id));
 
-		$_items1[$model->name]= array('label' =>'Project: '.$mod->name, 'url' => array('index', 'id'=>$model->id),'items'=>$_items);
+		$_items1[$model->name]= array('label' =>'Project: '.$mod->name, 'icon'=>'list-alt', 'url' => array('index', 'id'=>$model->id),'items'=>$_items);
 
 		return $_items1;
 	}
@@ -273,13 +252,13 @@ class aOrganization extends CActiveRecord
 		$subitems = array();
 
 		$model=$this->find(array(
-			'condition'=>'id = :id',
-			'params'=>array(':id'=>$this->id),
+				'condition'=>'id = :id',
+				'params'=>array(':id'=>$this->id),
 		));
 		if($this->childs) foreach($this->childs as $child)
 			$subitems[] = $child->getListPersonalia();
 
-		$returnarray = array('label' => $this->name, 'url' => Yii::app()->createUrl("/cPersonalia/index",array("id"=>$this->id)));
+		$returnarray = array('label' => $this->name, 'icon'=>'list-alt', 'url' => Yii::app()->createUrl("/cPersonalia/index",array("id"=>$this->id)));
 
 		if($subitems != array())
 			$returnarray = array_merge($returnarray, array('items' => $subitems));
@@ -292,13 +271,13 @@ class aOrganization extends CActiveRecord
 		$subitems = array();
 
 		$model=$this->find(array(
-			'condition'=>'id = :id',
-			'params'=>array(':id'=>$this->id),
+				'condition'=>'id = :id',
+				'params'=>array(':id'=>$this->id),
 		));
 		if($this->childs) foreach($this->childs as $child)
 			$subitems[] = $child->getListAbsence();
 
-		$returnarray = array('label' => $this->name, 'url' => Yii::app()->createUrl("/cAbsence/index",array("id"=>$this->id)));
+		$returnarray = array('label' => $this->name, 'icon'=>'list-alt', 'url' => Yii::app()->createUrl("/cAbsence/index",array("id"=>$this->id)));
 
 		if($subitems != array())
 			$returnarray = array_merge($returnarray, array('items' => $subitems));
@@ -306,5 +285,6 @@ class aOrganization extends CActiveRecord
 		return $returnarray;
 
 	}
+
 
 }

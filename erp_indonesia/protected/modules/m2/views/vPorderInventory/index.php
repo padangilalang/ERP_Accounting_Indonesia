@@ -65,11 +65,20 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 				//'remark',
 				array(
 						'header'=>'Total',
-						'value'=>'$data->sum_pof()',
+						'value'=>'Yii::app()->indoFormat->number($data->sum_po)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
 				),
+				//array(
+				//	'class'=>'ext.gridcolumns.RunningTotalColumn',
+				//	'value'=>'$data->sum_po',
+				//	'output'=>'Yii::app()->indoFormat->number($total)',
+				//	'type'=>'raw',
+				//	'htmlOptions'=>array(
+				//			'style'=>'text-align: right; padding-right: 5px;'
+				//	),
+				//),
 				array(
 						'class'=>'BootButtonColumn',
 						'template'=>'{myUpdate}{myView}{myDelete}',

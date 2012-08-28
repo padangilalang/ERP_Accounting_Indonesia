@@ -55,7 +55,7 @@ class SAdminController extends Controller
 	public function actionBackup()
 	{
 
-		Yii::import('ext.yii-database-dumper.SDatabaseDumper');
+		Yii::import('SDatabaseDumper');
 		$dumper = new SDatabaseDumper;
 			
 		// Get path to new backup file
@@ -75,61 +75,39 @@ class SAdminController extends Controller
 	/////BLOCK TESTING
 
 
-	public function actionEmail1()   //not work
+	public function actionSendEmail($id)
 	{
-		$message = new YiiMailMessage;
-		$message->setBody('Message content here with HTML', 'text/html');
-		$message->subject = 'My Subject';
-		$message->addTo('peterjkambey@yahoo.co.id');
-		$message->from = Yii::app()->params['adminEmail'];
-		Yii::app()->mail->send($message);
+		$mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+		$mailer->IsSMTP();
+		$mailer->IsHTML(true);
+		$mailer->SMTPAuth = true;
+		/*
+		 $mailer->SMTPSecure = "ssl";
+		$mailer->Host = "smtp.gmail.com";
+		$mailer->Port = 465;
+		$mailer->Username = "thony@folindonesia2013.com";
+		$mailer->Password = 'thony2013';
+		$mailer->From = "thony@folindonesia2013.com";
+		*/
+		/**/
+		$mailer->Host = "smtp.mail.yahoo.co.id";
+		$mailer->Port = 25;
+		$mailer->Username = "festivaloflive2013";
+		$mailer->Password = 'jmmindonesia';
+		$mailer->From = "festivaloflive2013@yahoo.co.id";
+		/**/
+		$mailer->CharSet = 'UTF-8';
+		$mailer->addAttachment(Yii::app()->basePath."/reports/BuktiTerima.php");
+		//$mailer->addAttachment(Yii::app()->basePath."/reports/bukti_".$id.".pdf");
+		$mailer->FromName = "Festival of Live 2013";
+		$mailer->AddAddress("thonyronaldo.fol2013@gmail.com","peterjkambey@gmail.com");
+		$mailer->Subject = "FOL Bukti Registrasi";
+		$mailer->Body = "FOL Bukti Registrasi";
+		$mailer->Send();
+
+		$this->redirect(array('/peserta'));
 	}
 
-	public function actionEmail2()   //OK BANGET tapi sayangnya masih Port 25
-	{
-		$model=new FEmail;
-
-		$mail = new JPhpMailer;
-		$mail->IsSMTP();
-		$mail->Host = 'smtp.mail.yahoo.co.id';
-		$mail->SMTPAuth = true;
-		$mail->Username = 'otabethel1@yahoo.co.id';
-		$mail->Password = '....';
-
-		if(isset($_POST['FEmail']))
-		{
-			$model->attributes=$_POST['FEmail'];
-			if($model->validate())
-			{
-				$mail->SetFrom(Yii::app()->params['adminEmail'], 'Peter Kambey');
-				$mail->Subject = $model->subject;
-				$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
-				$mail->MsgHTML($model->body);
-				$mail->AddAddress($model->email, 'No Name');
-				$mail->Send();
-
-				Yii::app()->user->setFlash('contact','Your Email Has Been Send...');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-
-	public function actionEmail3()  //integrate to actionEmail2
-	{
-		$mail = new JPhpMailer;
-		$mail->IsSMTP();
-		$mail->Host = 'smtp.mail.yahoo.co.id';
-		$mail->SMTPAuth = true;
-		$mail->Username = 'otabethel1@yahoo.co.id';
-		$mail->Password = '........';
-		$mail->SetFrom('peterjkambey@yahoo.co.id', 'Peter Kambey');
-		$mail->Subject = 'PHPMailer Test Subject via smtp, basic with authentication';
-		$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
-		$mail->MsgHTML('<h1>JUST A TEST!</h1>');
-		$mail->AddAddress('peterjkambey@gmail.com', 'Peter Kambey');
-		$mail->Send();
-	}
 
 	public function actionCall1()
 	{
@@ -288,29 +266,44 @@ class SAdminController extends Controller
 	public function actionHelp()   //OK BANGET tapi sayangnya masih Port 25
 	{
 		$model=new FEmail;
-
-		Yii::import('ext.phpmailer.JPhpMailer');
-		$mail = new JPhpMailer;
-		$mail->IsSMTP();
-		$mail->Host = 'smtp.mail.yahoo.co.id';
-		$mail->SMTPAuth = true;
-		$mail->Username = 'peterjkambey@yahoo.co.id';
-		$mail->Password = '';
-
+		
 		if(isset($_POST['FEmail']))
 		{
 			$model->attributes=$_POST['FEmail'];
 			if($model->validate())
 			{
-				$mail->SetFrom(Yii::app()->params['userEmail'], Yii::app()->user->name);
-				$mail->Subject = $model->subject;
-				$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
-				$mail->MsgHTML($model->body);
-				$mail->AddAddress(Yii::app()->params['adminEmail'], 'Peter J. Kambey');
-				$mail->Send();
 
-				Yii::app()->user->setFlash('contact','Your Email Has Been Send...');
-				$this->refresh();
+				$mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+				$mailer->IsSMTP();
+				$mailer->IsHTML(true);
+				$mailer->SMTPAuth = true;
+		/*
+				$mailer->SMTPSecure = "ssl";
+				$mailer->Host = "smtp.gmail.com";
+				$mailer->Port = 465;
+				$mailer->Username = "thony@folindonesia2013.com";
+				$mailer->Password = 'thony2013';
+				$mailer->From = "thony@folindonesia2013.com";
+		*/		
+		/**/
+				$mailer->Host = "smtp.mail.yahoo.co.id";
+				$mailer->Port = 25;
+				$mailer->Username = "festivaloflive2013";
+				$mailer->Password = 'jmmindonesia';
+				$mailer->From = "festivaloflive2013@yahoo.co.id";
+		/**/		
+				$mailer->CharSet = 'UTF-8';
+				//$mailer->addAttachment(Yii::app()->basePath."/reports/BuktiTerima.php");
+				//$mailer->addAttachment(Yii::app()->basePath."/reports/bukti_".$id.".pdf");
+				$mailer->FromName = Yii::app()->params['userEmail'];
+				$mailer->AddAddress(Yii::app()->params['adminEmail']);
+				$mailer->Subject = $model->subject;
+				$mailer->Body = $model->body;
+				$mailer->Send();				
+
+				echo "OK";
+				//Yii::app()->user->setFlash('contact','Your Email Has Been Send...');
+				//$this->refresh();
 			}
 		}
 		$this->render('help',array('model'=>$model));

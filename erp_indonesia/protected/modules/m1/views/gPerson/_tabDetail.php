@@ -54,8 +54,8 @@
 						'c_pskdpos',
 						'vc_psemail',
 						'vc_psemail2',
-				/*		'c_rfdarah',
-				 'vc_psnotelp',
+						/*		'c_rfdarah',
+						 'vc_psnotelp',
 				'vc_psnohp',
 				'vc_psnohp2',
 				'vc_pshobby',
@@ -77,7 +77,7 @@
 	</div>
 </div>
 
-<hr/>
+<hr />
 
 <div class="row-fluid">
 	<div class="span12">
@@ -137,7 +137,7 @@
 		't_status',
 		't_status2',
 		*/
-	),
-)); ?>
+				),
+		)); ?>
 	</div>
 </div>

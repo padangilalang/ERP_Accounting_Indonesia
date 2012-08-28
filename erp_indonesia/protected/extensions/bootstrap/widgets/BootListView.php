@@ -10,8 +10,7 @@
 Yii::import('zii.widgets.CListView');
 
 /**
- * Bootstrap list view.
- * Used to enable the bootstrap pager.
+ * Bootstrap Zii list view.
  */
 class BootListView extends CListView
 {
@@ -21,6 +20,7 @@ class BootListView extends CListView
 	public $pagerCssClass = 'pagination';
 	/**
 	 * @var array the configuration for the pager.
+	 * Defaults to <code>array('class'=>'ext.bootstrap.widgets.BootPager')</code>.
 	 */
 	public $pager = array('class'=>'bootstrap.widgets.BootPager');
 	/**
@@ -46,9 +46,7 @@ class BootListView extends CListView
 		jQuery('{$tooltip}').tooltip();
 	}";
 
-		if (isset($this->afterAjaxUpdate))
-			$this->afterAjaxUpdate .= ' '.$afterAjaxUpdate;
-		else
+		if (!isset($this->afterAjaxUpdate))
 			$this->afterAjaxUpdate = $afterAjaxUpdate;
 	}
 

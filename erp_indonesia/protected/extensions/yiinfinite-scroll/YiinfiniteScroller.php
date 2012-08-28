@@ -16,7 +16,7 @@ class YiinfiniteScroller extends CBasePager {
 	public $contentSelector = '#content';
 
 	private $_options = array(
-			'loadingImg'    => null,
+			'loadingImg'    => '/erp_indonesia/images/icon/loading.gif',
 			'loadingText'   => null,
 			'donetext'      => null,
 			'itemSelector'  => null,

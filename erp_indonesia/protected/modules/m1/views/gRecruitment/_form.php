@@ -1,10 +1,10 @@
 <?php
 Yii::app()->clientScript->registerCss('userAutoComplete', <<<EOCSS
-        .userautocompletelink {height:52px;}
-	.userautocompletelink img {float:left;margin-right:5px;width:40px;}
-EOCSS
+		.userautocompletelink {height:52px;}
+		.userautocompletelink img {float:left;margin-right:5px;width:40px;}
+		EOCSS
 );
-?>
+		?>
 
 
 <?php

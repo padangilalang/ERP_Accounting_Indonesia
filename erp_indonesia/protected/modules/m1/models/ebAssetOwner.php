@@ -11,7 +11,7 @@
  * @property integer $location_id
  * @property string $remark
  */
-class ebAssetOwner extends CActiveRecord
+class ebAssetOwner extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

@@ -10,7 +10,7 @@
  * @property string $fax
  * @property string $remarks
  */
-class eaAssetSupplier extends CActiveRecord
+class eaAssetSupplier extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

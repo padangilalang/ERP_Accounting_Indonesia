@@ -16,9 +16,9 @@ class sUser extends CActiveRecord
 	{
 		return array(
 				array('username, password, default_group, status_id', 'required'),
-				array('status_id', 'numerical', 'integerOnly'=>true),
+				array('status_id, default_group, status_id, created_date', 'numerical', 'integerOnly'=>true),
 				array('username, created_by', 'length', 'max'=>15),
-				array('password, salt, default_group', 'length', 'max'=>100),
+				array('password, salt, ', 'length', 'max'=>100),
 				array('last_login', 'safe'),
 				array('username, default_group, status_id', 'safe', 'on'=>'search'),
 		);
@@ -72,22 +72,18 @@ class sUser extends CActiveRecord
 
 	protected function beforeSave()
 	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->salt=$this->generateSalt();
-				$this->password=md5($this->salt.$this->password);
-				$this->created_by='admin';
-				$this->created_date=time();
-			} else {
-				$this->created_by='admin';
-				$this->created_date=time();
-			}
-
-			return true;
+		if($this->isNewRecord) {
+			$this->salt=$this->generateSalt();
+			$this->password=md5($this->salt.$this->password);
+			$this->created_by=Yii::app()->user->id;
+			$this->created_date=time();
+		} else {
+			$this->created_by=Yii::app()->user->id;
+			$this->created_date=time();
 		}
-		else
-			return false;
+			
+		return parent::beforeSave();
+
 	}
 
 	public function generateSalt()
@@ -300,7 +296,7 @@ class sUser extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->username, 'label' => $model->username, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->username, 'label' => $model->username, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -328,7 +324,7 @@ class sUser extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->username, 'label' => $model->username, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->username, 'label' => $model->username, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;

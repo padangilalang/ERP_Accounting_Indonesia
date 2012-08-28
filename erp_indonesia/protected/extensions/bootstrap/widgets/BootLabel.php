@@ -9,11 +9,11 @@
 
 /**
  * Bootstrap label widget.
+ * @see http://twitter.github.com/bootstrap/components.html#labels
  */
 class BootLabel extends CWidget
 {
 	// Label types.
-	const TYPE_DEFAULT = '';
 	const TYPE_SUCCESS = 'success';
 	const TYPE_WARNING = 'warning';
 	const TYPE_IMPORTANT = 'important';
@@ -21,10 +21,10 @@ class BootLabel extends CWidget
 	const TYPE_INVERSE = 'inverse';
 
 	/**
-	 * @var string the label type (defaults to '').
-	 * Valid types are '', 'success', 'warning', 'important', 'info' and 'inverse'.
+	 * @var string the label type.
+	 * Valid types are 'success', 'warning', 'important', 'info' and 'inverse'.
 	 */
-	public $type = self::TYPE_DEFAULT;
+	public $type;
 	/**
 	 * @var string the label text.
 	 */
@@ -45,17 +45,19 @@ class BootLabel extends CWidget
 	{
 		$classes = array('label');
 
-		$validTypes = array(self::TYPE_SUCCESS, self::TYPE_WARNING,
-				self::TYPE_IMPORTANT, self::TYPE_INFO, self::TYPE_INVERSE);
+		$validTypes = array(self::TYPE_SUCCESS, self::TYPE_WARNING, self::TYPE_IMPORTANT, self::TYPE_INFO, self::TYPE_INVERSE);
 
-		if (in_array($this->type, $validTypes))
+		if (isset($this->type) && in_array($this->type, $validTypes))
 			$classes[] = 'label-'.$this->type;
 
-		$classes = implode(' ', $classes);
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 
 		if ($this->encodeLabel === true)
 			$this->label = CHtml::encode($this->label);

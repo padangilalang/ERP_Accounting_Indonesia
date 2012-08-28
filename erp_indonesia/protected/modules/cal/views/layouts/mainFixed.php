@@ -5,7 +5,8 @@
 	Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
 	-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+<title><?php echo CHtml::encode($this->pageTitle); ?>
+</title>
 <meta name="description" content="Description" />
 <meta name="keywords" content="Keywords" />
 

@@ -10,6 +10,9 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Home', 'icon'=>'home','url'=>array('/m2/vPorderInventory')),
 );
+
+$this->menu1=vPorder::getTopUpdated(1);
+$this->menu2=vPorder::getTopCreated(1);
 ?>
 
 <div class="page-header">

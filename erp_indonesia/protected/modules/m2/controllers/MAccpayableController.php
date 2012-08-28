@@ -89,7 +89,7 @@ class MAccpayableController extends Controller
 			$modelHeader->module_id=3; //AP
 			$modelHeader->journal_type_id=1; //Purchasing
 			$modelHeader->state_id=1;
-			$modelHeader->created_id=Yii::app()->user->id;
+			$modelHeader->created_by=Yii::app()->user->id;
 			$modelHeader->created_date=time();
 
 			$modelHeader->save();
@@ -157,7 +157,7 @@ class MAccpayableController extends Controller
 			$modelHeader->module_id=3; //AP
 			$modelHeader->journal_type_id=2; //Payment
 			$modelHeader->state_id=1;
-			$modelHeader->created_id=Yii::app()->user->id;
+			$modelHeader->created_by=Yii::app()->user->id;
 			$modelHeader->created_date=time();
 
 			$modelHeader->save();

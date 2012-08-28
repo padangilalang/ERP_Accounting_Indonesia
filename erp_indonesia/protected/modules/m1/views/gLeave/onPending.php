@@ -83,6 +83,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 });
 }',
 												),
+												'class'=>'btn btn-mini',
 										),
 								),
 						),

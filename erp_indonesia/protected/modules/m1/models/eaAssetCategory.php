@@ -11,7 +11,7 @@
  * @property string $type2_info
  * @property string $remarks
  */
-class eaAssetCategory extends CActiveRecord
+class eaAssetCategory extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

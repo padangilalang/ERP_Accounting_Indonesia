@@ -8,7 +8,7 @@
  * @property integer $parent_id
  * @property integer $organization_root_id
  */
-class sGroup extends CActiveRecord
+class sGroup extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

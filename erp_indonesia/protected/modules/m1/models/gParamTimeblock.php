@@ -11,7 +11,7 @@
  * @property string $rest_in
  * @property string $rest_out
  */
-class gParamTimeblock extends CActiveRecord
+class gParamTimeblock extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -126,19 +126,6 @@ class gParamTimeblock extends CActiveRecord
 		foreach($models as $model)
 			self::$_items[$type][$model->id]=$model->code . " (". $model->in . " - ". $model->out .")";
 	}
-
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
-	}
-
 
 
 }

@@ -54,7 +54,7 @@
 			<div class="art-sheet-cc"></div>
 			<div class="art-sheet-body">
 
-				<?php $this->beginContent('/layouts/_header'); $this->endContent(); ?>
+				<?php //$this->beginContent('/layouts/_header'); $this->endContent(); ?>
 				<?php //$this->beginContent('/layouts/_navigation'); $this->endContent(); ?>
 				<?php $this->beginContent('/layouts/_notification'); $this->endContent(); ?>
 

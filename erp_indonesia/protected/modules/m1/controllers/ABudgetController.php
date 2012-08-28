@@ -8,15 +8,38 @@ class aBudgetController extends Controller
 	 */
 	public $layout='//layouts/column1';
 
+	/**/
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			array(
+				'COutputCache +index',
+				// will expire in a year
+				'duration'=>24*3600*365,
+				'dependency'=>array(
+				'class'=>'CChainedCacheDependency',
+				'dependencies'=>array(
+					new CGlobalStateCacheDependency('budget'),
+					new CDbCacheDependency('SELECT id FROM a_budget
+					ORDER BY id DESC LIMIT 1'),
+					),
+				),
+			),
+		);
+	}
+	/**/
+	
 	/**
 	 * @return array action filters
 	 */
-	public function filters()
+/*	public function filters()
 	{
 		return array(
 				'accessControl', // perform access control for CRUD operations
 		);
 	}
+*/
 
 	/**
 	 * Specifies the access control rules.

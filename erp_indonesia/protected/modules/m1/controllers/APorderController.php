@@ -87,16 +87,17 @@ class aPorderController extends Controller
 				$model->amount=$_POST['amount'];
 					
 				for($i = 0; $i < sizeof($model->budget_id); ++$i):
-				$modelDetail=new aPorderDetail;
-				$modelDetail->parent_id=$modelHeader->id;
-				$modelDetail->budget_id=$model->budget_id[$i];
-				$modelDetail->description=$model->description[$i];
-				$modelDetail->user=$model->user[$i];
-				($model->qty[$i] != null) ? $modelDetail->qty=$model->qty[$i] : $modelDetail->qty=1;
-				($model->amount[$i] != null) ? $modelDetail->amount=$model->amount[$i] : $modelDetail->amount=0;
-				$modelDetail->detail_payment_id=1;
+					$modelDetail=new aPorderDetail;
+					$modelDetail->parent_id=$modelHeader->id;
+					$modelDetail->budget_id=$model->budget_id[$i];
+					$modelDetail->description=$model->description[$i];
+					$modelDetail->user=$model->user[$i];
+					($model->qty[$i] != null) ? $modelDetail->qty=$model->qty[$i] : $modelDetail->qty=1;
+					($model->amount[$i] != null) ? $modelDetail->amount=$model->amount[$i] : $modelDetail->amount=0;
+					$modelDetail->detail_payment_id=1;
+					$modelDetail->department_id=0;
 
-				$modelDetail->save();
+					$modelDetail->save();
 				endfor;
 					
 				$this->redirect(array('/m1/aPorder'));
@@ -141,16 +142,16 @@ class aPorderController extends Controller
 				$model->amount=$_POST['amount'];
 					
 				for($i = 0; $i < sizeof($model->budget_id); ++$i):
-				$modelDetail=new aPorderDetail;
-				$modelDetail->parent_id=$modelHeader->id;
-				$modelDetail->budget_id=$model->budget_id[$i];
-				$modelDetail->department_id=$model->department_id[$i];
-				$modelDetail->description=$model->description[$i];
-				$modelDetail->user=$model->user[$i];
-				($model->qty[$i] != null) ? $modelDetail->qty=$model->qty[$i] : $modelDetail->qty=1;
-				($model->amount[$i] != null) ? $modelDetail->amount=$model->amount[$i] : $modelDetail->amount=0;
+					$modelDetail=new aPorderDetail;
+					$modelDetail->parent_id=$modelHeader->id;
+					$modelDetail->budget_id=$model->budget_id[$i];
+					$modelDetail->department_id=$model->department_id[$i];
+					$modelDetail->description=$model->description[$i];
+					$modelDetail->user=$model->user[$i];
+					($model->qty[$i] != null) ? $modelDetail->qty=$model->qty[$i] : $modelDetail->qty=1;
+					($model->amount[$i] != null) ? $modelDetail->amount=$model->amount[$i] : $modelDetail->amount=0;
 
-				$modelDetail->save();
+					$modelDetail->save();
 				endfor;
 					
 					
@@ -202,8 +203,8 @@ class aPorderController extends Controller
 				$model->amount=$_POST['amount'];
 					
 				$t=aPorderDetail::model()->deleteAll(array(
-					'condition'=>'parent_id = :id',
-					'params'=>array(':id'=>(int)$id),
+						'condition'=>'parent_id = :id',
+						'params'=>array(':id'=>(int)$id),
 				));
 
 				for($i = 0; $i < sizeof($model->budget_id); ++$i):
@@ -228,9 +229,9 @@ class aPorderController extends Controller
 		}
 
 		$modelDetail = aPorderDetail::model()->findAll(array(
-			'condition'=>'parent_id = :parent',
-			'params'=>array(':parent'=>$model->id),
-			'order'=>'id'
+				'condition'=>'parent_id = :parent',
+				'params'=>array(':parent'=>$model->id),
+				'order'=>'id'
 		));
 
 		foreach ($modelDetail as $mm) {

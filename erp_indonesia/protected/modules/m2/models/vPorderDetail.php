@@ -18,7 +18,7 @@
  * @property integer $updated_date
  * @property string $updated_by
  */
-class vPorderDetail extends CActiveRecord
+class vPorderDetail extends BaseModel
 {
 	public $sub_total;
 	/**
@@ -68,7 +68,7 @@ class vPorderDetail extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 				'po' => array(self::BELONGS_TO, 'vPorder', 'parent_id'),
-				'item_inventory' => array(self::BELONGS_TO, 'cProduct', 'item_id'),
+				'item_inventory' => array(self::BELONGS_TO, 'xProduct', 'item_id'),
 				'item_general' => array(self::BELONGS_TO, 'tAccount', 'item_id'),
 		);
 	}
@@ -112,13 +112,7 @@ class vPorderDetail extends CActiveRecord
 		));
 	}
 
-	public function amountf() {
-		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->amount);
-
-		return $_format;
-	}
-
-	public function totalf() {
+	public function total() {
 		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->qty*$this->amount);
 
 		return $_format;

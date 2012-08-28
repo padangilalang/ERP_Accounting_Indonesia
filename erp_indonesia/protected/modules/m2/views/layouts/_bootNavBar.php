@@ -29,14 +29,13 @@
 							'class'=>'bootstrap.widgets.BootMenu',
 							'htmlOptions'=>array('class'=>'pull-right'),
 							'items'=>array(
-									array('label'=>'This Periode: '.Yii::app()->settings->get("System", "cCurrentPeriod"), 'url'=>'#'),
-									array('label'=>Yii::app()->user->name, 'url'=>'#', 'items'=>array(
-											array('label'=>'Help', 'url'=>Yii::app()->createUrl("/sAdmin/help"),'visible'=>(Yii::app()->user->name == "admin")),
-											array('label'=>'Setting', 'url'=>'#'),
-											array('label'=>'Version', 'url'=>Yii::app()->createUrl("/menu/version")),
-											array('label'=>'About', 'url'=>Yii::app()->createUrl("/menu/about")),
+									array('label'=>Yii::app()->user->name, 'icon'=>'icon-th', 'url'=>'#', 'items'=>array(
+											array('label'=>'Help', 'icon'=>'question-sign','url'=>Yii::app()->createUrl("sAdmin/help"),'visible'=>(Yii::app()->user->name == "admin")),
+											array('label'=>'Setting', 'icon'=>'road','url'=>'#'),
+											array('label'=>'Version', 'icon'=>'info-sign','url'=>Yii::app()->createUrl("menu/version")),
+											array('label'=>'About', 'icon'=>'qrcode', 'url'=>Yii::app()->createUrl("menu/about")),
 											'---',
-											array('label'=>'Log Out', 'url'=>Yii::app()->createUrl("/site/logout")),
+											array('label'=>'Log Out', 'icon'=>'off', 'url'=>Yii::app()->createUrl("site/logout")),
 									)),
 							),
 					),

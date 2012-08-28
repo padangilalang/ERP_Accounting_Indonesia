@@ -43,7 +43,6 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		//Yii::app()->settings->set('Test', 'Test', 'test1', $toDatabase=true);
 
 		$model=new fLogin;
 
@@ -59,22 +58,36 @@ class SiteController extends Controller
 			$model->attributes=$_POST['fLogin'];
 			if($model->validate() && $model->login()) {
 
-				//Save Last Login
-				//$model1=sUser::model()->findByPk((int)Yii::app()->user->id);
-				//if($model1 != null) {
-				//	$model1->last_login=time();
-				//	$model1->save();
-				//}
 				sUser::model()->updateByPk((int)Yii::app()->user->id,array('last_login'=>time()));
 
 				$this->redirect(Yii::app()->user->returnUrl);
 			}
 		}
+		
+		//flickr
+		$tag="landscape";
+		$tag = urlencode($tag);
+
+		$api_key = "3febaac31cc6a34b93349523beacbfee";
+		$per_page="11";
+		$url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={$api_key}&tags={$tag}&per_page={$per_page}";
+
+		//$feed = getResource($url);
+		if  (in_array  ('curl', get_loaded_extensions())) {
+			$chandle = curl_init();
+			curl_setopt($chandle, CURLOPT_URL, $url);
+			curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
+			$result = curl_exec($chandle);
+			curl_close($chandle);
+
+			$xml = simplexml_load_string($result);
+		}  
+  
+		
 		if  (Yii::app()->user->isGuest) {
-			$this->render('login',array('model'=>$model));
+			$this->render('login',array('model'=>$model,'xml'=>$xml));
 		} else {
 			$this->redirect(array('/menu'));
-			//$this->redirect(array('/dash'));
 		}
 
 	}

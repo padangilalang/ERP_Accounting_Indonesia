@@ -9,11 +9,11 @@
  * @property string $item_name
  * @property string $photo_path
  * @property integer $created_date
- * @property integer $created_id
+ * @property integer $created_by
  * @property integer $updated_date
- * @property integer $updated_id
+ * @property integer $updated_by
  */
-class xProduct extends CActiveRecord
+class xProduct extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -41,12 +41,12 @@ class xProduct extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('item_name', 'required'),
-			array('parent_id, created_date, created_id, updated_date, updated_id', 'numerical', 'integerOnly'=>true),
-			array('item_name, photo_path', 'length', 'max'=>100),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, parent_id, item_name, photo_path, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
+				array('item_name', 'required'),
+				array('parent_id, created_date, created_by, updated_date, updated_by', 'numerical', 'integerOnly'=>true),
+				array('item_name, photo_path', 'length', 'max'=>100),
+				// The following rule is used by search().
+				// Please remove those attributes that should not be searched.
+				array('id, parent_id, item_name, photo_path, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,14 +67,14 @@ class xProduct extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'parent_id' => 'Parent',
-			'item_name' => 'Item Name',
-			'photo_path' => 'Photo Path',
-			'created_date' => 'Created Date',
-			'created_id' => 'Created',
-			'updated_date' => 'Updated Date',
-			'updated_id' => 'Updated',
+				'id' => 'ID',
+				'parent_id' => 'Parent',
+				'item_name' => 'Item Name',
+				'photo_path' => 'Photo Path',
+				'created_date' => 'Created Date',
+				'created_by' => 'Created',
+				'updated_date' => 'Updated Date',
+				'updated_by' => 'Updated',
 		);
 	}
 
@@ -94,12 +94,12 @@ class xProduct extends CActiveRecord
 		$criteria->compare('item_name',$this->item_name,true);
 		$criteria->compare('photo_path',$this->photo_path,true);
 		$criteria->compare('created_date',$this->created_date);
-		$criteria->compare('created_id',$this->created_id);
+		$criteria->compare('created_by',$this->created_by);
 		$criteria->compare('updated_date',$this->updated_date);
-		$criteria->compare('updated_id',$this->updated_id);
+		$criteria->compare('updated_by',$this->updated_by);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+				'criteria'=>$criteria,
 		));
 	}
 }

@@ -31,7 +31,7 @@
  * @property integer $updated_date
  * @property string $updated_by
  */
-class eaAsset extends CActiveRecord
+class eaAsset extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -167,7 +167,7 @@ class eaAsset extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -180,7 +180,7 @@ class eaAsset extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -209,44 +209,10 @@ class eaAsset extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
 	}
-
-	/**
-	 * This is invoked before the record is saved.
-	 * @return boolean whether the record should be saved.
-	 */
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
-	}
-
-
 
 }

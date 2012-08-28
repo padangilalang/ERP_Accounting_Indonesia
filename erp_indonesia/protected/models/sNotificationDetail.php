@@ -94,8 +94,4 @@ class sNotificationDetail extends CActiveRecord
 		return $_nicetime;
 	}
 
-	public function behaviors()
-	{
-		return array('datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'));
-	}
 }

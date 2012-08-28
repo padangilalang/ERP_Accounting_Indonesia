@@ -202,8 +202,8 @@ class aPorder07Controller extends Controller
 				$model->amount=$_POST['amount'];
 					
 				$t=aPorderDetail::model()->deleteAll(array(
-					'condition'=>'parent_id = :id',
-					'params'=>array(':id'=>(int)$id),
+						'condition'=>'parent_id = :id',
+						'params'=>array(':id'=>(int)$id),
 				));
 
 				for($i = 0; $i < sizeof($model->budget_id); ++$i):
@@ -228,9 +228,9 @@ class aPorder07Controller extends Controller
 		}
 
 		$modelDetail = aPorderDetail::model()->findAll(array(
-			'condition'=>'parent_id = :parent',
-			'params'=>array(':parent'=>$model->id),
-			'order'=>'id'
+				'condition'=>'parent_id = :parent',
+				'params'=>array(':parent'=>$model->id),
+				'order'=>'id'
 		));
 
 		foreach ($modelDetail as $mm) {

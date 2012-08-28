@@ -10,7 +10,7 @@
 Yii::import('zii.widgets.grid.CDataColumn');
 
 /**
- * Bootstrap grid data column
+ * Bootstrap grid data column.
  */
 class BootDataColumn extends CDataColumn
 {
@@ -28,7 +28,7 @@ class BootDataColumn extends CDataColumn
 			if ($sort->resolveAttribute($this->name) !== false)
 				$label .= '<span class="caret"></span>';
 
-			echo $sort->link($this->name, $label);
+			echo $sort->link($this->name, $label, array('class'=>'sort-link'));
 		}
 		else
 		{

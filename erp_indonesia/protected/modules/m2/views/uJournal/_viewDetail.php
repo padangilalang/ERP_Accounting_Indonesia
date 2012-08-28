@@ -14,38 +14,42 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 				array(
 					  'class'=>'ext.gridcolumns.TotalColumn',
 					  'name'=>'debit',
-					  //'output'=>'$data->creditf()',
-					  'output'=>'Yii::app()->numberFormatter->format("#,##0.00",$value)',
+					  'output'=>'Yii::app()->indoFormat->number($value)',
 					  'type'=>'raw',
 					  'footer'=>true,
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
-					 ),
-				/*array(
-						'name'=>'debit',
-						'value'=>'$data->debitf()',
-						'htmlOptions'=>array(
+						'footerHtmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
-				),*/
+					 ),
 				array(
-					  'class'=>'ext.gridcolumns.TotalColumn',
-					  'name'=>'credit',
-					  //'output'=>'$data->creditf()',
-					  'output'=>'Yii::app()->numberFormatter->format("#,##0.00",$value)',
-					  'type'=>'raw',
-					  'footer'=>true,
-						'htmlOptions'=>array(
-								'style'=>'text-align: right; padding-right: 5px;'
-						),
-					 ),
-				/*array(
-						'name'=>'credit',
-						'value'=>'$data->creditf()',
-						'htmlOptions'=>array(
-								'style'=>'text-align: right; padding-right: 5px;'
-						),
+					'class'=>'ext.gridcolumns.TotalColumn',
+					'name'=>'credit',
+					'output'=>'Yii::app()->indoFormat->number($value)',
+					'type'=>'raw',
+					'footer'=>true,
+					'htmlOptions'=>array(
+							'style'=>'text-align: right; padding-right: 5px;'
+					),
+					'footerHtmlOptions'=>array(
+							'style'=>'text-align: right; padding-right: 5px;'
+					),
+				),
+				/* array(
+					'class'=>'ext.gridcolumns.CalcColumn',
+					'value'=>'$data->debit+$data->credit',
+					'output'=>'Yii::app()->indoFormat->number($value)',
+					'footerOutput'=>'Yii::app()->indoFormat->number($value)',
+					'type'=>'raw',
+					'footer'=>true,
+					'htmlOptions'=>array(
+							'style'=>'text-align: right; padding-right: 5px;'
+					),
+					'footerHtmlOptions'=>array(
+							'style'=>'text-align: right; padding-right: 5px;'
+					),
 				),*/
 				'user_remark',
 				//'system_remark',
@@ -60,7 +64,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 		'attributes'=>array(
 				array(
 						'label'=>'Total',
-						'value'=>Yii::app()->numberFormatter->format("#,##0.00",uJournal::model()->findByPk((int)$id)->journalSum),
+						'value'=>Yii::app()->indoFormat->number(uJournal::model()->findByPk((int)$id)->journalSum),
 				),
 				array(
 						'label'=>'Check',

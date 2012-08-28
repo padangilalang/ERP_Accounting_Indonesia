@@ -11,7 +11,7 @@
  * @property string $schedule_date
  * @property string $remark
  */
-class ebAssetMaintenance extends CActiveRecord
+class ebAssetMaintenance extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -96,18 +96,5 @@ class ebAssetMaintenance extends CActiveRecord
 				'criteria'=>$criteria,
 		));
 	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
-	}
-
-
 
 }

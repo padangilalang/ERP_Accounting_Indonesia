@@ -1,6 +1,6 @@
 <?php
 
-class sSmsoutController extends Controller
+class SSmsoutController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -134,8 +134,8 @@ class sSmsoutController extends Controller
 
 			//Create Send SMS File
 			$models=dAddressbookGroupDetail::model()->findAll(array(
-				'condition'=>'parent_id = :parent',
-				'params'=>array(':parent'=>$model->receivergroup_id),
+					'condition'=>'parent_id = :parent',
+					'params'=>array(':parent'=>$model->receivergroup_id),
 			));
 
 			foreach ($models as $model1) :

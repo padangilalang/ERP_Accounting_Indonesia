@@ -147,8 +147,8 @@ class VPorderGeneralController extends Controller
 				$model->amount=$_POST['amount'];
 
 				$t=vPorderDetail::model()->deleteAll(array(
-					'condition'=>'parent_id = :id',
-					'params'=>array(':id'=>(int)$id),
+						'condition'=>'parent_id = :id',
+						'params'=>array(':id'=>(int)$id),
 				));
 
 				for($i = 0; $i < sizeof($model->budget_id); ++$i):
@@ -172,9 +172,9 @@ class VPorderGeneralController extends Controller
 		}
 
 		$modelDetail = vPorderDetail::model()->findAll(array(
-			'condition'=>'parent_id = :id',
-			'params'=>array(':id'=>$model->id),
-			'order'=>'id'
+				'condition'=>'parent_id = :id',
+				'params'=>array(':id'=>$model->id),
+				'order'=>'id'
 		));
 
 		foreach ($modelDetail as $mm) {

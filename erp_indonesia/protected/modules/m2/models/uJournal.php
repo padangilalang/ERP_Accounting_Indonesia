@@ -1,6 +1,6 @@
 <?php
 
-class uJournal extends CActiveRecord
+class uJournal extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -16,11 +16,11 @@ class uJournal extends CActiveRecord
 	{
 		return array(
 				array('input_date, yearmonth_periode', 'required'),
-				array('entity_id, module_id, yearmonth_periode, journal_type_id, state_id, created_date, created_id, updated_date, updated_id', 'numerical', 'integerOnly'=>true),
+				array('entity_id, module_id, yearmonth_periode, journal_type_id, state_id, created_date, created_by, updated_date, updated_by', 'numerical', 'integerOnly'=>true),
 				array('user_ref, system_ref', 'length', 'max'=>100),
 				array('cb_receiver', 'length', 'max'=>50),
 				array('remark', 'safe'),
-				array('id, entity_id, module_id, input_date, yearmonth_periode, user_ref, system_ref, remark, journal_type_id, state_id, cb_receiver, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
+				array('id, entity_id, module_id, input_date, yearmonth_periode, user_ref, system_ref, remark, journal_type_id, state_id, cb_receiver, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,9 +53,9 @@ class uJournal extends CActiveRecord
 				'state_id' => 'State',
 				'cb_receiver' => 'Cb Receiver',
 				'created_date' => 'Created Date',
-				'created_id' => 'Created',
+				'created_by' => 'Created',
 				'updated_date' => 'Updated Date',
-				'updated_id' => 'Updated',
+				'updated_by' => 'Updated',
 		);
 	}
 
@@ -172,27 +172,10 @@ class uJournal extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
 	}
 
 	protected function afterDelete()
@@ -241,19 +224,6 @@ class uJournal extends CActiveRecord
 		$_format=$this->system_ref .$_state;
 
 		return $_format;
-	}
-
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-				//'ActiveRecordLogableBehavior'=>array('class'=>'ext.ActiveRecordLogableBehavior'),
-		);
 	}
 
 }

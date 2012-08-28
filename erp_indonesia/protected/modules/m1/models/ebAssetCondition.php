@@ -11,7 +11,7 @@
  * @property string $description
  * @property string $checked_by
  */
-class ebAssetCondition extends CActiveRecord
+class ebAssetCondition extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -96,18 +96,6 @@ class ebAssetCondition extends CActiveRecord
 				'criteria'=>$criteria,
 		));
 	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
-	}
-
 
 
 }

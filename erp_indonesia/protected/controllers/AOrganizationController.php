@@ -1,6 +1,6 @@
 <?php
 
-class aOrganizationController extends Controller
+class AOrganizationController extends Controller
 {
 	public $layout='//layouts/column3structure';
 
@@ -96,6 +96,7 @@ class aOrganizationController extends Controller
 				'criteria'=>$criteria,
 		));
 
+
 		$this->render('index',array(
 				'dataProvider'=>$dataProvider,
 				'model'=>$model,
@@ -160,9 +161,9 @@ class aOrganizationController extends Controller
 	public function actionKabupatenUpdate() {
 		$cat_id = $_POST['aOrganization']['propinsi_id'];
 		$data=sKabupatenPropinsi::model()->findAll(array(
-			'condition'=>'parent_id = :cat_id',
-			'params'=>array(':cat_id'=>$cat_id),
-			'order'=>'sort'
+				'condition'=>'parent_id = :cat_id',
+				'params'=>array(':cat_id'=>$cat_id),
+				'order'=>'sort'
 		));
 
 		$data=CHtml::listData($data,'id','nama');

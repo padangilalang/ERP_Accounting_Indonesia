@@ -10,20 +10,18 @@
 Yii::import('zii.widgets.CDetailView');
 
 /**
- * Bootstrap detail view widget.
- * Used for setting default HTML classes and disabling the default CSS.
+ * Bootstrap Zii detail view.
  */
 class BootDetailView extends CDetailView
 {
 	// Table types.
-	const TYPE_PLAIN = '';
 	const TYPE_STRIPED = 'striped';
 	const TYPE_BORDERED = 'bordered';
 	const TYPE_CONDENSED = 'condensed';
 
 	/**
 	 * @var string|array the table type.
-	 * Valid values are '', 'striped', 'bordered' and/or 'condensed'.
+	 * Valid values are 'striped', 'bordered' and/or 'condensed'.
 	 */
 	public $type = array(self::TYPE_STRIPED, self::TYPE_CONDENSED);
 	/**
@@ -41,19 +39,30 @@ class BootDetailView extends CDetailView
 
 		$classes = array('table');
 
-		if (is_string($this->type))
-			$this->type = explode(' ', $this->type);
+		if (isset($this->type))
+		{
+			if (is_string($this->type))
+				$this->type = explode(' ', $this->type);
 
-		$validTypes = array(self::TYPE_STRIPED, self::TYPE_BORDERED, self::TYPE_CONDENSED);
+			$validTypes = array(self::TYPE_STRIPED, self::TYPE_BORDERED, self::TYPE_CONDENSED);
 
-		foreach ($this->type as $type)
-			if (in_array($type, $validTypes))
-			$classes[] = 'table-'.$type;
+			if (!empty($this->type))
+			{
+				foreach ($this->type as $type)
+				{
+					if (in_array($type, $validTypes))
+						$classes[] = 'table-'.$type;
+				}
+			}
+		}
 
-		$classes = implode(' ', $classes);
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 	}
 }

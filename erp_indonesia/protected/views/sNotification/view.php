@@ -24,7 +24,7 @@ $this->menu2=sNotification::getTopCreated();
 <div class="row-fluid">
 	<div class="span12">
 		<div class="well">
-			<h4>
+			<h4><span class="icon fam-note"></span>
 				<?php echo sUser::model()->findName($model->sender_id). ' to ' . sUser::model()->findName($model->receiver_id) ?>
 				|
 				<?php echo sParameter::item("cCategory",$model->category_id) ?>

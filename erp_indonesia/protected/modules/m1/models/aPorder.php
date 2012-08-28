@@ -21,7 +21,7 @@
  * @property integer $updated_date
  * @property string $updated_by
  */
-class aPorder extends CActiveRecord
+class aPorder extends BaseModel
 {
 	public $budget_id;
 	public $department_id;
@@ -298,7 +298,7 @@ class aPorder extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -316,35 +316,5 @@ class aPorder extends CActiveRecord
 		//return self::count('from_unixtime(created_date) > date_sub(curdate(), interval 1 week)');
 		return 100;
 	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				//'defaults'=>array(
-				//	'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-				//	//'format'=>'db',
-				//),
-		);
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_by= yii::app()->user->name;
-			} else {
-				$this->updated_date=time();
-				$this->updated_by= yii::app()->user->name;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
-
-
 
 }

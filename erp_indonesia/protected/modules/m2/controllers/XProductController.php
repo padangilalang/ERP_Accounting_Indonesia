@@ -14,7 +14,7 @@ class XProductController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+				'accessControl', // perform access control for CRUD operations
 		);
 	}
 
@@ -26,12 +26,12 @@ class XProductController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow', 
-				'users'=>array('@'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+				array('allow',
+						'users'=>array('@'),
+				),
+				array('deny',  // deny all users
+						'users'=>array('*'),
+				),
 		);
 	}
 
@@ -42,7 +42,7 @@ class XProductController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+				'model'=>$this->loadModel($id),
 		));
 	}
 
@@ -65,7 +65,7 @@ class XProductController extends Controller
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+				'model'=>$model,
 		));
 	}
 
@@ -89,7 +89,7 @@ class XProductController extends Controller
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+				'model'=>$model,
 		));
 	}
 
@@ -120,7 +120,7 @@ class XProductController extends Controller
 	{
 		$dataProvider=new CActiveDataProvider('xProduct');
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+				'dataProvider'=>$dataProvider,
 		));
 	}
 
@@ -135,7 +135,7 @@ class XProductController extends Controller
 			$model->attributes=$_GET['xProduct'];
 
 		$this->render('admin',array(
-			'model'=>$model,
+				'model'=>$model,
 		));
 	}
 
@@ -184,5 +184,5 @@ class XProductController extends Controller
 		//echo $test;
 	}
 
-	
+
 }

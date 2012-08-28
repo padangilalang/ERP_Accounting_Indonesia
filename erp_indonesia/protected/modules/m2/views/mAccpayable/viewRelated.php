@@ -63,7 +63,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 
 <?php $this->widget('bootstrap.widgets.BootGridView', array(
 		'id'=>'u-order-detail-grid',
-		'dataProvider'=>bPorderDetail::model()->search($model->id),
+		'dataProvider'=>vPorderDetail::model()->search($model->id),
 		'template'=>'{items}{pager}',
 		'itemsCssClass'=>'table table-striped table-bordered',
 		'columns'=>array(
@@ -75,7 +75,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 				'qty',
 				'uom',
 				array(
-						'value'=>'$data->amountf()',
+						'value'=>'Yii::app()->indoFormat->number($data->amount)',
 						'name'=>'amount',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
@@ -83,7 +83,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 				),
 				array(
 						'header'=>'Total',
-						'value'=>'$data->totalf()',
+						'value'=>'Yii::app()->indoFormat->number($data->amount)',
 						'name'=>'amount',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
@@ -94,7 +94,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 
 ?>
 <br />
-<b> Total: <?php echo $model->sum_pof(); ?>
+<b> Total: <?php echo Yii::app()->indoFormat->number($model->sum_po); ?>
 </b>
 
 <hr />

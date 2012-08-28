@@ -1,6 +1,6 @@
 <?php
 
-class tAccount extends CActiveRecord
+class tAccount extends BaseModel
 {
 	public $account_properties;
 	public $value;
@@ -27,12 +27,12 @@ class tAccount extends CActiveRecord
 				array('beginning_balance', 'required','on'=>'newaccount'),
 				//array('parent_id, haschild_id, account_no, account_name, currency_id, state_id', 'required'),
 				array('parent_id, account_no, account_name', 'required'),
-				array('parent_id, haschild_id, currency_id, state_id, created_date, created_id, updated_date, updated_id', 'numerical', 'integerOnly'=>true),
+				array('parent_id, haschild_id, currency_id, state_id, created_date, created_by, updated_date, updated_by', 'numerical', 'integerOnly'=>true),
 				array('beginning_balance', 'numerical'),
 				array('account_no', 'length', 'max'=>50),
 				array('account_name', 'length', 'max'=>100),
 				array('short_description', 'safe'),
-				array('id, parent_id, haschild_id, account_no, account_name, short_description, currency_id, state_id, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
+				array('id, parent_id, haschild_id, account_no, account_name, short_description, currency_id, state_id, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,9 +75,9 @@ class tAccount extends CActiveRecord
 				'currency_id' => 'Currency',
 				'state_id' => 'Status',
 				'created_date' => 'Created Date',
-				'created_id' => 'Created',
+				'created_by' => 'Created',
 				'updated_date' => 'Updated Date',
-				'updated_id' => 'Updated',
+				'updated_by' => 'Updated',
 		);
 	}
 
@@ -366,27 +366,10 @@ class tAccount extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'url' => array('/tAccount/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'icon'=>'list-alt', 'url' => array('/tAccount/view','id'=>$model->id));
 		}
 
 		return $returnarray;
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
 	}
 
 	public static function item($all=null)
@@ -630,17 +613,6 @@ class tAccount extends CActiveRecord
 		$log->save();
 
 		return true;
-	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
 	}
 
 }

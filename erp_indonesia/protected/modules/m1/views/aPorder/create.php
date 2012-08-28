@@ -4,19 +4,19 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->getClientScript()->getCore
 Yii::app()->getClientScript()->registerCoreScript('maskedinput');
 
 Yii::app()->clientScript->registerScript('datepicker', "
-	$(function() {
+		$(function() {
 		$( \"#".CHtml::activeId($model,'input_date')."\" ).datepicker({
 		'dateFormat' : 'dd-mm-yy',
-		});
+});
 		$( \"#".CHtml::activeId($model,'periode_date')."\" ).datepicker({
-			'dateFormat':'yymm',
-		});
+		'dateFormat':'yymm',
+});
 		$( \"#".CHtml::activeId($model,'input_date')."\" ).mask('99-99-9999');
 		$( \"#".CHtml::activeId($model,'periode_date')."\" ).mask('999999');
 		$( \"#".CHtml::activeId($model,'no_ref')."\" ).mask('aa/9999/9999');
-	});
+});
 
-");
+		");
 ?>
 
 
@@ -69,7 +69,7 @@ $this->menu2=aPorder::getTopCreated();
 		//				}',
 		//	),
 
-		)); ?>
+)); ?>
 
 
 <?php echo $form->textAreaRow($model,'remark',array('rows'=>2, 'cols'=>50)); ?>

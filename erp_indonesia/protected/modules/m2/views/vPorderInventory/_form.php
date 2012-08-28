@@ -1,6 +1,9 @@
 <?php
 Yii::app()->clientScript->registerScriptFile(Yii::app()->getClientScript()->getCoreScriptUrl().'/jui/css/2jui-bootstrap/js/jquery-ui-1.8.16.custom.min.js');
 Yii::app()->clientScript->registerCssFile(Yii::app()->getClientScript()->getCoreScriptUrl().'/jui/css/2jui-bootstrap/jquery-ui.css');
+//Yii::app()->clientScript->registerCoreScript('jquery.ui');
+
+
 Yii::app()->getClientScript()->registerCoreScript('maskedinput');
 
 Yii::app()->clientScript->registerScript('datepicker', "
@@ -8,11 +11,28 @@ Yii::app()->clientScript->registerScript('datepicker', "
 		$( \"#".CHtml::activeId($model,'input_date')."\" ).datepicker({
 			'dateFormat' : 'dd-mm-yy',
 		});
+		$( \"#".CHtml::activeId($model,'item_name')."\" ).autocomplete({
+				'minLength': '2',
+				'source' : '".Yii::app()->createUrl('/m2/xProduct/xProductAutoComplete')."',
+				'focus' : function( event, ui ) {
+					$(\"#". CHtml::activeId($model,'item_name') ."\").val(ui.item.label);
+					return false;
+				},
+				'select' : function( event, ui ) {
+					$(\"#". CHtml::activeId($model,'item_id') ."\").val(ui.item.id);
+					return false;
+				},			
+
+		});
 		$( \"#".CHtml::activeId($model,'input_date')."\" ).mask('99-99-9999');
 	});
 
 ");
+
+
 ?>
+
+
 
 <div class="row-fluid">
 <div class="span12">
@@ -35,40 +55,23 @@ Yii::app()->clientScript->registerScript('datepicker', "
 		<?php echo $this->renderPartial('_formDetail', array('model'=>$model,'dataProvider'=>$dataProvider)); ?>
 	</div>
 
-	<div class="control-group">
-		<?php echo $form->labelEx($model,'item_name',array("class"=>"control-label")); ?>
-	<div class="controls">
-
-		<?php 
-		$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-			'model'=>$model,
-			'attribute'=>'item_name',
-			'sourceUrl' => Yii::app()->createUrl('/m2/xProduct/xProductAutoComplete'),
-			'options'=>array(
-				'minLength'=>'2',
-				'focus'=> 'js:function( event, ui ) {
-					$("#'.CHtml::activeId($model,'item_name').'").val(ui.item.label);
-					return false;
-				}',
-				'select'=>'js:function( event, ui ) {
-					$("#'.CHtml::activeId($model,'item_id').'").val(ui.item.id);
-					return false;
-				}',			
-			),
-			'htmlOptions'=>array(
-				
-			),
-		));  
-		?>
+		<?php echo CHtml::activeTextField($model,'item_name',array('class'=>'span3')); ?>
 		<?php echo $form->hiddenField($model,'item_id',array('class'=>'span3')); ?>
-	</div>
-	</div>
+		
+	<?php 
+		//echo $form->textFieldRow($model,'description',array('size'=>60,'maxlength'=>500)); 
+		echo CHtml::ActiveTextField($model,'description',array('size'=>60,'maxlength'=>500)); 
+	?>
 
-	<?php echo $form->textFieldRow($model,'description',array('size'=>60,'maxlength'=>500)); ?>
+	<?php 
+		//echo $form->textFieldRow($model,'qty'); 
+		echo CHtml::activeTextField($model,'qty'); 
+	?>
 
-	<?php echo $form->textFieldRow($model,'qty'); ?>
-
-	<?php echo $form->textFieldRow($model,'amount',array('size'=>15,'maxlength'=>15)); ?>
+	<?php 
+		//echo $form->textFieldRow($model,'amount',array('size'=>15,'maxlength'=>15)); 
+		echo CHtml::activeTextField($model,'amount',array('size'=>15,'maxlength'=>15)); 
+	?>
 
 	<div class="form-actions">
 		<?php

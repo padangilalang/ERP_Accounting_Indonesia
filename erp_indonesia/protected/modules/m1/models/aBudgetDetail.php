@@ -19,7 +19,7 @@
  * @property integer $updated_date
  * @property string $updated_by
  */
-class aBudgetDetail extends CActiveRecord
+class aBudgetDetail extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

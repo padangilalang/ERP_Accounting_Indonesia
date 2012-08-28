@@ -10,31 +10,36 @@
 
 /**
  * Bootstrap carousel widget.
+ * @see http://twitter.github.com/bootstrap/javascript.html#carousel
  */
 class BootCarousel extends CWidget
 {
 	/**
-	 * @var string the previous button content.
+	 * @var string the previous button label. Defaults to '&lsaquo;'.
 	 */
-	public $prev = '&lsaquo;';
+	public $prevLabel = '&lsaquo;';
 	/**
-	 * @var string the next button content.
+	 * @var string the next button label. Defaults to '&rsaquo;'.
 	 */
-	public $next = '&rsaquo;';
+	public $nextLabel = '&rsaquo;';
+	/**
+	 * @var boolean indicates whether the carousel should slide items.
+	 */
+	public $slide = true;
+	/**
+	 * @var boolean indicates whether to display the previous and next links.
+	 */
+	public $displayPrevAndNext = true;
 	/**
 	 * @var array the carousel items configuration.
 	 */
 	public $items = array();
 	/**
-	 * @var array the options for the Bootstrap JavaScript plugin.
+	 * @var array the options for the Bootstrap Javascript plugin.
 	 */
 	public $options = array();
 	/**
-	 * @var string[] the JavaScript event handlers.
-	 */
-	public $noNav = false;
-	/**
-	 * @var string[] the JavaScript event handlers.
+	 * @var string[] the Javascript event handlers.
 	 */
 	public $events = array();
 	/**
@@ -50,12 +55,19 @@ class BootCarousel extends CWidget
 		if (!isset($this->htmlOptions['id']))
 			$this->htmlOptions['id'] = $this->getId();
 
-		$classes = 'carousel';
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		$classes = array('carousel');
 
+		if ($this->slide === true)
+			$classes[] = 'slide';
+
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 	}
 
 	/**
@@ -63,17 +75,19 @@ class BootCarousel extends CWidget
 	 */
 	public function run()
 	{
-		$id = $this->id;
+		$id = $this->htmlOptions['id'];
 
 		echo CHtml::openTag('div', $this->htmlOptions);
 		echo '<div class="carousel-inner">';
 		$this->renderItems($this->items);
-		echo '</div>';
-		if (!$this->noNav) {
-			echo '<a class="carousel-control left" href="#'.$id.'" data-slide="prev">'.$this->prev.'</a>';
-			echo '<a class="carousel-control right" href="#'.$id.'" data-slide="next">'.$this->next.'</a>';
+
+		if ($this->displayPrevAndNext)
+		{
+			echo '</div>';
+			echo '<a class="carousel-control left" href="#'.$id.'" data-slide="prev">'.$this->prevLabel.'</a>';
+			echo '<a class="carousel-control right" href="#'.$id.'" data-slide="next">'.$this->nextLabel.'</a>';
+			echo '</div>';
 		}
-		echo '</div>';
 
 		/** @var CClientScript $cs */
 		$cs = Yii::app()->getClientScript();
@@ -83,7 +97,7 @@ class BootCarousel extends CWidget
 		foreach ($this->events as $name => $handler)
 		{
 			$handler = CJavaScript::encode($handler);
-			$cs->registerScript(__CLASS__.'#'.$id.'_'.$name, "jQuery('#{$id}').on('".$name."', {$handler});");
+			$cs->registerScript(__CLASS__.'#'.$id.'_'.$name, "jQuery('#{$id}').on('{$name}', {$handler});");
 		}
 	}
 
@@ -98,6 +112,9 @@ class BootCarousel extends CWidget
 			if (!is_array($item))
 				continue;
 
+			if (isset($item['visible']) && $item['visible'] === false)
+				continue;
+
 			if (!isset($item['itemOptions']))
 				$item['itemOptions'] = array();
 
@@ -106,11 +123,14 @@ class BootCarousel extends CWidget
 			if ($i === 0)
 				$classes[] = 'active';
 
-			$classes = implode(' ', $classes);
-			if (isset($item['itemOptions']['class']))
-				$item['itemOptions']['class'] .= ' '.$classes;
-			else
-				$item['itemOptions']['class'] = $classes;
+			if (!empty($classes))
+			{
+				$classes = implode(' ', $classes);
+				if (isset($item['itemOptions']['class']))
+					$item['itemOptions']['class'] .= ' '.$classes;
+				else
+					$item['itemOptions']['class'] = $classes;
+			}
 
 			echo CHtml::openTag('div', $item['itemOptions']);
 
@@ -125,16 +145,15 @@ class BootCarousel extends CWidget
 				echo CHtml::image($item['image'], $item['alt'], $item['imageOptions']);
 			}
 
-			if (isset($item['label']) || isset($item['caption']))
+			if (!empty($item['caption']) && (isset($item['label']) || isset($item['caption'])))
 			{
 				if (!isset($item['captionOptions']))
 					$item['captionOptions'] = array();
 
-				$classes = 'carousel-caption';
 				if (isset($item['captionOptions']['class']))
-					$item['captionOptions']['class'] .= ' '.$classes;
+					$item['captionOptions']['class'] .= ' carousel-caption';
 				else
-					$item['captionOptions']['class'] = $classes;
+					$item['captionOptions']['class'] = 'carousel-caption';
 
 				echo CHtml::openTag('div', $item['captionOptions']);
 

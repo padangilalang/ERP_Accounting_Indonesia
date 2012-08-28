@@ -84,14 +84,15 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 										'visible'=>'$data->leave->approved_id ==1',
 										'options'=>array(
 												'ajax'=>array(
-														'type'=>'GET',
-														'url'=>"js:$(this).attr('href')",
-														'success'=>'js:function(data){
+													'type'=>'GET',
+													'url'=>"js:$(this).attr('href')",
+													'success'=>'js:function(data){
 														$.fn.yiiGridView.update("g-person-grid", {
 														data: $(this).serialize()
-});
-}',
+													});
+													}',
 												),
+												'class'=>'btn btn-mini',
 										),
 								),
 						),

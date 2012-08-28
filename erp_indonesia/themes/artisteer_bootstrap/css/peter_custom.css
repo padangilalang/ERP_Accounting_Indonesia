@@ -20,3 +20,24 @@ table.detail-view th {
 	text-align: left;
 	width: 160px;
 }
+
+.dashboardIcons {
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+.dashIcon {
+  float:left;
+  /*padding-left:4px;width:123px;*/
+  border: solid 1px #CCCCCC;	
+  background-color:#F9F9F9;
+  padding-top:8px;
+  margin-bottom:10px;
+  text-align:center;
+  
+}
+
+.dashIconText{
+	padding-top:5px;
+	padding-bottom:10px;
+	
+}

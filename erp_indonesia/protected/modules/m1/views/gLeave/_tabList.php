@@ -1,19 +1,19 @@
 
 
-	<?php
-	$this->widget('bootstrap.widgets.BootDetailView', array(
-			//$this->widget('ext.XDetailView', array(
-			//'ItemColumns' => 3,
-			'data'=>array(
-					'id'=>1,
-					'unit_joindate'=>$model->d_joinunit,
-					'group_joindate'=>$model->d_joingrp,
-			),
-			'attributes'=>array(
-					array('name'=>'unit_joindate', 'label'=>'Unit Join Date'),
-					array('name'=>'group_joindate', 'label'=>'Group Join Date'),
-			),
-	)); ?>
+<?php
+$this->widget('bootstrap.widgets.BootDetailView', array(
+		//$this->widget('ext.XDetailView', array(
+		//'ItemColumns' => 3,
+		'data'=>array(
+				'id'=>1,
+				'unit_joindate'=>$model->d_joinunit,
+				'group_joindate'=>$model->d_joingrp,
+		),
+		'attributes'=>array(
+				array('name'=>'unit_joindate', 'label'=>'Unit Join Date'),
+				array('name'=>'group_joindate', 'label'=>'Group Join Date'),
+		),
+)); ?>
 
 <?php 
 $this->widget('bootstrap.widgets.BootGridView', array(
@@ -51,14 +51,15 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 										'visible'=>'$data->approved_id ==1',
 										'options'=>array(
 												'ajax'=>array(
-														'type'=>'GET',
-														'url'=>"js:$(this).attr('href')",
-														'success'=>'js:function(data){
+													'type'=>'GET',
+													'url'=>"js:$(this).attr('href')",
+													'success'=>'js:function(data){
 														$.fn.yiiGridView.update("g-person-grid", {
 														data: $(this).serialize()
-});
-}',
+													});
+													}',
 												),
+												'class'=>'btn btn-mini',
 										),
 								),
 						),

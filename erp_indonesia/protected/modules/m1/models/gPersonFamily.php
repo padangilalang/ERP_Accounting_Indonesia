@@ -21,7 +21,7 @@
  * @property string $py_kodeproyek
  * @property integer $f_cover
  */
-class gPersonFamily extends CActiveRecord
+class gPersonFamily extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -122,18 +122,5 @@ class gPersonFamily extends CActiveRecord
 				'pagination'=>false,
 		));
 	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-				//'ActiveRecordLogableBehavior'=>array('class'=>'ext.ActiveRecordLogableBehavior'),
-		);
-	}
-
 
 }

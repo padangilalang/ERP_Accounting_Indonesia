@@ -1,6 +1,6 @@
 <?php
 
-class tAccountEntity extends CActiveRecord
+class tAccountEntity extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -16,11 +16,11 @@ class tAccountEntity extends CActiveRecord
 	{
 		return array(
 				array('parent_id, entity_id, state_id', 'required'),
-				array('parent_id, entity_id, state_id, created_date, created_id', 'numerical', 'integerOnly'=>true),
+				array('parent_id, entity_id, state_id, created_date, created_by', 'numerical', 'integerOnly'=>true),
 				//array('parent_id', 'unique'),
 				array('parent_id', 'UniqueAttributesValidator', 'with'=>'entity_id','message'=>'This Entity already inputed...'),
 				array('remark', 'safe'),
-				array('id, parent_id, entity_id, remark, state_id, created_date, created_id', 'safe', 'on'=>'search'),
+				array('id, parent_id, entity_id, remark, state_id, created_date, created_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -41,7 +41,7 @@ class tAccountEntity extends CActiveRecord
 				'remark' => 'Remark',
 				'state_id' => 'State',
 				'created_date' => 'Created Date',
-				'created_id' => 'Created',
+				'created_by' => 'Created',
 		);
 	}
 

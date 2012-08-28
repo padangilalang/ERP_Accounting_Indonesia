@@ -12,7 +12,7 @@
  * @property string $in
  * @property string $out
  */
-class gPersonAbsence extends CActiveRecord
+class gPersonAbsence extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -158,19 +158,5 @@ class gPersonAbsence extends CActiveRecord
 		if (strtotime($this->in) < strtotime($this->in))
 			return "Late In";
 	}
-
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
-	}
-
-
 
 }

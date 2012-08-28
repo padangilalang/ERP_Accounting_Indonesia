@@ -65,8 +65,14 @@
 	</div>
 	<div class="span3">
 		<?php 
-		if ($data->c_pathfoto == null) {
-			echo CHtml::image(Yii::app()->request->baseUrl . "/images/nophoto.jpg", "No Photo", array("class"=>"span2"));
+		if ($data->c_pathfoto == null || (!is_file(Yii::app()->request->baseUrl . "/images/employee/" .$data->c_pathfoto))) {
+			//echo CHtml::image(Yii::app()->request->baseUrl . "/images/nophoto.jpg", "No Photo", array("class"=>"span2"));
+			$this->widget('ext.espaceholder.ESpaceHolder', array(
+					'size' => '140x200', // you can also do 300x250
+					'text' => CHtml::encode($data->vc_psnama),
+					'htmlOptions' => array( 'title' => 'test image' )
+			));
+				
 		} else {
 			echo CHtml::image(Yii::app()->request->baseUrl . "/images/employee/" .$data->c_pathfoto, CHtml::encode($data->vc_psnama), array("class"=>"span2"));
 		}

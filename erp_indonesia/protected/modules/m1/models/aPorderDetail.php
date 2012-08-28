@@ -20,7 +20,7 @@
  * @property integer $updated_date
  * @property string $updated_by
  */
-class aPorderDetail extends CActiveRecord
+class aPorderDetail extends BaseModel
 {
 	public $sub_total;
 	/**
@@ -57,7 +57,7 @@ class aPorderDetail extends CActiveRecord
 				array('need_date', 'safe'),
 				// The following rule is used by search().
 				// Please remove those attributes that should not be searched.
-				array('id, parent_id, supplier_id, budget_id, payment_date, description, user, qty, uom, amount, need_date, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
+				array('id, parent_id, supplier_id, budget_id, detail_payment_id, payment_date, description, user, qty, uom, amount, need_date, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 

@@ -10,6 +10,7 @@
 
 /**
  * Bootstrap button widget.
+ * @see http://twitter.github.com/bootstrap/base-css.html#buttons
  */
 class BootButton extends CWidget
 {
@@ -24,7 +25,6 @@ class BootButton extends CWidget
 	const BUTTON_AJAXSUBMIT = 'ajaxSubmit';
 
 	// Button types.
-	const TYPE_NORMAL = '';
 	const TYPE_PRIMARY = 'primary';
 	const TYPE_INFO = 'info';
 	const TYPE_SUCCESS = 'success';
@@ -35,7 +35,6 @@ class BootButton extends CWidget
 	// Button sizes.
 	const SIZE_MINI = 'mini';
 	const SIZE_SMALL = 'small';
-	const SIZE_NORMAL = '';
 	const SIZE_LARGE = 'large';
 
 	/**
@@ -45,14 +44,14 @@ class BootButton extends CWidget
 	public $buttonType = self::BUTTON_LINK;
 	/**
 	 * @var string the button type.
-	 * Valid values are '', 'primary', 'info', 'success', 'warning', 'danger' and 'inverse'.
+	 * Valid values are 'primary', 'info', 'success', 'warning', 'danger' and 'inverse'.
 	 */
-	public $type = self::TYPE_NORMAL;
+	public $type;
 	/**
 	 * @var string the button size.
-	 * Valid values are '', 'small' and 'large'.
+	 * Valid values are 'small' and 'large'.
 	 */
-	public $size = self::SIZE_NORMAL;
+	public $size;
 	/**
 	 * @var string the button icon, e.g. 'ok' or 'remove white'.
 	 */
@@ -137,12 +136,14 @@ class BootButton extends CWidget
 			$this->htmlOptions['data-toggle'] = 'dropdown';
 		}
 
-		$classes = implode(' ', $classes);
-
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 
 		if (isset($this->icon))
 		{
@@ -152,25 +153,14 @@ class BootButton extends CWidget
 			$this->label = '<i class="'.$this->icon.'"></i> '.$this->label;
 		}
 
-		$this->initHTML5Data();
-	}
+		if (isset($this->toggle))
+			$this->htmlOptions['data-toggle'] = 'button';
 
-	/**
-	 * Initializes the HTML5 data attributes used by the data-api.
-	 */
-	protected function initHTML5Data()
-	{
-		if (isset($this->toggle) || isset($this->loadingText) || isset($this->completeText))
-		{
-			if (isset($this->toggle))
-				$this->htmlOptions['data-toggle'] = 'button';
+		if (isset($this->loadingText))
+			$this->htmlOptions['data-loading-text'] = $this->loadingText;
 
-			if (isset($this->loadingText))
-				$this->htmlOptions['data-loading-text'] = $this->loadingText;
-
-			if (isset($this->completeText))
-				$this->htmlOptions['data-complete-text'] = $this->completeText;
-		}
+		if (isset($this->completeText))
+			$this->htmlOptions['data-complete-text'] = $this->completeText;
 	}
 
 	/**

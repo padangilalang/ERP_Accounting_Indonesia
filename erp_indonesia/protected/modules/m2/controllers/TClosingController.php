@@ -33,7 +33,7 @@ class TClosingController extends Controller
 
 	public function actionClosingPeriodExecution()
 	{
-		uJournal::model()->updateAll(array('state_id'=>3,'updated_date'=>time(),'updated_id'=>Yii::app()->user->id),
+		uJournal::model()->updateAll(array('state_id'=>3,'updated_date'=>time(),'updated_by'=>Yii::app()->user->id),
 				'state_id !=4 AND yearmonth_periode = '.Yii::app()->settings->get("System", "cCurrentPeriod"));
 
 		$_curPeriod = Yii::app()->settings->get("System", "cCurrentPeriod");

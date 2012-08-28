@@ -50,7 +50,11 @@ class MCashbankController extends Controller
 
 		$criteria->mergeWith($criteria1);
 
-		$dataProvider=new CActiveDataProvider('uJournal', array(
+		$dependency = new CDbCacheDependency('SELECT MAX(id) FROM u_journal');
+
+		//$dataProvider=new CActiveDataProvider('uJournal', array(
+		$dataProvider=new EActiveDataProviderEx('uJournal', array(
+				'cache' => array(3600,$dependency),
 				'criteria'=>$criteria,
 				'pagination'=>array(
 						'pageSize'=>10,
@@ -98,6 +102,8 @@ class MCashbankController extends Controller
 				$model->credit=$_POST['credit'];
 				$model->user_remark=$_POST['user_remark'];
 
+				$_myBalance=0; //default
+				
 				foreach ($model->debit as $_debit)
 					$_myDebit=$_myDebit+$_debit;
 
@@ -399,7 +405,6 @@ class MCashbankController extends Controller
 		if(isset($_POST['account_no_id']))
 		{
 			$model->attributes=$_POST['fJournal'];
-			$model->validate();
 
 			if (isset($_POST['fJournal']['cb_receiver']))
 			{  //Expense
@@ -437,23 +442,24 @@ class MCashbankController extends Controller
 					$_tcredit = 0;
 
 					for($i = 0; $i < sizeof($model->account_no_id); ++$i):
-					$modelDetail=new uJournalDetail;
-					$modelDetail->parent_id=$modelHeader->id;
-					$modelDetail->account_no_id=$model->account_no_id[$i];
+						$modelDetail=new uJournalDetail;
+						$modelDetail->parent_id=$modelHeader->id;
+						$modelDetail->account_no_id=$model->account_no_id[$i];
 
-					if ($model->debit[$i] != null) {
-						$modelDetail->debit=$model->debit[$i];
-					} else
-						$modelDetail->debit=0;
+						if ($model->debit[$i] != null) {
+							$modelDetail->debit=$model->debit[$i];
+						} else
+							$modelDetail->debit=0;
 
-					if ($model->credit[$i] != null) {
-						$modelDetail->credit=$model->credit[$i];
-					} else
-						$modelDetail->credit=0;
+						if ($model->credit[$i] != null) {
+							$modelDetail->credit=$model->credit[$i];
+						} else
+							$modelDetail->credit=0;
 
-					$modelDetail->user_remark=$model->user_remark[$i];
+						$modelDetail->user_remark=$model->user_remark[$i];
+						$modelDetail->sub_account_id=0;
 
-					$modelDetail->save();
+						$modelDetail->save();
 					endfor;
 
 					$modelDetail=new uJournalDetail;
@@ -465,6 +471,7 @@ class MCashbankController extends Controller
 
 					$modelDetail->system_remark="Automated by System";
 					$modelDetail->user_remark=$model->user_remark[0];
+					$modelDetail->sub_account_id=0;
 					$modelDetail->save();
 
 					//Create System_ref
@@ -519,6 +526,7 @@ class MCashbankController extends Controller
 
 					$modelDetail->system_remark="Automated by System";
 					$modelDetail->user_remark=$model->user_remark[0];
+					$modelDetail->sub_account_id=0;
 					$modelDetail->save();
 
 					//Create System_ref
@@ -544,6 +552,7 @@ class MCashbankController extends Controller
 						$modelDetail->credit=0;
 
 					$modelDetail->user_remark=$model->user_remark[$i];
+					$modelDetail->sub_account_id=0;
 
 					$modelDetail->save();
 					endfor;

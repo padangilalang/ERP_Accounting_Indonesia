@@ -1,6 +1,6 @@
 <?php
 
-class sSmsinController extends Controller
+class SSmsinController extends Controller
 {
 	public $layout='//layouts/column1';
 

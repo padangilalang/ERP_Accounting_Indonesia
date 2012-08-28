@@ -49,7 +49,7 @@ $this->breadcrumbs=array(
 
 <br />
 
-<?php if ($id == 0 || aBudget::model()->findByPk((int)$id)->childs) { 
+<?php if ($id == 300 || aBudget::model()->findByPk((int)$id)->childs) { 
 	?>
 <div id="component">
 	<?php	
@@ -61,26 +61,28 @@ echo $this->renderPartial('_listAF', array('id'=>$id));
 ?>
 
 <br />
-<?php /**/
+<?php /*
 $this->Widget('ext.highcharts.HighchartsWidget', array(
 		'options'=>array(
 				'chart' => array('defaultSeriesType' => 'column'),
 				'theme' => 'grid',
 				'title' => array('text' => 'Budget'),
 				'xAxis' => array(
-						'categories' => aBudget::model()->perBudgetModelCat($id,$pro_id)
+						//'categories' => aBudget::model()->perBudgetModelCat($id,$pro_id)
+						'categories' => aBudget::model()->perBudgetModelCat($id,1)
 				),
 				'yAxis' => array(
 						'title' => array('text' => 'Rupiah'),
 				),
-				'series'=>aBudget::model()->perBudgetModel($id,$pro_id),
+				//'series'=>aBudget::model()->perBudgetModel($id,$pro_id),
+				'series'=>aBudget::model()->perBudgetModel($id,1),
 		),
 ));
-/**/
+*/
 ?>
 
 <?php
 } else {
-	echo $this->renderPartial('_detail', array('id'=>$id));
+	//echo $this->renderPartial('_detail', array('id'=>$id));
 }
 ?>

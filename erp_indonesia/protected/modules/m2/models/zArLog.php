@@ -13,7 +13,7 @@
  * @property string $creationdate
  * @property string $userid
  */
-class zArLog extends CActiveRecord
+class zArLog extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

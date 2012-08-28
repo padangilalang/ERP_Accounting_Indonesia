@@ -10,19 +10,24 @@
 
 /**
  * Bootstrap modal widget.
+ * @see http://twitter.github.com/bootstrap/javascript.html#modals
  */
 class BootModal extends CWidget
 {
 	/**
-	 * @var boolean whether to automatically open the modal when initialized.
+	 * @var boolean indicates whether to automatically open the modal when initialized. Defaults to 'false'.
 	 */
 	public $autoOpen = false;
 	/**
-	 * @var array the options for the Bootstrap JavaScript plugin.
+	 * @var boolean indicates whether the modal should use transitions. Defaults to 'true'.
+	 */
+	public $fade = true;
+	/**
+	 * @var array the options for the Bootstrap Javascript plugin.
 	 */
 	public $options = array();
 	/**
-	 * @var string[] the JavaScript event handlers.
+	 * @var string[] the Javascript event handlers.
 	 */
 	public $events = array();
 	/**
@@ -38,16 +43,24 @@ class BootModal extends CWidget
 		if (!isset($this->htmlOptions['id']))
 			$this->htmlOptions['id'] = $this->getId();
 
-		if (!$this->autoOpen && !isset($this->options['show']))
+		if ($this->autoOpen === false && !isset($this->options['show']))
 			$this->options['show'] = false;
 
-		$classes = 'modal fade';
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		$classes = array('modal');
 
-		echo CHtml::openTag('div', $this->htmlOptions).PHP_EOL;
+		if ($this->fade === true)
+			$classes[] = 'fade';
+
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
+
+		echo CHtml::openTag('div', $this->htmlOptions);
 	}
 
 	/**
@@ -55,7 +68,7 @@ class BootModal extends CWidget
 	 */
 	public function run()
 	{
-		$id = $this->id;
+		$id = $this->htmlOptions['id'];
 
 		echo '</div>';
 
@@ -68,7 +81,7 @@ class BootModal extends CWidget
 		foreach ($this->events as $name => $handler)
 		{
 			$handler = CJavaScript::encode($handler);
-			$cs->registerScript(__CLASS__.'#'.$id.'_'.$name, "jQuery('#{$id}').on('".$name."', {$handler});");
+			$cs->registerScript(__CLASS__.'#'.$id.'_'.$name, "jQuery('#{$id}').on('{$name}', {$handler});");
 		}
 	}
 }

@@ -1,0 +1,12 @@
+<phpunit bootstrap="bootstrap.php"
+		colors="false"
+		convertErrorsToExceptions="true"
+		convertNoticesToExceptions="true"
+		convertWarningsToExceptions="true"
+		stopOnFailure="false">
+
+	<selenium>
+		<browser name="Chrome" browser="*googlechrome" />
+	</selenium>
+
+</phpunit>

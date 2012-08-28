@@ -7,11 +7,11 @@
  * @property integer $id
  * @property string $af_date
  * @property integer $created_date
- * @property integer $created_id
+ * @property integer $created_by
  * @property integer $updated_date
- * @property integer $updated_id
+ * @property integer $updated_by
  */
-class vPorderExt extends CActiveRecord
+class vPorderExt extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -39,11 +39,11 @@ class vPorderExt extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_date, created_id, updated_date, updated_id', 'numerical', 'integerOnly'=>true),
-			array('af_date', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, af_date, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
+				array('created_date, created_by, updated_date, updated_by', 'numerical', 'integerOnly'=>true),
+				array('af_date', 'safe'),
+				// The following rule is used by search().
+				// Please remove those attributes that should not be searched.
+				array('id, af_date, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,12 +64,12 @@ class vPorderExt extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'af_date' => 'Af Date',
-			'created_date' => 'Created Date',
-			'created_id' => 'Created',
-			'updated_date' => 'Updated Date',
-			'updated_id' => 'Updated',
+				'id' => 'ID',
+				'af_date' => 'Af Date',
+				'created_date' => 'Created Date',
+				'created_by' => 'Created',
+				'updated_date' => 'Updated Date',
+				'updated_by' => 'Updated',
 		);
 	}
 
@@ -87,41 +87,13 @@ class vPorderExt extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('af_date',$this->af_date,true);
 		$criteria->compare('created_date',$this->created_date);
-		$criteria->compare('created_id',$this->created_id);
+		$criteria->compare('created_by',$this->created_by);
 		$criteria->compare('updated_date',$this->updated_date);
-		$criteria->compare('updated_id',$this->updated_id);
+		$criteria->compare('updated_by',$this->updated_by);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+				'criteria'=>$criteria,
 		));
 	}
 
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				//'defaults'=>array(
-				//	'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-				//	//'format'=>'db',
-				//),
-		);
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
-	
 }

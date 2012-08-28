@@ -49,7 +49,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 				'qty',
 				'uom',
 				array(
-						'value'=>'$data->amountf()',
+						'value'=>'Yii::app()->indoFormat->number($data->amount)',
 						'name'=>'amount',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
@@ -57,7 +57,7 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 				),
 				array(
 						'header'=>'Total',
-						'value'=>'$data->totalf()',
+						'value'=>'Yii::app()->indoFormat->number($data->total)',
 						'name'=>'amount',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
@@ -67,5 +67,5 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 ));
 ?>
 <br />
-<b> Total: <?php echo $model->sum_pof(); ?>
+<b> Total: <?php echo Yii::app()->indoFormat->number($model->sum_po); ?>
 </b>

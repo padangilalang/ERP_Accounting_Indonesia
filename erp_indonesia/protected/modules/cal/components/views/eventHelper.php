@@ -5,8 +5,7 @@
 	?>
 </div>
 <br>
-<input type='checkbox'
-	id='drop-remove' />
+<input type='checkbox' id='drop-remove' />
 <label for='drop-remove'><?php echo Yii::t('CalModule.fullCal', 'remove after drop'); ?>
 </label>
 

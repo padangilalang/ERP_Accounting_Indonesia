@@ -34,6 +34,7 @@ return array(
 						'password'=>'1234qwe',
 						'generatorPaths'=>array(
 								'bootstrap.gii', // Since 0.9.1
+								'ext.giitemplates',
 						),
 				),
 				/**/
@@ -55,25 +56,42 @@ return array(
 		'components'=>array(
 				//'widgetFactory'=>array(
 				//	'widgets'=>array(
-						//'CJuiAutoComplete'=>array(
-						//	'options'=>array(
-						//		'minLength'=>'3',
-						//	),
-						//),
+				//'CJuiAutoComplete'=>array(
+				//	'options'=>array(
+				//		'minLength'=>'3',
 				//	),
 				//),
+				//	),
+				//),
+				'clientScript' => array(
+				  'class' => 'ext.ClientScriptPacker.ClientScriptPacker',
+				),
+
+				'sprite'=>array(
+						'class'=>'ext.sprite.NSprite',
+						// if you remove the imageFolderPsth setting it will use the icon folder within
+						// the sprite package (ext.sprite.icons)
+						//'imageFolderPath'=>array(
+						//Yii::getPathOfAlias('modules.project.images'),
+						//	'path/to/another/folder'
+				),
 				'jasPHP' => array(
 						'class' => 'JasPHP',
 				),
+
 				'cache'=>array(
-					'class'=>'system.caching.CFileCache',
-					//'cache'=>'CZendDataCache',
+						//'class'=>'system.caching.CFileCache',
+						'class'=>'CZendDataCache',
 				),
 					
 				'session' => array(
-					'class' => 'CCacheHttpSession',
+						'class' => 'CCacheHttpSession',
 				),
-				
+
+				'indoFormat'=>array(
+						'class'=>'application.components.IndoNumberFormatter',
+				),
+
 				'settings'=>array(
 						'class'                 => 'CmsSettings',
 						'cacheComponentId'  => 'cache',
@@ -95,14 +113,15 @@ return array(
 				),
 				'db'=>array(
 						'connectionString' => 'mysql:host=localhost;dbname=erp_indonesia',
+						//'connectionString'=>'pgsql:host=localhost;port=5432;dbname=erp_indonesia',
 						'emulatePrepare' => true,
-						'username' => 'erp_indonesia',    //mysql
+						'username' => 'erp_indonesia',
 						'password' => '1234qwe',
 						'charset' => 'utf8',
 						'tablePrefix' => '',
 						'enableProfiling'=>true,
 						'enableParamLogging' => true,
-						'schemaCachingDuration' => 180,						
+						'schemaCachingDuration' => 180,
 				),
 				'errorHandler'=>array(
 						// use 'site/error' action to display errors
@@ -110,15 +129,15 @@ return array(
 				),
 
 				/**/
-				 'urlManager'=>array(
-				 		'urlFormat'=>'path',
-				 		//'showScriptName'=>false,
-				 		'rules'=>array(
-				 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-				 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				 		),
-				 ),
+				'urlManager'=>array(
+						'urlFormat'=>'path',
+						//'showScriptName'=>false,
+						'rules'=>array(
+								'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+								'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+								'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+						),
+				),
 				/**/
 
 				'log'=>array(
@@ -133,13 +152,15 @@ return array(
 								 array(
 								 		'class'=>'CWebLogRoute',
 								 ),
-*/
-/*							array(
- 'class'=>'ext.db_profiler.DbProfileLogRoute',
-		'countLimit' => 1, // How many times the same query should be executed to be considered inefficient
-		'slowQueryMin' => 0.01, // Minimum time for the query to be slow
-),
-*/
+								*/
+
+								/*
+								 array(
+								 		'class'=>'ext.db_profiler.DbProfileLogRoute',
+								 		'countLimit' => 1, // How many times the same query should be executed to be considered inefficient
+								 		'slowQueryMin' => 0.01, // Minimum time for the query to be slow
+								 ),
+								*/
 						),
 				),
 		),

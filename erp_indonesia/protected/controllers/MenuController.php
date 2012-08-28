@@ -151,6 +151,8 @@ class MenuController extends Controller
 		if(isset($_POST['sTask']))
 		{
 			$model->attributes=$_POST['sTask'];
+			$model->created_by=Yii::app()->user->id;
+			$model->mark_id=1;
 			if($model->save()) {
 				Yii::app()->user->setFlash('success','data has been saved successfully');
 				$this->refresh();

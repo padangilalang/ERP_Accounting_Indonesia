@@ -14,7 +14,7 @@ class GRecruitmentController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+				'accessControl', // perform access control for CRUD operations
 		);
 	}
 
@@ -26,12 +26,12 @@ class GRecruitmentController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow', 
-				'users'=>array('@'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+				array('allow',
+						'users'=>array('@'),
+				),
+				array('deny',  // deny all users
+						'users'=>array('*'),
+				),
 		);
 	}
 
@@ -41,11 +41,11 @@ class GRecruitmentController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$files = $this->read_folder_directory (Yii::app()->basePath."/../images/recruitment/".$id); 
+		$files = $this->read_folder_directory (Yii::app()->basePath."/../images/recruitment/".$id);
 
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-			'files'=>$files,
+				'model'=>$this->loadModel($id),
+				'files'=>$files,
 		));
 	}
 
@@ -65,34 +65,34 @@ class GRecruitmentController extends Controller
 			$model->attributes=$_POST['gRecruitment'];
 			$model->followup_id=1;
 			$model->final_result_id=1;
-			
+				
 			$model->image=CUploadedFile::getInstance($model,'image');
 			$docs=CUploadedFile::getInstancesByName('docs');
-						
-			if (isset($model->image)) 
+
+			if (isset($model->image))
 				$model->photo_path=$model->image->name;
-			
+				
 			if($model->save()) {
-				if (isset($model->image)) 
+				if (isset($model->image))
 					$model->image->saveAs(Yii::app()->basePath . '/../images/recruitment/'.$model->image->name);
-		
-				if (isset($docs)) { 
+
+				if (isset($docs)) {
 					mkdir(Yii::getPathOfAlias('webroot').'/images/recruitment/'.$model->id);
-					//chmod(Yii::getPathOfAlias('webroot').'/images/recruitment/'.$model->id, 0755); 
-				   
+					//chmod(Yii::getPathOfAlias('webroot').'/images/recruitment/'.$model->id, 0755);
+						
 					foreach ($docs as $image => $pic) {
 						$pic->saveAs(Yii::app()->basePath . '/../images/recruitment/'.$model->id . '/'.$pic->name);
-					}					
+					}
 				}
 					
-			
+					
 				$this->redirect(array('/m1/gRecruitment'));
 			}
 		}
 
 
-		   $this->render('create',array(
-			'model'=>$model,
+		$this->render('create',array(
+				'model'=>$model,
 		));
 	}
 
@@ -116,7 +116,7 @@ class GRecruitmentController extends Controller
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+				'model'=>$model,
 		));
 	}
 
@@ -147,8 +147,8 @@ class GRecruitmentController extends Controller
 	{
 		$dataProvider=new CActiveDataProvider('gRecruitment');
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-			'id'=>$id,
+				'dataProvider'=>$dataProvider,
+				'id'=>$id,
 		));
 	}
 
@@ -177,7 +177,7 @@ class GRecruitmentController extends Controller
 			Yii::app()->end();
 		}
 	}
-	
+
 	public function actionRecruitAutoComplete()
 	{
 		$res =array();
@@ -193,21 +193,21 @@ class GRecruitmentController extends Controller
 		echo CJSON::encode($res);
 	}
 
-	private function read_folder_directory($dir = "root_dir/dir") 
-    { 
-        $listDir = array(); 
+	private function read_folder_directory($dir = "root_dir/dir")
+	{
+		$listDir = array();
 		if (is_dir($dir)) {
-			if($handler = opendir($dir)) { 
-				while (($sub = readdir($handler)) !== FALSE) { 
-						if(is_file($dir."/".$sub)) { 
-							$listDir[] = $sub; 
-						} 
-				} 
-				closedir($handler); 
-			} 
+			if($handler = opendir($dir)) {
+				while (($sub = readdir($handler)) !== FALSE) {
+					if(is_file($dir."/".$sub)) {
+						$listDir[] = $sub;
+					}
+				}
+				closedir($handler);
+			}
 		}
-		
-        return $listDir; 
-    } 
-	
+
+		return $listDir;
+	}
+
 }

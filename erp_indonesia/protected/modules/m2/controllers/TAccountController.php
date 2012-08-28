@@ -200,24 +200,24 @@ class TAccountController extends Controller
 			if($model->save()) {
 				//accmain_id
 				$modelProperties0=tAccountProperties::model()->find(array(
-					'condition'=>'mkey = \'accmain_id\' AND parent_id = :id',
-					'params'=>array(':id'=>$id),
+						'condition'=>'mkey = \'accmain_id\' AND parent_id = :id',
+						'params'=>array(':id'=>$id),
 				));
 				$modelProperties0->mvalue=$_POST['tAccount']['accmain_id'];
 				$modelProperties0->save();
 
 				//currency_id
 				$modelProperties2=tAccountProperties::model()->find(array(
-					'condition'=>'mkey = \'currency_id\' AND parent_id = :id',
-					'params'=>array(':id'=>$id),
+						'condition'=>'mkey = \'currency_id\' AND parent_id = :id',
+						'params'=>array(':id'=>$id),
 				));
 				$modelProperties2->mvalue=$_POST['tAccount']['currency_id'];
 				$modelProperties2->save();
 
 				//state_id
 				$modelProperties3=tAccountProperties::model()->find(array(
-					'condition'=>'mkey = \'state_id\' AND parent_id = :id',
-					'params'=>array(':id'=>$id),
+						'condition'=>'mkey = \'state_id\' AND parent_id = :id',
+						'params'=>array(':id'=>$id),
 				));
 				$modelProperties3->mvalue=$_POST['tAccount']['state_id'];
 				$modelProperties3->save();

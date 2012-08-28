@@ -1,6 +1,6 @@
 <?php
 
-class sNotification3 extends CActiveRecord
+class sNotification3 extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -68,11 +68,6 @@ class sNotification3 extends CActiveRecord
 						'pageSize'=>5,
 				),
 		));
-	}
-
-	public function behaviors()
-	{
-		return array('datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'));
 	}
 
 }

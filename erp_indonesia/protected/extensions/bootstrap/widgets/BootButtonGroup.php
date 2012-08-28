@@ -12,6 +12,7 @@ Yii::import('bootstrap.widgets.BootButton');
 
 /**
  * Bootstrap button group widget.
+ * @see http://twitter.github.com/bootstrap/components.html#buttonGroups
  */
 class BootButtonGroup extends CWidget
 {
@@ -28,12 +29,12 @@ class BootButtonGroup extends CWidget
 	 * @var string the button type.
 	 * @see BootButton::type
 	 */
-	public $type = BootButton::TYPE_NORMAL;
+	public $type;
 	/**
 	 * @var string the button size.
 	 * @see BootButton::size
 	 */
-	public $size = BootButton::SIZE_NORMAL;
+	public $size;
 	/**
 	 * @var boolean indicates whether to encode the button labels.
 	 */
@@ -50,17 +51,29 @@ class BootButtonGroup extends CWidget
 	 * @var boolean indicates whether to enable button toggling.
 	 */
 	public $toggle;
+	/**
+	 * @var boolean indicates whether dropdowns should be dropups instead.
+	 */
+	public $dropup = false;
 
 	/**
 	 * Initializes the widget.
 	 */
 	public function init()
 	{
-		$classes = 'btn-group';
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		$classes = array('btn-group');
+
+		if ($this->dropup === true)
+			$classes[] = 'dropup';
+
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 
 		$validToggles = array(self::TOGGLE_CHECKBOX, self::TOGGLE_RADIO);
 
@@ -77,10 +90,13 @@ class BootButtonGroup extends CWidget
 
 		foreach ($this->buttons as $button)
 		{
+			if (isset($button['visible']) && $button['visible'] === false)
+				continue;
+
 			$this->controller->widget('bootstrap.widgets.BootButton', array(
 					'buttonType'=>isset($button['buttonType']) ? $button['buttonType'] : $this->buttonType,
 					'type'=>isset($button['type']) ? $button['type'] : $this->type,
-					'size'=>$this->size,
+					'size'=>$this->size, // all buttons in a group cannot vary in size
 					'icon'=>isset($button['icon']) ? $button['icon'] : null,
 					'label'=>isset($button['label']) ? $button['label'] : null,
 					'url'=>isset($button['url']) ? $button['url'] : null,

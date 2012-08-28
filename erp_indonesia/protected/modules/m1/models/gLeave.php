@@ -34,10 +34,10 @@
  * @property string $Id_OLD
  * @property integer $tahunke
  */
-class gLeave extends CActiveRecord
+class gLeave extends BaseModel
 {
 	public $parent_name;
-	
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -181,18 +181,6 @@ class gLeave extends CActiveRecord
 		}
 
 		return $returnarray;
-	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-				//'ActiveRecordLogableBehavior'=>array('class'=>'ext.ActiveRecordLogableBehavior'),
-		);
 	}
 
 

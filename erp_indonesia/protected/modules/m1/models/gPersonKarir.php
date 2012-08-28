@@ -31,7 +31,7 @@
  * @property integer $t_status
  * @property string $t_stat
  */
-class gPersonKarir extends CActiveRecord
+class gPersonKarir extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -145,18 +145,6 @@ class gPersonKarir extends CActiveRecord
 				'criteria'=>$criteria,
 				'pagination'=>false,
 		));
-	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-				//'ActiveRecordLogableBehavior'=>array('class'=>'ext.ActiveRecordLogableBehavior'),
-		);
 	}
 
 }

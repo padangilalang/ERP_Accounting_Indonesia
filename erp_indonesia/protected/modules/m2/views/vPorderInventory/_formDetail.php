@@ -7,7 +7,7 @@
 	'columns'=>array(
 		array(
 			'header'=>'Item',
-			'value'=>'xProduct::model()->findByPk($data["item_id"])->item',
+			'value'=>'xProduct::model()->findByPk($data["item_id"])->item_name',
 		),
 		'description',
 		'qty',

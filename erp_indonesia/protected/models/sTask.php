@@ -19,7 +19,7 @@
  * @property integer $updated_date
  * @property integer $updated_by
  */
-class sTask extends CActiveRecord
+class sTask extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -102,46 +102,14 @@ class sTask extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('subject',$this->subject,true);
-		$criteria->compare('start_date',$this->start_date,true);
-		$criteria->compare('end_date',$this->end_date,true);
-		$criteria->compare('reminder',$this->reminder,true);
-		$criteria->compare('status_id',$this->status_id);
-		$criteria->compare('priority_id',$this->priority_id);
-		$criteria->compare('category_id',$this->category_id);
-		$criteria->compare('mark_id',$this->mark_id);
-		$criteria->compare('notes',$this->notes,true);
-		$criteria->compare('created_date',$this->created_date);
 		$criteria->compare('created_by',Yii::app()->user->id);
-		$criteria->compare('updated_date',$this->updated_date);
-		$criteria->compare('updated_by',$this->updated_by);
+		$criteria->order='created_date DESC';
 
 		return new CActiveDataProvider($this, array(
 				'criteria'=>$criteria,
 		));
 	}
 
-	/**
-	 * This is invoked before the record is saved.
-	 * @return boolean whether the record should be saved.
-	 */
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_by= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_by= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
 
 	public function getTopCreated() {
 
@@ -150,7 +118,7 @@ class sTask extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -163,7 +131,7 @@ class sTask extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -192,24 +160,11 @@ class sTask extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
 	}
-
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
-	}
-
 
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-class vPorderPayment extends CActiveRecord
+class vPorderPayment extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -64,23 +64,6 @@ class vPorderPayment extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 				'criteria'=>$criteria,
 		));
-	}
-
-	public function amountf() {
-		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->amount);
-
-		return $_format;
-	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				//'defaults'=>array(
-				//	'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-				//	//'format'=>'db',
-				//),
-		);
 	}
 
 

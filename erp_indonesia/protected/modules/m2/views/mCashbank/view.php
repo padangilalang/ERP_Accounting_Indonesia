@@ -68,7 +68,7 @@ if (empty($_GET['asDialog'])) {
 					'remark',
 					array(
 							'header'=>'Total',
-							'value'=>'$data->journalSumF()',
+							'value'=>'Yii::app()->indoFormat->number($data->journalSum)',
 							'htmlOptions'=>array(
 									'style'=>'text-align: right; padding-right: 5px;'
 							),

@@ -1,6 +1,6 @@
 <?php
 
-class menu extends CActiveRecord
+class menu extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -24,14 +24,14 @@ class menu extends CActiveRecord
 		$subitems = array();
 
 		$model=sUserModule::model()->find(array(
-			'condition'=>'s_module_id = :module AND s_user_id = :user',
-			'params'=>array(':module'=>$this->id,':user'=>Yii::app()->user->id)
+				'condition'=>'s_module_id = :module AND s_user_id = :user',
+				'params'=>array(':module'=>$this->id,':user'=>Yii::app()->user->id)
 		));
 		if ($model !=null or Yii::app()->user->name == 'admin') {
 			if($this->childs) foreach($this->childs as $child)
 				$subitems[] = $child->getListed();
 
-			$returnarray = array('label' => $this->title, 'url' => array($this->link));
+			$returnarray = array('label' => $this->title, 'icon'=>'th-large', 'url' => array($this->link));
 
 			if($subitems != array())
 				$returnarray = array_merge($returnarray, array('items' => $subitems));

@@ -18,7 +18,8 @@ $this->menu2=gLeave::getTopCreated();
 <div class="page-header">
 	<h1>
 		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/icon/user.png') ?>
-		Update: <?php echo $model->person->vc_psnama; ?>
+		Update:
+		<?php echo $model->person->vc_psnama; ?>
 	</h1>
 </div>
 

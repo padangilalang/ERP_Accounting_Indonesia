@@ -1,6 +1,6 @@
 <?php
 
-class sUserModule extends CActiveRecord
+class sUserModule extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -18,12 +18,12 @@ class sUserModule extends CActiveRecord
 				array('s_user_id, s_module_id, s_matrix_id', 'required'),
 				//array('s_user_id, s_module_id', 'unique'),
 				array('s_user_id', 'unique', 'criteria'=>array(
-					'condition'=>'`s_module_id`=:s_module_id',
-					'params'=>array(
-						':s_module_id'=>$this->s_module_id
-					)
+						'condition'=>'`s_module_id`=:s_module_id',
+						'params'=>array(
+								':s_module_id'=>$this->s_module_id
+						)
 				)),
-			array('s_user_id, s_module_id, s_matrix_id', 'length', 'max'=>20),
+				array('s_user_id, s_module_id, s_matrix_id', 'length', 'max'=>20),
 				array('id, s_user_id, s_module_id, s_matrix_id', 'safe', 'on'=>'search'),
 		);
 	}

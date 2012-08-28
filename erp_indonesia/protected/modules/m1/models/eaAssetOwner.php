@@ -9,7 +9,7 @@
  * @property string $owner
  * @property string $remarks
  */
-class eaAssetOwner extends CActiveRecord
+class eaAssetOwner extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

@@ -10,7 +10,7 @@
  * @property string $message
  * @property string $created_date
  */
-class sSmsout extends CActiveRecord
+class sSmsout extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

@@ -1,6 +1,6 @@
 <?php $this->widget('bootstrap.widgets.BootGridView',array(
 		'id'=>'g-education-grid',
-		'dataProvider'=>gEducation::model()->search($model->id),
+		'dataProvider'=>gPersonEducation::model()->search($model->id),
 		//'filter'=>$model,
 		'columns'=>array(
 				'c_fmjenjang',

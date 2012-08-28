@@ -9,27 +9,21 @@
  */
 
 /**
- * Bootstrap type-a-head widget.
+ * Bootstrap typeahead widget.
+ * @see http://twitter.github.com/bootstrap/javascript.html#typeahead
  */
-class BootTypeahead extends CWidget
+class BootTypeahead extends CInputWidget
 {
 	/**
-	 * @var array the options for the Bootstrap JavaScript plugin.
+	 * @var array the options for the Bootstrap Javascript plugin.
 	 */
 	public $options = array();
-	/**
-	 * @var array the HTML attributes for the widget container.
-	 */
-	public $htmlOptions = array();
 
 	/**
 	 * Initializes the widget.
 	 */
 	public function init()
 	{
-		if (!isset($this->htmlOptions['id']))
-			$this->htmlOptions['id'] = $this->getId();
-
 		$this->htmlOptions['type'] = 'text';
 		$this->htmlOptions['data-provide'] = 'typeahead';
 	}
@@ -39,9 +33,20 @@ class BootTypeahead extends CWidget
 	 */
 	public function run()
 	{
-		$id = $this->id;
+		list($name, $id) = $this->resolveNameID();
 
-		echo CHtml::tag('input', $this->htmlOptions);
+		if (isset($this->htmlOptions['id']))
+			$id = $this->htmlOptions['id'];
+		else
+			$this->htmlOptions['id'] = $id;
+
+		if (isset($this->htmlOptions['name']))
+			$name = $this->htmlOptions['name'];
+
+		if ($this->hasModel())
+			echo CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
+		else
+			echo CHtml::textField($name, $this->value, $this->htmlOptions);
 
 		$options = !empty($this->options) ? CJavaScript::encode($this->options) : '';
 		Yii::app()->clientScript->registerScript(__CLASS__.'#'.$id, "jQuery('#{$id}').typeahead({$options});");

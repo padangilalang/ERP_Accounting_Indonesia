@@ -1,6 +1,6 @@
 <?php
 
-class aOrganization extends CActiveRecord
+class aOrganization extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -137,28 +137,6 @@ class aOrganization extends CActiveRecord
 		}
 
 		return $returnarray;
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
-
-	public function behaviors()
-	{
-		return array('datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'));
 	}
 
 	public static function items()

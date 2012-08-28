@@ -1,6 +1,6 @@
 <?php
 
-class sSmsin extends CActiveRecord
+class sSmsin extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{

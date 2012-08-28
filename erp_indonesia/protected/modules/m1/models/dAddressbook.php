@@ -14,7 +14,7 @@
  * @property string $handphone
  * @property string $email
  */
-class dAddressbook extends CActiveRecord
+class dAddressbook extends BaseModel
 {
 
 	public $defaultgroup;

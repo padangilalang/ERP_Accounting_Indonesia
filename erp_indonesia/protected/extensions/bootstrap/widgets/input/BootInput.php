@@ -46,8 +46,42 @@ abstract class BootInput extends CInputWidget
 	 * @var array the data for list inputs.
 	 */
 	public $data = array();
-
-	private $_addon = false;
+	/**
+	 * @var string text to prepend.
+	 */
+	public $prependText;
+	/**
+	 * @var string text to append.
+	 */
+	public $appendText;
+	/**
+	 * @var string the hint text.
+	 */
+	public $hintText;
+	/**
+	 * @var array label html attributes.
+	 */
+	public $labelOptions = array();
+	/**
+	 * @var array prepend html attributes.
+	 */
+	public $prependOptions = array();
+	/**
+	 * @var array append html attributes.
+	 */
+	public $appendOptions = array();
+	/**
+	 * @var array hint html attributes.
+	 */
+	public $hintOptions = array();
+	/**
+	 * @var array error html attributes.
+	 */
+	public $errorOptions = array();
+	/**
+	 * @var array captcha html attributes.
+	 */
+	public $captchaOptions = array();
 
 	/**
 	 * Initializes the widget.
@@ -70,6 +104,69 @@ abstract class BootInput extends CInputWidget
 				$this->htmlOptions['class'] .= ' uneditable-input';
 			else
 				$this->htmlOptions['class'] = 'uneditable-input';
+		}
+
+		$this->processHtmlOptions();
+	}
+
+	/**
+	 * Processes the html options.
+	 */
+	protected function processHtmlOptions()
+	{
+		if (isset($this->htmlOptions['prepend']))
+		{
+			$this->prependText = $this->htmlOptions['prepend'];
+			unset($this->htmlOptions['prepend']);
+		}
+
+		if (isset($this->htmlOptions['append']))
+		{
+			$this->appendText = $this->htmlOptions['append'];
+			unset($this->htmlOptions['append']);
+		}
+
+		if (isset($this->htmlOptions['hint']))
+		{
+			$this->hintText = $this->htmlOptions['hint'];
+			unset($this->htmlOptions['hint']);
+		}
+
+		if (isset($this->htmlOptions['labelOptions']))
+		{
+			$this->labelOptions = $this->htmlOptions['labelOptions'];
+			unset($this->htmlOptions['labelOptions']);
+		}
+
+		if (isset($this->htmlOptions['prependOptions']))
+		{
+			$this->prependOptions = $this->htmlOptions['prependOptions'];
+			unset($this->htmlOptions['prependOptions']);
+		}
+
+		if (isset($this->htmlOptions['appendOptions']))
+		{
+			$this->appendOptions = $this->htmlOptions['appendOptions'];
+			unset($this->htmlOptions['appendOptions']);
+		}
+
+		if (isset($this->htmlOptions['hintOptions']))
+		{
+			$this->hintOptions = $this->htmlOptions['hintOptions'];
+			unset($this->htmlOptions['hintOptions']);
+
+		}
+
+		if (isset($this->htmlOptions['errorOptions']))
+		{
+			$this->errorOptions = $this->htmlOptions['errorOptions'];
+			unset($this->htmlOptions['errorOptions']);
+		}
+
+		if (isset($this->htmlOptions['captchaOptions']))
+		{
+			$this->captchaOptions = $this->htmlOptions['captchaOptions'];
+			unset($this->htmlOptions['captchaOptions']);
 		}
 	}
 
@@ -144,16 +241,8 @@ abstract class BootInput extends CInputWidget
 	 */
 	protected function getLabel()
 	{
-		if (isset($this->htmlOptions['labelOptions']))
-		{
-			$htmlOptions = $this->htmlOptions['labelOptions'];
-			unset($this->htmlOptions['labelOptions']);
-		}
-		else
-			$htmlOptions = array();
-
 		if ($this->label !== false && !in_array($this->type, array('checkbox', 'radio')) && $this->hasModel())
-			return $this->form->labelEx($this->model, $this->attribute, $htmlOptions);
+			return $this->form->labelEx($this->model, $this->attribute, $this->labelOptions);
 		else if ($this->label !== null)
 			return $this->label;
 		else
@@ -168,28 +257,18 @@ abstract class BootInput extends CInputWidget
 	{
 		if ($this->hasAddOn())
 		{
-			if (isset($this->htmlOptions['prependOptions']))
-			{
-				$htmlOptions = $this->htmlOptions['prependOptions'];
-				unset($this->htmlOptions['prependOptions']);
-			}
-			else
-				$htmlOptions = array();
+			$htmlOptions = $this->prependOptions;
 
 			if (isset($htmlOptions['class']))
 				$htmlOptions['class'] .= ' add-on';
 			else
 				$htmlOptions['class'] = 'add-on';
 
-			$classes = $this->getInputContainerCssClass();
 			ob_start();
-			echo '<div class="'.$classes.'">';
-			if (isset($this->htmlOptions['prepend']))
-			{
-				$this->_addon = true;
-				echo CHtml::tag('span', $htmlOptions, $this->htmlOptions['prepend']);
-				unset($this->htmlOptions['prepend']);
-			}
+			echo '<div class="'.$this->getAddonCssClass().'">';
+			if (isset($this->prependText))
+				echo CHtml::tag('span', $htmlOptions, $this->prependText);
+
 			return ob_get_clean();
 		}
 		else
@@ -204,13 +283,7 @@ abstract class BootInput extends CInputWidget
 	{
 		if ($this->hasAddOn())
 		{
-			if (isset($this->htmlOptions['appendOptions']))
-			{
-				$htmlOptions = $this->htmlOptions['appendOptions'];
-				unset($this->htmlOptions['appendOptions']);
-			}
-			else
-				$htmlOptions = array();
+			$htmlOptions = $this->appendOptions;
 
 			if (isset($htmlOptions['class']))
 				$htmlOptions['class'] .= ' add-on';
@@ -218,12 +291,9 @@ abstract class BootInput extends CInputWidget
 				$htmlOptions['class'] = 'add-on';
 
 			ob_start();
-			if (isset($this->htmlOptions['append']))
-			{
-				$this->_addon = true;
-				echo CHtml::tag('span', $htmlOptions, $this->htmlOptions['append']);
-				unset($this->htmlOptions['append']);
-			}
+			if (isset($this->appendText))
+				echo CHtml::tag('span', $htmlOptions, $this->appendText);
+
 			echo '</div>';
 			return ob_get_clean();
 		}
@@ -249,15 +319,7 @@ abstract class BootInput extends CInputWidget
 	 */
 	protected function getError()
 	{
-		if (isset($this->htmlOptions['errorOptions']))
-		{
-			$htmlOptions = $this->htmlOptions['errorOptions'];
-			unset($this->htmlOptions['errorOptions']);
-		}
-		else
-			$htmlOptions = array();
-
-		return $this->form->error($this->model, $this->attribute, $htmlOptions);
+		return $this->form->error($this->model, $this->attribute, $this->errorOptions);
 	}
 
 	/**
@@ -266,25 +328,16 @@ abstract class BootInput extends CInputWidget
 	 */
 	protected function getHint()
 	{
-		if (isset($this->htmlOptions['hint']))
+		if (isset($this->hintText))
 		{
-			if (isset($this->htmlOptions['hintOptions']))
-			{
-				$htmlOptions = $this->htmlOptions['hintOptions'];
-				unset($this->htmlOptions['hintOptions']);
-			}
-			else
-				$htmlOptions = array();
+			$htmlOptions = $this->hintOptions;
 
 			if (isset($htmlOptions['class']))
 				$htmlOptions['class'] .= ' help-block';
 			else
 				$htmlOptions['class'] = 'help-block';
 
-			$hint = $this->htmlOptions['hint'];
-			unset($this->htmlOptions['hint']);
-
-			return CHtml::tag('p', $htmlOptions, $hint);
+			return CHtml::tag('p', $htmlOptions, $this->hintText);
 		}
 		else
 			return '';
@@ -304,33 +357,15 @@ abstract class BootInput extends CInputWidget
 	 * Returns the input container CSS classes.
 	 * @return string the CSS class
 	 */
-	protected function getInputContainerCssClass()
+	protected function getAddonCssClass()
 	{
 		$classes = array();
-		if (isset($this->htmlOptions['prepend']))
+		if (isset($this->prependText))
 			$classes[] = 'input-prepend';
-		if (isset($this->htmlOptions['append']))
+		if (isset($this->appendText))
 			$classes[] = 'input-append';
 
 		return implode(' ', $classes);
-	}
-
-	/**
-	 * Returns the HTML attributes for the CAPTCHA widget.
-	 * @return array the attributes
-	 * @since 0.10.0
-	 */
-	protected function getCaptchaOptions()
-	{
-		if (isset($this->htmlOptions['captchaOptions']))
-		{
-			$htmlOptions = $this->htmlOptions['captchaOptions'];
-			unset($this->htmlOptions['captchaOptions']);
-		}
-		else
-			$htmlOptions = array();
-
-		return $htmlOptions;
 	}
 
 	/**
@@ -339,7 +374,7 @@ abstract class BootInput extends CInputWidget
 	 */
 	protected function hasAddOn()
 	{
-		return $this->_addon || isset($this->htmlOptions['prepend']) || isset($this->htmlOptions['append']);
+		return isset($this->prependText) || isset($this->appendText);
 	}
 
 	/**

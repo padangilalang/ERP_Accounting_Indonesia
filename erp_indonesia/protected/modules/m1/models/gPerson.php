@@ -49,7 +49,7 @@
  * @property integer $t_status
  * @property integer $t_status2
  */
-class gPerson extends CActiveRecord
+class gPerson extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -198,7 +198,7 @@ class gPerson extends CActiveRecord
 		));
 	}
 
-	public function waitingApproval()
+	public function listWaitingApproval()
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
@@ -270,6 +270,31 @@ class gPerson extends CActiveRecord
 		));
 	}
 
+	public function ListWaitingApproval()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->with=array('leave');
+		$criteria->together=true;
+		$criteria->compare('leave.approved_id',1);
+		$criteria->compare('leave.d_dari>',Yii::app()->dateFormatter->format("yyyy-MM-dd",time()));
+
+		$models=self::model()->findAll($criteria);
+
+		$returnarray = array();
+
+		foreach ($models as $model) {
+			//$_nama= (strlen($model->vc_psnama) >15) ? substr($model->vc_psnama,0,15)."..." : $model->vc_psnama;
+			$_nama= $model->vc_psnama;
+			$returnarray[] = array('id' => $model->id, 'label' => $_nama, 'icon'=>'list-alt', 'url' => array('/m1/gLeave/view','id'=>$model->id));
+		}
+
+		return $returnarray;
+	}
+
 	public static function getTopCreated() {
 
 		$models=self::model()->findAll(array('limit'=>10,'order'=>'created_date DESC'));
@@ -334,18 +359,5 @@ class gPerson extends CActiveRecord
 				'2'=>'Perempuan',
 		);
 	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-				//'ActiveRecordLogableBehavior'=>array('class'=>'ext.ActiveRecordLogableBehavior'),
-		);
-	}
-
 
 }

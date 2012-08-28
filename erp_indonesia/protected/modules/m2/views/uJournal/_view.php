@@ -16,13 +16,13 @@
 			echo " ( ";
 
 			if ($data->state_id != 4) {
-				echo 	   CHtml::link('DELETE',"#", array("submit"=>array('delete', 'id'=>$data->id), 'confirm' => 'Are you sure?'));
+				echo 	   CHtml::link('DELETE',"#", array("class"=>"btn btn-mini", "submit"=>array('delete', 'id'=>$data->id), 'confirm' => 'Are you sure?'));
 				echo " | ";
-				echo CHtml::link('UPDATE',Yii::app()->createUrl($this->id.'/update',array("id"=>$data->id)));
+				echo CHtml::link('UPDATE',Yii::app()->createUrl($this->module->id .'/'. $this->id.'/update',array("id"=>$data->id)),array("class"=>"btn btn-mini"));
 				echo " | ";
 			}
 
-			echo CHtml::link('PRINT',Yii::app()->createUrl($this->id.'/print',array("id"=>$data->id)),array('target'=>'_blank'));
+			echo CHtml::link('PRINT',Yii::app()->createUrl($this->module->id .'/'. $this->id.'/print',array("id"=>$data->id)),array('target'=>'_blank',"class"=>"btn btn-mini"));
 			echo " ) ";
 
 			?> 
@@ -31,7 +31,7 @@
 		?> </h4>
 		
 		<?php if ($data->remark !=null) { ?>
-			<div style="color: #999; font-size: 11px"><?php echo CHtml::encode($data->remark); ?> </div>
+			<div style="color: #999; font-size: 11px; margin: 5px 0"><?php echo CHtml::encode($data->remark); ?> </div>
 		<?php }; ?>
 		<br/>
 
@@ -46,7 +46,7 @@
 						'input_date'=>$data->input_date,
 						'yearmonth_periode'=>$data->yearmonth_periode,
 						'user_ref'=>$data->user_ref,
-						'total'=>$data->journalSumF(),
+						'total'=>Yii::app()->indoFormat->number($data->journalSum),
 				),
 				'attributes'=>array(
 						array('name'=>'entity_id', 'label'=>'Entity'),

@@ -9,19 +9,35 @@
 
 /**
  * Bootstrap alert widget.
+ * @see http://twitter.github.com/bootstrap/javascript.html#alerts
  */
 class BootAlert extends CWidget
 {
+	// Alert types.
+	const TYPE_SUCCESS = 'success';
+	const TYPE_INFO = 'info';
+	const TYPE_WARNING = 'warning';
+	const TYPE_ERROR = 'error';
+	const TYPE_DANGER = 'danger'; // same as error
+
 	/**
-	 * @var array the keys for which to get flash messages.
+	 * @var array the alerts configurations.
 	 */
-	public $keys = array('success', 'info', 'warning', 'error', /* or */'danger');
+	public $alerts;
 	/**
-	 * @var string the template to use for displaying flash messages.
+	 * @var string the string to use for the close link. If this is set false, no close link will be displayed.
 	 */
-	public $template = '<div class="alert alert-block alert-{key}{class}"><a class="close" data-dismiss="alert">&times;</a>{message}</div>';
+	public $closeText = '&times;';
 	/**
-	 * @var string[] the JavaScript event handlers.
+	 * @var boolean indicates whether the alert should be an alert block. Defaults to 'true'.
+	 */
+	public $block = true;
+	/**
+	 * @var boolean indicates whether the modal should use transitions. Defaults to 'true'.
+	 */
+	public $fade = true;
+	/**
+	 * @var string[] the Javascript event handlers.
 	 */
 	public $events = array();
 	/**
@@ -34,10 +50,15 @@ class BootAlert extends CWidget
 	 */
 	public function init()
 	{
-		parent::init();
-
 		if (!isset($this->htmlOptions['id']))
 			$this->htmlOptions['id'] = $this->getId();
+
+		if (is_string($this->alerts))
+			$this->alerts = array($this->alerts);
+
+		// Display all alert types by default.
+		if (!isset($this->alerts))
+			$this->alerts = array(self::TYPE_SUCCESS, self::TYPE_INFO, self::TYPE_WARNING, self::TYPE_ERROR, self::TYPE_DANGER);
 	}
 
 	/**
@@ -45,22 +66,62 @@ class BootAlert extends CWidget
 	 */
 	public function run()
 	{
-		$id = $this->id;
-
-		if (is_string($this->keys))
-			$this->keys = array($this->keys);
+		$id = $this->htmlOptions['id'];
 
 		echo CHtml::openTag('div', $this->htmlOptions);
 
-		foreach ($this->keys as $key)
+		foreach ($this->alerts as $type => $alert)
 		{
-			if (Yii::app()->user->hasFlash($key))
+			if (is_string($alert))
 			{
-				echo strtr($this->template, array(
-						'{class}'=>' fade in',
-						'{key}'=>$key,
-						'{message}'=>Yii::app()->user->getFlash($key),
-				));
+				$type = $alert;
+				$alert = array();
+			}
+
+			if (isset($alert['visible']) && $alert['visible'] === false)
+				continue;
+
+			if (Yii::app()->user->hasFlash($type))
+			{
+				$classes = array('alert in');
+
+				if (!isset($alert['block']))
+					$alert['block'] = $this->block;
+
+				if ($alert['block'] === true)
+					$classes[] = 'alert-block';
+
+				if (!isset($alert['fade']))
+					$alert['fade'] = $this->fade;
+
+				if ($alert['fade'] === true)
+					$classes[] = 'fade';
+
+				$validTypes = array(self::TYPE_SUCCESS, self::TYPE_INFO, self::TYPE_WARNING, self::TYPE_ERROR, self::TYPE_DANGER);
+
+				if (in_array($type, $validTypes))
+					$classes[] = 'alert-'.$type;
+
+				if (!isset($alert['htmlOptions']))
+					$alert['htmlOptions'] = array();
+
+				$classes = implode(' ', $classes);
+				if (isset($alert['htmlOptions']['class']))
+					$alert['htmlOptions']['class'] .= ' '.$classes;
+				else
+					$alert['htmlOptions']['class'] = $classes;
+
+				echo CHtml::openTag('div', $alert['htmlOptions']);
+
+				if ($this->closeText !== false && !isset($alert['closeText']))
+					$alert['closeText'] = $this->closeText;
+
+				if ($alert['closeText'] !== false)
+					echo '<a class="close" data-dismiss="alert">'.$alert['closeText'].'</a>';
+
+				echo Yii::app()->user->getFlash($type);
+
+				echo '</div>';
 			}
 		}
 
@@ -76,7 +137,7 @@ class BootAlert extends CWidget
 		foreach ($this->events as $name => $handler)
 		{
 			$handler = CJavaScript::encode($handler);
-			$cs->registerScript(__CLASS__.'#'.$id.'_'.$name, "jQuery('{$selector}').on('".$name."', {$handler});");
+			$cs->registerScript(__CLASS__.'#'.$id.'_'.$name, "jQuery('{$selector}').on('{$name}', {$handler});");
 		}
 	}
 }

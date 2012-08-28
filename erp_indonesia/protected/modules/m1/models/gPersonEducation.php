@@ -21,7 +21,7 @@
  * @property string $pf_ipk
  * @property string $t_jenis
  */
-class gPersonEducation extends CActiveRecord
+class gPersonEducation extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

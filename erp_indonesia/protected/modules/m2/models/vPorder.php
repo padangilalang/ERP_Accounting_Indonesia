@@ -14,11 +14,11 @@
  * @property string $remark
  * @property integer $payment_state_id
  * @property integer $created_date
- * @property string $created_id
+ * @property string $created_by
  * @property integer $updated_date
- * @property string $updated_id
+ * @property string $updated_by
  */
-class vPorder extends CActiveRecord
+class vPorder extends BaseModel
 {
 	public $item_id;
 	public $item_name;
@@ -46,11 +46,11 @@ class vPorder extends CActiveRecord
 				array('input_date', 'required'),
 				array('item_id, budget_id, qty, amount, organization_id, periode_date, po_type_id, budgetcomp_id, supplier_id, approved_date, payment_state_id, journal_state_id, created_date, updated_date, total_amount', 'numerical', 'integerOnly'=>true),
 				array('system_ref, item_name, description', 'length', 'max'=>100),
-				array('created_id, updated_id', 'length', 'max'=>15),
+				array('created_by, updated_by', 'length', 'max'=>15),
 				array('remark, payment_date', 'safe'),
 				// The following rule is used by search().
 				// Please remove those attributes that should not be searched.
-				array('id, organization_id, input_date, system_ref, periode_date, po_type_id, approved_date, remark, payment_state_id, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
+				array('id, organization_id, input_date, system_ref, periode_date, po_type_id, approved_date, remark, payment_state_id, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -89,9 +89,9 @@ class vPorder extends CActiveRecord
 				'journal_state_id' => 'Journal State',
 				'total_amount' => 'Total Amount',
 				'created_date' => 'Created Date',
-				'created_id' => 'Created By',
+				'created_by' => 'Created By',
 				'updated_date' => 'Updated Date',
-				'updated_id' => 'Updated By',
+				'updated_by' => 'Updated By',
 		);
 	}
 
@@ -225,24 +225,6 @@ class vPorder extends CActiveRecord
 						'pageSize'=>20
 				)
 		));
-	}
-
-	public function sum_pof() {
-		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->sum_po);
-
-		return $_format;
-	}
-
-	public function sum_ttlf() {
-		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->total_amount);
-
-		return $_format;
-	}
-
-	public function paymentf() {
-		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->payment);
-
-		return $_format;
 	}
 
 	public function hutangPerSupplier($id) {
@@ -415,34 +397,6 @@ class vPorder extends CActiveRecord
 		}
 
 		return $returnarray;
-	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				//'defaults'=>array(
-				//	'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-				//	//'format'=>'db',
-				//),
-		);
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
 	}
 
 	protected function afterDelete()

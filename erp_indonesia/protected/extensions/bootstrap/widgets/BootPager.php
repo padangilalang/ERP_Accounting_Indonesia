@@ -8,12 +8,22 @@
  */
 
 /**
- * Bootstrap pager widget.
+ * Bootstrap pager.
+ * @see http://twitter.github.com/bootstrap/components.html#pagination
  */
 class BootPager extends CLinkPager
 {
+	// Pager alignments.
+	const ALIGNMENT_CENTER = 'centered';
+	const ALIGNMENT_RIGHT = 'right';
+
 	/**
-	 * @var string the text shown before page buttons. Defaults to ''.
+	 * @var string the pager alignment. Valid values are 'centered' and 'right'.
+	 */
+	public $alignment;
+	/**
+	 * @var string the text shown before page buttons.
+	 * Defaults to an empty string, meaning that no header will be displayed.
 	 */
 	public $header = '';
 	/**
@@ -32,19 +42,26 @@ class BootPager extends CLinkPager
 	public function init()
 	{
 		if ($this->nextPageLabel === null)
-			$this->nextPageLabel = Yii::t('bootstrap','Next').' &rarr;';
+			$this->nextPageLabel = '&rarr;';
 
 		if ($this->prevPageLabel === null)
-			$this->prevPageLabel = '&larr; '.Yii::t('bootstrap','Previous');
+			$this->prevPageLabel = '&larr;';
 
-		if ($this->firstPageLabel === null)
-			$this->firstPageLabel = Yii::t('bootstrap','First');
+		$classes = array();
 
-		if ($this->lastPageLabel === null)
-			$this->lastPageLabel = Yii::t('bootstrap','Last');
+		$validAlignments = array(self::ALIGNMENT_CENTER, self::ALIGNMENT_RIGHT);
 
-		if (!isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] = ''; // would default to yiiPager
+		if (in_array($this->alignment, $validAlignments))
+			$classes[] = 'pagination-'.$this->alignment;
+
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] = ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 
 		parent::init();
 	}

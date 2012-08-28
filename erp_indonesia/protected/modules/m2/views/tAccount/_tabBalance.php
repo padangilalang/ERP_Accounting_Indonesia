@@ -33,28 +33,28 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
 				//),
 				array(
 						'name'=>'beginning_balance',
-						'value'=>'$data->beginf()',
+						'value'=>'Yii::app()->indoFormat->number($data->beginning_balance)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
 				),
 				array(
 						'name'=>'debit',
-						'value'=>'$data->debitf()',
+						'value'=>'Yii::app()->indoFormat->number($data->debit)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
 				),
 				array(
 						'name'=>'credit',
-						'value'=>'$data->creditf()',
+						'value'=>'Yii::app()->indoFormat->number($data->credit)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
 				),
 				array(
 						'name'=>'end_balance',
-						'value'=>'$data->endf()',
+						'value'=>'Yii::app()->indoFormat->number($data->end_balance)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
@@ -132,14 +132,14 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 				),
 				array(
 						'name'=>'debit',
-						'value'=>'$data->debitf()',
+						'value'=>'Yii::app()->indoFormat->number($data->debit)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
 				),
 				array(
 						'name'=>'credit',
-						'value'=>'$data->creditf()',
+						'value'=>'Yii::app()->indoFormat->number($data->credit)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),

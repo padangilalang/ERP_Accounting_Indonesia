@@ -29,7 +29,7 @@
  * @property integer $updated_date
  * @property string $updated_by
  */
-class aBudget extends CActiveRecord
+class aBudget extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -361,10 +361,10 @@ class aBudget extends CActiveRecord
 	{
 
 		$models=self::model()->findAll(array(
-			'condition'=>'department_id = 1 and parent_id = :id',
-			'params'=>array(':id'=>$id),
+				'condition'=>'department_id = 1 and parent_id = :id',
+				'params'=>array(':id'=>$id),
 		));
-		
+
 		$_total=0;
 
 		foreach($models as $model)
@@ -467,7 +467,7 @@ class aBudget extends CActiveRecord
 
 		foreach ($rawData as $key => $value)
 			foreach ($value as $key1 => $value1)
-				
+
 			if ($format ==0) {
 			return Yii::app()->numberFormatter->format("#,##0.00",$value1);
 		} else

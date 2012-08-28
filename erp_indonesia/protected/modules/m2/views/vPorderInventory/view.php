@@ -49,7 +49,7 @@ $this->widget('ext.XDetailView', array(
 				),
 				array(
 						'label'=>'Total Amount',
-						'value'=>$model->sum_ttlf(),
+						'value'=>Yii::app()->indoFormat->number($model->total_amount),
 				),
 		),
 )); ?>
@@ -77,13 +77,13 @@ $this->widget('ext.XDetailView', array(
 		'columns'=>array(
 				array(
 						'header'=>'Item',
-						'value'=>'$data->item_inventory->item',
+						'value'=>'$data->item_inventory->item_name',
 				),
 				'description',
 				'qty',
 				'uom',
 				array(
-						'value'=>'$data->amountf()',
+						'value'=>'Yii::app()->indoFormat->number($data->amount)',
 						'name'=>'amount',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
@@ -91,7 +91,7 @@ $this->widget('ext.XDetailView', array(
 				),
 				array(
 						'header'=>'Total',
-						'value'=>'$data->totalf()',
+						'value'=>'Yii::app()->indoFormat->number($data->amount)',
 						'name'=>'amount',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
@@ -101,5 +101,5 @@ $this->widget('ext.XDetailView', array(
 ));
 ?>
 <br />
-<b> Total: <?php echo $model->sum_pof(); ?>
+<b> Total: <?php echo Yii::app()->indoFormat->number($model->sum_po); ?>
 </b>

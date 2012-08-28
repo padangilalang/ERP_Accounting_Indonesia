@@ -9,7 +9,7 @@
  * @property string $group_name
  * @property string $description
  */
-class dAddressbookGroup extends CActiveRecord
+class dAddressbookGroup extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

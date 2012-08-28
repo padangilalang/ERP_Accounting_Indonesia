@@ -46,7 +46,7 @@
 	border: 300px solid transparent;
 	opacity: 0;
 	-ms-filter: 'alpha(opacity=0)';
-	filter: alpha(opacity =             0);
+	filter: alpha(opacity =               0);
 	-o-transform: translate(-300px, -300px) scale(10);
 	-moz-transform: translate(-800px, 0) scale(10);
 	cursor: pointer;

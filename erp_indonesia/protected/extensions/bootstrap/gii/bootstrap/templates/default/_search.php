@@ -20,6 +20,7 @@ if(strpos($field,'password')!==false)
 <?php endforeach; ?>
 <div class="form-actions">
 	<?php echo "<?php \$this->widget('bootstrap.widgets.BootButton', array(
+	'buttonType'=>'submit'
 	'type'=>'primary',
 	'label'=>'Search',
 	)); ?>\n"; ?>

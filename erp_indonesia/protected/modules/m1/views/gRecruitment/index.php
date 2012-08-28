@@ -35,36 +35,36 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 ?>
 
 <?php $this->widget('BootGridView', array(
-	'id'=>'g-recruitment-grid',
-	'dataProvider'=>gRecruitment::model()->search($id),
-	'template'=>'{items}{pager}',
-	//'filter'=>$model,
-	'columns'=>array(
-		array(
-			'type'=>'raw',
-			'value'=>'CHtml::link(CHtml::image(Yii::app()->request->baseUrl . "/images/recruitment/".$data->photo_path, "No Photo", array("class"=>"span2")),
+		'id'=>'g-recruitment-grid',
+		'dataProvider'=>gRecruitment::model()->search($id),
+		'template'=>'{items}{pager}',
+		//'filter'=>$model,
+		'columns'=>array(
+				array(
+						'type'=>'raw',
+						'value'=>'CHtml::link(CHtml::image(Yii::app()->request->baseUrl . "/images/recruitment/".$data->photo_path, "No Photo", array("class"=>"span2")),
 						Yii::app()->createUrl("/m1/gRecruitment/view",array("id"=>$data->id)))',
+				),
+				'for_position',
+				'for_project',
+				array(
+						'header'=>'Candidate Name',
+						'type'=>'raw',
+						'value'=>'CHtml::link($data->candidate_name,Yii::app()->createUrl("/m1/gRecruitment/view",array("id"=>$data->id)))',
+				),
+				'birthdate',
+				'quick_background',
+				//'work_experience',
+				'sallary_expectation',
+				'source_id',
+				//'followup_date',
+				//'followup_id',
+				//'followup_remark',
+				'review',
+				'final_result_id',
+				'general_remark',
+				array(
+						'class'=>'BootButtonColumn',
+				),
 		),
-		'for_position',
-		'for_project',
-		array(
-			'header'=>'Candidate Name',
-			'type'=>'raw',
-			'value'=>'CHtml::link($data->candidate_name,Yii::app()->createUrl("/m1/gRecruitment/view",array("id"=>$data->id)))',
-		),
-		'birthdate',
-		'quick_background',
-		//'work_experience',
-		'sallary_expectation',
-		'source_id',
-		//'followup_date',
-		//'followup_id',
-		//'followup_remark',
-		'review',
-		'final_result_id',
-		'general_remark',
-		array(
-			'class'=>'BootButtonColumn',
-		),
-	),
 )); ?>

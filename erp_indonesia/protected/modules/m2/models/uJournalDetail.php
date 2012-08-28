@@ -1,6 +1,6 @@
 <?php
 
-class uJournalDetail extends CActiveRecord
+class uJournalDetail extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{
@@ -16,6 +16,7 @@ class uJournalDetail extends CActiveRecord
 	{
 		return array(
 				array('account_no_id, debit, credit', 'required'),
+				array('sub_account_id', 'numerical', 'integerOnly'=>true),
 				array('account_no_id, sub_account_id, debit, credit, user_remark, system_remark', 'safe', 'on'=>'search'),
 		);
 	}
@@ -41,9 +42,9 @@ class uJournalDetail extends CActiveRecord
 				'user_remark' => 'User Remark',
 				'system_remark' => 'System Remark',
 				'created_date' => 'Created Date',
-				'created_id' => 'Created',
+				'created_by' => 'Created',
 				'updated_date' => 'Updated Date',
-				'updated_id' => 'Updated',
+				'updated_by' => 'Updated',
 		);
 	}
 
@@ -131,47 +132,6 @@ class uJournalDetail extends CActiveRecord
 		}
 
 		return $returnarray;
-	}
-
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_id= yii::app()->user->id;
-			} else {
-				$this->updated_date=time();
-				$this->updated_id= yii::app()->user->id;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
-
-	public function debitf() {
-		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->debit);
-
-		return $_format;
-	}
-
-	public function creditf() {
-		$_format=Yii::app()->numberFormatter->format("#,##0.00",$this->credit);
-
-		return $_format;
-	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				//'defaults'=>array(
-				//	'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-				//	//'format'=>'db',
-				//),
-				//'ActiveRecordLogableBehavior'=>array('class'=>'ActiveRecordLogableBehavior'),
-		);
 	}
 
 

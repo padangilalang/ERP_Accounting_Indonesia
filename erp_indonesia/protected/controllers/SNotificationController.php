@@ -1,6 +1,6 @@
 <?php
 
-class sNotificationController extends Controller
+class SNotificationController extends Controller
 {
 	public $layout='//layouts/column2';
 
@@ -116,7 +116,7 @@ class sNotificationController extends Controller
 		$dataProvider=new CActiveDataProvider('sNotification',array('criteria'=>array('order'=>'sender_date DESC')));
 		$dataProviderMySelf=new CActiveDataProvider('sNotification',array('criteria'=>array(
 				'condition'=>'receiver_id = :receiver',
-				'params'=>':receiver'=>Yii::app()->user->id,
+				'params'=>array(':receiver'=>Yii::app()->user->id),
 				'order'=>'sender_date DESC')));
 
 		$this->render('index',array(
@@ -164,8 +164,8 @@ class sNotificationController extends Controller
 	public function actionMarkArchive($id)
 	{
 		$model=sNotification::model()->findByPk((int)$id, array(
-			'condition'=>'sender_id = :sender', 
-			'params'=>array(':sender'=>Yii::app()->user->id), 
+				'condition'=>'sender_id = :sender',
+				'params'=>array(':sender'=>Yii::app()->user->id),
 		));
 
 		if($model===null)

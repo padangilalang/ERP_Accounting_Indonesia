@@ -116,8 +116,8 @@ class sNotification extends CActiveRecord
 	public function getCountComment($id)
 	{
 		$model=sNotificationDetail::model()->count(array(
-			'condition'=>'parent_id = :id',
-			'params'=>array(':id'=>$id),
+				'condition'=>'parent_id = :id',
+				'params'=>array(':id'=>$id),
 		));
 		if ($model == null) {
 			return 0;
@@ -137,7 +137,7 @@ class sNotification extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->id, 'label' => $model->sender_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->id, 'label' => ($model->sender_ref !=null) ? $model->sender_ref : 'Message #'.$model->id, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -155,7 +155,7 @@ class sNotification extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->id, 'label' => $model->sender_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->id, 'label' => ($model->sender_ref !=null) ? $model->sender_ref : 'Message #'.$model->id, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -184,7 +184,7 @@ class sNotification extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->name, 'label' => $model->name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -199,11 +199,6 @@ class sNotification extends CActiveRecord
 
 	public function getUnreadNotification() {
 		return self::count('read_id =1 and receiver_id = '.Yii::app()->user->id);
-	}
-
-	public function behaviors()
-	{
-		return array('datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'));
 	}
 
 }

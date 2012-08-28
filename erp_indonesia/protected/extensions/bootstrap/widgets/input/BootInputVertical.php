@@ -151,7 +151,7 @@ class BootInputVertical extends BootInput
 	protected function captcha()
 	{
 		echo $this->getLabel().'<div class="captcha">';
-		echo '<div class="widget">'.$this->widget('CCaptcha', $this->getCaptchaOptions(), true).'</div>';
+		echo '<div class="widget">'.$this->widget('CCaptcha', $this->captchaOptions, true).'</div>';
 		echo $this->form->textField($this->model, $this->attribute, $this->htmlOptions);
 		echo $this->getError().$this->getHint();
 		echo '</div>';

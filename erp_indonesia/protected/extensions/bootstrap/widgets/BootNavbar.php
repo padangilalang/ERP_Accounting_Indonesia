@@ -13,10 +13,18 @@
  */
 class BootNavbar extends CWidget
 {
+	// Navbar types.
+	const TYPE_INVERSE = 'inverse';
+
 	// Navbar fix locations.
 	const FIXED_TOP = 'top';
 	const FIXED_BOTTOM = 'bottom';
 
+	/**
+	 * @var string the navbar type. Valid values are 'inverse'.
+	 * @since 1.0.0
+	 */
+	public $type;
 	/**
 	 * @var string the text for the brand.
 	 */
@@ -68,7 +76,7 @@ class BootNavbar extends CWidget
 			if (!isset($this->brandUrl))
 				$this->brandUrl = Yii::app()->homeUrl;
 
-			$this->brandOptions['href'] = $this->brandUrl;
+			$this->brandOptions['href'] = CHtml::normalizeUrl($this->brandUrl);
 
 			if (isset($this->brandOptions['class']))
 				$this->brandOptions['class'] .= ' brand';
@@ -78,18 +86,20 @@ class BootNavbar extends CWidget
 
 		$classes = array('navbar');
 
-		if ($this->fixed !== false)
-		{
-			$validFixes = array(self::FIXED_TOP, self::FIXED_BOTTOM);
-			if (in_array($this->fixed, $validFixes))
-				$classes[] = 'navbar-fixed-'.$this->fixed;
-		}
+		if (isset($this->type) && in_array($this->type, array(self::TYPE_INVERSE)))
+			$classes[] = 'navbar-'.$this->type;
 
-		$classes = implode(' ', $classes);
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		if ($this->fixed !== false && in_array($this->fixed, array(self::FIXED_TOP, self::FIXED_BOTTOM)))
+			$classes[] = 'navbar-fixed-'.$this->fixed;
+
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 	}
 
 	/**
@@ -113,7 +123,12 @@ class BootNavbar extends CWidget
 			echo CHtml::openTag('a', $this->brandOptions).$this->brand.'</a>';
 
 		if ($this->collapse)
-			echo '<div class="nav-collapse">';
+		{
+			$this->controller->beginWidget('bootstrap.widgets.BootCollapse', array(
+					'toggle'=>false, // navbars should be collapsed by default
+					'htmlOptions'=>array('class'=>'nav-collapse'),
+			));
+		}
 
 		foreach ($this->items as $item)
 		{
@@ -132,7 +147,7 @@ class BootNavbar extends CWidget
 		}
 
 		if ($this->collapse)
-			echo '</div>';
+			$this->controller->endWidget();
 
 		echo '</div></div></div>';
 	}

@@ -83,8 +83,8 @@ class UJournalController extends Controller
 				$modelHeader->save();
 
 				$t=uJournalDetail::model()->deleteAll(array(
-					'condition'=>'parent_id = :id',
-					'params'=>array(':id'=>$id),
+						'condition'=>'parent_id = :id',
+						'params'=>array(':id'=>$id),
 				)); //delete All Journal
 
 				$_tdebet = 0;
@@ -125,9 +125,9 @@ class UJournalController extends Controller
 			$model->master_id=$modelHeader->id;
 
 			$modelDetail = uJournalDetail::model()->findAll(array(
-				'condition'=>'parent_id = :id',
-				'params'=>array(':id'=>$modelHeader->id),
-			
+					'condition'=>'parent_id = :id',
+					'params'=>array(':id'=>$modelHeader->id),
+						
 			));
 
 			foreach ($modelDetail as $mm) {
@@ -298,6 +298,7 @@ class UJournalController extends Controller
 					$modelDetail->credit=0;
 
 				$modelDetail->user_remark=$model->user_remark[$i];
+				$modelDetail->sub_account_id=0;
 
 				$modelDetail->save();
 				endfor;

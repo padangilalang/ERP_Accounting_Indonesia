@@ -14,11 +14,17 @@
 	href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css"
 	type="text/css" media="screen" />
 
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/icons.css" />
+	
 <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
 
 <script type="text/javascript"
 	src="<?php echo Yii::app()->theme->baseUrl; ?>/css/script.js"></script>
+
+<?php
+//Yii::app()->sprite->registerSpriteCss();
+?>
 
 
 </head>

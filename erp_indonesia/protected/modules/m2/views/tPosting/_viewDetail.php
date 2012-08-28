@@ -12,14 +12,14 @@ $this->widget('bootstrap.widgets.BootGridView', array(
 				),
 				array(
 						'name'=>'debit',
-						'value'=>'$data->debitf()',
+						'value'=>'Yii::app()->indoFormat->number($data->debit)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
 				),
 				array(
 						'name'=>'credit',
-						'value'=>'$data->creditf()',
+						'value'=>'Yii::app()->indoFormat->number($data->credit)',
 						'htmlOptions'=>array(
 								'style'=>'text-align: right; padding-right: 5px;'
 						),
@@ -35,7 +35,8 @@ $this->widget('bootstrap.widgets.BootDetailView', array(
 		'attributes'=>array(
 				array(
 						'label'=>'Total',
-						'value'=>Yii::app()->numberFormatter->format("#,##0.00",uJournal::model()->findByPk((int)$id)->journalSum),
+						'value'=>Yii::app()->indoFormat->number(uJournal::model()->findByPk((int)$id)->journalSum),
+						
 				),
 		),
 )); ?>

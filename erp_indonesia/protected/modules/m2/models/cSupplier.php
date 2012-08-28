@@ -23,11 +23,11 @@
  * @property string $atas_nama
  * @property integer $status_id
  * @property integer $created_date
- * @property integer $created_id
+ * @property integer $created_by
  * @property integer $updated_date
- * @property integer $updated_id
+ * @property integer $updated_by
  */
-class cSupplier extends CActiveRecord
+class cSupplier extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -55,8 +55,8 @@ class cSupplier extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-				//array('method_id, bank_id, status_id, created_date, created_id, updated_date, updated_id', 'required'),
-				array('method_id, bank_id, status_id, created_date, created_id, updated_date, updated_id', 'numerical', 'integerOnly'=>true),
+				//array('method_id, bank_id, status_id, created_date, created_by, updated_date, updated_by', 'required'),
+				array('method_id, bank_id, status_id, created_date, created_by, updated_date, updated_by', 'numerical', 'integerOnly'=>true),
 				array('company_name, telephone, fax, email', 'length', 'max'=>50),
 				array('pic, no_account, atas_nama', 'length', 'max'=>40),
 				array('address, city, province', 'length', 'max'=>100),
@@ -65,7 +65,7 @@ class cSupplier extends CActiveRecord
 				array('pos_code', 'length', 'max'=>7),
 				// The following rule is used by search().
 				// Please remove those attributes that should not be searched.
-				array('id, company_name, pic, address, address1, address2, address3, city, pos_code, province, telephone, fax, email, method_id, bank_id, no_account, atas_nama, status_id, created_date, created_id, updated_date, updated_id', 'safe', 'on'=>'search'),
+				array('id, company_name, pic, address, address1, address2, address3, city, pos_code, province, telephone, fax, email, method_id, bank_id, no_account, atas_nama, status_id, created_date, created_by, updated_date, updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -108,9 +108,9 @@ class cSupplier extends CActiveRecord
 				'atas_nama' => 'Atas Nama',
 				'status_id' => 'Status',
 				'created_date' => 'Created Date',
-				'created_id' => 'Created',
+				'created_by' => 'Created',
 				'updated_date' => 'Updated Date',
-				'updated_id' => 'Updated',
+				'updated_by' => 'Updated',
 		);
 	}
 
@@ -144,9 +144,9 @@ class cSupplier extends CActiveRecord
 		$criteria->compare('atas_nama',$this->atas_nama,true);
 		$criteria->compare('status_id',$this->status_id);
 		$criteria->compare('created_date',$this->created_date);
-		$criteria->compare('created_id',$this->created_id);
+		$criteria->compare('created_by',$this->created_by);
 		$criteria->compare('updated_date',$this->updated_date);
-		$criteria->compare('updated_id',$this->updated_id);
+		$criteria->compare('updated_by',$this->updated_by);
 
 		return new CActiveDataProvider($this, array(
 				'criteria'=>$criteria,

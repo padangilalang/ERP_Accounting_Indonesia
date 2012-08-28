@@ -5,31 +5,31 @@ Yii::app()->getClientScript()->registerCoreScript('maskedinput');
 
 Yii::app()->clientScript->registerScript('datepicker', "
 		$(function() {
-			$( \"#".CHtml::activeId($model,'d_cuti')."\" ).datepicker({
-				'dateFormat' : 'dd-mm-yy',
-			});
-			$( \"#".CHtml::activeId($model,'d_dari')."\" ).datepicker({
-				'dateFormat' : 'dd-mm-yy',
-			});
-			$( \"#".CHtml::activeId($model,'d_sampai')."\" ).datepicker({
-				'dateFormat' : 'dd-mm-yy',
-			});
-			$( \"#".CHtml::activeId($model,'d_h_masuk')."\" ).datepicker({
-				'dateFormat' : 'dd-mm-yy',
-			});
-			$( \"#".CHtml::activeId($model,'d_cuti')."\" ).mask('99-99-9999');
-			$( \"#".CHtml::activeId($model,'d_dari')."\" ).mask('99-99-9999');
-			$( \"#".CHtml::activeId($model,'d_sampai')."\" ).mask('99-99-9999');
-			$( \"#".CHtml::activeId($model,'d_h_masuk')."\" ).mask('99-99-9999');
-			$( \"#".CHtml::activeId($model,'parent_id')."\" ).autocomplete({
-					
-				'minLength':'2'
-			),
+		$( \"#".CHtml::activeId($model,'d_cuti')."\" ).datepicker({
+		'dateFormat' : 'dd-mm-yy',
+});
+		$( \"#".CHtml::activeId($model,'d_dari')."\" ).datepicker({
+		'dateFormat' : 'dd-mm-yy',
+});
+		$( \"#".CHtml::activeId($model,'d_sampai')."\" ).datepicker({
+		'dateFormat' : 'dd-mm-yy',
+});
+		$( \"#".CHtml::activeId($model,'d_h_masuk')."\" ).datepicker({
+		'dateFormat' : 'dd-mm-yy',
+});
+		$( \"#".CHtml::activeId($model,'d_cuti')."\" ).mask('99-99-9999');
+		$( \"#".CHtml::activeId($model,'d_dari')."\" ).mask('99-99-9999');
+		$( \"#".CHtml::activeId($model,'d_sampai')."\" ).mask('99-99-9999');
+		$( \"#".CHtml::activeId($model,'d_h_masuk')."\" ).mask('99-99-9999');
+		$( \"#".CHtml::activeId($model,'parent_id')."\" ).autocomplete({
+			
+		'minLength':'2'
+),
 
-			});
-		});
+});
+});
 
-	");
+		");
 ?>
 
 <?php $form=$this->beginWidget('bootstrap.widgets.BootActiveForm',array(

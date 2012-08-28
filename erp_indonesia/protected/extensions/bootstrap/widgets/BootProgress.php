@@ -10,30 +10,30 @@
 
 /**
  * Bootstrap progress bar widget.
+ * @see http://twitter.github.com/bootstrap/components.html#progress
  */
 class BootProgress extends CWidget
 {
 	// Progress bar types.
-	const TYPE_DEFAULT = '';
 	const TYPE_INFO = 'info';
 	const TYPE_SUCCESS = 'success';
+	const TYPE_WARNING = 'warning';
 	const TYPE_DANGER = 'danger';
 
 	/**
-	 * @var string the bar type.
-	 * Valid values are '', 'info', 'success', and 'danger'.
+	 * @var string the bar type. Valid values are 'info', 'success', and 'danger'.
 	 */
-	public $type = self::TYPE_DEFAULT;
+	public $type;
 	/**
-	 * @var boolean whether the bar is striped.
+	 * @var boolean indicates whether the bar is striped.
 	 */
 	public $striped = false;
 	/**
-	 * @var boolean whether the bar is animated.
+	 * @var boolean indicates whether the bar is animated.
 	 */
 	public $animated = false;
 	/**
-	 * @var integer the progress.
+	 * @var integer the amount of progress in percent.
 	 */
 	public $percent = 0;
 	/**
@@ -48,8 +48,9 @@ class BootProgress extends CWidget
 	{
 		$classes = array('progress');
 
-		$validTypes = array(self::TYPE_DEFAULT, self::TYPE_INFO, self::TYPE_SUCCESS, self::TYPE_DANGER);
-		if ($this->type !== self::TYPE_DEFAULT && in_array($this->type, $validTypes))
+		$validTypes = array(self::TYPE_INFO, self::TYPE_SUCCESS, self::TYPE_WARNING, self::TYPE_DANGER);
+
+		if (isset($this->type) && in_array($this->type, $validTypes))
 			$classes[] = 'progress-'.$this->type;
 
 		if ($this->striped)
@@ -58,11 +59,14 @@ class BootProgress extends CWidget
 		if ($this->animated)
 			$classes[] = 'active';
 
-		$classes = implode(' ', $classes);
-		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
-		else
-			$this->htmlOptions['class'] = $classes;
+		if (!empty($classes))
+		{
+			$classes = implode(' ', $classes);
+			if (isset($this->htmlOptions['class']))
+				$this->htmlOptions['class'] .= ' '.$classes;
+			else
+				$this->htmlOptions['class'] = $classes;
+		}
 
 		if ($this->percent < 0)
 			$this->percent = 0;

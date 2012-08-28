@@ -1,6 +1,6 @@
 <?php
 
-class sMatrix extends CActiveRecord
+class sMatrix extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{

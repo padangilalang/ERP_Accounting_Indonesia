@@ -1,6 +1,6 @@
 <?php
 
-class tAccountMain extends CActiveRecord
+class tAccountMain extends BaseModel
 {
 	public static function model($className=__CLASS__)
 	{

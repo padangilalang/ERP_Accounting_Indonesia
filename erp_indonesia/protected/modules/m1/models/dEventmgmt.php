@@ -15,7 +15,7 @@
  * @property string $incomplete_exp
  * @property string $remark
  */
-class dEventmgmt extends CActiveRecord
+class dEventmgmt extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -119,27 +119,6 @@ class dEventmgmt extends CActiveRecord
 		));
 	}
 
-	/**
-	 * This is invoked before the record is saved.
-	 * @return boolean whether the record should be saved.
-	 */
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord) {
-				$this->created_date=time();
-				$this->created_by= yii::app()->user->name;
-			} else {
-				$this->updated_date=time();
-				$this->updated_by= yii::app()->user->name;
-			}
-			return true;
-		}
-		else
-			return false;
-	}
-
 	public function getTopCreated() {
 
 		$models=self::model()->findAll(array('limit'=>10,'order'=>'created_date DESC'));
@@ -147,7 +126,7 @@ class dEventmgmt extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -160,7 +139,7 @@ class dEventmgmt extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->user_ref, 'label' => $model->user_ref, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -189,23 +168,10 @@ class dEventmgmt extends CActiveRecord
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'url' => array('view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_no . " ".$model->account_name, 'icon'=>'list-alt', 'url' => array('view','id'=>$model->id));
 		}
 
 		return $returnarray;
 	}
-
-	public function behaviors()
-	{
-		return array(
-				'datetimeI18NBehavior' => array('class' => 'ext.DateTimeI18NBehavior'),
-				'defaults'=>array(
-						'class'=>'ext.decimali18nbehavior.DecimalI18NBehavior',
-						//'format'=>'db',
-				),
-		);
-	}
-
-
 
 }

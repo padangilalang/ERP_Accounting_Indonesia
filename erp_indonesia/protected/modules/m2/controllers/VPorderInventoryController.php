@@ -78,9 +78,9 @@ class VPorderInventoryController extends Controller
 
 					$sqlinsert="
 					INSERT INTO v_porder_detail_temp (parent_id,item_id,description,qty,amount)
-					VALUES ('".Yii::app()->session->sessionID."', ".$model->item_id.", '".$model->description."', ".$model->qty.", ".$model->amount.")
+					VALUES ('1111', 1, 'tetere', 111, 2000000)
 					";
-						
+					//VALUES ('".Yii::app()->session->sessionID."', ".$model->item_id.", '".$model->description."', ".$model->qty.", ".$model->amount.")
 					Yii::app()->db->createCommand($sqlinsert)->execute();
 
 				} else {
@@ -96,12 +96,18 @@ class VPorderInventoryController extends Controller
 					$modelParent->journal_state_id=1;
 					$modelParent->budgetcomp_id=0;
 					$modelParent->po_type_id=1; //PO Inventory
+					$modelParent->system_ref="temp";
 					$modelParent->save();
-						
+
+					$modelParentExt=new vPorderExt;
+					$modelParentExt->id=$modelParent->id;
+					$modelParentExt->af_date=$modelParent->input_date;
+					$modelParentExt->save();
+
 					//cek if only one record, temporary table no need
 					$sqlcount="select count(*) FROM v_porder_detail_temp";
 					$_count=Yii::app()->db->createCommand($sqlcount)->queryScalar();
-						
+
 					if($_count ==0) {
 						$sql="INSERT INTO v_porder_detail (parent_id, item_id, description, qty, amount)
 						VALUES (".$modelParent->id.", ".$model->item_id.", '".$model->description."', ".$model->qty.", ".$model->amount.")";
@@ -111,13 +117,13 @@ class VPorderInventoryController extends Controller
 						WHERE parent_id = '".Yii::app()->session->sessionID."'
 						";
 					}
-						
+
 					Yii::app()->db->createCommand($sql)->execute();
-						
+
 					//delete temporary table
 					$sqlDelete="DELETE FROM v_porder_detail_temp WHERE parent_id = '".Yii::app()->session->sessionID."'";
 					Yii::app()->db->createCommand($sqlDelete)->execute();
-						
+
 					//Create System_ref
 					$_ref ="PO-".$modelParent->periode_date."-".str_pad($modelParent->id,5,"0",STR_PAD_LEFT);
 					$modelParent->system_ref=$_ref;
@@ -129,7 +135,8 @@ class VPorderInventoryController extends Controller
 			}
 		}
 
-		$sql="SELECT * FROM v_porder_detail_temp WHERE parent_id = '".Yii::app()->session->sessionID."'";
+		//$sql="SELECT * FROM v_porder_detail_temp WHERE parent_id = '".Yii::app()->session->sessionID."'";
+		$sql="SELECT * FROM v_porder_detail_temp WHERE parent_id = '1111'";
 		$rawData=Yii::app()->db->createCommand($sql)->queryAll();
 
 		$dataProvider=new CArrayDataProvider($rawData, array(
@@ -174,17 +181,17 @@ class VPorderInventoryController extends Controller
 					$sqlinsert="INSERT INTO v_porder_detail_temp (parent_id, item_id, description, qty, amount)
 					VALUES (".$model->id.", ".$model->item_id.", '".$model->description."', ".$model->qty.", ".$model->amount.")";
 					$command = Yii::app()->db->createCommand($sqlinsert);
-					$command->execute();		
+					$command->execute();
 
 				} else {
 
 					$model->save();
-						
+
 					//Delete Old Detail Data
 					$sqlDelete="DELETE FROM v_porder_detail WHERE parent_id = ':id'";
 					$command = Yii::app()->db->createCommand($sqlDelete);
 					$command->bindParam(":id", $id, PDO::PARAM_STR);
-					$command->execute();					
+					$command->execute();
 
 					//Insert New Data
 					$sql="INSERT INTO v_porder_detail (parent_id, item_id, description, qty, amount)
@@ -192,14 +199,14 @@ class VPorderInventoryController extends Controller
 					WHERE parent_id = ':id'";
 					$command = Yii::app()->db->createCommand($sql);
 					$command->bindParam(":id", $id, PDO::PARAM_STR);
-					$command->execute();		
+					$command->execute();
 
 					//Delete Temporary Data
 					$sqlD="DELETE FROM v_porder_detail_temp WHERE parent_id = ':id'";
 					$command = Yii::app()->db->createCommand($sqlD);
 					$command->bindParam(":id", $id, PDO::PARAM_STR);
-					$command->execute();		
-						
+					$command->execute();
+
 					$this->redirect(array('/m2/vPorderInventory'));
 				}
 			}
@@ -213,23 +220,23 @@ class VPorderInventoryController extends Controller
 
 			$sqlcount="select count(*) FROM v_porder_detail_temp WHERE parent_id = '".$model->id."'";
 			$command = Yii::app()->db->createCommand($sqlcount);
-			$_count=$command->queryScalar();		
-				
+			$_count=$command->queryScalar();
+
 			if($_count ==0) {
 				foreach ($models as $mod) {
 					$sql="INSERT INTO v_porder_detail_temp (parent_id, item_id, description, qty, amount)
 					VALUES (".$mod->parent_id.", ".$mod->item_id.", '".$mod->description."', ".$mod->qty.", ".$mod->amount.")";
 					$command = Yii::app()->db->createCommand($sql);
-					$command->execute();		
-						
+					$command->execute();
+
 				}
 			}
 		}
 
 		$sql="SELECT * FROM v_porder_detail_temp WHERE parent_id = '".$model->id."'";
 		$command = Yii::app()->db->createCommand($sql);
-		$rawData=$command->queryAll();		
-		
+		$rawData=$command->queryAll();
+
 		$dataProvider=new CArrayDataProvider($rawData, array(
 				'pagination'=>false
 		));

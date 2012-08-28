@@ -1,5 +1,6 @@
 <ul class="nav nav-list">
-	<li class="nav-header">Communication</li>
+	<li class="nav-header"><span class="h-icon-world">Communication</span>
+	</li>
 </ul>
 <?php $this->widget('bootstrap.widgets.BootMenu', array(
 		'type'=>'list',

@@ -11,11 +11,12 @@ Yii::import('zii.widgets.CBreadcrumbs');
 
 /**
  * Bootstrap breadcrumb widget.
+ * @see http://twitter.github.com/bootstrap/components.html#breadcrumbs
  */
 class BootBreadcrumbs extends CBreadcrumbs
 {
 	/**
-	 * @var string the separator between links in the breadcrumbs (defaults to ' / ').
+	 * @var string the separator between links in the breadcrumbs. Defaults to '/'.
 	 */
 	public $separator = '/';
 
@@ -24,11 +25,10 @@ class BootBreadcrumbs extends CBreadcrumbs
 	 */
 	public function init()
 	{
-		$classes = 'breadcrumb';
 		if (isset($this->htmlOptions['class']))
-			$this->htmlOptions['class'] .= ' '.$classes;
+			$this->htmlOptions['class'] .= ' breadcrumb';
 		else
-			$this->htmlOptions['class'] = $classes;
+			$this->htmlOptions['class'] = 'breadcrumb';
 	}
 
 	/**
@@ -37,6 +37,7 @@ class BootBreadcrumbs extends CBreadcrumbs
 	 */
 	public function run()
 	{
+		// Hide empty breadcrumbs.
 		if (empty($this->links))
 			return;
 
@@ -44,7 +45,7 @@ class BootBreadcrumbs extends CBreadcrumbs
 
 		if (!isset($this->homeLink))
 		{
-			$content = CHtml::link(Yii::t('bootstrap', 'Home'), Yii::app()->homeUrl);
+			$content = CHtml::link(Yii::t('zii', 'Home'), Yii::app()->homeUrl);
 			$links[] = $this->renderItem($content);
 		}
 		else if ($this->homeLink !== false)
@@ -61,9 +62,7 @@ class BootBreadcrumbs extends CBreadcrumbs
 				$links[] = $this->renderItem($this->encodeLabel ? CHtml::encode($url) : $url, true);
 		}
 
-		echo CHtml::openTag('ul', $this->htmlOptions);
-		echo implode('', $links);
-		echo '</ul>';
+		echo CHtml::tag('ul', $this->htmlOptions, implode('', $links));
 	}
 
 	/**
