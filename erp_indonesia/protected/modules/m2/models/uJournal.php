@@ -136,9 +136,9 @@ class uJournal extends BaseModel
 
 		foreach ($models as $model) {
 			if ($model->module_id == 1) {
-				$returnarray[] = array('id' => $model->system_ref, 'label' => '...'.substr($model->system_ref,strlen($model->system_ref)-15,15), 'icon'=>'list-alt', 'url' => array('/uJournal/view','id'=>$model->id));
+				$returnarray[] = array('id' => $model->system_ref, 'label' => '...'.substr($model->system_ref,strlen($model->system_ref)-15,15), 'icon'=>'list-alt', 'url' => array('/m2/uJournal/view','id'=>$model->id));
 			} else {
-				$returnarray[] = array('id' => $model->system_ref, 'label' => '...'.substr($model->system_ref,strlen($model->system_ref)-15,15), 'icon'=>'list-alt', 'url' => array('/mCashbank/view','id'=>$model->id));
+				$returnarray[] = array('id' => $model->system_ref, 'label' => '...'.substr($model->system_ref,strlen($model->system_ref)-15,15), 'icon'=>'list-alt', 'url' => array('/m2/mCashbank/view','id'=>$model->id));
 					
 			}
 

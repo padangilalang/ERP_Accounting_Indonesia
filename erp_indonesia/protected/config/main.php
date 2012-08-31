@@ -26,6 +26,16 @@ return array(
 
 		),
 		'modules'=>array(
+				'mailbox'=>
+					array(  
+					'userClass' => 'sUser',
+					'userIdColumn' => 'id',
+					'usernameColumn' =>  'username',
+					'superuserColumn' =>  'username',
+					//'juiThemes'=>'jquery',
+					//....more options here....
+					//....more options here....
+				),
 				'm1',
 				'm2',
 				/**/
@@ -63,10 +73,12 @@ return array(
 				//),
 				//	),
 				//),
-				'clientScript' => array(
-				  'class' => 'ext.ClientScriptPacker.ClientScriptPacker',
+				//'clientScript' => array(
+				 // 'class' => 'ext.ClientScriptPacker.ClientScriptPacker',
+				//),
+				'browser' => array(
+					'class' => 'application.components.EWebBrowser',
 				),
-
 				'sprite'=>array(
 						'class'=>'ext.sprite.NSprite',
 						// if you remove the imageFolderPsth setting it will use the icon folder within

@@ -1,20 +1,29 @@
 <div class="row">
 	<div class="span3 well">
 		<?php 
-		if ($model->c_pathfoto == null) {
-			echo CHtml::image(Yii::app()->request->baseUrl . "/images/nophoto.jpg", "No Photo", array("class"=>"span2"));
+		if ($model->c_pathfoto == null || (!is_file(Yii::app()->request->baseUrl . "/images/employee/" .$model->c_pathfoto))) {
+			//echo CHtml::image(Yii::app()->request->baseUrl . "/images/nophoto.jpg", "No Photo", array("class"=>"span2"));
+			$this->widget('ext.espaceholder.ESpaceHolder', array(
+					'size' => '140x200', // you can also do 300x250
+					'text' => CHtml::encode($model->vc_psnama),
+					'htmlOptions' => array( 'title' => 'test image' )
+			));
+				
 		} else {
-			echo CHtml::image(Yii::app()->request->baseUrl . "/images/employee/" .$model->c_pathfoto, CHtml::encode($model->vc_psnama), array("class"=>"span3"));
-		}
+			echo CHtml::image(Yii::app()->request->baseUrl . "/images/employee/" .$model->c_pathfoto, CHtml::encode($model->vc_psnama), array("class"=>"span2"));
+		}		
 		?>
 	</div>
 	<div class="span9">
 		<?php 
-		//$this->widget('bootstrap.widgets.BootDetailView', array(
-		$this->widget('ext.XDetailView', array(
-				'ItemColumns' => 2,
+		$this->widget('bootstrap.widgets.BootDetailView', array(
+		//$this->widget('ext.XDetailView', array(
+		//		'ItemColumns' => 2,
 				'data'=>$model,
 				'attributes'=>array(
+						array(
+							'header'=>'Personal Data',
+						),
 						'c_hriskd',
 						//'c_proyek',
 						//'c_pt',
@@ -40,6 +49,9 @@
 						array(
 								'label'=>'SF',
 								'value'=>$model->sf->name,
+						),
+						array(
+							'header'=>'Parents Data',
 						),
 						'c_rfkwarga',
 						't_domalamat',

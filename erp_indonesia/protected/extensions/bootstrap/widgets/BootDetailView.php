@@ -7,12 +7,14 @@
  * @package bootstrap.widgets
  */
 
-Yii::import('zii.widgets.CDetailView');
+//Yii::import('zii.widgets.CDetailView');
+Yii::import('ext.DetailView4Col');
 
 /**
  * Bootstrap Zii detail view.
  */
-class BootDetailView extends CDetailView
+//class BootDetailView extends CDetailView
+class BootDetailView extends DetailView4Col
 {
 	// Table types.
 	const TYPE_STRIPED = 'striped';

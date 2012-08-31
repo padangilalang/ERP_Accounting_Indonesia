@@ -38,8 +38,8 @@
 <ul class="nav nav-list">
 	<li class="nav-header">Leave Approval</li>
 </ul>
-<?php $this->widget('bootstrap.widgets.BootMenu', array(
-		'type'=>'list',
-		'items'=>gPerson::model()->listWaitingApproval(),
-)); ?>
+<?php //$this->widget('bootstrap.widgets.BootMenu', array(
+	//	'type'=>'list',
+	//	'items'=>gPerson::model()->listWaitingApproval(),
+//)); ?>
 <br />

@@ -37,12 +37,28 @@ class SiteController extends Controller
 		}
 	}
 
+	public function actionNotSupportedBrowser()
+	{
+		$b = new EWebBrowser;
+
+		if ($b->browser !='Internet Explorer') 
+			$this->redirect(array('/menu'));
+
+			$this->layout='//layouts/notSupport';
+		$this->render('not_support');
+	}
 
 	/**
 	 * Displays the login page
 	 */
 	public function actionLogin()
 	{
+
+		$b = new EWebBrowser;
+
+		if ($b->browser =='Internet Explorer') 
+			$this->redirect(array('notSupportedBrowser'));
+
 
 		$model=new fLogin;
 

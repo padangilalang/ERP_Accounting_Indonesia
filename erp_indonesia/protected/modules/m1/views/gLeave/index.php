@@ -44,7 +44,7 @@ $this->widget('bootstrap.widgets.BootMenu', array(
 
 <?php $this->widget('bootstrap.widgets.BootGridView',array(
 		'id'=>'g-person-grid',
-		'dataProvider'=>gPerson::model()->waitingApproval(),
+		'dataProvider'=>gPerson::model()->listWaitingApproval(),
 		//'filter'=>$model,
 		'columns'=>array(
 				array(

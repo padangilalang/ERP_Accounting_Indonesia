@@ -14,8 +14,3 @@
 			</div>
 
 <?php $this->endContent(); ?>
-
-
-
-
-

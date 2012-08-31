@@ -4,7 +4,7 @@
 	 $this->widget('ext.bootstrap.widgets.BootListView', array(
 		'dataProvider'=>$dataProvider,
 		'itemView'=>'/sNotification/_view',
-		'template'=>'{items}{pager}'
+		'template'=>'{items}'
 )); ?>
 
 <br>

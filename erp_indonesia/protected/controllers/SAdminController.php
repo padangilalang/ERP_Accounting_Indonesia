@@ -229,81 +229,20 @@ class SAdminController extends Controller
 		$this->render('barcode');
 	}
 
-	public function actionPeter()
-	{
-		$this->render('peter');
-	}
-
-	public function actionFileBrowser()
-	{
-		$root = 'c:/';
-
-		$_POST['dir'] = urldecode($_POST['dir']);
-
-		if( file_exists($root . $_POST['dir']) ) {
-			$files = scandir($root . $_POST['dir']);
-			natcasesort($files);
-			if( count($files) > 2 ) { /* The 2 accounts for . and .. */
-				echo "<ul class=\"jqueryFileTree\" style=\"display: none;\">";
-				// All dirs
-				foreach( $files as $file ) {
-					if( file_exists($root . $_POST['dir'] . $file) && $file != '.' && $file != '..' && is_dir($root . $_POST['dir'] . $file) ) {
-						echo "<li class=\"directory collapsed\"><a href=\"#\" rel=\"" . htmlentities($_POST['dir'] . $file) . "/\">" . htmlentities($file) . "</a></li>";
-					}
-				}
-				// All files
-				foreach( $files as $file ) {
-					if( file_exists($root . $_POST['dir'] . $file) && $file != '.' && $file != '..' && !is_dir($root . $_POST['dir'] . $file) ) {
-						$ext = preg_replace('/^.*\./', '', $file);
-						echo "<li class=\"file ext_$ext\"><a href=\"#\" rel=\"" . htmlentities($_POST['dir'] . $file) . "\">" . htmlentities($file) . "</a></li>";
-					}
-				}
-				echo "</ul>";
-			}
-		}
-	}
-
 	public function actionHelp()   //OK BANGET tapi sayangnya masih Port 25
 	{
-		$model=new FEmail;
+		$model=new fEmail;
 		
-		if(isset($_POST['FEmail']))
+		if(isset($_POST['fEmail']))
 		{
-			$model->attributes=$_POST['FEmail'];
+			$model->attributes=$_POST['fEmail'];
 			if($model->validate())
 			{
 
-				$mailer = Yii::createComponent('application.extensions.mailer.EMailer');
-				$mailer->IsSMTP();
-				$mailer->IsHTML(true);
-				$mailer->SMTPAuth = true;
-		/*
-				$mailer->SMTPSecure = "ssl";
-				$mailer->Host = "smtp.gmail.com";
-				$mailer->Port = 465;
-				$mailer->Username = "thony@folindonesia2013.com";
-				$mailer->Password = 'thony2013';
-				$mailer->From = "thony@folindonesia2013.com";
-		*/		
-		/**/
-				$mailer->Host = "smtp.mail.yahoo.co.id";
-				$mailer->Port = 25;
-				$mailer->Username = "festivaloflive2013";
-				$mailer->Password = 'jmmindonesia';
-				$mailer->From = "festivaloflive2013@yahoo.co.id";
-		/**/		
-				$mailer->CharSet = 'UTF-8';
-				//$mailer->addAttachment(Yii::app()->basePath."/reports/BuktiTerima.php");
-				//$mailer->addAttachment(Yii::app()->basePath."/reports/bukti_".$id.".pdf");
-				$mailer->FromName = Yii::app()->params['userEmail'];
-				$mailer->AddAddress(Yii::app()->params['adminEmail']);
-				$mailer->Subject = $model->subject;
-				$mailer->Body = $model->body;
-				$mailer->Send();				
+				EmailComponent::getInstance()->sendEmail('peterjkambey@gmail.com',$model->subject,$model->body,'ssl');
 
-				echo "OK";
-				//Yii::app()->user->setFlash('contact','Your Email Has Been Send...');
-				//$this->refresh();
+				Yii::app()->user->setFlash('success','<strong>Great!</strong> Your Message has been sent...');
+				$this->redirect(array('/menu'));
 			}
 		}
 		$this->render('help',array('model'=>$model));

@@ -18,6 +18,10 @@ class SUserController extends Controller
 				array('allow',
 						'users'=>array('admin'),
 				),
+				array('allow',
+						'actions'=>array('viewPublic'),
+						'users'=>array('@'),
+				),
 				array('deny',
 						'users'=>array('*'),
 				),
@@ -33,6 +37,15 @@ class SUserController extends Controller
 				'model'=>$this->loadModel($id),
 				'modelModule'=>$module,
 				'modelGroup'=>$group,
+		));
+	}
+
+	public function actionViewPublic($id)
+	{
+		$this->layout="//layouts/column1";
+		
+		$this->render('viewPublic',array(
+				'model'=>$this->loadModel($id),
 		));
 	}
 

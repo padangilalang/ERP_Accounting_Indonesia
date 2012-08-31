@@ -344,7 +344,7 @@ class vPorder extends BaseModel
 		foreach ($models as $model) {
 			$_system_ref= (strlen($model->system_ref) >15) ? substr($model->system_ref,0,15)."..." : $model->system_ref;
 
-			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('/mAccpayable/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('/m2/mAccpayable/view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -364,7 +364,7 @@ class vPorder extends BaseModel
 		foreach ($models as $model) {
 			$_system_ref= (strlen($model->system_ref) >15) ? substr($model->system_ref,0,15)."..." : $model->system_ref;
 
-			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('/mAccpayable/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->system_ref, 'label' => $_system_ref, 'icon'=>'list-alt', 'url' => array('/m2/mAccpayable/view','id'=>$model->id));
 		}
 
 		return $returnarray;

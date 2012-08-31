@@ -4,16 +4,6 @@
 	</h1>
 </div>
 
-<?php 
-
-$browser=checkBrowser::getInstance()->getBrowser();
-
-if ($browser['name'] =='Internet Explorer') 
-	header("Location: not_support.php");
-
-?>
-
-
 <div class="row-fluid">
 	<div class="span6 well">
 		<?php $form=$this->beginWidget('BootActiveForm', array(

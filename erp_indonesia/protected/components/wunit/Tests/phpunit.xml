@@ -1,0 +1,5 @@
+<phpunit bootstrap="bootstrap.php" convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true" convertWarningsToExceptions="true"
+	printerClass="WUnit_ResultPrinter" printerFile="../PHPUnit/ResultPrinter.php"
+	stopOnFailure="false" verbose="true" strict="true">
+</phpunit>

@@ -8,7 +8,7 @@ class GPersonController extends Controller
 	 */
 	public $layout='//layouts/column2';
 
-	/**/
+	/*
 	public function filters()
 	{
 		return array(
@@ -29,18 +29,18 @@ class GPersonController extends Controller
 			),
 		);
 	}
-	/**/
+	*/
 	
 	/**
 	 * @return array action filters
 	 */
-/*	public function filters()
+
+	 public function filters()
 	{
 		return array(
 				'accessControl', // perform access control for CRUD operations
 		);
 	}
-*/
 
 
 	/**

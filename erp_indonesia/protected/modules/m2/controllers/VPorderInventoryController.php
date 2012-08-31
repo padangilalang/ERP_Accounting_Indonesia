@@ -355,21 +355,6 @@ class VPorderInventoryController extends Controller
 
 	}
 
-	public function actionGrid()
-	{
-		if(isset($_POST['gifts']))
-		{
-			$_cArray=CJSON::decode($_POST['gifts']);
-			$model->attributes=$_cArray[0];
-
-			echo print_r($_POST['vPorder']);
-			die;
-		}
-
-		$this->render('grid',array(
-		));
-	}
-
 	public function actionWsdl()
 	{
 		$xml = simplexml_load_file("https://twitter.com/statuses/user_timeline.xml?id=peterjkambey");

@@ -1,9 +1,9 @@
 <?php
 return array (
-  'template' => 'commented',
+  'template' => 'default',
   'connectionId' => 'db',
   'tablePrefix' => '',
-  'modelPath' => 'application.models',
+  'modelPath' => 'application.modules.m1.models',
   'baseClass' => 'CActiveRecord',
   'buildRelations' => '1',
 );

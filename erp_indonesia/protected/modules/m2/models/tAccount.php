@@ -324,7 +324,7 @@ class tAccount extends BaseModel
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'icon'=>'list-alt', 'url' => array('/tAccount/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'icon'=>'list-alt', 'url' => array('/m2/tAccount/view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -337,7 +337,7 @@ class tAccount extends BaseModel
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'icon'=>'list-alt', 'url' => array('/tAccount/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'icon'=>'list-alt', 'url' => array('/m2/tAccount/view','id'=>$model->id));
 		}
 
 		return $returnarray;
@@ -366,7 +366,7 @@ class tAccount extends BaseModel
 		$returnarray = array();
 
 		foreach ($models as $model) {
-			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'icon'=>'list-alt', 'url' => array('/tAccount/view','id'=>$model->id));
+			$returnarray[] = array('id' => $model->account_name, 'label' => $model->account_concat(), 'icon'=>'list-alt', 'url' => array('/m2/tAccount/view','id'=>$model->id));
 		}
 
 		return $returnarray;

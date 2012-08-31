@@ -14,3 +14,8 @@ $this->widget('personalization');
 <?php
 //$this->widget('twitter');
 ?>
+
+<?php
+$this->widget('folderManagement');
+?>
+
