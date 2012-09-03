@@ -31,7 +31,10 @@
 							'items'=>array(
 									array('label'=>Yii::app()->user->name, 'icon'=>'icon-th', 'url'=>'#', 'items'=>array(
 											array('label'=>'Help', 'icon'=>'question-sign','url'=>Yii::app()->createUrl("sAdmin/help"),'visible'=>(Yii::app()->user->name == "admin")),
-											array('label'=>'Setting', 'icon'=>'road','url'=>'#'),
+											'---',
+											array('label'=>'Profile', 'icon'=>'road','url'=>Yii::app()->createUrl('/sUser/viewPublic',array('id'=>Yii::app()->user->id))),
+											array('label'=>'Theme', 'icon'=>'road','url'=>'#'),
+											array('label'=>'Bookmark', 'icon'=>'list','url'=>'#'),
 											array('label'=>'Version', 'icon'=>'info-sign','url'=>Yii::app()->createUrl("menu/version")),
 											array('label'=>'About', 'icon'=>'qrcode', 'url'=>Yii::app()->createUrl("menu/about")),
 											'---',

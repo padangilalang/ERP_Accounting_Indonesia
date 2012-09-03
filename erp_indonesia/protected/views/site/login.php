@@ -32,9 +32,18 @@
 			echo CHtml::image(Yii::app()->request->baseUrl.'/images/photo/'.$_slide,'image',array('style'=>'width: 100%')); 
 		?>
 	</div>
+
 </div>
 
 <br/>
+
+	<p>
+		<?php
+			$this->widget('ext.LanguagePicker.ELanguagePicker', array(
+				'title'=>null
+			));
+		?>
+	</p>
 
 <div class="row-fluid">
 	<div class="span12">
@@ -43,6 +52,7 @@
 			For the reason, to speed development and concentrate to make a good business process and workflow system, this application design to be opened with Chrome, Firefox or Opera Browser. so, please do not open this application with Internet Explorer. It will be banned automatically, we are sorry..
 		</div>
 	</div>
+
 </div>
 
 <div class="row-fluid">

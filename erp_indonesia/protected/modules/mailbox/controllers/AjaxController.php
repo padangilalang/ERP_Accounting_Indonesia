@@ -3,7 +3,7 @@
 
 class AjaxController extends Controller
 {
-	public $layout='//layouts/column1';
+	public $layout='//layouts/main2';
 
 	public $defaultAction = 'auto';
 	

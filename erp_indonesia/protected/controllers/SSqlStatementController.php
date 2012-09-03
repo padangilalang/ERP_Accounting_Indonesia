@@ -7,7 +7,8 @@ class SSqlStatementController extends Controller
 	public function filters()
 	{
 		return array(
-				'accessControl',
+				//'accessControl', // perform access control for CRUD operations
+				'rights',
 		);
 	}
 

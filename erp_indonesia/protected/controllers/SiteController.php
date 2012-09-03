@@ -4,6 +4,14 @@ class SiteController extends Controller
 {
 	public $layout='//layouts/column1';
 
+	public function init() 
+	{
+		//Yii::app()->language='id';
+		//return parent::init();
+		Yii::import('ext.LanguagePicker.ELanguagePicker'); 
+		ELanguagePicker::setLanguage();	
+		return parent::init();
+	}
 	/**
 	 * Declares class-based actions.
 	 */
@@ -87,7 +95,8 @@ class SiteController extends Controller
 		$api_key = "3febaac31cc6a34b93349523beacbfee";
 		$per_page="11";
 		$url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={$api_key}&tags={$tag}&per_page={$per_page}";
-
+		$xml=array();
+		
 		//$feed = getResource($url);
 		if  (in_array  ('curl', get_loaded_extensions())) {
 			$chandle = curl_init();

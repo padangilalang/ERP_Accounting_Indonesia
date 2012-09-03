@@ -2,7 +2,7 @@
 
 class MessageController extends Controller
 {
-	public $layout='//layouts/column1';
+	public $layout='//layouts/main2';
 	
 	public $defaultAction = 'inbox';
 	public $buttons = array( // Ex output: {count} messages have been {value}
@@ -47,6 +47,7 @@ class MessageController extends Controller
 		{
 			$this->buttonAction('inbox');
 		}
+		
 		$dataProvider = new CActiveDataProvider( Mailbox::model()->inbox($this->module->getUserId()) );
 		if(isset($ajax))
 			$this->renderPartial('_mailbox',array('dataProvider'=>$dataProvider));

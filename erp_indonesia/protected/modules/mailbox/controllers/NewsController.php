@@ -3,7 +3,7 @@
 
 class NewsController extends Controller
 {
-	public $layout='//layouts/column1';
+	public $layout='//layouts/main2';
 
 	public $buttons = array('admin'=>array('delete'=>'deleted'));
 	

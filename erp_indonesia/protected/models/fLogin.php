@@ -37,6 +37,8 @@ class fLogin extends CFormModel
 	{
 		return array(
 				'rememberMe'=>'Remember me',
+				'username' => Yii::t('app','model.flogin.username'),
+				'password' => Yii::t('app','model.flogin.password'),
 		);
 	}
 

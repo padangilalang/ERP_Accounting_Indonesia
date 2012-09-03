@@ -4,10 +4,10 @@ class MainController extends Controller
 {
 	public function init()
 	{
-		$this->layout = $this->module->layout;
+		//$this->layout = $this->module->layout;
 		$this->defaultAction = 'browse';
 	}
-
+	//public $layouts='//layouts/column2';
 	/**
 	 * @return array action filters
 	 */
@@ -15,6 +15,7 @@ class MainController extends Controller
 	{
 		return array(
 				'accessControl', // perform access control for CRUD operations
+				//'rights', 
 		);
 	}
 

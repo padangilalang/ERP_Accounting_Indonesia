@@ -3,10 +3,10 @@
 	echo "<h2>List of AF</h2>";
 
 	$this->widget('bootstrap.widgets.BootGridView', array(
+			'itemsCssClass'=>'table table-striped table-bordered',
 			'id'=>'aPorder-grid',
 			'dataProvider'=>aPorder::model()->approvalForm(0,$id),
 			//'filter'=>$model,
-			'itemsCssClass'=>'table table-striped table-bordered',
 			'template'=>'{items}{pager}',
 			'columns'=>array(
 					'input_date',

@@ -5,8 +5,7 @@
 	Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
 	-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title><?php echo CHtml::encode($this->pageTitle); ?>
-</title>
+<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 <meta name="description" content="Description" />
 <meta name="keywords" content="Keywords" />
 
@@ -15,25 +14,30 @@
 	href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css"
 	type="text/css" media="screen" />
 
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/icons.css" />
+	
 <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
 
 <script type="text/javascript"
 	src="<?php echo Yii::app()->theme->baseUrl; ?>/css/script.js"></script>
 
+<?php
+//Yii::app()->sprite->registerSpriteCss();
+?>
+
 
 </head>
 <style>
-body {
-	padding-top: 50px;
-	/* 60px to make the container go all the way to the bottom of the topbar */
-}
-
-@media ( max-width : 980px) {
 	body {
-		padding-top: 0px;
+		padding-top: 50px; /* 60px to make the container go all the way to the bottom of the topbar */
 	}
-}
+
+	@media (max-width: 980px) {
+		body{
+			padding-top: 0px;
+		}
+	}
 </style>
 
 <body>
@@ -60,7 +64,7 @@ body {
 			<div class="art-sheet-body">
 
 				<?php echo $content; ?>
-
+				
 			</div>
 		</div>
 		<?php $this->beginContent('/layouts/_footer'); $this->endContent(); ?>

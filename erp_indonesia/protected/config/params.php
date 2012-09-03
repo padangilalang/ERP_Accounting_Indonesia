@@ -10,13 +10,6 @@ return array(
 		'adminHp'=>'082 1100 46 046',
 		'userEmail'=>'peterjkambey@yahoo.co.id',
 		'twittername'=>'agungpodomoro',
-		'appVersion'=>'2.0.1',
+		'twitterdisplay'=>'Agung Podomoro Land, Tbk',
+		'appVersion'=>'3.0.1',
 );
-
-/*
- 1.5.1  Modifikasi Tampilan CSS, Header, Logo, Help, Version
-
-
-
-
-*/

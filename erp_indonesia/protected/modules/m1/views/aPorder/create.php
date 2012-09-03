@@ -49,7 +49,8 @@ $this->menu2=aPorder::getTopCreated();
 </div>
 <br />
 
-<?php $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(	'id'=>'aPorder-form',
+<?php $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(	
+		'id'=>'aPorder-form',
 		'type' => 'horizontal',
 		'enableAjaxValidation'=>false,
 )); ?>

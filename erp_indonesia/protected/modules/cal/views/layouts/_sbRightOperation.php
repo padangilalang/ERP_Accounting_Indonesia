@@ -2,20 +2,14 @@
 
 <br />
 <ul class="nav nav-list">
-	<?php
-	$this->widget('zii.widgets.jui.CJuiButton', array(
-			'buttonType'=>'link',
-			'name'=>'btnGo7',
-			'url'=>Yii::app()->createUrl($this->id."/create"),
-			'caption'=>'Create New '.$this->menu5[0],
-			'options'=>array(
-					//'icons'=>'js:{secondary:"ui-icon-extlink"}',
-			),
-			'htmlOptions'=>array(
-					'class'=>'ui-button-primary',
-			),
-
+	<?php 
+	$this->widget('bootstrap.widgets.BootButton', array(
+			'label'=>'Create New '.$this->menu5[0],
+			'type'=>'primary', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+			//'size'=>'large', // '', 'large', 'small' or 'mini'
+			'url'=>Yii::app()->createUrl($this->module->id.'/'.$this->id.'/create'),
 	));
+
 	?>
 </ul>
 <br />

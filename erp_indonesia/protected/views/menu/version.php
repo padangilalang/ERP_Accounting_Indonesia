@@ -9,4 +9,7 @@ $this->breadcrumbs=array(
 </div>
 
 <p>
+	3.0.1<br> Added RBAC, File Browser, mailbox
+
+<p>
 	2.0.1<br> New Release

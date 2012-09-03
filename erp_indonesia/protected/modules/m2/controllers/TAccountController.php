@@ -7,20 +7,7 @@ class TAccountController extends Controller
 	public function filters()
 	{
 		return array(
-				'accessControl',
-		);
-	}
-
-	public function accessRules()
-	{
-		return array(
-				array('allow',
-						//'users'=>array('@'),
-						'users'=>sUser::getAccess('3'),
-				),
-				array('deny',
-						'users'=>array('*'),
-				),
+				'rights',
 		);
 	}
 

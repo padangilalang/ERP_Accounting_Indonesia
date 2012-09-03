@@ -1,6 +1,6 @@
 <?php $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
 		'id'=>'example-form',
-		'type'=>'horizontal',
+		//'type'=>'horizontal',
 		'enableAjaxValidation'=>false,
 )); ?>
 
@@ -70,7 +70,7 @@
 <?php echo $form->dropDownListRow($model,'status_id',sParameter::items("cStatusTask")); ?>
 <?php echo $form->dropDownListRow($model,'priority_id',sParameter::items("cPriority")); ?>
 <?php echo $form->dropDownListRow($model,'category_id',sParameter::items("cTaskCategory")); ?>
-<?php echo $form->textAreaRow($model,'notes',array('rows'=>3, 'class'=>'span5')); ?>
+<?php echo $form->textAreaRow($model,'notes',array('rows'=>3, 'class'=>'span4')); ?>
 
 <div class="form-actions">
 	<?php echo CHtml::htmlButton('<i class="icon-ok"></i> Submit', array('class'=>'btn', 'type'=>'submit')); ?>

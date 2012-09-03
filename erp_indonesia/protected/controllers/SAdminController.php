@@ -18,21 +18,10 @@ class SAdminController extends Controller
 	public function filters()
 	{
 		return array(
-				'accessControl',
+				'rights',
 		);
 	}
 
-	public function accessRules()
-	{
-		return array(
-				array('allow',
-						'users'=>array('admin'),
-				),
-				array('deny',
-						'users'=>array('*'),
-				),
-		);
-	}
 	public function actionSqlStatement()
 	{
 		$model=new fSqlStatement;
@@ -248,6 +237,46 @@ class SAdminController extends Controller
 		$this->render('help',array('model'=>$model));
 	}
 
+	public function actionTableFpdf()
+	{
+		$pdf=new mc_table();
+		$pdf->AddPage();
+		$pdf->SetFont('Arial','',14);
+		//Table with 20 rows and 4 columns
+		$pdf->SetWidths(array(30,50,30,40));
+		srand(microtime()*1000000);
+		for($i=0;$i<20;$i++)
+			$pdf->Row(array($this->GenerateSentence(),$this->GenerateSentence(),$this->GenerateSentence(),$this->GenerateSentence()));
+		$pdf->Output();	
+		
+	}
 
+	private function GenerateWord()
+	{
+		//Get a random word
+		$nb=rand(3,10);
+		$w='';
+		for($i=1;$i<=$nb;$i++)
+			$w.=chr(rand(ord('a'),ord('z')));
+		return $w;
+	}
 
+	private function GenerateSentence()
+	{
+		//Get a random sentence
+		$nb=rand(1,10);
+		$s='';
+		for($i=1;$i<=$nb;$i++)
+			$s.=$this->GenerateWord().' ';
+		return substr($s,0,-1);
+	}
+
+	public function actionCode39() 
+	{
+		$pdf=new PDF_Code39();
+		$pdf->AddPage();
+		$pdf->Code39(80,40,'PETERKAMBEY',1,10);
+		$pdf->Output();
+	}
+	
 }

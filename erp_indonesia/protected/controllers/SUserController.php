@@ -7,7 +7,8 @@ class SUserController extends Controller
 	public function filters()
 	{
 		return array(
-				'accessControl',
+				//'accessControl', // perform access control for CRUD operations
+				'rights',
 				'ajaxOnly + delete, deleteModule',
 		);
 	}
@@ -45,7 +46,7 @@ class SUserController extends Controller
 		$this->layout="//layouts/column1";
 		
 		$this->render('viewPublic',array(
-				'model'=>$this->loadModel($id),
+				'model'=>$this->loadModelPublic($id),
 		));
 	}
 
@@ -188,6 +189,14 @@ class SUserController extends Controller
 	public function loadModel($id)
 	{
 		$model=sUser::model()->findByPk((int)$id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	public function loadModelPublic($id)
+	{
+		$model=sUser::model()->findByPk((int)$id,array('condition'=>'id = '.Yii::app()->user->id));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

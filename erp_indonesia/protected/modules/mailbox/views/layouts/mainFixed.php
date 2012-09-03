@@ -5,19 +5,28 @@
 	Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
 	-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title><?php echo CHtml::encode($this->pageTitle); ?>
-</title>
+<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 <meta name="description" content="Description" />
 <meta name="keywords" content="Keywords" />
+
 
 <link rel="stylesheet"
 	href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css"
 	type="text/css" media="screen" />
 
-
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/icons.css" />
+	
 <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
-	
+
+<script type="text/javascript"
+	src="<?php echo Yii::app()->theme->baseUrl; ?>/css/script.js"></script>
+
+<?php
+//Yii::app()->sprite->registerSpriteCss();
+?>
+
+
 </head>
 <style>
 	body {
@@ -36,11 +45,11 @@
 		<div id="art-page-background-glare-image"></div>
 	</div>
 
+	<div id="art-main">
 
-	<?php $this->beginContent('/layouts/_bootNavBar'); $this->endContent(); ?>
-	<?php //$this->beginContent('/layouts/_menu'); $this->endContent(); ?>
-		<div class="container-fluid">
-	<div class="row-fluid">
+
+
+		<?php $this->beginContent('/layouts/_bootNavBar'); $this->endContent(); ?>
 
 		<div class="art-sheet">
 			<div class="art-sheet-tl"></div>
@@ -54,18 +63,15 @@
 			<div class="art-sheet-cc"></div>
 			<div class="art-sheet-body">
 
-				<?php //$this->beginContent('/layouts/_header'); $this->endContent(); ?>
-				<?php //$this->beginContent('/layouts/_navigation'); $this->endContent(); ?>
-				<?php $this->beginContent('/layouts/_notification'); $this->endContent(); ?>
-
 				<?php echo $content; ?>
-
-
+				
 			</div>
 		</div>
+		<?php $this->beginContent('/layouts/_footer'); $this->endContent(); ?>
+
+
 	</div>
-	</div>
-	<?php $this->beginContent('/layouts/_footer'); $this->endContent(); ?>		
 </body>
 </html>
+
 

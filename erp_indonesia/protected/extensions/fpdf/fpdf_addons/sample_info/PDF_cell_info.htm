@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Extended Cell functions</title>
+<style type="text/css">
+body {font-family:"Times New Roman",serif}
+h1 {font:bold 135% Arial,sans-serif; color:#4000A0; margin-bottom:0.9em}
+h2 {font:bold 95% Arial,sans-serif; color:#900000; margin-top:1.5em; margin-bottom:1em}
+</style>
+</head>
+<body>
+<h1>Extended Cell functions</h1>
+<h2>Informations</h2>
+Author: <a href="mailto:boba@khspu.ru?subject=Extended%20Cell%20functions">Pivkin Vladimir</a><br>
+License: FPDF
+<h2>Description</h2>
+This class provides two extended versions of the Cell method, one which prints horizontal text:<br>
+<br>
+<code>Cell(<b>float</b> w [, <b>float</b> h [, <b>string</b> txt [, <b>mixed</b> border [, <b>int</b> ln [, <b>string</b> align [, <b>boolean</b> fill [, <b>mixed</b> link]]]]]]])</code><br>
+<br>
+and one for vertical:<br>
+<br>
+<code>VCell(<b>float</b> w [, <b>float</b> h [, <b>string</b> txt [, <b>mixed</b> border [, <b>int</b> ln [, <b>string</b> align [, <b>boolean</b> fill]]]]]])</code><br>
+<br>
+These methods allow multiline text with the delimiter "\n".<br>
+If the cell contains a single line and its length exceeds the size of the cell, the text will be
+compressed to fit.<br>
+<br>
+Changes in parameters:<br>
+<br>
+<code><u>border</u></code>: indicates if borders must be drawn around the cell. The value can be
+either a number:<br>
+<ul>
+<li><code>0</code>: no border</li>
+<li><code>>0</code>: frame of the corresponding width</li>
+</ul>
+or a string containing some or all of the following characters (in any order):
+<ul>
+<li><code>L</code>: left</li>
+<li><code>T</code>: top</li>
+<li><code>R</code>: right</li>
+<li><code>B</code>: bottom</li>
+</ul>
+or for bold border:
+<ul>
+<li><code>l</code>: left</li>
+<li><code>t</code>: top</li>
+<li><code>r</code>: right</li>
+<li><code>b</code>: bottom</li>
+</ul>
+Default value: <code>0</code>.<br>
+<br>
+For VCell():<br>
+<br>
+<code><u>align</u></code>: allows to center or align the text. Possible values are:
+<ul>
+<li><code>U</code>: top</li>
+<li><code>C</code>: center (default value)</li>
+<li><code>D</code>: bottom</li>
+</ul>
+</body>
+</html>

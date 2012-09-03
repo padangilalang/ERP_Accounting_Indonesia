@@ -18,8 +18,7 @@ $this->breadcrumbs=array(
 	</h1>
 </div>
 
-<div class="row">
-	<div class="span10">
+<div class="art-post">
 		<div class="dashIcon span2">
 			<a href="#"><img
 				src="<?php echo Yii::app()->theme->baseUrl; ?>/css/images/big_icons/icon-inbox.png"
@@ -111,6 +110,5 @@ $this->breadcrumbs=array(
 		</div>
 
 
-	</div>
 </div>
 <!-- END OF .dashIcons -->

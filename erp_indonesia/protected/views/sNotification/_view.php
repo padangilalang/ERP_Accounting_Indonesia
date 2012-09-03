@@ -5,8 +5,7 @@
 		</strong>
 	</div>
 
-	<div class="span10">
-		<div class="well">
+	<div class="span4">
 			<?php echo strlen($data->long_desc) <= 300 ? $data->long_desc : substr($data->long_desc,0,300). "..."; ?>
 
 			<h6>
@@ -23,7 +22,6 @@
 				));
 			}
 			?>
-		</div>
 
 	</div>
 </div>

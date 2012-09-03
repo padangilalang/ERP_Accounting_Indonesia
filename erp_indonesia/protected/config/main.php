@@ -19,11 +19,11 @@ return array(
 				'application.extensions.*',
 				'application.reports.*',
 				'ext.fpdf.*',
+				'ext.fpdf.fpdf_addons.*',
 				'ext.bootstrap.widgets.*',
-				//'ext.facebook.*',
-				//'ext.facebook.lib.*',
 				'ext.JasPHP.*',
-
+				//'application.modules.rights.*', 
+				'application.modules.rights.components.*',
 		),
 		'modules'=>array(
 				'mailbox'=>
@@ -32,12 +32,14 @@ return array(
 					'userIdColumn' => 'id',
 					'usernameColumn' =>  'username',
 					'superuserColumn' =>  'username',
-					//'juiThemes'=>'jquery',
+					//'juiThemes'=>'base',
 					//....more options here....
 					//....more options here....
 				),
 				'm1',
 				'm2',
+				'rights',
+				
 				/**/
 				'gii'=>array(
 						'class'=>'system.gii.GiiModule',
@@ -50,7 +52,7 @@ return array(
 				/**/
 				//masih lumayan OK
 				'cal' => array(
-						'debug' => true // For first run only!
+						//'debug' => true // For first run only!
 				),
 		),
 
@@ -58,10 +60,12 @@ return array(
 
 		'timeZone'=>'Asia/Jakarta',
 		'sourceLanguage'=>'id_id',
-		//'language'=>'id',
+		'language'=>'en',
 
 		'theme'=>'artisteer_bootstrap',
-
+		'controllerMap'=>array(
+			 'YiiFeedWidget' => 'ext.yii-feed-widget.YiiFeedWidgetController'
+		),
 		// application components
 		'components'=>array(
 				//'widgetFactory'=>array(
@@ -77,7 +81,7 @@ return array(
 				 // 'class' => 'ext.ClientScriptPacker.ClientScriptPacker',
 				//),
 				'browser' => array(
-					'class' => 'application.components.EWebBrowser',
+					'class' => 'ext.EWebBrowser',
 				),
 				'sprite'=>array(
 						'class'=>'ext.sprite.NSprite',
@@ -101,7 +105,7 @@ return array(
 				),
 
 				'indoFormat'=>array(
-						'class'=>'application.components.IndoNumberFormatter',
+						'class'=>'ext.IndoNumberFormatter',
 				),
 
 				'settings'=>array(
@@ -120,6 +124,7 @@ return array(
 				),
 
 				'user'=>array(
+						'class'=>'RWebUser',
 						// enable cookie-based authentication
 						'allowAutoLogin'=>true,
 				),
@@ -134,6 +139,12 @@ return array(
 						'enableProfiling'=>true,
 						'enableParamLogging' => true,
 						'schemaCachingDuration' => 180,
+				),
+				'authManager'=>array( 
+					'class'=>'RDbAuthManager', 
+					'itemTable'=>'s_authitem',
+					'assignmentTable'=>'s_authassignment',
+					'itemChildTable'=>'s_authitemchild',
 				),
 				'errorHandler'=>array(
 						// use 'site/error' action to display errors

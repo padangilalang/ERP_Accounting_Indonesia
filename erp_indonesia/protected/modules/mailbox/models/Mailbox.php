@@ -37,7 +37,8 @@ class Mailbox extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return MailboxModule::TBL_CONV;
+		//return MailboxModule::TBL_CONV;
+		return 's_mailbox_conversation';
 	}
 
 	/**

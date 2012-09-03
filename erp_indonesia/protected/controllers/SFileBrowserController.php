@@ -6,7 +6,7 @@ class SFileBrowserController extends Controller
 	public function filters()
 	{
 		return array(
-				'accessControl',
+				'rights',
 		);
 	}
 

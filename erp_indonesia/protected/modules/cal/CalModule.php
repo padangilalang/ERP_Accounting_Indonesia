@@ -14,7 +14,7 @@ class CalModule extends CWebModule
 	 * @var string  'column1' or 'column2'
 	 * Defaults to 'column2'.
 	 */
-	public $layout = 'column2';
+	public $layout = 'column1';
 
 	public $calendarOptions = array(
 			'editable'=>true,
