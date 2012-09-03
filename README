@@ -19,12 +19,26 @@ Cara Penggunaan:
 username: admin 
 password: kamerad
 
+#8. Jika anda tidak menggunakan ZendCache maka atur seting cache di main.php menggunakan standard Yii
+....
+	'cache'=>array(
+			//'class'=>'system.caching.CFileCache',
+			'class'=>'CZendDataCache',
+	),
+...					
+
+
 Online Demo
-www.multiglgpl.tk
+http://erpindonesia.my.phpcloud.com
 username: admin 
 password: kamerad
 
 ----------------------------------
+
+04-09-2012
+[ENH] Upgrade ke versi 3 Beta. Tambahan File Browser, Mailbox, RBAC dan Internationalization (Terjemahana belum selesai)
+
+
 04-08-2012
 [ENH] Upgrade ke versi 2 Beta. Accounting pindah ke module, Budgeting+Purchasing module tersendiri. Fitur standard masuk ke non-module
 
